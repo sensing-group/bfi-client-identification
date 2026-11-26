@@ -1,0 +1,295 @@
+{
+  "body_cap": 512,
+  "trials": 50,
+  "k_grid": [
+    "1",
+    "16",
+    "all"
+  ],
+  "t_grid": [
+    1,
+    4,
+    16,
+    32
+  ],
+  "windows": 25948,
+  "windows_per_device": {
+    "Vacuum": 748,
+    "LGTV": 1659,
+    "Laptop": 1743,
+    "AppleTV-LR": 12974,
+    "SamsungTV": 100,
+    "AppleTV-BR": 8724
+  },
+  "untruncated_windows_per_device": {
+    "Vacuum": 748,
+    "LGTV": 1659,
+    "Laptop": 1743,
+    "AppleTV-LR": 12974,
+    "SamsungTV": 100,
+    "AppleTV-BR": 8724
+  },
+  "formats": [
+    {
+      "device": "Vacuum",
+      "format": [
+        "VHT",
+        1,
+        3,
+        6,
+        4,
+        80,
+        1,
+        "SU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 202,
+      "bins_kept": 27,
+      "windows": 1
+    },
+    {
+      "device": "Vacuum",
+      "format": [
+        "VHT",
+        1,
+        3,
+        9,
+        7,
+        80,
+        1,
+        "MU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 126,
+      "bins_kept": 17,
+      "windows": 747
+    },
+    {
+      "device": "LGTV",
+      "format": [
+        "HE",
+        2,
+        3,
+        6,
+        4,
+        80,
+        4,
+        "SU",
+        1
+      ],
+      "tones_full": 250,
+      "tones_kept": 134,
+      "bins_kept": 17,
+      "windows": 1659
+    },
+    {
+      "device": "Laptop",
+      "format": [
+        "VHT",
+        1,
+        3,
+        6,
+        4,
+        80,
+        1,
+        "SU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 202,
+      "bins_kept": 27,
+      "windows": 50
+    },
+    {
+      "device": "Laptop",
+      "format": [
+        "VHT",
+        1,
+        3,
+        9,
+        7,
+        80,
+        1,
+        "MU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 126,
+      "bins_kept": 17,
+      "windows": 1693
+    },
+    {
+      "device": "AppleTV-LR",
+      "format": [
+        "HE",
+        2,
+        3,
+        4,
+        2,
+        80,
+        4,
+        "SU",
+        0
+      ],
+      "tones_full": 250,
+      "tones_kept": 223,
+      "bins_kept": 28,
+      "windows": 12974
+    },
+    {
+      "device": "SamsungTV",
+      "format": [
+        "VHT",
+        1,
+        3,
+        9,
+        7,
+        80,
+        1,
+        "MU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 126,
+      "bins_kept": 17,
+      "windows": 1
+    },
+    {
+      "device": "SamsungTV",
+      "format": [
+        "VHT",
+        2,
+        3,
+        9,
+        7,
+        80,
+        1,
+        "MU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 84,
+      "bins_kept": 11,
+      "windows": 97
+    },
+    {
+      "device": "SamsungTV",
+      "format": [
+        "VHT",
+        2,
+        3,
+        6,
+        4,
+        80,
+        1,
+        "SU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 134,
+      "bins_kept": 18,
+      "windows": 2
+    },
+    {
+      "device": "AppleTV-BR",
+      "format": [
+        "VHT",
+        2,
+        3,
+        6,
+        4,
+        80,
+        1,
+        "SU",
+        1
+      ],
+      "tones_full": 234,
+      "tones_kept": 134,
+      "bins_kept": 18,
+      "windows": 8724
+    }
+  ],
+  "day_cache": {
+    "bfi_2026-05-08": {
+      "frames": 16693,
+      "undecodable": 0,
+      "cut": 16693
+    },
+    "bfi_2026-05-09": {
+      "frames": 23022,
+      "undecodable": 0,
+      "cut": 23022
+    },
+    "bfi_2026-05-10": {
+      "frames": 53250,
+      "undecodable": 0,
+      "cut": 53250
+    },
+    "bfi_2026-05-11": {
+      "frames": 37591,
+      "undecodable": 0,
+      "cut": 37591
+    },
+    "bfi_2026-05-12": {
+      "frames": 0,
+      "undecodable": 0,
+      "cut": 0
+    },
+    "bfi_2026-05-13": {
+      "frames": 0,
+      "undecodable": 0,
+      "cut": 0
+    },
+    "bfi_2026-05-14": {
+      "frames": 36506,
+      "undecodable": 0,
+      "cut": 36506
+    },
+    "bfi_2026-05-15": {
+      "frames": 122506,
+      "undecodable": 0,
+      "cut": 122506
+    },
+    "bfi_2026-05-16": {
+      "frames": 117202,
+      "undecodable": 0,
+      "cut": 117202
+    },
+    "bfi_2026-05-17": {
+      "frames": 115093,
+      "undecodable": 0,
+      "cut": 115093
+    },
+    "bfi_2026-05-18": {
+      "frames": 135261,
+      "undecodable": 0,
+      "cut": 135261
+    },
+    "bfi_2026-05-19": {
+      "frames": 116019,
+      "undecodable": 0,
+      "cut": 116019
+    },
+    "bfi_2026-05-20": {
+      "frames": 58876,
+      "undecodable": 0,
+      "cut": 58876
+    }
+  },
+  "masks": {
+    "common": {
+      "bins_kept": 11,
+      "dims": 110,
+      "pair_bins_kept": 17
+    },
+    "none": {
+      "bins_kept": 32,
+      "dims": 320,
+      "pair_bins_kept": 32
+    }
+  },
+  "runtime_s": 358.02883887290955,
+  "peak_rss_mb": 662.37890625
+}

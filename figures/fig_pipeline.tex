@@ -1,0 +1,57 @@
+% fig_pipeline.tex -- the attack as one pipeline.
+%
+% Four stages left to right: Calibrate (other households or a public
+% dataset give the standardisation statistics), Enroll (one labeled
+% session of the target, K windows), Listen (T unlabeled windows from
+% the air, Givens angles summarised per window), Decide (nearest enrolled
+% device, 1-NN, averaging the T windows). A bracket under stages 2-4 marks
+% what the single observer does with no training data on the target.
+%
+% Drawn at \columnwidth (241.147 pt = 84.79 mm): column pitch 21.2 mm,
+% boxes 18.6 mm wide, 2.6 mm arrow gaps. Font: document font at
+% \footnotesize (8 pt). Colours: Okabe-Ito blue #0072B2 (10% fill, 50%
+% border) and grey #8C8C8C (15% fill); no other accent.
+%
+% Preamble (already in paper.tex): tikz with arrows.meta, positioning, calc.
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\footnotesize,
+    stage/.style={rectangle, rounded corners=0.9mm, line width=0.5pt,
+                  inner xsep=0.6mm, inner ysep=1.0mm,
+                  minimum width=18.6mm, minimum height=5.6mm,
+                  anchor=center, font=\footnotesize\bfseries},
+    other/.style={draw=cGrey, fill=cGrey!15},
+    ours/.style={draw=cBlue!50, fill=cBlue!10},
+    detail/.style={anchor=north, align=center, inner sep=0pt,
+                   font=\footnotesize},
+    next/.style={-{Stealth[length=1.5mm, width=1.2mm]}, line width=0.5pt,
+                 draw=cGrey},
+]
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cGrey}{HTML}{8C8C8C}
+
+% Stage titles: 18.6 mm boxes on a 21.2 mm pitch, y = 0 is the box centre.
+\node[stage, other] (cal) at ( 9.3, 0) {Calibrate};
+\node[stage, ours]  (enr) at (30.5, 0) {Enroll};
+\node[stage, ours]  (lis) at (51.7, 0) {Listen};
+\node[stage, ours]  (dec) at (72.9, 0) {Decide};
+
+% Arrows through the 2.6 mm gaps.
+\draw[next] (cal.east) -- (enr.west);
+\draw[next] (enr.east) -- (lis.west);
+\draw[next] (lis.east) -- (dec.west);
+
+% Two lines beneath each box (each line at most 58 pt wide).
+\node[detail] at ([yshift=-1.2mm]cal.south) {other households\\ $\mu$, $\sigma$ per angle};
+\node[detail] at ([yshift=-1.2mm]enr.south) {one labeled\\ session, $K$ windows};
+\node[detail] at ([yshift=-1.2mm]lis.south) {$T$ windows off air\\ Givens $\mu$, $\sigma$};
+\node[detail] at ([yshift=-1.2mm]dec.south) {average the $T$,\\ 1-NN to enrolled};
+
+% Bracket under stages 2-4: the one observer, no training data on the target.
+\coordinate (bl) at ([yshift=-9.6mm]enr.south west);
+\coordinate (br) at ([yshift=-9.6mm]dec.south east);
+\draw[cGrey, line width=0.4pt] ([yshift=0.8mm]bl) -- (bl) -- (br) -- ([yshift=0.8mm]br);
+\node[anchor=north, text=cGrey, font=\footnotesize, inner sep=0pt]
+    at ([yshift=-0.7mm]$(bl)!0.5!(br)$)
+    {same observer, no training data on the target};
+\end{tikzpicture}

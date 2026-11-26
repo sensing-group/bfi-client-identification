@@ -1,0 +1,123 @@
+{
+ "dataset": "he",
+ "seeds": 10,
+ "chance": 0.05263157894736842,
+ "cal_sizes": [
+  0,
+  1,
+  2,
+  5,
+  10,
+  20
+ ],
+ "supcon": true,
+ "supcon_epochs": 100,
+ "he_cal_per_class": 300,
+ "session_prefix": null,
+ "n_session_support": null,
+ "n_session_queries": null,
+ "runtime_s": 514.4388492107391,
+ "peak_rss_mb": 1103.12109375,
+ "aggregate": [
+  {
+   "dataset": "he",
+   "n_cal": 0,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.4889796362844387,
+   "acc_sd": 0.048103147428092116,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 1,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.3712566699335729,
+   "acc_sd": 0.04930460417028761,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 2,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.3856909506697158,
+   "acc_sd": 0.04286615888035145,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 2,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.3104922138734619,
+   "acc_sd": 0.04439513400554181,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 5,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.3980126320374605,
+   "acc_sd": 0.03218133933697411,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 5,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.27340193836436893,
+   "acc_sd": 0.042844820335623784,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 10,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.39415223783077424,
+   "acc_sd": 0.03978651466225379,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 10,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.2919797451813133,
+   "acc_sd": 0.0260609109334633,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 20,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.3901393879995644,
+   "acc_sd": 0.03876097405790027,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "he",
+   "n_cal": 20,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.3362027659806163,
+   "acc_sd": 0.042281080836473625,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  }
+ ]
+}

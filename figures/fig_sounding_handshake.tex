@@ -1,0 +1,128 @@
+% fig_sounding_handshake.tex -- threat-model view of the 802.11 sounding exchange.
+%
+% Single-column figure (~\columnwidth wide, ~2.5 in tall).
+% Requires in the document preamble:
+%     \usepackage{tikz}
+%     \usetikzlibrary{arrows.meta,positioning,calc}
+%
+% Palette matches the rest of the paper (Wong colorblind-safe).
+%
+% Layout:
+%   - Left lane (compressed): AP-STA protocol exchange (blue arrows).
+%   - Centre: dashed "the air" boundary.
+%   - Right half (centerpiece): passive monitor box, dashed-red taps from each
+%     protocol arrow, then two annotation panels stating what the eavesdropper
+%     CAPTURES vs CANNOT see.
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\footnotesize,
+    >={Stealth[length=1.4mm,width=1.1mm]},
+]
+
+% ===== Colour palette =====
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cRed}{HTML}{D55E00}
+\definecolor{cGray}{HTML}{555555}
+\definecolor{fillSta}{HTML}{DCEEF7}
+\definecolor{fillAp}{HTML}{FCE6CC}
+\definecolor{fillEve}{HTML}{F4D7CC}
+\definecolor{fillCap}{HTML}{FFF5F0}
+\definecolor{fillCs}{HTML}{F0F0F0}
+
+% Canvas notes: 84mm wide x 56mm tall.
+
+% ----- Header boxes (lifeline tops) -----
+\node[draw=cOrange, fill=fillAp, line width=0.4pt,
+      rounded corners=0.7mm, inner sep=0.6mm,
+      minimum width=8mm, minimum height=4.2mm,
+      anchor=south] (ap) at (5,49) {\textbf{AP}};
+
+\node[draw=cBlue, fill=fillSta, line width=0.4pt,
+      rounded corners=0.7mm, inner sep=0.6mm,
+      minimum width=8mm, minimum height=4.2mm,
+      anchor=south] (sta) at (22,49) {\textbf{STA}};
+
+% Passive monitor header (centerpiece)
+\node[draw=cRed, fill=fillEve, line width=0.5pt,
+      rounded corners=0.9mm, inner sep=0.9mm,
+      minimum width=42mm, minimum height=6mm,
+      align=center, anchor=south] (eve) at (60,48.5) {%
+  {\color{cRed}\textbf{passive monitor}}\\[-0.4ex]
+  {\scriptsize\itshape\color{cRed}no ack, no probe, no association}};
+
+% ----- Lifelines -----
+\draw[cGray, line width=0.25pt] (ap.south) -- (5,4);
+\draw[cGray, line width=0.25pt] (sta.south) -- (22,4);
+% Eve lifeline: dashed red, spans only through the four tap rows.
+\draw[cRed, line width=0.25pt, dash pattern=on 0.6mm off 0.4mm, opacity=0.7]
+    (eve.south) -- (39.5,11);
+
+% ----- Time arrow on far left -----
+\draw[->, cGray, line width=0.25pt] (1.1,46) -- (1.1,5);
+\node[cGray, rotate=90, font=\tiny] at (2.5,25) {time};
+
+% ----- Privacy boundary: dashed vertical line between STA lane and eve lane
+\draw[cGray, line width=0.3pt, dash pattern=on 0.6mm off 0.5mm, opacity=0.7]
+    (32,46) -- (32,4);
+\node[cGray, font=\scriptsize\itshape] at (32,53.5) {in the air $\rightarrow$};
+
+% ===== Protocol arrows (compressed left lane, blue) =====
+% NDPA: AP -> STA
+\draw[->, cBlue, line width=0.5pt] (5.6,42) -- (21.4,42);
+\node[cBlue, font=\scriptsize\bfseries, anchor=south] at (13.5,42.2) {NDPA};
+% NDP: AP -> STA
+\draw[->, cBlue, line width=0.5pt] (5.6,35) -- (21.4,35);
+\node[cBlue, font=\scriptsize\bfseries, anchor=south] at (13.5,35.2) {NDP};
+% BFI: STA -> AP
+\draw[->, cBlue, line width=0.5pt] (21.4,25) -- (5.6,25);
+\node[cBlue, font=\scriptsize\bfseries, anchor=south] at (13.5,25.2) {BFI};
+% Data (precoded): AP -> STA
+\draw[->, cBlue, line width=0.5pt] (5.6,14) -- (21.4,14);
+\node[cBlue, font=\scriptsize\bfseries, anchor=south] at (13.5,14.2) {Data (precoded)};
+
+% ===== Dashed red taps: every protocol step is captured in the air =====
+\draw[->, cRed, line width=0.3pt, dash pattern=on 0.6mm off 0.4mm]
+    (22.5,42) -- (39.3,42);
+\draw[->, cRed, line width=0.3pt, dash pattern=on 0.6mm off 0.4mm]
+    (22.5,35) -- (39.3,35);
+\draw[->, cRed, line width=0.3pt, dash pattern=on 0.6mm off 0.4mm]
+    (22.5,25) -- (39.3,25);
+\draw[->, cRed, line width=0.3pt, dash pattern=on 0.6mm off 0.4mm]
+    (22.5,14) -- (39.3,14);
+
+% Caption: "every frame captured" — between BFI and Data taps, off to the right
+\node[cRed, font=\scriptsize\itshape, align=center] at (33,19.5)
+    {every frame\\captured};
+
+% ===== Captures panel (upper) =====
+\node[draw=cRed, fill=fillCap, line width=0.3pt,
+      rounded corners=0.6mm, inner sep=1mm,
+      minimum width=37mm, minimum height=18mm,
+      anchor=north west, align=left] (cap) at (45,42) {%
+\begin{minipage}{34mm}
+\raggedright
+{\scriptsize\bfseries\color{cRed}captures (in the air):}\\[0.2ex]
+{\tiny $\bullet$ BFI body $(\varphi,\psi)$}\\[-0.4ex]
+{\tiny $\bullet$ MIMO Control field}\\[-0.4ex]
+{\tiny $\bullet$ avg SNR per stream}\\[-0.4ex]
+{\tiny $\bullet$ per-antenna RSSI}\\[-0.4ex]
+{\tiny $\bullet$ sounding token, NDPA timing}
+\end{minipage}};
+
+% ===== Cannot-see panel (lower) =====
+\node[draw=cGray, fill=fillCs, line width=0.3pt,
+      rounded corners=0.6mm, inner sep=1mm,
+      dash pattern=on 0.6mm off 0.4mm,
+      minimum width=37mm, minimum height=11.5mm,
+      anchor=north west, align=left] (cs) at (45,18.5) {%
+\begin{minipage}{34mm}
+\raggedright
+{\scriptsize\bfseries\color{cGray}cannot see:}\\[0.2ex]
+{\tiny\color{cGray} $\bullet$ raw $H$ at STA, $V$ at AP}\\[-0.4ex]
+{\tiny\color{cGray} $\bullet$ WPA3 keys}\\[-0.4ex]
+{\tiny\color{cGray} $\bullet$ user-data payload}
+\end{minipage}};
+
+\end{tikzpicture}

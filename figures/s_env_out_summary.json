@@ -1,0 +1,215 @@
+{
+ "rooms": [
+  "Conference Room 1",
+  "Conference Room 2",
+  "Lab 1",
+  "Lab 2",
+  "Rooftop"
+ ],
+ "seeds": 10,
+ "calibs": [
+  "none",
+  "other_rooms",
+  "in_room",
+  "in_room_cohort"
+ ],
+ "cohort_cal_frac": 0.5,
+ "n_windows": {
+  "Conference Room 1": 36246,
+  "Conference Room 2": 43197,
+  "Lab 1": 28559,
+  "Lab 2": 14455,
+  "Rooftop": 37189
+ },
+ "n_positions": {
+  "Conference Room 1": 39,
+  "Conference Room 2": 38,
+  "Lab 1": 44,
+  "Lab 2": 30,
+  "Rooftop": 59
+ },
+ "runtime_s": 209.32810401916504,
+ "peak_rss_mb": 1285.8125,
+ "aggregate": [
+  {
+   "test_room": "Conference Room 1",
+   "n_positions": 39,
+   "calib": "none",
+   "acc_mean": 0.5210926064020769,
+   "acc_sd": 0.04083558064457191,
+   "chance": 0.02564102564102564,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Conference Room 1",
+   "n_positions": 39,
+   "calib": "other_rooms",
+   "acc_mean": 0.4340348551385092,
+   "acc_sd": 0.03361204271774663,
+   "chance": 0.02564102564102564,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Conference Room 1",
+   "n_positions": 39,
+   "calib": "in_room",
+   "acc_mean": 0.45332946667771423,
+   "acc_sd": 0.021759463292756593,
+   "chance": 0.02564102564102564,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Conference Room 1",
+   "n_positions": 19,
+   "calib": "in_room_cohort",
+   "acc_mean": 0.5630688146299222,
+   "acc_sd": 0.06352372767145416,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Conference Room 2",
+   "n_positions": 38,
+   "calib": "none",
+   "acc_mean": 0.39627424175722326,
+   "acc_sd": 0.014607962390587802,
+   "chance": 0.02631578947368421,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Conference Room 2",
+   "n_positions": 38,
+   "calib": "other_rooms",
+   "acc_mean": 0.2773720429110962,
+   "acc_sd": 0.01523236625554181,
+   "chance": 0.02631578947368421,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Conference Room 2",
+   "n_positions": 38,
+   "calib": "in_room",
+   "acc_mean": 0.32808220765077967,
+   "acc_sd": 0.019372994827422947,
+   "chance": 0.02631578947368421,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Conference Room 2",
+   "n_positions": 19,
+   "calib": "in_room_cohort",
+   "acc_mean": 0.42827843715210523,
+   "acc_sd": 0.06220606815568966,
+   "chance": 0.05263157894736842,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 1",
+   "n_positions": 44,
+   "calib": "none",
+   "acc_mean": 0.30858144836051205,
+   "acc_sd": 0.018338066890438477,
+   "chance": 0.022727272727272728,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 1",
+   "n_positions": 44,
+   "calib": "other_rooms",
+   "acc_mean": 0.260894266175697,
+   "acc_sd": 0.016402038663785316,
+   "chance": 0.022727272727272728,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 1",
+   "n_positions": 44,
+   "calib": "in_room",
+   "acc_mean": 0.30990005260389275,
+   "acc_sd": 0.02009757217644047,
+   "chance": 0.022727272727272728,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 1",
+   "n_positions": 22,
+   "calib": "in_room_cohort",
+   "acc_mean": 0.3615725942164519,
+   "acc_sd": 0.04845813408804324,
+   "chance": 0.045454545454545456,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 2",
+   "n_positions": 30,
+   "calib": "none",
+   "acc_mean": 0.5145996533795494,
+   "acc_sd": 0.02686390636264799,
+   "chance": 0.03333333333333333,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 2",
+   "n_positions": 30,
+   "calib": "other_rooms",
+   "acc_mean": 0.3968526863084922,
+   "acc_sd": 0.022044193484840248,
+   "chance": 0.03333333333333333,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 2",
+   "n_positions": 30,
+   "calib": "in_room",
+   "acc_mean": 0.49677642980935877,
+   "acc_sd": 0.02548548584881068,
+   "chance": 0.03333333333333333,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Lab 2",
+   "n_positions": 15,
+   "calib": "in_room_cohort",
+   "acc_mean": 0.577637717724568,
+   "acc_sd": 0.04417624650018111,
+   "chance": 0.06666666666666667,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Rooftop",
+   "n_positions": 59,
+   "calib": "none",
+   "acc_mean": 0.25966873148397523,
+   "acc_sd": 0.02630160002643485,
+   "chance": 0.01694915254237288,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Rooftop",
+   "n_positions": 59,
+   "calib": "other_rooms",
+   "acc_mean": 0.20063291139240508,
+   "acc_sd": 0.019968280214611205,
+   "chance": 0.01694915254237288,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Rooftop",
+   "n_positions": 59,
+   "calib": "in_room",
+   "acc_mean": 0.26470778346350665,
+   "acc_sd": 0.024996775733916038,
+   "chance": 0.01694915254237288,
+   "n_seeds": 10
+  },
+  {
+   "test_room": "Rooftop",
+   "n_positions": 29,
+   "calib": "in_room_cohort",
+   "acc_mean": 0.3049762378344816,
+   "acc_sd": 0.04562210229059106,
+   "chance": 0.034482758620689655,
+   "n_seeds": 10
+  }
+ ]
+}

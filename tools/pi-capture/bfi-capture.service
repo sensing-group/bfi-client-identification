@@ -1,0 +1,23 @@
+[Unit]
+Description=BFI Capture Service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=notify
+NotifyAccess=main
+User=root
+WorkingDirectory=/home/pi/bfi-capture
+ExecStartPre=/home/pi/bfi-capture/setup_monitor.sh
+ExecStart=/usr/bin/python3 /home/pi/bfi-capture/bfi_capture.py --iface mon0 --db-dir /var/lib/bfi-capture
+Restart=always
+RestartSec=10
+WatchdogSec=120
+TimeoutStartSec=60
+TimeoutStopSec=10
+KillSignal=SIGTERM
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

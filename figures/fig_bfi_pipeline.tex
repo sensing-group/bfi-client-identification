@@ -1,0 +1,101 @@
+% fig_bfi_pipeline.tex -- leakage-map view of the BFI pipeline.
+%
+% Single-column figure (~\columnwidth wide, ~1.85 in tall).
+% Requires in the document preamble:
+%     \usepackage{tikz}
+%     \usetikzlibrary{arrows.meta,positioning,calc}
+%
+% Layout: two zones separated by a dashed vertical "privacy boundary".
+%   - Left  (shaded gray):  "stays inside the STA"  -- H, V (precoder).
+%   - Right (light salmon): "broadcast on every sounding" -- Givens, BFI body.
+%   - The arrow that crosses the boundary is the leak (red, thicker).
+%   - Side-channel strip below the right boxes names the other leaked fields.
+%   - "K=1 identification input" caption sits below the BFI-body box.
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\footnotesize,
+    >={Stealth[length=1.4mm,width=1.1mm]},
+]
+
+% ===== Colour palette =====
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cRed}{HTML}{D55E00}
+\definecolor{cGray}{HTML}{555555}
+\definecolor{secretFill}{HTML}{E5E5E5}
+\definecolor{exposedFill}{HTML}{FFF5F0}
+\definecolor{secretEdge}{HTML}{666666}
+
+% Canvas: 84mm wide x 36mm tall.
+
+% ===== Background zones =====
+\fill[secretFill, opacity=0.55, rounded corners=1mm]
+    (1,2) rectangle (40.5,34);
+\fill[exposedFill, opacity=0.85, rounded corners=1mm]
+    (43.5,2) rectangle (83,34);
+
+% ===== Zone headers (top of bands) =====
+\node[font=\scriptsize\bfseries, color=cGray, anchor=center] at (21,32.5)
+    {stays inside the STA};
+\node[font=\scriptsize\bfseries, color=cRed, anchor=center] at (63,32.5)
+    {broadcast on every sounding};
+
+% ===== Privacy boundary (dashed vertical line) =====
+\draw[black, line width=0.4pt, dash pattern=on 0.7mm off 0.5mm]
+    (42,2) -- (42,30);
+
+% ===== Pipeline boxes =====
+% Left zone: H, V
+\node[draw=secretEdge, fill=white, line width=0.4pt,
+      rounded corners=0.7mm, inner sep=0.7mm,
+      minimum width=14mm, minimum height=10mm,
+      align=center] (H) at (10,23) {%
+      \textbf{$H$}\\[-0.3ex]{\tiny channel}};
+\node[draw=secretEdge, fill=white, line width=0.4pt,
+      rounded corners=0.7mm, inner sep=0.7mm,
+      minimum width=14mm, minimum height=10mm,
+      align=center] (V) at (30,23) {%
+      \textbf{$V$}\\[-0.3ex]{\tiny precoder}};
+
+% Right zone: Givens, BFI body
+\node[draw=cRed, fill=white, line width=0.4pt,
+      rounded corners=0.7mm, inner sep=0.7mm,
+      minimum width=14mm, minimum height=10mm,
+      align=center] (givens) at (54,23) {%
+      {\color{cRed}\textbf{Givens}}\\[-0.3ex]{\tiny $\varphi,\psi$}};
+\node[draw=cRed, fill=white, line width=0.4pt,
+      rounded corners=0.7mm, inner sep=0.7mm,
+      minimum width=14mm, minimum height=10mm,
+      align=center] (bfi) at (74,23) {%
+      {\color{cRed}\textbf{BFI body}}\\[-0.3ex]{\tiny Action frame}};
+
+% ===== Arrows between boxes =====
+\draw[->, black, line width=0.4pt] (H.east) -- (V.west);
+% Leak crossing — red, thicker
+\draw[->, cRed, line width=0.7pt] (V.east) -- (givens.west);
+\draw[->, black, line width=0.4pt] (givens.east) -- (bfi.west);
+
+% ===== Side-channel strip (below the right-zone boxes) =====
+\node[font=\tiny\itshape, color=cRed, anchor=center] at (63,15)
+    {also leaked, same frame:};
+\node[font=\tiny, color=black!75, anchor=center] at (63,12.6)
+    {MIMO Control $\bullet$ SNR/stream $\bullet$ per-antenna RSSI};
+
+% ===== K=1 identification input — below the BFI body =====
+\draw[<-, cRed, line width=0.4pt, dash pattern=on 0.6mm off 0.4mm]
+    (74,7) -- (74,17.5);
+\node[font=\scriptsize\bfseries, color=cRed, anchor=center] at (74,5.5)
+    {$K\!=\!1$ identification input};
+\node[font=\tiny, color=black!75, anchor=center] at (74,3)
+    {Givens bytes ($+$ power proxy)};
+
+% ===== Strapline on the left zone (moved low to avoid the right-zone strip) =====
+\node[font=\scriptsize\itshape\bfseries, color=black, anchor=center,
+      align=center] at (21,7.5)
+    {the protocol's only barrier};
+\node[font=\tiny\itshape, color=black, anchor=center, align=center]
+    at (21,4.5)
+    {between identity and the air};
+
+\end{tikzpicture}

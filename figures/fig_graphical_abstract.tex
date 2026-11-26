@@ -1,0 +1,184 @@
+% fig_graphical_abstract.tex -- v2 workflow-style graphical abstract.
+%
+% Thin two-column horizontal flow: INPUT -> METHOD -> RESULT.
+%
+% Canvas: 178 mm wide x 32 mm tall. Designed for figure*[!t] at full
+% text width, so the figure block plus a one-line caption fits in the
+% page budget.
+%
+% INPUT  (left, blue):   three thin boxes stacked. Two database
+%   cylinders for public datasets (NTU-Fi, He BFI) and a Pi board with
+%   an antenna for the testbed.
+% METHOD (centre, orange): four boxes in a row with numbered badges.
+%   1 Features -> 2 Encoder -> 3 Enrollment -> 4 Inference.
+% RESULT (right, green/red): three thin sub-blocks.
+%   1 hero numbers (green): 67% top-1, 4.7x chance, K=3 86%, matched 90%.
+%   2 defense status (red): DP-SQ trails by 3-4 points.
+%   3 disclosure (red dashed): fix at the protocol layer, not the bit-depth.
+%
+% Requires (already loaded in paper.tex):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,%
+%                    shapes.geometric,decorations.pathmorphing}
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\footnotesize\sffamily,
+    >={Stealth[length=2.0mm,width=1.5mm]},
+]
+
+% Wong colorblind-safe palette ----------------------------------------
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cGreen}{HTML}{009E73}
+\definecolor{cRed}{HTML}{D55E00}
+\definecolor{cGray}{HTML}{333333}
+\definecolor{cMidGray}{HTML}{777777}
+
+\definecolor{blueFill}{HTML}{E0EEF5}
+\definecolor{orangeFill}{HTML}{FBEFE0}
+\definecolor{greenFill}{HTML}{DDEEEA}
+\definecolor{redFill}{HTML}{FBE7DB}
+\definecolor{redFillSoft}{HTML}{FDF1E9}
+
+% Canvas: 178 x 22 mm. Title strips y 18..21.6. Bodies y 0.6..17.2.
+% INPUT  x  1.0 .. 39.0   (38 mm)
+% METHOD x 42.5 .. 134.5  (92 mm)
+% RESULT x 138.0 .. 178.0 (40 mm; trimmed margin to 1.0..177.0)
+
+% Stage title strips --------------------------------------------------
+\fill[cBlue,   rounded corners=0.6mm] (1.0, 18.0) rectangle (39.0, 21.6);
+\fill[cOrange, rounded corners=0.6mm] (42.5, 18.0) rectangle (134.5, 21.6);
+\fill[cGreen,  rounded corners=0.6mm] (138.0, 18.0) rectangle (177.0, 21.6);
+
+\node[font=\scriptsize\sffamily\bfseries, color=white] at (20.0, 19.8) {INPUT};
+\node[font=\scriptsize\sffamily\bfseries, color=white] at (88.5, 19.8) {METHOD};
+\node[font=\scriptsize\sffamily\bfseries, color=white] at (157.5, 19.8) {RESULT};
+
+% Big stage-to-stage arrows ------------------------------------------
+\draw[->, color=cMidGray, line width=0.9pt]
+  (39.3, 8.9) -- (42.2, 8.9);
+\draw[->, color=cMidGray, line width=0.9pt]
+  (134.8, 8.9) -- (137.7, 8.9);
+
+% =====================================================================
+% Stage 1: INPUT -- three stacked boxes (compact)
+% =====================================================================
+% Body y range 0.6 .. 17.2. Three boxes of ~5.0 mm each with 0.5 gaps.
+% Box 1 (top):    y 12.2 .. 17.2
+% Box 2 (middle): y  6.4 .. 11.4
+% Box 3 (bottom): y  0.6 ..  5.6
+\def\inX{1.5}
+\def\inXR{38.5}
+
+% ----- Box 1: NTU-Fi HumanID -----
+\fill[blueFill, rounded corners=0.6mm] (\inX, 12.2) rectangle (\inXR, 17.2);
+\draw[cBlue, line width=0.5pt, rounded corners=0.6mm]
+  (\inX, 12.2) rectangle (\inXR, 17.2);
+% database cylinder
+\fill[white] (4.5, 15.4) ellipse [x radius=1.1, y radius=0.28];
+\draw[cBlue, line width=0.4pt] (4.5, 15.4) ellipse [x radius=1.1, y radius=0.28];
+\draw[cBlue, line width=0.4pt] (3.4, 15.4) -- (3.4, 13.7);
+\draw[cBlue, line width=0.4pt] (5.6, 15.4) -- (5.6, 13.7);
+\draw[cBlue, line width=0.4pt]
+  (3.4, 13.7) arc[start angle=180,end angle=360,x radius=1.1,y radius=0.28];
+\node[anchor=west, font=\tiny\sffamily\bfseries, color=cBlue]
+  at (7.6, 15.45) {NTU-Fi HumanID};
+\node[anchor=west, font=\tiny\sffamily, color=cGray]
+  at (7.6, 13.55) {14 subjects, amplitude CSI};
+
+% ----- Box 2: He BFI -----
+\fill[blueFill, rounded corners=0.6mm] (\inX, 6.4) rectangle (\inXR, 11.4);
+\draw[cBlue, line width=0.5pt, rounded corners=0.6mm]
+  (\inX, 6.4) rectangle (\inXR, 11.4);
+\fill[white] (4.5, 9.6) ellipse [x radius=1.1, y radius=0.28];
+\draw[cBlue, line width=0.4pt] (4.5, 9.6) ellipse [x radius=1.1, y radius=0.28];
+\draw[cBlue, line width=0.4pt] (3.4, 9.6) -- (3.4, 7.9);
+\draw[cBlue, line width=0.4pt] (5.6, 9.6) -- (5.6, 7.9);
+\draw[cBlue, line width=0.4pt]
+  (3.4, 7.9) arc[start angle=180,end angle=360,x radius=1.1,y radius=0.28];
+\node[anchor=west, font=\tiny\sffamily\bfseries, color=cBlue]
+  at (7.6, 9.65) {He BFI};
+\node[anchor=west, font=\tiny\sffamily, color=cGray]
+  at (7.6, 7.75) {19 held-out, Givens angles};
+
+% ----- Box 3: Pi 5 + AX210 -----
+\fill[blueFill, rounded corners=0.6mm] (\inX, 0.6) rectangle (\inXR, 5.6);
+\draw[cBlue, line width=0.5pt, rounded corners=0.6mm]
+  (\inX, 0.6) rectangle (\inXR, 5.6);
+\fill[white, rounded corners=0.2mm] (3.2, 2.6) rectangle (5.8, 4.0);
+\draw[cBlue, line width=0.4pt, rounded corners=0.2mm]
+  (3.2, 2.6) rectangle (5.8, 4.0);
+\fill[cBlue, opacity=0.5] (3.5, 3.0) rectangle (4.1, 3.6);
+\fill[cBlue, opacity=0.5] (4.9, 3.0) rectangle (5.5, 3.6);
+\draw[cBlue, line width=0.4pt] (5.8, 3.7) -- (6.6, 4.7);
+\fill[cBlue] (6.6, 4.7) circle (0.18mm);
+\node[anchor=west, font=\tiny\sffamily\bfseries, color=cBlue]
+  at (7.6, 3.85) {Pi 5 + AX210};
+\node[anchor=west, font=\tiny\sffamily, color=cGray]
+  at (7.6, 1.95) {sub-\$200, 128k frames};
+
+% =====================================================================
+% Stage 2: METHOD  -- four boxes side by side
+% =====================================================================
+% Body x 43.5 .. 133.5 (90 mm). Four boxes of ~21 mm with ~1.2 mm gaps.
+% Box 1: 43.5 .. 64.5
+% Box 2: 65.7 .. 86.7
+% Box 3: 87.9 .. 108.9
+% Box 4: 110.1 .. 131.1   then small right margin to 133.5
+% Body y 0.8 .. 16.8
+\def\mY{0.8}
+\def\mYT{16.8}
+
+\foreach \i/\num/\title/\sub/\xc in {%
+  0/1/Features/{per-coord mean+std}/54.0,%
+  1/2/Encoder/{2-layer MLP, sup-con}/76.2,%
+  2/3/Enrollment/{1 window / target}/98.4,%
+  3/4/Inference/{argmax cos sim}/120.6%
+}{%
+  % Box
+  \fill[orangeFill, rounded corners=0.6mm]
+    (\xc-10.5, \mY) rectangle (\xc+10.5, \mYT);
+  \draw[cOrange, line width=0.5pt, rounded corners=0.6mm]
+    (\xc-10.5, \mY) rectangle (\xc+10.5, \mYT);
+  % Number badge top-left
+  \fill[cOrange] (\xc-8.5, \mYT-1.6) circle (1.2mm);
+  \node[font=\tiny\sffamily\bfseries, color=white] at (\xc-8.5, \mYT-1.6) {\num};
+  % Title
+  \node[anchor=west, font=\scriptsize\sffamily\bfseries, color=cOrange]
+    at (\xc-6.6, \mYT-1.6) {\title};
+  % Sub
+  \node[font=\tiny\sffamily, color=cGray]
+    at (\xc, \mY+2.4) {\sub};
+}
+
+% Small inter-step arrows
+\foreach \xa/\xb in {64.7/65.5, 86.9/87.7, 109.1/109.9}{
+  \draw[->, color=cOrange, line width=0.6pt, opacity=0.85]
+    (\xa, 8.8) -- (\xb, 8.8);
+}
+
+% =====================================================================
+% Stage 3: RESULT -- single hero pane (slimmed per author request,
+% no DP-SQ reference, fewer details)
+% =====================================================================
+% Body x 138.5 .. 177.0 (38.5 mm). Body y 0.6 .. 17.2.
+\def\rX{138.5}
+\def\rXR{177.0}
+
+\fill[greenFill, rounded corners=0.6mm] (\rX, 0.6) rectangle (\rXR, 17.2);
+\draw[cGreen, line width=0.5pt, rounded corners=0.6mm]
+  (\rX, 0.6) rectangle (\rXR, 17.2);
+% Big hero number
+\node[font=\fontsize{18}{20}\selectfont\sffamily\bfseries, color=cGreen]
+  at (157.75, 11.2) {67\%};
+% Hairline
+\draw[cGreen, line width=0.3pt, opacity=0.45]
+  (142.5, 6.4) -- (173.0, 6.4);
+% Sub-lines
+\node[font=\scriptsize\sffamily\bfseries, color=cGreen]
+  at (157.75, 4.6) {4.7$\times$ chance};
+\node[font=\tiny\sffamily, color=cGray]
+  at (157.75, 2.2) {top-1, one clip per target};
+
+\end{tikzpicture}

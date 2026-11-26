@@ -1,0 +1,164 @@
+% fig_multi_query.tex -- multi-query consensus: trade labels for passive
+% observation time. T unlabelled windows are averaged into a single decision.
+%
+% Slide-width figure (~120mm wide x ~58mm tall).
+% Requires in the document preamble:
+%     \usepackage{tikz}
+%     \usetikzlibrary{arrows.meta,positioning,calc}
+%
+% Layout:
+%   Left column:  one labelled "support" window (orange tag, K=1).
+%   Centre:       T unlabelled query windows arriving over time
+%                 (vertical stack of T grey rectangles), with a clock icon and
+%                 "~50 s of passive listening at NTU-Fi rate".
+%   The T column feeds a small "average" node, then "L2 norm",
+%   then "cosine vs support -> identity", with a final "predict" arrow.
+%   Top banner: "no extra labels needed".
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\sffamily\footnotesize,
+    >={Stealth[length=1.4mm,width=1.1mm]},
+]
+
+% ===== Wong colorblind-safe palette =====
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cGreen}{HTML}{009E73}
+\definecolor{cRed}{HTML}{D55E00}
+\definecolor{cGrey}{HTML}{666666}
+\definecolor{fillSupport}{HTML}{FFF5F0}
+\definecolor{fillQuery}{HTML}{F2F2F2}
+\definecolor{fillNode}{HTML}{DCEEF7}
+\definecolor{fillPredict}{HTML}{E6F2EC}
+
+% Canvas: 120mm x 58mm.
+
+% ===== Top banner =====
+\node[draw=cGreen, fill=fillPredict, line width=0.4pt,
+      rounded corners=0.7mm, inner sep=0.7mm,
+      font=\sffamily\scriptsize\bfseries\color{cGreen}, anchor=center]
+      at (60,53.5) {no extra labels needed};
+
+% ============================================================
+% LEFT COLUMN: SUPPORT (one labelled window)
+% ============================================================
+\node[font=\sffamily\scriptsize\bfseries\color{cOrange}, anchor=center]
+      at (15,46) {support set};
+\node[font=\sffamily\tiny\itshape\color{cGrey}, anchor=center]
+      at (15,43.5) {one labelled window};
+
+% Single labelled window (tagged document)
+% rectangle 8x10
+\fill[white, draw=cOrange, line width=0.6pt, rounded corners=0.4mm]
+      (10,30) rectangle (20,42);
+% corner fold
+\fill[cOrange] (17.5,42) -- (20,42) -- (20,39.5) -- cycle;
+% inside lines (suggesting "data")
+\foreach \yy in {31.5,33.5,35.5,37.5,39.5}{
+  \draw[cGrey, line width=0.18pt] (11,\yy) -- (16.5,\yy);
+}
+% orange tag dot at bottom-left
+\fill[cOrange] (11.5,31) circle (0.7mm);
+\node[font=\sffamily\tiny\bfseries\color{cOrange}, anchor=west]
+      at (12.5,31) {label};
+
+% K=1 badge below
+\node[draw=cOrange, fill=fillSupport, line width=0.35pt,
+      rounded corners=0.5mm, inner sep=0.6mm,
+      font=\sffamily\scriptsize\bfseries\color{cOrange}, anchor=center]
+      at (15,25.5) {$K\!=\!1$};
+
+% ============================================================
+% CENTRE COLUMN: T UNLABELLED QUERY WINDOWS
+% ============================================================
+\node[font=\sffamily\scriptsize\bfseries\color{cGrey}, anchor=center]
+      at (40,46) {query windows};
+\node[font=\sffamily\tiny\itshape\color{cGrey}, anchor=center]
+      at (40,43.5) {$T$ unlabelled};
+
+% Stack of T=6 grey rectangles
+% positions y in 12..40 step 5
+\foreach \i/\y in {0/40,1/35,2/30,3/25,4/20,5/15}{
+  \fill[fillQuery, draw=cGrey, line width=0.3pt, rounded corners=0.3mm]
+        (34,\y -2) rectangle (46,\y +2);
+  % small "data" hint
+  \draw[cGrey, line width=0.2pt] (35.5,\y) -- (44.5,\y);
+}
+% ellipsis-like dots between top and bottom suggesting "T windows over time"
+% (already visually clear)
+
+% (Clock and passive-listening annotation removed; the slide bullet
+% "T=32 = 50s passive listening (NTU-Fi rate)" already conveys this.)
+
+% Vertical "time" arrow on the right of the stack
+\draw[->, cGrey, line width=0.3pt] (47.5,42) -- (47.5,12);
+\node[cGrey, font=\sffamily\tiny\itshape, rotate=-90, anchor=south]
+      at (49,27) {time};
+
+% ============================================================
+% RIGHT COLUMN: PIPELINE (avg -> L2 -> cosine -> predict)
+% ============================================================
+% AVERAGE node
+\node[draw=cBlue, fill=fillNode, line width=0.5pt,
+      rounded corners=0.7mm, inner sep=0.8mm,
+      font=\sffamily\scriptsize\bfseries\color{cBlue}, anchor=center,
+      minimum width=14mm, minimum height=7mm,
+      align=center]
+      (avg) at (66,32) {average\\$\bar{f}$};
+
+% L2 NORM node
+\node[draw=cBlue, fill=fillNode, line width=0.5pt,
+      rounded corners=0.7mm, inner sep=0.8mm,
+      font=\sffamily\scriptsize\bfseries\color{cBlue}, anchor=center,
+      minimum width=14mm, minimum height=7mm,
+      align=center]
+      (l2) at (84,32) {$\ell_2$ norm};
+
+% COSINE node (slightly larger)
+\node[draw=cBlue, fill=fillNode, line width=0.5pt,
+      rounded corners=0.7mm, inner sep=0.8mm,
+      font=\sffamily\scriptsize\bfseries\color{cBlue}, anchor=center,
+      minimum width=22mm, minimum height=10mm,
+      align=center]
+      (cos) at (105,32) {cosine vs\\support\\$\to$ identity};
+
+% PREDICT badge
+\node[draw=cGreen, fill=fillPredict, line width=0.5pt,
+      rounded corners=0.7mm, inner sep=0.7mm,
+      font=\sffamily\scriptsize\bfseries\color{cGreen}, anchor=center,
+      minimum width=14mm, minimum height=6mm,
+      align=center]
+      (predict) at (105,18) {predict};
+
+% ============================================================
+% ARROWS / WIRING
+% ============================================================
+% T windows -> average (fan-in)
+\foreach \y in {40,35,30,25,20,15}{
+  \draw[->, cGrey, line width=0.25pt] (46,\y) -- (avg.west);
+}
+% average -> L2
+\draw[->, cBlue, line width=0.5pt] (avg.east) -- (l2.west);
+% L2 -> cosine
+\draw[->, cBlue, line width=0.5pt] (l2.east) -- (cos.west);
+% Support -> cosine (the "K=1" support feeds cosine comparator).
+% Route along the top to avoid crossing the query-window stack.
+\draw[->, cOrange, line width=0.5pt, rounded corners=0.7mm]
+      (15,42) -- (15,49) -- (105,49) -- (cos.north);
+\node[font=\sffamily\tiny\itshape\color{cOrange}, anchor=south]
+      at (85,49.2) {support feature};
+
+% cosine -> predict
+\draw[->, cGreen, line width=0.6pt] (cos.south) -- (predict.north);
+
+% ============================================================
+% Footer punchline
+% ============================================================
+\node[font=\sffamily\scriptsize\itshape\color{cGrey},
+      anchor=center, align=center]
+      at (60,7)
+      {trade labels for time:
+       one label per target $\;+\;$ $T$ unlabelled queries from the air};
+
+\end{tikzpicture}

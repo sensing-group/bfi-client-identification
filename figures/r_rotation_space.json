@@ -1,0 +1,5588 @@
+{
+  "structures": [
+    "none",
+    "s1_diag",
+    "s2_perm",
+    "s3_orth",
+    "s4_unitary"
+  ],
+  "freshness": {
+    "f1_report": 0,
+    "f2_group": 1,
+    "f3_band2": 2,
+    "f3_band4": 4,
+    "f3_band8": 8
+  },
+  "blocks": [
+    "mag",
+    "sortmag",
+    "tsym",
+    "cross"
+  ],
+  "home": {
+    "condition": "other_day_any",
+    "k": "all",
+    "t_grid": [
+      1,
+      32
+    ],
+    "trials": 50,
+    "windows_per_block_cap": 32,
+    "frames_kept_per_day": {
+      "bfi_2026-05-08": 1060,
+      "bfi_2026-05-09": 2048,
+      "bfi_2026-05-10": 2126,
+      "bfi_2026-05-11": 3222,
+      "bfi_2026-05-12": 0,
+      "bfi_2026-05-13": 0,
+      "bfi_2026-05-14": 5466,
+      "bfi_2026-05-15": 10443,
+      "bfi_2026-05-16": 10236,
+      "bfi_2026-05-17": 5556,
+      "bfi_2026-05-18": 7168,
+      "bfi_2026-05-19": 4096,
+      "bfi_2026-05-20": 2048
+    }
+  },
+  "he": {
+    "seeds": 3,
+    "t_grid": [
+      1,
+      32
+    ],
+    "n_decisions_per_class": 200,
+    "gain_reports": 3000
+  },
+  "pass_rule": {
+    "margin": 0.01,
+    "gain_min": 0.95
+  },
+  "cost_basis": {
+    "n_t": 4,
+    "groups": 250
+  },
+  "cells": {
+    "none|f1_report": {
+      "structure": "none",
+      "freshness": "f1_report",
+      "blocks": [
+        "mag",
+        "sortmag",
+        "tsym",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 0,
+        "random_numbers": 0,
+        "complex_values_stored": 0,
+        "indices_stored": 0,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.81875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.688030303030303,
+            "ci": [
+              0.7134614672783235,
+              0.9015646624705537
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.9032520325203252,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7184082271406215,
+            "ci": [
+              0.8229532161713515,
+              0.9725741162001461
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.810625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.8159090909090908,
+            "ci": [
+              0.7192612024183178,
+              0.8952401585414611
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7967479674796748,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8302537446903644,
+            "ci": [
+              0.6823377684407097,
+              0.9076872136077764
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.580625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5607121212121212,
+            "ci": [
+              0.4799983277591973,
+              0.6791428571428572
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6130081300813008,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6412866085401296,
+            "ci": [
+              0.49071508848294565,
+              0.7262582480846729
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.65875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6609090909090908,
+            "ci": [
+              0.5623200723277688,
+              0.7559896818884382
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6691056910569105,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7141007154035323,
+            "ci": [
+              0.5508466787355523,
+              0.7844982320805134
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.460625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.48926767676767674,
+            "ci": [
+              0.36222280162959203,
+              0.5665124092161282
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.44552845528455287,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5463162307176391,
+            "ci": [
+              0.314452273846681,
+              0.5745290087902902
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.7775,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.7695454545454545,
+            "ci": [
+              0.6854641508032512,
+              0.8589905899111242
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7764227642276422,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7993527833668678,
+            "ci": [
+              0.6639710059896694,
+              0.8856863746045804
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.4108860575701477,
+            "sd": 0.03177831267346981,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.6596491228070175,
+            "sd": 0.05109346049290499,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.43927184289810883,
+            "sd": 0.01925665720660664,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7094736842105264,
+            "sd": 0.02658893333339911,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.3358561109296163,
+            "sd": 0.02560676040638986,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.5071929824561403,
+            "sd": 0.00373605955070999,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.46257577407528405,
+            "sd": 0.006197296378363322,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.8113157894736842,
+            "sd": 0.01962365203773868,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.3671639623942793,
+            "sd": 0.024952570285269225,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.6315789473684211,
+            "sd": 0.0723574154310879,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.4446803876728738,
+            "sd": 0.01590609000553767,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7649122807017544,
+            "sd": 0.006829723389411151,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9619528385123459,
+        "gain_col1_p05": 0.9518843331163698,
+        "gain_sub": 0.9827474510249565
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.8113,
+            "chance": 0.0526,
+            "excess": 0.7587
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.9033,
+            "chance": 0.1667,
+            "excess": 0.7366
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7649,
+            "chance": 0.0526,
+            "excess": 0.7123
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7095,
+            "chance": 0.0526,
+            "excess": 0.6568
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.8187,
+            "chance": 0.1667,
+            "excess": 0.6521
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.8106,
+            "chance": 0.1667,
+            "excess": 0.644
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7967,
+            "chance": 0.1667,
+            "excess": 0.6301
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.7775,
+            "chance": 0.1667,
+            "excess": 0.6108
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7764,
+            "chance": 0.1667,
+            "excess": 0.6098
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.6596,
+            "chance": 0.0526,
+            "excess": 0.607
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6316,
+            "chance": 0.0526,
+            "excess": 0.5789
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.6691,
+            "chance": 0.1667,
+            "excess": 0.5024
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.6587,
+            "chance": 0.1667,
+            "excess": 0.4921
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.5072,
+            "chance": 0.0526,
+            "excess": 0.4546
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.613,
+            "chance": 0.1667,
+            "excess": 0.4463
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.5806,
+            "chance": 0.1667,
+            "excess": 0.414
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.4626,
+            "chance": 0.0526,
+            "excess": 0.4099
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4447,
+            "chance": 0.0526,
+            "excess": 0.392
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.4393,
+            "chance": 0.0526,
+            "excess": 0.3866
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.4109,
+            "chance": 0.0526,
+            "excess": 0.3583
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.3672,
+            "chance": 0.0526,
+            "excess": 0.3145
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4606,
+            "chance": 0.1667,
+            "excess": 0.294
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.3359,
+            "chance": 0.0526,
+            "excess": 0.2832
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4455,
+            "chance": 0.1667,
+            "excess": 0.2789
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_tsym",
+          "T": 32,
+          "accuracy": 0.8113,
+          "chance": 0.0526,
+          "excess": 0.7587
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.9033,
+          "chance": 0.1667,
+          "excess": 0.7366
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_tsym",
+          "T": 32,
+          "accuracy": 0.8113,
+          "chance": 0.0526,
+          "excess": 0.7587
+        }
+      }
+    },
+    "s1_diag|f1_report": {
+      "structure": "s1_diag",
+      "freshness": "f1_report",
+      "blocks": [
+        "mag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 1,
+        "random_numbers": 4,
+        "complex_values_stored": 4,
+        "indices_stored": 0,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.751875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6506565656565657,
+            "ci": [
+              0.6708666267942585,
+              0.8260138174097559
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7910569105691057,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7980818242790074,
+            "ci": [
+              0.6934752135527893,
+              0.8846237330454968
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.810625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.8159090909090908,
+            "ci": [
+              0.7175124265633328,
+              0.8975460132184926
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7967479674796748,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8302537446903644,
+            "ci": [
+              0.6803167386746667,
+              0.8948267579707764
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.460625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.48926767676767674,
+            "ci": [
+              0.3572235119323986,
+              0.5641655622366752
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.44552845528455287,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5463162307176391,
+            "ci": [
+              0.32346692754354966,
+              0.5725661779369304
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.793125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.8123737373737375,
+            "ci": [
+              0.6938973944481693,
+              0.8772577251554099
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7691056910569106,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8028761457634698,
+            "ci": [
+              0.6559987554791956,
+              0.8876059180762251
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.13051290427964718,
+            "sd": 0.016236654259009397,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.07771929824561404,
+            "sd": 0.009614771389399836,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.43927184289810883,
+            "sd": 0.01925665720660664,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7079824561403508,
+            "sd": 0.021295022733697332,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.3504845910922356,
+            "sd": 0.023743015106967164,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.6350877192982457,
+            "sd": 0.034933873248666425,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.4675124323931903,
+            "sd": 0.011835603605680063,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7687719298245614,
+            "sd": 0.02061086201782645,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9617558870148016,
+        "gain_col1_p05": 0.9512538002344154,
+        "gain_sub": 0.982658945576574
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7688,
+            "chance": 0.0526,
+            "excess": 0.7161
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.708,
+            "chance": 0.0526,
+            "excess": 0.6554
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.8106,
+            "chance": 0.1667,
+            "excess": 0.644
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7967,
+            "chance": 0.1667,
+            "excess": 0.6301
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.7931,
+            "chance": 0.1667,
+            "excess": 0.6265
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.7911,
+            "chance": 0.1667,
+            "excess": 0.6244
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7691,
+            "chance": 0.1667,
+            "excess": 0.6024
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.7519,
+            "chance": 0.1667,
+            "excess": 0.5852
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6351,
+            "chance": 0.0526,
+            "excess": 0.5825
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4675,
+            "chance": 0.0526,
+            "excess": 0.4149
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.4393,
+            "chance": 0.0526,
+            "excess": 0.3866
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.3505,
+            "chance": 0.0526,
+            "excess": 0.2979
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4606,
+            "chance": 0.1667,
+            "excess": 0.294
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4455,
+            "chance": 0.1667,
+            "excess": 0.2789
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.1305,
+            "chance": 0.0526,
+            "excess": 0.0779
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.0777,
+            "chance": 0.0526,
+            "excess": 0.0251
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7688,
+          "chance": 0.0526,
+          "excess": 0.7161
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_mag",
+          "T": 1,
+          "accuracy": 0.8106,
+          "chance": 0.1667,
+          "excess": 0.644
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7688,
+          "chance": 0.0526,
+          "excess": 0.7161
+        }
+      }
+    },
+    "s1_diag|f2_group": {
+      "structure": "s1_diag",
+      "freshness": "f2_group",
+      "blocks": [
+        "mag"
+      ],
+      "cost": {
+        "q_matrices": 250,
+        "random_numbers": 1000,
+        "complex_values_stored": 1000,
+        "indices_stored": 0,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.776875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.7217171717171716,
+            "ci": [
+              0.6973841168795791,
+              0.8480444537831363
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.8195121951219512,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8170109546165886,
+            "ci": [
+              0.7271865097048921,
+              0.9135633416282805
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.810625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.8159090909090908,
+            "ci": [
+              0.7240794724370875,
+              0.9040657126512207
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7967479674796748,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8302537446903644,
+            "ci": [
+              0.6921231273408239,
+              0.8984249753902405
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.06573741333623724,
+            "sd": 0.001178179416103489,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.08210526315789474,
+            "sd": 0.007862507312384756,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.43927184289810883,
+            "sd": 0.01925665720660664,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7081578947368422,
+            "sd": 0.02343238440632609,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9617731229162613,
+        "gain_col1_p05": 0.9512838493185303,
+        "gain_sub": 0.9826615699979352
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7082,
+            "chance": 0.0526,
+            "excess": 0.6555
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.8195,
+            "chance": 0.1667,
+            "excess": 0.6528
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.8106,
+            "chance": 0.1667,
+            "excess": 0.644
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7967,
+            "chance": 0.1667,
+            "excess": 0.6301
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.7769,
+            "chance": 0.1667,
+            "excess": 0.6102
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.4393,
+            "chance": 0.0526,
+            "excess": 0.3866
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.0821,
+            "chance": 0.0526,
+            "excess": 0.0295
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.0657,
+            "chance": 0.0526,
+            "excess": 0.0131
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_mag",
+          "T": 32,
+          "accuracy": 0.7082,
+          "chance": 0.0526,
+          "excess": 0.6555
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.8195,
+          "chance": 0.1667,
+          "excess": 0.6528
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_mag",
+          "T": 32,
+          "accuracy": 0.7082,
+          "chance": 0.0526,
+          "excess": 0.6555
+        }
+      }
+    },
+    "s1_diag|f3_band2": {
+      "structure": "s1_diag",
+      "freshness": "f3_band2",
+      "blocks": [
+        "mag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 125,
+        "random_numbers": 500,
+        "complex_values_stored": 500,
+        "indices_stored": 0,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.784375,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.729520202020202,
+            "ci": [
+              0.7049135115583877,
+              0.854635385604476
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.8170731707317073,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8026917057902972,
+            "ci": [
+              0.7234265921507809,
+              0.9036260601317657
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.810625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.8159090909090908,
+            "ci": [
+              0.7187232765327595,
+              0.8953043505418656
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7967479674796748,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8302537446903644,
+            "ci": [
+              0.6809281232212073,
+              0.9065464588135941
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.465,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4363333333333333,
+            "ci": [
+              0.37067290421730625,
+              0.5628662438803289
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.47317073170731705,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.4012161860049184,
+            "ci": [
+              0.37441922350504453,
+              0.591243006641788
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.795625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.7920454545454545,
+            "ci": [
+              0.7300312697501694,
+              0.8602179218505451
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7910569105691057,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8115850659512631,
+            "ci": [
+              0.7050577731092438,
+              0.8743608852755195
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.0634142800101637,
+            "sd": 0.0026053196379675157,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.09491228070175439,
+            "sd": 0.024611790421714314,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.43927184289810883,
+            "sd": 0.01925665720660664,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7063157894736842,
+            "sd": 0.02184791721449133,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.17897201350321246,
+            "sd": 0.0068727358937958625,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.4071052631578948,
+            "sd": 0.024405205081861513,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.435623797597009,
+            "sd": 0.01388768445478197,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7130701754385965,
+            "sd": 0.012427691753280585,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9619803262759314,
+        "gain_col1_p05": 0.9514498863123212,
+        "gain_sub": 0.9826643300968257
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7131,
+            "chance": 0.0526,
+            "excess": 0.6604
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7063,
+            "chance": 0.0526,
+            "excess": 0.6537
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.8171,
+            "chance": 0.1667,
+            "excess": 0.6504
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.8106,
+            "chance": 0.1667,
+            "excess": 0.644
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7967,
+            "chance": 0.1667,
+            "excess": 0.6301
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.7956,
+            "chance": 0.1667,
+            "excess": 0.629
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7911,
+            "chance": 0.1667,
+            "excess": 0.6244
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.7844,
+            "chance": 0.1667,
+            "excess": 0.6177
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.4393,
+            "chance": 0.0526,
+            "excess": 0.3866
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4356,
+            "chance": 0.0526,
+            "excess": 0.383
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4071,
+            "chance": 0.0526,
+            "excess": 0.3545
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4732,
+            "chance": 0.1667,
+            "excess": 0.3065
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.465,
+            "chance": 0.1667,
+            "excess": 0.2983
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.179,
+            "chance": 0.0526,
+            "excess": 0.1263
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.0949,
+            "chance": 0.0526,
+            "excess": 0.0423
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.0634,
+            "chance": 0.0526,
+            "excess": 0.0108
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7131,
+          "chance": 0.0526,
+          "excess": 0.6604
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.8171,
+          "chance": 0.1667,
+          "excess": 0.6504
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7131,
+          "chance": 0.0526,
+          "excess": 0.6604
+        }
+      }
+    },
+    "s1_diag|f3_band4": {
+      "structure": "s1_diag",
+      "freshness": "f3_band4",
+      "blocks": [
+        "mag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 63,
+        "random_numbers": 252,
+        "complex_values_stored": 252,
+        "indices_stored": 0,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.78375,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.7071717171717172,
+            "ci": [
+              0.7094433659172318,
+              0.8525411494948815
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.8146341463414634,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7084372904091215,
+            "ci": [
+              0.7165457256377592,
+              0.9113253464685257
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.810625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.8159090909090908,
+            "ci": [
+              0.7219507229103704,
+              0.8977057478158518
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7967479674796748,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8302537446903644,
+            "ci": [
+              0.6717734411468442,
+              0.8999166480610707
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.4325,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.3975505050505051,
+            "ci": [
+              0.35072598666944127,
+              0.518378847240695
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.45934959349593496,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.38123798345629334,
+            "ci": [
+              0.36299887692441174,
+              0.5668071864403401
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.7775,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.7599999999999999,
+            "ci": [
+              0.7107613294537686,
+              0.8437717140779928
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.775609756097561,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7892376481108876,
+            "ci": [
+              0.6881352950520213,
+              0.8571828472991263
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.06076445606011108,
+            "sd": 0.0012328293366540846,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.07736842105263157,
+            "sd": 0.011179307490812924,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.43927184289810883,
+            "sd": 0.01925665720660664,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7105263157894738,
+            "sd": 0.024934818073420354,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.26781371374641544,
+            "sd": 0.024834708942407212,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.5505263157894738,
+            "sd": 0.03298688846664668,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.44041526008203563,
+            "sd": 0.016388547500132272,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7134210526315788,
+            "sd": 0.013378846604724971,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9616295779544165,
+        "gain_col1_p05": 0.951308338870863,
+        "gain_sub": 0.982632449981778
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7134,
+            "chance": 0.0526,
+            "excess": 0.6608
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7105,
+            "chance": 0.0526,
+            "excess": 0.6579
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.8146,
+            "chance": 0.1667,
+            "excess": 0.648
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.8106,
+            "chance": 0.1667,
+            "excess": 0.644
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7967,
+            "chance": 0.1667,
+            "excess": 0.6301
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.7837,
+            "chance": 0.1667,
+            "excess": 0.6171
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.7775,
+            "chance": 0.1667,
+            "excess": 0.6108
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7756,
+            "chance": 0.1667,
+            "excess": 0.6089
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.5505,
+            "chance": 0.0526,
+            "excess": 0.4979
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4404,
+            "chance": 0.0526,
+            "excess": 0.3878
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.4393,
+            "chance": 0.0526,
+            "excess": 0.3866
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4593,
+            "chance": 0.1667,
+            "excess": 0.2927
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4325,
+            "chance": 0.1667,
+            "excess": 0.2658
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.2678,
+            "chance": 0.0526,
+            "excess": 0.2152
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.0774,
+            "chance": 0.0526,
+            "excess": 0.0247
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7134,
+          "chance": 0.0526,
+          "excess": 0.6608
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.8146,
+          "chance": 0.1667,
+          "excess": 0.648
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7134,
+          "chance": 0.0526,
+          "excess": 0.6608
+        }
+      }
+    },
+    "s1_diag|f3_band8": {
+      "structure": "s1_diag",
+      "freshness": "f3_band8",
+      "blocks": [
+        "mag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 32,
+        "random_numbers": 128,
+        "complex_values_stored": 128,
+        "indices_stored": 0,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.79125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.7144090909090909,
+            "ci": [
+              0.7187527052422684,
+              0.8591585546221736
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.8373983739837398,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7351341381623072,
+            "ci": [
+              0.7534907669340827,
+              0.9205929101442539
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.810625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.8159090909090908,
+            "ci": [
+              0.7232329141601106,
+              0.8991206216488358
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.7967479674796748,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8302537446903644,
+            "ci": [
+              0.6836797394962135,
+              0.8987741979941903
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.4625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.45556060606060605,
+            "ci": [
+              0.37168601610520685,
+              0.5495882601055139
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.4772357723577236,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.42642801251956186,
+            "ci": [
+              0.37992313323572474,
+              0.5761849565986321
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.77,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.7512121212121213,
+            "ci": [
+              0.6985008997966601,
+              0.836545566502463
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.78130081300813,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.8088922423429464,
+            "ci": [
+              0.6956069673590262,
+              0.8583342429041861
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.0639587643834622,
+            "sd": 0.0015782743622134875,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.07964912280701754,
+            "sd": 0.01949185180678056,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_mag": {
+          "1": {
+            "accuracy": 0.43927184289810883,
+            "sd": 0.01925665720660664,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7114035087719298,
+            "sd": 0.022777308585428032,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.2856546517114959,
+            "sd": 0.0052197346578539685,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.5451754385964912,
+            "sd": 0.025261634944349062,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.44872772151439255,
+            "sd": 0.012701808929383822,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7371052631578947,
+            "sd": 0.026999025323538123,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9618083301495814,
+        "gain_col1_p05": 0.9512807251592535,
+        "gain_sub": 0.9827160250233563
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7371,
+            "chance": 0.0526,
+            "excess": 0.6845
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.8374,
+            "chance": 0.1667,
+            "excess": 0.6707
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7114,
+            "chance": 0.0526,
+            "excess": 0.6588
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.8106,
+            "chance": 0.1667,
+            "excess": 0.644
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_mag",
+            "T": 32,
+            "accuracy": 0.7967,
+            "chance": 0.1667,
+            "excess": 0.6301
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.7913,
+            "chance": 0.1667,
+            "excess": 0.6246
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7813,
+            "chance": 0.1667,
+            "excess": 0.6146
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.77,
+            "chance": 0.1667,
+            "excess": 0.6033
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.5452,
+            "chance": 0.0526,
+            "excess": 0.4925
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4487,
+            "chance": 0.0526,
+            "excess": 0.3961
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_mag",
+            "T": 1,
+            "accuracy": 0.4393,
+            "chance": 0.0526,
+            "excess": 0.3866
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4772,
+            "chance": 0.1667,
+            "excess": 0.3106
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4625,
+            "chance": 0.1667,
+            "excess": 0.2958
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.2857,
+            "chance": 0.0526,
+            "excess": 0.233
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.0796,
+            "chance": 0.0526,
+            "excess": 0.027
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.064,
+            "chance": 0.0526,
+            "excess": 0.0113
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7371,
+          "chance": 0.0526,
+          "excess": 0.6845
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.8374,
+          "chance": 0.1667,
+          "excess": 0.6707
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7371,
+          "chance": 0.0526,
+          "excess": 0.6845
+        }
+      }
+    },
+    "s2_perm|f1_report": {
+      "structure": "s2_perm",
+      "freshness": "f1_report",
+      "blocks": [
+        "sortmag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 1,
+        "random_numbers": 8,
+        "complex_values_stored": 4,
+        "indices_stored": 4,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.4975,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.46514141414141413,
+            "ci": [
+              0.4227454628510521,
+              0.5782266715619727
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.5,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.43451486697965575,
+            "ci": [
+              0.40198968845800986,
+              0.6187864808696146
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.649375,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5881313131313132,
+            "ci": [
+              0.557556868192671,
+              0.7420120304968011
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6943089430894309,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6695059244355018,
+            "ci": [
+              0.5828129416531096,
+              0.8047055904073692
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.47125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.48893939393939395,
+            "ci": [
+              0.3731340951492538,
+              0.5904480216222271
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.45772357723577234,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5502749832327297,
+            "ci": [
+              0.34201032264183756,
+              0.5781482726301961
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.608125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5622727272727273,
+            "ci": [
+              0.5107241346175704,
+              0.6989905213289038
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6422764227642277,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6821696847753186,
+            "ci": [
+              0.527481569128665,
+              0.755319559716861
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.06900431957602816,
+            "sd": 0.0034270330707232444,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.05254385964912281,
+            "sd": 0.0065783625471062,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.19169479835928707,
+            "sd": 0.007042933372685012,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.2863157894736842,
+            "sd": 0.03160744328341232,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.33218991614940646,
+            "sd": 0.022832318836400033,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.5764035087719298,
+            "sd": 0.029861432317340213,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.22797560710007625,
+            "sd": 0.008428200697203663,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.3460526315789474,
+            "sd": 0.025817206713963894,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9655415563915115,
+        "gain_col1_p05": 0.9553969676751956,
+        "gain_sub": 0.9832377059646106
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.6943,
+            "chance": 0.1667,
+            "excess": 0.5276
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.5764,
+            "chance": 0.0526,
+            "excess": 0.5238
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.6494,
+            "chance": 0.1667,
+            "excess": 0.4827
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.6423,
+            "chance": 0.1667,
+            "excess": 0.4756
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.6081,
+            "chance": 0.1667,
+            "excess": 0.4415
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.5,
+            "chance": 0.1667,
+            "excess": 0.3333
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.4975,
+            "chance": 0.1667,
+            "excess": 0.3308
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4713,
+            "chance": 0.1667,
+            "excess": 0.3046
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.3461,
+            "chance": 0.0526,
+            "excess": 0.2934
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4577,
+            "chance": 0.1667,
+            "excess": 0.2911
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.3322,
+            "chance": 0.0526,
+            "excess": 0.2796
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.2863,
+            "chance": 0.0526,
+            "excess": 0.2337
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.228,
+            "chance": 0.0526,
+            "excess": 0.1753
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.1917,
+            "chance": 0.0526,
+            "excess": 0.1391
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.069,
+            "chance": 0.0526,
+            "excess": 0.0164
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6943,
+          "chance": 0.1667,
+          "excess": 0.5276
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6943,
+          "chance": 0.1667,
+          "excess": 0.5276
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.5764,
+          "chance": 0.0526,
+          "excess": 0.5238
+        }
+      }
+    },
+    "s2_perm|f2_group": {
+      "structure": "s2_perm",
+      "freshness": "f2_group",
+      "blocks": [
+        "sortmag"
+      ],
+      "cost": {
+        "q_matrices": 250,
+        "random_numbers": 2000,
+        "complex_values_stored": 1000,
+        "indices_stored": 1000,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.54,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4911666666666667,
+            "ci": [
+              0.4724013089889189,
+              0.6115239642643092
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6276422764227643,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5153817348535658,
+            "ci": [
+              0.5349636973051904,
+              0.713369045477838
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.576875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5562424242424242,
+            "ci": [
+              0.47026255318031407,
+              0.6773324650564158
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6121951219512195,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6373027051196065,
+            "ci": [
+              0.4961684535466525,
+              0.723578463357938
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.05722530763367092,
+            "sd": 0.0009409765433820275,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.05403508771929825,
+            "sd": 0.008017563054220949,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.1902428400304911,
+            "sd": 0.008831507441977027,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.3265789473684211,
+            "sd": 0.0884659451617981,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9654989106270572,
+        "gain_col1_p05": 0.9607437094820226,
+        "gain_sub": 0.9832167115969529
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.6276,
+            "chance": 0.1667,
+            "excess": 0.461
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.6122,
+            "chance": 0.1667,
+            "excess": 0.4455
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.5769,
+            "chance": 0.1667,
+            "excess": 0.4102
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.54,
+            "chance": 0.1667,
+            "excess": 0.3733
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.3266,
+            "chance": 0.0526,
+            "excess": 0.2739
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.1902,
+            "chance": 0.0526,
+            "excess": 0.1376
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.6276,
+          "chance": 0.1667,
+          "excess": 0.461
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.6276,
+          "chance": 0.1667,
+          "excess": 0.461
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.3266,
+          "chance": 0.0526,
+          "excess": 0.2739
+        }
+      }
+    },
+    "s2_perm|f3_band2": {
+      "structure": "s2_perm",
+      "freshness": "f3_band2",
+      "blocks": [
+        "sortmag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 125,
+        "random_numbers": 1000,
+        "complex_values_stored": 500,
+        "indices_stored": 500,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.543125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.500550505050505,
+            "ci": [
+              0.46949991688578596,
+              0.6140534358597315
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.5780487804878048,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5081868991728147,
+            "ci": [
+              0.496382494154704,
+              0.6615492363972637
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.586875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5613434343434344,
+            "ci": [
+              0.4920320691964802,
+              0.6903479676565039
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6211382113821138,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6409915045830539,
+            "ci": [
+              0.510849559677302,
+              0.7293242586866641
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.468125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.44169191919191925,
+            "ci": [
+              0.37353514751101935,
+              0.5663211786773185
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.4813008130081301,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.4082953275206796,
+            "ci": [
+              0.3692709233650245,
+              0.5937936581707352
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.574375,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5488383838383838,
+            "ci": [
+              0.47361127201330017,
+              0.6826449601041938
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.56063603845294,
+            "ci": [
+              0.4829300942211566,
+              0.7269369552107888
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.05352281389524121,
+            "sd": 0.001937324063449547,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.052894736842105265,
+            "sd": 0.0024404259198672904,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.18953501034520312,
+            "sd": 0.007823541336052302,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.3171052631578947,
+            "sd": 0.04589119574299703,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.13298123343860033,
+            "sd": 0.012347302865259669,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.34035087719298246,
+            "sd": 0.05745861786542758,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.19487095720352823,
+            "sd": 0.007349261742985233,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.32780701754385966,
+            "sd": 0.05660213043332063,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9654706607269528,
+        "gain_col1_p05": 0.9598694560643753,
+        "gain_sub": 0.9832346905635795
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.6211,
+            "chance": 0.1667,
+            "excess": 0.4545
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.6,
+            "chance": 0.1667,
+            "excess": 0.4333
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.5869,
+            "chance": 0.1667,
+            "excess": 0.4202
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.578,
+            "chance": 0.1667,
+            "excess": 0.4114
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.5744,
+            "chance": 0.1667,
+            "excess": 0.4077
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.5431,
+            "chance": 0.1667,
+            "excess": 0.3765
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4813,
+            "chance": 0.1667,
+            "excess": 0.3146
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4681,
+            "chance": 0.1667,
+            "excess": 0.3015
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.3404,
+            "chance": 0.0526,
+            "excess": 0.2877
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.3278,
+            "chance": 0.0526,
+            "excess": 0.2752
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.3171,
+            "chance": 0.0526,
+            "excess": 0.2645
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.1949,
+            "chance": 0.0526,
+            "excess": 0.1422
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.1895,
+            "chance": 0.0526,
+            "excess": 0.1369
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.133,
+            "chance": 0.0526,
+            "excess": 0.0803
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6211,
+          "chance": 0.1667,
+          "excess": 0.4545
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6211,
+          "chance": 0.1667,
+          "excess": 0.4545
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.3404,
+          "chance": 0.0526,
+          "excess": 0.2877
+        }
+      }
+    },
+    "s2_perm|f3_band4": {
+      "structure": "s2_perm",
+      "freshness": "f3_band4",
+      "blocks": [
+        "sortmag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 63,
+        "random_numbers": 504,
+        "complex_values_stored": 252,
+        "indices_stored": 252,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.495625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.45365656565656565,
+            "ci": [
+              0.41675833826242975,
+              0.57284093954411
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.5227642276422764,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.4385295103957076,
+            "ci": [
+              0.4069864177980555,
+              0.6402271771407753
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.610625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.571489898989899,
+            "ci": [
+              0.5190375484731897,
+              0.7087615773753299
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6455284552845528,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6520478426112228,
+            "ci": [
+              0.5311997499429881,
+              0.7604895823673065
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.42375,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.3937878787878788,
+            "ci": [
+              0.3391761242917848,
+              0.5105920025954398
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.4479674796747967,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.3786938296445339,
+            "ci": [
+              0.34936472627256815,
+              0.5630952380952381
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.580625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5475505050505051,
+            "ci": [
+              0.4770772486893878,
+              0.6827453410630981
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6105691056910569,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5636642074670244,
+            "ci": [
+              0.4883112415325059,
+              0.7321392247666568
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.05239754619042433,
+            "sd": 0.00042253608939790205,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.052894736842105265,
+            "sd": 0.006915930998044571,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.18773821191331808,
+            "sd": 0.01187625141283515,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.2942982456140351,
+            "sd": 0.0889754791387241,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.20303822280300554,
+            "sd": 0.018190885288258497,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.40982456140350876,
+            "sd": 0.024873951240050242,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.2034193618643145,
+            "sd": 0.012968866474541948,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.32035087719298244,
+            "sd": 0.08946086939534036,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9654414478876338,
+        "gain_col1_p05": 0.9588479200887637,
+        "gain_sub": 0.9831622644966718
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.6455,
+            "chance": 0.1667,
+            "excess": 0.4789
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.6106,
+            "chance": 0.1667,
+            "excess": 0.444
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.6106,
+            "chance": 0.1667,
+            "excess": 0.4439
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.5806,
+            "chance": 0.1667,
+            "excess": 0.414
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4098,
+            "chance": 0.0526,
+            "excess": 0.3572
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.5228,
+            "chance": 0.1667,
+            "excess": 0.3561
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.4956,
+            "chance": 0.1667,
+            "excess": 0.329
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.448,
+            "chance": 0.1667,
+            "excess": 0.2813
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.3204,
+            "chance": 0.0526,
+            "excess": 0.2677
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4238,
+            "chance": 0.1667,
+            "excess": 0.2571
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.2943,
+            "chance": 0.0526,
+            "excess": 0.2417
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.2034,
+            "chance": 0.0526,
+            "excess": 0.1508
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.203,
+            "chance": 0.0526,
+            "excess": 0.1504
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.1877,
+            "chance": 0.0526,
+            "excess": 0.1351
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6455,
+          "chance": 0.1667,
+          "excess": 0.4789
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6455,
+          "chance": 0.1667,
+          "excess": 0.4789
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.4098,
+          "chance": 0.0526,
+          "excess": 0.3572
+        }
+      }
+    },
+    "s2_perm|f3_band8": {
+      "structure": "s2_perm",
+      "freshness": "f3_band8",
+      "blocks": [
+        "sortmag",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 32,
+        "random_numbers": 256,
+        "complex_values_stored": 128,
+        "indices_stored": 128,
+        "needs_qr": false
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.535,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.501540404040404,
+            "ci": [
+              0.456393572162574,
+              0.624122144747206
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.5609756097560976,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.4374944109099039,
+            "ci": [
+              0.4779258962924047,
+              0.6522882684715172
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.631875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5815151515151514,
+            "ci": [
+              0.5379239830217476,
+              0.7271078672799604
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6723577235772358,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6617829197406663,
+            "ci": [
+              0.5654824370352893,
+              0.7834501864347858
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.458125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4416060606060606,
+            "ci": [
+              0.36961781888579665,
+              0.5480930904843948
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.47235772357723577,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.4186977420076012,
+            "ci": [
+              0.37651889072562555,
+              0.5762771445794956
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.60125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5582575757575757,
+            "ci": [
+              0.4954620530132533,
+              0.7020016291725882
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6495934959349593,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.642530181086519,
+            "ci": [
+              0.5345221288150538,
+              0.7644969987666741
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.05354096337435116,
+            "sd": 0.003341476343348959,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.05482456140350877,
+            "sd": 0.0051268909460359495,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_sortmag": {
+          "1": {
+            "accuracy": 0.1772659624668772,
+            "sd": 0.008656711752408282,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.310438596491228,
+            "sd": 0.060995637846138706,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.2578315002359432,
+            "sd": 0.016529403320282188,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.48885964912280705,
+            "sd": 0.07698746565286838,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.20452648009002142,
+            "sd": 0.008489340037429674,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.36596491228070177,
+            "sd": 0.06487374389510983,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9655597109309095,
+        "gain_col1_p05": 0.9581079925205626,
+        "gain_sub": 0.9832119016555474
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.6724,
+            "chance": 0.1667,
+            "excess": 0.5057
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.6496,
+            "chance": 0.1667,
+            "excess": 0.4829
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.6319,
+            "chance": 0.1667,
+            "excess": 0.4652
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4889,
+            "chance": 0.0526,
+            "excess": 0.4362
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.6012,
+            "chance": 0.1667,
+            "excess": 0.4346
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.561,
+            "chance": 0.1667,
+            "excess": 0.3943
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.535,
+            "chance": 0.1667,
+            "excess": 0.3683
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.366,
+            "chance": 0.0526,
+            "excess": 0.3133
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4724,
+            "chance": 0.1667,
+            "excess": 0.3057
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.4581,
+            "chance": 0.1667,
+            "excess": 0.2915
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 32,
+            "accuracy": 0.3104,
+            "chance": 0.0526,
+            "excess": 0.2578
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.2578,
+            "chance": 0.0526,
+            "excess": 0.2052
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.2045,
+            "chance": 0.0526,
+            "excess": 0.1519
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_sortmag",
+            "T": 1,
+            "accuracy": 0.1773,
+            "chance": 0.0526,
+            "excess": 0.1246
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6724,
+          "chance": 0.1667,
+          "excess": 0.5057
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_sortmag",
+          "T": 32,
+          "accuracy": 0.6724,
+          "chance": 0.1667,
+          "excess": 0.5057
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.4889,
+          "chance": 0.0526,
+          "excess": 0.4362
+        }
+      }
+    },
+    "s3_orth|f1_report": {
+      "structure": "s3_orth",
+      "freshness": "f1_report",
+      "blocks": [
+        "tsym",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 1,
+        "random_numbers": 16,
+        "complex_values_stored": 8.0,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.475,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.42780303030303024,
+            "ci": [
+              0.3987566875533443,
+              0.5517011450041738
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.5764227642276423,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.547260228034876,
+            "ci": [
+              0.4698878695318529,
+              0.671978373095429
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.67875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6559848484848485,
+            "ci": [
+              0.5834771209361374,
+              0.7766446614333244
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.708130081300813,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7323043818466354,
+            "ci": [
+              0.5997805879934369,
+              0.818377197873685
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.551875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5329545454545453,
+            "ci": [
+              0.4519858170932747,
+              0.6610174514332351
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.5536585365853659,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5882187569863626,
+            "ci": [
+              0.4321294564642093,
+              0.6698671130046662
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.669375,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6608838383838385,
+            "ci": [
+              0.5721682252542286,
+              0.770193899813861
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6910569105691057,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7158283031522467,
+            "ci": [
+              0.5840180065906476,
+              0.8043335611756665
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.06495698573450942,
+            "sd": 0.0016231358318132328,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.04982456140350877,
+            "sd": 0.004767606400596909,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.42170314711967766,
+            "sd": 0.0048803540978539775,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.748157894736842,
+            "sd": 0.025365290627267136,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.3358742604087263,
+            "sd": 0.020354169480123675,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.5614035087719298,
+            "sd": 0.07218727994361003,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.4680206178082689,
+            "sd": 0.010144503565308395,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7977192982456142,
+            "sd": 0.050965893640338815,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9666206073363531,
+        "gain_col1_p05": 0.9569424414718204,
+        "gain_sub": 0.983125818928509
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7977,
+            "chance": 0.0526,
+            "excess": 0.7451
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.7482,
+            "chance": 0.0526,
+            "excess": 0.6955
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.7081,
+            "chance": 0.1667,
+            "excess": 0.5415
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.6911,
+            "chance": 0.1667,
+            "excess": 0.5244
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.6787,
+            "chance": 0.1667,
+            "excess": 0.5121
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.5614,
+            "chance": 0.0526,
+            "excess": 0.5088
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.6694,
+            "chance": 0.1667,
+            "excess": 0.5027
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.468,
+            "chance": 0.0526,
+            "excess": 0.4154
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.5764,
+            "chance": 0.1667,
+            "excess": 0.4098
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.5537,
+            "chance": 0.1667,
+            "excess": 0.387
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.5519,
+            "chance": 0.1667,
+            "excess": 0.3852
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.4217,
+            "chance": 0.0526,
+            "excess": 0.3691
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.475,
+            "chance": 0.1667,
+            "excess": 0.3083
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.3359,
+            "chance": 0.0526,
+            "excess": 0.2832
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.065,
+            "chance": 0.0526,
+            "excess": 0.0123
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7977,
+          "chance": 0.0526,
+          "excess": 0.7451
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_tsym",
+          "T": 32,
+          "accuracy": 0.7081,
+          "chance": 0.1667,
+          "excess": 0.5415
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7977,
+          "chance": 0.0526,
+          "excess": 0.7451
+        }
+      }
+    },
+    "s3_orth|f2_group": {
+      "structure": "s3_orth",
+      "freshness": "f2_group",
+      "blocks": [
+        "tsym"
+      ],
+      "cost": {
+        "q_matrices": 250,
+        "random_numbers": 4000,
+        "complex_values_stored": 2000.0,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.50625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4380555555555556,
+            "ci": [
+              0.426366473070587,
+              0.5912359913793104
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6121951219512195,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.6160557791191593,
+            "ci": [
+              0.5015063305571542,
+              0.7189500040251462
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.66625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6585606060606061,
+            "ci": [
+              0.5706355940934934,
+              0.7640212374499152
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6813008130081301,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7193907891795216,
+            "ci": [
+              0.5720547189475195,
+              0.7979332228098907
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.049584376928382155,
+            "sd": 0.0015631749246894228,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.053421052631578946,
+            "sd": 0.0011369720523522542,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.45792950742313693,
+            "sd": 0.010670535505933535,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.747280701754386,
+            "sd": 0.06790300960524719,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9664924756854214,
+        "gain_col1_p05": 0.962894046171142,
+        "gain_sub": 0.983065568884618
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.7473,
+            "chance": 0.0526,
+            "excess": 0.6946
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.6813,
+            "chance": 0.1667,
+            "excess": 0.5146
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.6663,
+            "chance": 0.1667,
+            "excess": 0.4996
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.6122,
+            "chance": 0.1667,
+            "excess": 0.4455
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.4579,
+            "chance": 0.0526,
+            "excess": 0.4053
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.5062,
+            "chance": 0.1667,
+            "excess": 0.3396
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_tsym",
+          "T": 32,
+          "accuracy": 0.7473,
+          "chance": 0.0526,
+          "excess": 0.6946
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_tsym",
+          "T": 32,
+          "accuracy": 0.6813,
+          "chance": 0.1667,
+          "excess": 0.5146
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_tsym",
+          "T": 32,
+          "accuracy": 0.7473,
+          "chance": 0.0526,
+          "excess": 0.6946
+        }
+      }
+    },
+    "s3_orth|f3_band2": {
+      "structure": "s3_orth",
+      "freshness": "f3_band2",
+      "blocks": [
+        "tsym",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 125,
+        "random_numbers": 2000,
+        "complex_values_stored": 1000.0,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.541875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4841262626262626,
+            "ci": [
+              0.45855737455191053,
+              0.6217800887918599
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6357723577235772,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5713022579923989,
+            "ci": [
+              0.529853810042304,
+              0.746693134822167
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.67,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6541666666666667,
+            "ci": [
+              0.5680247642652879,
+              0.7699924392477583
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6943089430894309,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.723940867426783,
+            "ci": [
+              0.5773194315004659,
+              0.8035416142691741
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.599375,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5241212121212121,
+            "ci": [
+              0.5011133463674907,
+              0.6925693539548194
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6536585365853659,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5101626425217974,
+            "ci": [
+              0.5286357697180869,
+              0.7616979531233429
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.671875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.615,
+            "ci": [
+              0.5693271090379456,
+              0.7697826784347361
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.708130081300813,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7102274759669126,
+            "ci": [
+              0.5899527243596273,
+              0.8101508373998433
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.052579040981523835,
+            "sd": 0.0015593772205169396,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.049035087719298244,
+            "sd": 0.0032891812735531,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.4411230897673237,
+            "sd": 0.0022981856307806568,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7156140350877194,
+            "sd": 0.04850932711207948,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.1217285563904316,
+            "sd": 0.008132748984035675,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.32535087719298245,
+            "sd": 0.03034453843147507,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.43613198301208755,
+            "sd": 0.004268099980402276,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7441228070175439,
+            "sd": 0.05328728968161925,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9664996026380783,
+        "gain_col1_p05": 0.9617466592995764,
+        "gain_sub": 0.9831110559276968
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7441,
+            "chance": 0.0526,
+            "excess": 0.6915
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.7156,
+            "chance": 0.0526,
+            "excess": 0.663
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7081,
+            "chance": 0.1667,
+            "excess": 0.5415
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.6943,
+            "chance": 0.1667,
+            "excess": 0.5276
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.6719,
+            "chance": 0.1667,
+            "excess": 0.5052
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.67,
+            "chance": 0.1667,
+            "excess": 0.5033
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6537,
+            "chance": 0.1667,
+            "excess": 0.487
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.6358,
+            "chance": 0.1667,
+            "excess": 0.4691
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.5994,
+            "chance": 0.1667,
+            "excess": 0.4327
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.4411,
+            "chance": 0.0526,
+            "excess": 0.3885
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4361,
+            "chance": 0.0526,
+            "excess": 0.3835
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.5419,
+            "chance": 0.1667,
+            "excess": 0.3752
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.3254,
+            "chance": 0.0526,
+            "excess": 0.2727
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.1217,
+            "chance": 0.0526,
+            "excess": 0.0691
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7441,
+          "chance": 0.0526,
+          "excess": 0.6915
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7081,
+          "chance": 0.1667,
+          "excess": 0.5415
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7441,
+          "chance": 0.0526,
+          "excess": 0.6915
+        }
+      }
+    },
+    "s3_orth|f3_band4": {
+      "structure": "s3_orth",
+      "freshness": "f3_band4",
+      "blocks": [
+        "tsym",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 63,
+        "random_numbers": 1008,
+        "complex_values_stored": 504.0,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.5275,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.46245454545454545,
+            "ci": [
+              0.4491719996788484,
+              0.6049011219892567
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6130081300813008,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.630192264699307,
+            "ci": [
+              0.5186455111512223,
+              0.7075612751320065
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.671875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6526262626262626,
+            "ci": [
+              0.582958407409954,
+              0.7677483870967742
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6959349593495935,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7235401296668903,
+            "ci": [
+              0.5725968637987003,
+              0.8126258794608799
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.5725,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4816414141414141,
+            "ci": [
+              0.4685774612806811,
+              0.6611781719622726
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.651219512195122,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.49113570310753407,
+            "ci": [
+              0.542925644434411,
+              0.7489971185448651
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.703125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6355555555555555,
+            "ci": [
+              0.6127187806575473,
+              0.7865870593874128
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.759349593495935,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7361239660183322,
+            "ci": [
+              0.6613296819339096,
+              0.8499701981991035
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.0538858034774402,
+            "sd": 0.0036934970363511543,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.05184210526315789,
+            "sd": 0.0020497055167627925,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.440306363207376,
+            "sd": 0.012486419539601907,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7071929824561404,
+            "sd": 0.03609923568258377,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.19238447856546514,
+            "sd": 0.02434396608372097,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.38315789473684214,
+            "sd": 0.05665458021122771,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.4477295001633453,
+            "sd": 0.003253569398569321,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7331578947368421,
+            "sd": 0.01806549079115737,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9664960670157091,
+        "gain_col1_p05": 0.9605756352499205,
+        "gain_sub": 0.9830832866430234
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7332,
+            "chance": 0.0526,
+            "excess": 0.6805
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.7072,
+            "chance": 0.0526,
+            "excess": 0.6546
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.7593,
+            "chance": 0.1667,
+            "excess": 0.5927
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.7031,
+            "chance": 0.1667,
+            "excess": 0.5365
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.6959,
+            "chance": 0.1667,
+            "excess": 0.5293
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.6719,
+            "chance": 0.1667,
+            "excess": 0.5052
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6512,
+            "chance": 0.1667,
+            "excess": 0.4846
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.613,
+            "chance": 0.1667,
+            "excess": 0.4463
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.5725,
+            "chance": 0.1667,
+            "excess": 0.4058
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4477,
+            "chance": 0.0526,
+            "excess": 0.3951
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.4403,
+            "chance": 0.0526,
+            "excess": 0.3877
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.5275,
+            "chance": 0.1667,
+            "excess": 0.3608
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.3832,
+            "chance": 0.0526,
+            "excess": 0.3305
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.1924,
+            "chance": 0.0526,
+            "excess": 0.1398
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7332,
+          "chance": 0.0526,
+          "excess": 0.6805
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7593,
+          "chance": 0.1667,
+          "excess": 0.5927
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.7332,
+          "chance": 0.0526,
+          "excess": 0.6805
+        }
+      }
+    },
+    "s3_orth|f3_band8": {
+      "structure": "s3_orth",
+      "freshness": "f3_band8",
+      "blocks": [
+        "tsym",
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 32,
+        "random_numbers": 512,
+        "complex_values_stored": 256.0,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.5625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4812121212121212,
+            "ci": [
+              0.4907624036726333,
+              0.6382858521701227
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6260162601626016,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5328806170355466,
+            "ci": [
+              0.5359218659053744,
+              0.7237536900767536
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.6775,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6586363636363636,
+            "ci": [
+              0.5846945112363332,
+              0.7753163781722164
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6934959349593496,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7116236306729266,
+            "ci": [
+              0.5756891461783292,
+              0.8113147984862018
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.5875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.4976161616161617,
+            "ci": [
+              0.5009277712446618,
+              0.6693117431386594
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6365853658536585,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.46968365750055896,
+            "ci": [
+              0.5455926126065274,
+              0.733064881300163
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.73875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.6612626262626262,
+            "ci": [
+              0.6491416451194525,
+              0.8211468715393134
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.8048780487804879,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.7746188240554438,
+            "ci": [
+              0.7159809163862,
+              0.8835827090424287
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.055918545137754544,
+            "sd": 0.0012861822727886015,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.05578947368421052,
+            "sd": 0.0024404259198672904,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_tsym": {
+          "1": {
+            "accuracy": 0.4393444408145486,
+            "sd": 0.014843233895755828,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7385087719298244,
+            "sd": 0.032891812735531024,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.24941014192892666,
+            "sd": 0.01697588609910954,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.4423684210526316,
+            "sd": 0.04619801613021383,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_combined": {
+          "1": {
+            "accuracy": 0.46368289230099097,
+            "sd": 0.011714472997296627,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.7640350877192983,
+            "sd": 0.025287208337603926,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9664671537196027,
+        "gain_col1_p05": 0.9595158062290928,
+        "gain_sub": 0.9830863616976603
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.764,
+            "chance": 0.0526,
+            "excess": 0.7114
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.7385,
+            "chance": 0.0526,
+            "excess": 0.6859
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 32,
+            "accuracy": 0.8049,
+            "chance": 0.1667,
+            "excess": 0.6382
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.7388,
+            "chance": 0.1667,
+            "excess": 0.5721
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 32,
+            "accuracy": 0.6935,
+            "chance": 0.1667,
+            "excess": 0.5268
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.6775,
+            "chance": 0.1667,
+            "excess": 0.5108
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6366,
+            "chance": 0.1667,
+            "excess": 0.4699
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.626,
+            "chance": 0.1667,
+            "excess": 0.4593
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.5875,
+            "chance": 0.1667,
+            "excess": 0.4208
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_combined",
+            "T": 1,
+            "accuracy": 0.4637,
+            "chance": 0.0526,
+            "excess": 0.4111
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.5625,
+            "chance": 0.1667,
+            "excess": 0.3958
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4424,
+            "chance": 0.0526,
+            "excess": 0.3897
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_tsym",
+            "T": 1,
+            "accuracy": 0.4393,
+            "chance": 0.0526,
+            "excess": 0.3867
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.2494,
+            "chance": 0.0526,
+            "excess": 0.1968
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.764,
+          "chance": 0.0526,
+          "excess": 0.7114
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.8049,
+          "chance": 0.1667,
+          "excess": 0.6382
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_combined",
+          "T": 32,
+          "accuracy": 0.764,
+          "chance": 0.0526,
+          "excess": 0.7114
+        }
+      }
+    },
+    "s4_unitary|f1_report": {
+      "structure": "s4_unitary",
+      "freshness": "f1_report",
+      "blocks": [
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 1,
+        "random_numbers": 32,
+        "complex_values_stored": 16,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.266875,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.22713636363636366,
+            "ci": [
+              0.20349946585254297,
+              0.3362072526271032
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.24471544715447155,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.18468980549966466,
+            "ci": [
+              0.1567229876677837,
+              0.3386574796824858
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.5475,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5318939393939394,
+            "ci": [
+              0.44879820341795423,
+              0.659773384229636
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.551219512195122,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5861452045606975,
+            "ci": [
+              0.4334941303746403,
+              0.6735820959500702
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.06512033104649896,
+            "sd": 0.004497849597748745,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.05517543859649123,
+            "sd": 0.004021716977665842,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.321227630766997,
+            "sd": 0.0036800950096357466,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.483421052631579,
+            "sd": 0.01717999867784155,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.966708431465151,
+        "gain_col1_p05": 0.957038571448545,
+        "gain_sub": 0.9831862917080986
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4834,
+            "chance": 0.0526,
+            "excess": 0.4308
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.5512,
+            "chance": 0.1667,
+            "excess": 0.3846
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.5475,
+            "chance": 0.1667,
+            "excess": 0.3808
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.3212,
+            "chance": 0.0526,
+            "excess": 0.2686
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.2669,
+            "chance": 0.1667,
+            "excess": 0.1002
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.2447,
+            "chance": 0.1667,
+            "excess": 0.078
+          },
+          {
+            "dataset": "he",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.0651,
+            "chance": 0.0526,
+            "excess": 0.0125
+          }
+        ],
+        "first_break": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.4834,
+          "chance": 0.0526,
+          "excess": 0.4308
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.5512,
+          "chance": 0.1667,
+          "excess": 0.3846
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.4834,
+          "chance": 0.0526,
+          "excess": 0.4308
+        }
+      }
+    },
+    "s4_unitary|f2_group": {
+      "structure": "s4_unitary",
+      "freshness": "f2_group",
+      "blocks": [],
+      "cost": {
+        "q_matrices": 250,
+        "random_numbers": 8000,
+        "complex_values_stored": 4000,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.263125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.22906565656565658,
+            "ci": [
+              0.21801285523377392,
+              0.3094949007219644
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.2739837398373984,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.20155432595573444,
+            "ci": [
+              0.18875095598585695,
+              0.35756210621379636
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.051925659733565645,
+            "sd": 0.001852492002969315,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.049035087719298244,
+            "sd": 0.0037851664930511264,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.96673580627256,
+        "gain_col1_p05": 0.9631105005547673,
+        "gain_sub": 0.9831986427938598
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": true,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.274,
+            "chance": 0.1667,
+            "excess": 0.1073
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.2631,
+            "chance": 0.1667,
+            "excess": 0.0965
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.274,
+          "chance": 0.1667,
+          "excess": 0.1073
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "plain",
+          "T": 32,
+          "accuracy": 0.274,
+          "chance": 0.1667,
+          "excess": 0.1073
+        },
+        "first_break_he": null
+      }
+    },
+    "s4_unitary|f3_band2": {
+      "structure": "s4_unitary",
+      "freshness": "f3_band2",
+      "blocks": [
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 125,
+        "random_numbers": 4000,
+        "complex_values_stored": 2000,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.25125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.21341414141414142,
+            "ci": [
+              0.20151462053974795,
+              0.3016493432734139
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.26260162601626014,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.1967024368432819,
+            "ci": [
+              0.20485495234148365,
+              0.32086804813786224
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.618125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5316060606060606,
+            "ci": [
+              0.5234041243056283,
+              0.7140332488107874
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6902439024390243,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5339453386988599,
+            "ci": [
+              0.5768112263162348,
+              0.7876073319018252
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.056045591491524195,
+            "sd": 0.003304301962470872,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.052894736842105265,
+            "sd": 0.004593342968977559,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.11094776579912158,
+            "sd": 0.00709883646189925,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.24912280701754388,
+            "sd": 0.017792968271590322,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9666983117562469,
+        "gain_col1_p05": 0.962018709152382,
+        "gain_sub": 0.9831618491713213
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6902,
+            "chance": 0.1667,
+            "excess": 0.5236
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.6181,
+            "chance": 0.1667,
+            "excess": 0.4515
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.2491,
+            "chance": 0.0526,
+            "excess": 0.1965
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.2626,
+            "chance": 0.1667,
+            "excess": 0.0959
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.2512,
+            "chance": 0.1667,
+            "excess": 0.0846
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.1109,
+            "chance": 0.0526,
+            "excess": 0.0583
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.6902,
+          "chance": 0.1667,
+          "excess": 0.5236
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.6902,
+          "chance": 0.1667,
+          "excess": 0.5236
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.2491,
+          "chance": 0.0526,
+          "excess": 0.1965
+        }
+      }
+    },
+    "s4_unitary|f3_band4": {
+      "structure": "s4_unitary",
+      "freshness": "f3_band4",
+      "blocks": [
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 63,
+        "random_numbers": 2016,
+        "complex_values_stored": 1008,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.34625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.291020202020202,
+            "ci": [
+              0.29656397905045884,
+              0.3974437807449051
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.4349593495934959,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.33627207690587974,
+            "ci": [
+              0.37801026660325243,
+              0.48917358445297504
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5237272727272727,
+            "ci": [
+              0.5275278711116796,
+              0.7119765735230708
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6991869918699187,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.5232478202548624,
+            "ci": [
+              0.5885255625658735,
+              0.8005400464664532
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.05005626338524085,
+            "sd": 0.0023395234737118614,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.050701754385964914,
+            "sd": 0.002508833271241243,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.20634142800101637,
+            "sd": 0.019799792405173246,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.4696491228070176,
+            "sd": 0.09376729347013968,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.9667953070787796,
+        "gain_col1_p05": 0.960700180127148,
+        "gain_sub": 0.9831958478151813
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6992,
+            "chance": 0.1667,
+            "excess": 0.5325
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.625,
+            "chance": 0.1667,
+            "excess": 0.4583
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4696,
+            "chance": 0.0526,
+            "excess": 0.417
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.435,
+            "chance": 0.1667,
+            "excess": 0.2683
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.3463,
+            "chance": 0.1667,
+            "excess": 0.1796
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.2063,
+            "chance": 0.0526,
+            "excess": 0.1537
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.6992,
+          "chance": 0.1667,
+          "excess": 0.5325
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.6992,
+          "chance": 0.1667,
+          "excess": 0.5325
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.4696,
+          "chance": 0.0526,
+          "excess": 0.417
+        }
+      }
+    },
+    "s4_unitary|f3_band8": {
+      "structure": "s4_unitary",
+      "freshness": "f3_band8",
+      "blocks": [
+        "cross"
+      ],
+      "cost": {
+        "q_matrices": 32,
+        "random_numbers": 1024,
+        "complex_values_stored": 512,
+        "indices_stored": 0,
+        "needs_qr": true
+      },
+      "home": {
+        "plain": {
+          "1": {
+            "accuracy": 0.405625,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.33898989898989895,
+            "ci": [
+              0.3536494706219385,
+              0.4560156467657615
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.44308943089430897,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.3531052984574112,
+            "ci": [
+              0.3740395117940159,
+              0.5115976667173733
+            ],
+            "n_decisions": 1230
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.618125,
+            "chance": 0.16666666666666663,
+            "macro_recall": 0.5216767676767677,
+            "ci": [
+              0.5382729301368134,
+              0.6918819716084398
+            ],
+            "n_decisions": 1600
+          },
+          "32": {
+            "accuracy": 0.6723577235772358,
+            "chance": 0.16666666666666666,
+            "macro_recall": 0.48622456964006266,
+            "ci": [
+              0.5867116127598468,
+              0.7634986130374479
+            ],
+            "n_decisions": 1230
+          }
+        }
+      },
+      "home_windows": 1641,
+      "he": {
+        "plain": {
+          "1": {
+            "accuracy": 0.05613633888707394,
+            "sd": 0.004537224579331299,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.05359649122807018,
+            "sd": 0.0017891296538922036,
+            "chance": 0.05263157894736842
+          }
+        },
+        "inv_cross": {
+          "1": {
+            "accuracy": 0.23548949145159534,
+            "sd": 0.009952701731359658,
+            "chance": 0.05263157894736842
+          },
+          "32": {
+            "accuracy": 0.4317543859649123,
+            "sd": 0.04710959175119866,
+            "chance": 0.05263157894736842
+          }
+        }
+      },
+      "gain": {
+        "gain_col1": 0.966709892586274,
+        "gain_col1_p05": 0.9599199866579576,
+        "gain_sub": 0.9832139216983332
+      },
+      "verdict": {
+        "passes": false,
+        "passes_home": false,
+        "passes_he": false,
+        "gain_ok": true,
+        "breaking_observers": [
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.6724,
+            "chance": 0.1667,
+            "excess": 0.5057
+          },
+          {
+            "dataset": "home",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.6181,
+            "chance": 0.1667,
+            "excess": 0.4515
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 32,
+            "accuracy": 0.4318,
+            "chance": 0.0526,
+            "excess": 0.3791
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 32,
+            "accuracy": 0.4431,
+            "chance": 0.1667,
+            "excess": 0.2764
+          },
+          {
+            "dataset": "home",
+            "observer": "plain",
+            "T": 1,
+            "accuracy": 0.4056,
+            "chance": 0.1667,
+            "excess": 0.239
+          },
+          {
+            "dataset": "he",
+            "observer": "inv_cross",
+            "T": 1,
+            "accuracy": 0.2355,
+            "chance": 0.0526,
+            "excess": 0.1829
+          }
+        ],
+        "first_break": {
+          "dataset": "home",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.6724,
+          "chance": 0.1667,
+          "excess": 0.5057
+        },
+        "first_break_home": {
+          "dataset": "home",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.6724,
+          "chance": 0.1667,
+          "excess": 0.5057
+        },
+        "first_break_he": {
+          "dataset": "he",
+          "observer": "inv_cross",
+          "T": 32,
+          "accuracy": 0.4318,
+          "chance": 0.0526,
+          "excess": 0.3791
+        }
+      }
+    }
+  },
+  "passing": [],
+  "cheapest_passing": null,
+  "runtime_s": 1443.2783246040344,
+  "peak_rss_mb": 1766.16796875,
+  "passing_he": [
+    "s4_unitary|f2_group"
+  ],
+  "passing_home": [],
+  "cheapest_passing_he": "s4_unitary|f2_group",
+  "cheapest_passing_home": null
+}

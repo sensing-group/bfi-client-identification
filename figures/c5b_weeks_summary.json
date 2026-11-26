@@ -1,0 +1,176 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "k_grid": [
+    "1",
+    "16",
+    "all"
+  ],
+  "t_grid": [
+    1,
+    16
+  ],
+  "n_trials": 20,
+  "max_queries_per_device": 1000,
+  "gallery": [
+    "LGTV",
+    "AppleTV-LR",
+    "SamsungTV"
+  ],
+  "chance": 0.3333333333333333,
+  "bins_kept": 17,
+  "bins_kept_idx": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "dims": 170,
+  "days": {
+    "2026-09": [
+      "2026-09-06",
+      "2026-09-07",
+      "2026-09-08"
+    ],
+    "2026-07": [
+      "2026-07-15",
+      "2026-07-16",
+      "2026-07-17",
+      "2026-07-18",
+      "2026-07-19",
+      "2026-07-20",
+      "2026-07-21",
+      "2026-07-22",
+      "2026-07-23",
+      "2026-07-24"
+    ]
+  },
+  "format_by_device_month": {
+    "LGTV": {
+      "2026-09": {
+        "[\"HE\", 2, 3, 6, 4, 80, 4, \"SU\", 1]": 172
+      },
+      "2026-07": {
+        "[\"HE\", 2, 3, 6, 4, 80, 4, \"SU\", 1]": 3688
+      }
+    },
+    "AppleTV-LR": {
+      "2026-09": {
+        "[\"HE\", 2, 3, 4, 2, 80, 4, \"SU\", 0]": 3698
+      },
+      "2026-07": {
+        "[\"HE\", 2, 3, 4, 2, 80, 4, \"SU\", 0]": 6243
+      }
+    },
+    "SamsungTV": {
+      "2026-09": {
+        "[\"VHT\", 2, 3, 6, 4, 80, 1, \"SU\", 1]": 342
+      },
+      "2026-07": {
+        "[\"VHT\", 2, 3, 6, 4, 80, 1, \"SU\", 1]": 3819
+      }
+    }
+  },
+  "conditions": {
+    "Jul_to_Sep": {
+      "enrol_month": "2026-07",
+      "query_month": "2026-09",
+      "enrol_windows": 13750,
+      "query_windows": 4212,
+      "enrol_blocks_per_device": {
+        "LGTV": 23,
+        "AppleTV-LR": 31,
+        "SamsungTV": 32
+      },
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "horizon_days": {
+        "min": 43.81042563680973,
+        "max": 54.30769211683285
+      }
+    },
+    "Sep_to_Jul": {
+      "enrol_month": "2026-09",
+      "query_month": "2026-07",
+      "enrol_windows": 4212,
+      "query_windows": 13750,
+      "enrol_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "query_blocks_per_device": {
+        "LGTV": 23,
+        "AppleTV-LR": 31,
+        "SamsungTV": 32
+      },
+      "horizon_days": {
+        "min": 43.81042563680973,
+        "max": 54.30769211683285
+      }
+    },
+    "Jul_within": {
+      "enrol_month": "2026-07",
+      "query_month": "2026-07",
+      "enrol_windows": 13750,
+      "query_windows": 13750,
+      "enrol_blocks_per_device": {
+        "LGTV": 23,
+        "AppleTV-LR": 31,
+        "SamsungTV": 32
+      },
+      "query_blocks_per_device": {
+        "LGTV": 23,
+        "AppleTV-LR": 31,
+        "SamsungTV": 32
+      },
+      "horizon_days": null
+    },
+    "Sep_within": {
+      "enrol_month": "2026-09",
+      "query_month": "2026-09",
+      "enrol_windows": 4212,
+      "query_windows": 4212,
+      "enrol_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "horizon_days": null
+    }
+  },
+  "zscore": "label-free on the pooled enrolment + query windows",
+  "runtime_s": 444.6676161289215,
+  "peak_rss_mb": 441.28125
+}

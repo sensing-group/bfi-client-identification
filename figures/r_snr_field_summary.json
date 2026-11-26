@@ -1,0 +1,2190 @@
+{
+  "trials": 50,
+  "runtime_s": 219.08620357513428,
+  "peak_rss_mb": 291.5,
+  "format_body_lengths": {
+    "[\"HE\", 2, 3, 4, 2, 80, 4, \"SU\", 0]": [
+      572
+    ],
+    "[\"HE\", 2, 3, 6, 4, 80, 4, \"SU\", 1]": [
+      947
+    ],
+    "[\"VHT\", 1, 3, 6, 4, 80, 1, \"SU\", 1]": [
+      591
+    ],
+    "[\"VHT\", 1, 3, 9, 7, 80, 1, \"MU\", 1]": [
+      1003
+    ],
+    "[\"HE\", 1, 3, 6, 4, 80, 4, \"SU\", 1]": [
+      633
+    ],
+    "[\"VHT\", 2, 3, 6, 4, 80, 1, \"SU\", 1]": [
+      885
+    ],
+    "[\"VHT\", 2, 3, 9, 7, 80, 1, \"MU\", 1]": [
+      1533
+    ]
+  },
+  "cells": {
+    "1|none|0|level|angles|same_day|1|1": {
+      "accuracy": 0.8946666666666667,
+      "macro_recall": 0.9094444444444445,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "1|none|0|level|angles|same_day|1|32": {
+      "accuracy": 0.8919382504288165,
+      "macro_recall": 0.9157993256598069,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "1|none|0|level|angles|same_day|16|1": {
+      "accuracy": 0.9613333333333334,
+      "macro_recall": 0.9794444444444445,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "1|none|0|level|angles|same_day|16|32": {
+      "accuracy": 0.9554030874785592,
+      "macro_recall": 0.9710289501220788,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "1|none|0|level|angles|same_day|all|1": {
+      "accuracy": 0.9626666666666667,
+      "macro_recall": 0.9777777777777777,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "1|none|0|level|angles|same_day|all|32": {
+      "accuracy": 0.9571183533447685,
+      "macro_recall": 0.9719154749447739,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|same_day|1|1": {
+      "accuracy": 0.9986666666666667,
+      "macro_recall": 0.9983333333333334,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|same_day|1|32": {
+      "accuracy": 0.9982847341337907,
+      "macro_recall": 0.9966666666666667,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|same_day|16|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|same_day|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "1|none|0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.706875,
+      "macro_recall": 0.7310757575757575,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "1|none|0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.7049312853678253,
+      "macro_recall": 0.7693164031682919,
+      "chance": 0.16666666666666669,
+      "draws": 1
+    },
+    "1|none|0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.745625,
+      "macro_recall": 0.7857525252525251,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "1|none|0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.725141471301536,
+      "macro_recall": 0.8467153428634542,
+      "chance": 0.16666666666666669,
+      "draws": 1
+    },
+    "1|none|0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.735,
+      "macro_recall": 0.7741363636363636,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "1|none|0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.7202910266774454,
+      "macro_recall": 0.8448998863959103,
+      "chance": 0.16666666666666669,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.8825,
+      "macro_recall": 0.77,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9272433306386418,
+      "macro_recall": 0.8588888888888889,
+      "chance": 0.16666666666666669,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.92,
+      "macro_recall": 0.8316666666666667,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.946645109135004,
+      "macro_recall": 0.9266666666666667,
+      "chance": 0.16666666666666669,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.91875,
+      "macro_recall": 0.8291666666666666,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "1|none|0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9474535165723524,
+      "macro_recall": 0.9272222222222223,
+      "chance": 0.16666666666666669,
+      "draws": 1
+    },
+    "2|none|0|level|angles|same_day|1|1": {
+      "accuracy": 0.9266666666666666,
+      "macro_recall": 0.9269444444444445,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "2|none|0|level|angles|same_day|1|32": {
+      "accuracy": 0.9210977701543739,
+      "macro_recall": 0.9278182769445413,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "2|none|0|level|angles|same_day|16|1": {
+      "accuracy": 0.9746666666666667,
+      "macro_recall": 0.9827777777777778,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "2|none|0|level|angles|same_day|16|32": {
+      "accuracy": 0.9656946826758147,
+      "macro_recall": 0.9730926636437625,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "2|none|0|level|angles|same_day|all|1": {
+      "accuracy": 0.9733333333333334,
+      "macro_recall": 0.9827777777777778,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "2|none|0|level|angles|same_day|all|32": {
+      "accuracy": 0.9622641509433962,
+      "macro_recall": 0.9719300081385885,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|same_day|1|1": {
+      "accuracy": 0.9986666666666667,
+      "macro_recall": 0.9983333333333334,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|same_day|1|32": {
+      "accuracy": 0.9982847341337907,
+      "macro_recall": 0.9966666666666667,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|same_day|16|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|same_day|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3381932532875929,
+      "draws": 1
+    },
+    "2|none|0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.779375,
+      "macro_recall": 0.7994242424242425,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "2|none|0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.7639902676399026,
+      "macro_recall": 0.7637920786958015,
+      "chance": 0.16666666666666666,
+      "draws": 1
+    },
+    "2|none|0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.84125,
+      "macro_recall": 0.8648484848484849,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "2|none|0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.8231954582319546,
+      "macro_recall": 0.8985717263766043,
+      "chance": 0.16666666666666666,
+      "draws": 1
+    },
+    "2|none|0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.815,
+      "macro_recall": 0.8276666666666666,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "2|none|0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.8118410381184104,
+      "macro_recall": 0.8994641074230292,
+      "chance": 0.16666666666666666,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.8975,
+      "macro_recall": 0.7941666666666668,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9359286293592863,
+      "macro_recall": 0.8294444444444444,
+      "chance": 0.16666666666666666,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.920625,
+      "macro_recall": 0.8275,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9529602595296026,
+      "macro_recall": 0.935,
+      "chance": 0.16666666666666666,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.919375,
+      "macro_recall": 0.8225000000000001,
+      "chance": 0.16666666666666663,
+      "draws": 1
+    },
+    "2|none|0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9578264395782644,
+      "macro_recall": 0.9416666666666668,
+      "chance": 0.16666666666666666,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|same_day|1|1": {
+      "accuracy": 0.8716666666666667,
+      "macro_recall": 0.8416666666666668,
+      "chance": 0.4305555555555555,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|same_day|1|32": {
+      "accuracy": 0.8645833333333334,
+      "macro_recall": 0.6611108116606028,
+      "chance": 0.4376736111111111,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|same_day|16|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.8150000000000001,
+      "chance": 0.4305555555555555,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|same_day|16|32": {
+      "accuracy": 0.9666666666666667,
+      "macro_recall": 0.7320441988950276,
+      "chance": 0.4376736111111111,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|same_day|all|1": {
+      "accuracy": 0.92,
+      "macro_recall": 0.7983333333333333,
+      "chance": 0.4305555555555555,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|same_day|all|32": {
+      "accuracy": 0.975,
+      "macro_recall": 0.7375690607734806,
+      "chance": 0.4376736111111111,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|same_day|1|1": {
+      "accuracy": 0.985,
+      "macro_recall": 0.98875,
+      "chance": 0.4305555555555555,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|same_day|1|32": {
+      "accuracy": 0.9708333333333333,
+      "macro_recall": 0.9806629834254144,
+      "chance": 0.4376736111111111,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|same_day|16|1": {
+      "accuracy": 0.99,
+      "macro_recall": 0.9924999999999999,
+      "chance": 0.4305555555555555,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|same_day|16|32": {
+      "accuracy": 0.9875,
+      "macro_recall": 0.9917127071823204,
+      "chance": 0.4376736111111111,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|same_day|all|1": {
+      "accuracy": 0.9983333333333333,
+      "macro_recall": 0.99875,
+      "chance": 0.4305555555555555,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|same_day|all|32": {
+      "accuracy": 0.9979166666666667,
+      "macro_recall": 0.9986187845303868,
+      "chance": 0.4376736111111111,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|other_day_any|1|1": {
+      "accuracy": 0.655,
+      "macro_recall": 0.5890909090909091,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|other_day_any|1|32": {
+      "accuracy": 0.6966632962588474,
+      "macro_recall": 0.5518333333333334,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|other_day_any|16|1": {
+      "accuracy": 0.745,
+      "macro_recall": 0.6482727272727272,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|other_day_any|16|32": {
+      "accuracy": 0.788675429726997,
+      "macro_recall": 0.8759236111111111,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|other_day_any|all|1": {
+      "accuracy": 0.7441666666666666,
+      "macro_recall": 0.6409393939393939,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles|other_day_any|all|32": {
+      "accuracy": 0.7866531850353893,
+      "macro_recall": 0.6298125,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|other_day_any|1|1": {
+      "accuracy": 0.9116666666666666,
+      "macro_recall": 0.7516666666666667,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9888776541961577,
+      "macro_recall": 0.7413194444444444,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.7533333333333333,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9989888776541962,
+      "macro_recall": 0.9991319444444444,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "2|none|0|shape|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9989888776541962,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 1
+    },
+    "1|report|3.0|level|angles|same_day|1|1": {
+      "accuracy": 0.7653333333333333,
+      "macro_recall": 0.8183333333333334,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|same_day|1|32": {
+      "accuracy": 0.7726495726495727,
+      "macro_recall": 0.8584358974358975,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|same_day|16|1": {
+      "accuracy": 0.8653333333333333,
+      "macro_recall": 0.9205555555555556,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|same_day|16|32": {
+      "accuracy": 0.8666666666666668,
+      "macro_recall": 0.9324999999999999,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|same_day|all|1": {
+      "accuracy": 0.8666666666666668,
+      "macro_recall": 0.9258333333333335,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|same_day|all|32": {
+      "accuracy": 0.8700854700854702,
+      "macro_recall": 0.9362820512820514,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|same_day|1|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|same_day|1|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|same_day|16|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|same_day|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.661875,
+      "macro_recall": 0.69260101010101,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.6623653028152712,
+      "macro_recall": 0.7204973671809372,
+      "chance": 0.16666666666666666,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.6768750000000001,
+      "macro_recall": 0.7320757575757575,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.6543197016328278,
+      "macro_recall": 0.800982912287172,
+      "chance": 0.16666666666666666,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.6606249999999999,
+      "macro_recall": 0.7137424242424243,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.6400150942695013,
+      "macro_recall": 0.7920231216833651,
+      "chance": 0.16666666666666666,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.8875,
+      "macro_recall": 0.7775000000000001,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9295899557358023,
+      "macro_recall": 0.8555555555555555,
+      "chance": 0.16666666666666666,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9193749999999999,
+      "macro_recall": 0.8308333333333333,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9536232409878573,
+      "macro_recall": 0.9355555555555555,
+      "chance": 0.16666666666666666,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9193749999999999,
+      "macro_recall": 0.8275,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|3.0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9568234720257548,
+      "macro_recall": 0.9399999999999998,
+      "chance": 0.16666666666666666,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|same_day|1|1": {
+      "accuracy": 0.7516666666666667,
+      "macro_recall": 0.7324999999999999,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|same_day|1|32": {
+      "accuracy": 0.7895833333333334,
+      "macro_recall": 0.8280000000000001,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|same_day|16|1": {
+      "accuracy": 0.915,
+      "macro_recall": 0.7925000000000001,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|same_day|16|32": {
+      "accuracy": 0.9833333333333332,
+      "macro_recall": 0.9851851851851852,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|same_day|all|1": {
+      "accuracy": 0.9183333333333333,
+      "macro_recall": 0.7870833333333335,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|same_day|all|32": {
+      "accuracy": 0.9916666666666668,
+      "macro_recall": 0.9925925925925927,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|same_day|1|1": {
+      "accuracy": 0.9833333333333332,
+      "macro_recall": 0.9875,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|same_day|1|32": {
+      "accuracy": 0.9708333333333334,
+      "macro_recall": 0.9740740740740741,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|same_day|16|1": {
+      "accuracy": 0.9966666666666667,
+      "macro_recall": 0.9974999999999999,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|same_day|16|32": {
+      "accuracy": 0.9916666666666668,
+      "macro_recall": 0.9925925925925927,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|same_day|all|32": {
+      "accuracy": 0.9979166666666668,
+      "macro_recall": 0.9981481481481481,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|other_day_any|1|1": {
+      "accuracy": 0.5875,
+      "macro_recall": 0.5417575757575758,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|other_day_any|1|32": {
+      "accuracy": 0.6740000000000002,
+      "macro_recall": 0.5268931375896211,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|other_day_any|16|1": {
+      "accuracy": 0.7333333333333333,
+      "macro_recall": 0.6399242424242424,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|other_day_any|16|32": {
+      "accuracy": 0.796,
+      "macro_recall": 0.7733654831000342,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|other_day_any|all|1": {
+      "accuracy": 0.7341666666666666,
+      "macro_recall": 0.6326818181818182,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles|other_day_any|all|32": {
+      "accuracy": 0.8019999999999999,
+      "macro_recall": 0.6351404062820074,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|other_day_any|1|1": {
+      "accuracy": 0.9066666666666666,
+      "macro_recall": 0.7483333333333333,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|other_day_any|1|32": {
+      "accuracy": 0.977,
+      "macro_recall": 0.7344827586206895,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9174999999999999,
+      "macro_recall": 0.7591666666666667,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9959999999999999,
+      "macro_recall": 0.8982758620689655,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9174999999999999,
+      "macro_recall": 0.7541666666666667,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|3.0|shape|angles+format|other_day_any|all|32": {
+      "accuracy": 0.994,
+      "macro_recall": 0.7491379310344828,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|same_day|1|1": {
+      "accuracy": 0.6213333333333333,
+      "macro_recall": 0.7205555555555555,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|same_day|1|32": {
+      "accuracy": 0.6763778367226644,
+      "macro_recall": 0.7585823211875844,
+      "chance": 0.34018076431869537,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|same_day|16|1": {
+      "accuracy": 0.7693333333333333,
+      "macro_recall": 0.8561111111111112,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|same_day|16|32": {
+      "accuracy": 0.7825670498084291,
+      "macro_recall": 0.8738380566801618,
+      "chance": 0.34018076431869537,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|same_day|all|1": {
+      "accuracy": 0.7533333333333332,
+      "macro_recall": 0.8480555555555556,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|same_day|all|32": {
+      "accuracy": 0.7791335101679929,
+      "macro_recall": 0.8794392712550609,
+      "chance": 0.34018076431869537,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|same_day|1|1": {
+      "accuracy": 0.9893333333333333,
+      "macro_recall": 0.9866666666666667,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|same_day|1|32": {
+      "accuracy": 0.9948423224285292,
+      "macro_recall": 0.9879999999999999,
+      "chance": 0.34018076431869537,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|same_day|16|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|same_day|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.34018076431869537,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.34018076431869537,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.5831250000000001,
+      "macro_recall": 0.6132828282828282,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.602297410192147,
+      "macro_recall": 0.668622621462378,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.651875,
+      "macro_recall": 0.7169242424242424,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.6382366171839855,
+      "macro_recall": 0.788604591261792,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.6362500000000001,
+      "macro_recall": 0.6853383838383837,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.6207120365015102,
+      "macro_recall": 0.7528108921729612,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.881875,
+      "macro_recall": 0.7716666666666667,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.94099672257567,
+      "macro_recall": 0.8861111111111111,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9175000000000001,
+      "macro_recall": 0.8316666666666668,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9537915301073197,
+      "macro_recall": 0.9355555555555555,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.91875,
+      "macro_recall": 0.8308333333333333,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|6.0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9577758498811131,
+      "macro_recall": 0.941111111111111,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|same_day|1|1": {
+      "accuracy": 0.74,
+      "macro_recall": 0.74,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|same_day|1|32": {
+      "accuracy": 0.7812500000000001,
+      "macro_recall": 0.8268148148148148,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|same_day|16|1": {
+      "accuracy": 0.915,
+      "macro_recall": 0.7995833333333333,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|same_day|16|32": {
+      "accuracy": 0.98125,
+      "macro_recall": 0.9833333333333334,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|same_day|all|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.7779166666666668,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|same_day|all|32": {
+      "accuracy": 0.99375,
+      "macro_recall": 0.9944444444444445,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|same_day|1|1": {
+      "accuracy": 0.9833333333333332,
+      "macro_recall": 0.9875,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|same_day|1|32": {
+      "accuracy": 0.9791666666666666,
+      "macro_recall": 0.9814814814814815,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|same_day|16|1": {
+      "accuracy": 0.9983333333333334,
+      "macro_recall": 0.99875,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|same_day|16|32": {
+      "accuracy": 0.9958333333333333,
+      "macro_recall": 0.9962962962962963,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|other_day_any|1|1": {
+      "accuracy": 0.5525,
+      "macro_recall": 0.5170151515151515,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|other_day_any|1|32": {
+      "accuracy": 0.626,
+      "macro_recall": 0.5013374871969956,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|other_day_any|16|1": {
+      "accuracy": 0.7183333333333334,
+      "macro_recall": 0.6261060606060606,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|other_day_any|16|32": {
+      "accuracy": 0.7969999999999999,
+      "macro_recall": 0.6286697678388529,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|other_day_any|all|1": {
+      "accuracy": 0.725,
+      "macro_recall": 0.6261515151515151,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles|other_day_any|all|32": {
+      "accuracy": 0.7969999999999999,
+      "macro_recall": 0.631176169341072,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|other_day_any|1|1": {
+      "accuracy": 0.9066666666666666,
+      "macro_recall": 0.7450000000000001,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9799999999999999,
+      "macro_recall": 0.7370689655172413,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9158333333333333,
+      "macro_recall": 0.7558333333333334,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|other_day_any|16|32": {
+      "accuracy": 0.992,
+      "macro_recall": 0.7474137931034482,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.7533333333333334,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|6.0|shape|angles+format|other_day_any|all|32": {
+      "accuracy": 0.994,
+      "macro_recall": 0.7491379310344828,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|same_day|1|1": {
+      "accuracy": 0.5693333333333334,
+      "macro_recall": 0.6738888888888888,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|same_day|1|32": {
+      "accuracy": 0.5777777777777777,
+      "macro_recall": 0.6644871794871795,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|same_day|16|1": {
+      "accuracy": 0.616,
+      "macro_recall": 0.7225000000000001,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|same_day|16|32": {
+      "accuracy": 0.6974358974358974,
+      "macro_recall": 0.7701410256410256,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|same_day|all|1": {
+      "accuracy": 0.6106666666666667,
+      "macro_recall": 0.7091666666666667,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|same_day|all|32": {
+      "accuracy": 0.6376068376068377,
+      "macro_recall": 0.7631410256410256,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|same_day|1|1": {
+      "accuracy": 0.992,
+      "macro_recall": 0.99,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|same_day|1|32": {
+      "accuracy": 0.9965811965811966,
+      "macro_recall": 0.992,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|same_day|16|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|same_day|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.5143749999999999,
+      "macro_recall": 0.5690151515151516,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.5429777777777778,
+      "macro_recall": 0.6438334873041056,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.585,
+      "macro_recall": 0.6559292929292928,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.5731238095238096,
+      "macro_recall": 0.6970755427469725,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.565625,
+      "macro_recall": 0.6187020202020201,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.5524888888888889,
+      "macro_recall": 0.6568450942457329,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.881875,
+      "macro_recall": 0.7858333333333334,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9395936507936508,
+      "macro_recall": 0.8983333333333332,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.915625,
+      "macro_recall": 0.8316666666666668,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9491365079365078,
+      "macro_recall": 0.9288888888888888,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.913125,
+      "macro_recall": 0.8216666666666665,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|report|12.0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9515111111111111,
+      "macro_recall": 0.931111111111111,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|same_day|1|1": {
+      "accuracy": 0.7216666666666668,
+      "macro_recall": 0.725,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|same_day|1|32": {
+      "accuracy": 0.78125,
+      "macro_recall": 0.8237037037037037,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|same_day|16|1": {
+      "accuracy": 0.9016666666666667,
+      "macro_recall": 0.7791666666666668,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|same_day|16|32": {
+      "accuracy": 0.975,
+      "macro_recall": 0.9777777777777779,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|same_day|all|1": {
+      "accuracy": 0.9183333333333333,
+      "macro_recall": 0.7833333333333334,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|same_day|all|32": {
+      "accuracy": 0.9854166666666668,
+      "macro_recall": 0.987037037037037,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|same_day|1|1": {
+      "accuracy": 0.9683333333333334,
+      "macro_recall": 0.97625,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|same_day|1|32": {
+      "accuracy": 0.9645833333333333,
+      "macro_recall": 0.9685185185185186,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|same_day|16|1": {
+      "accuracy": 0.9949999999999999,
+      "macro_recall": 0.9962500000000001,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|same_day|16|32": {
+      "accuracy": 0.9875,
+      "macro_recall": 0.9888888888888889,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|same_day|all|32": {
+      "accuracy": 0.9958333333333332,
+      "macro_recall": 0.9962962962962962,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|other_day_any|1|1": {
+      "accuracy": 0.5491666666666667,
+      "macro_recall": 0.5197727272727273,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|other_day_any|1|32": {
+      "accuracy": 0.603,
+      "macro_recall": 0.4855471150563332,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|other_day_any|16|1": {
+      "accuracy": 0.7366666666666666,
+      "macro_recall": 0.6542272727272727,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|other_day_any|16|32": {
+      "accuracy": 0.7969999999999999,
+      "macro_recall": 0.6774406794127688,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|other_day_any|all|1": {
+      "accuracy": 0.7358333333333333,
+      "macro_recall": 0.638090909090909,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles|other_day_any|all|32": {
+      "accuracy": 0.7950000000000002,
+      "macro_recall": 0.6294520314100376,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|other_day_any|1|1": {
+      "accuracy": 0.9016666666666666,
+      "macro_recall": 0.7483333333333333,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|other_day_any|1|32": {
+      "accuracy": 0.97,
+      "macro_recall": 0.728448275862069,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.76,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|other_day_any|16|32": {
+      "accuracy": 0.993,
+      "macro_recall": 0.7974137931034482,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9183333333333333,
+      "macro_recall": 0.7583333333333334,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|report|12.0|shape|angles+format|other_day_any|all|32": {
+      "accuracy": 0.992,
+      "macro_recall": 0.7474137931034482,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|same_day|1|1": {
+      "accuracy": 0.8240000000000001,
+      "macro_recall": 0.8477777777777777,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|same_day|1|32": {
+      "accuracy": 0.8205128205128205,
+      "macro_recall": 0.880423076923077,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|same_day|16|1": {
+      "accuracy": 0.844,
+      "macro_recall": 0.9025000000000001,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|same_day|16|32": {
+      "accuracy": 0.8273504273504273,
+      "macro_recall": 0.9020897435897435,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|same_day|all|1": {
+      "accuracy": 0.8146666666666667,
+      "macro_recall": 0.8738888888888889,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|same_day|all|32": {
+      "accuracy": 0.8017094017094017,
+      "macro_recall": 0.8886282051282051,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|same_day|1|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|same_day|1|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|same_day|16|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|same_day|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.7,
+      "macro_recall": 0.7213080808080807,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.6746031746031746,
+      "macro_recall": 0.7062035158891143,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.6981250000000001,
+      "macro_recall": 0.7430656565656565,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.6682539682539683,
+      "macro_recall": 0.800371872887086,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.660625,
+      "macro_recall": 0.713459595959596,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.6293650793650795,
+      "macro_recall": 0.7661009691232815,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.8875,
+      "macro_recall": 0.7791666666666667,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9365079365079365,
+      "macro_recall": 0.8333333333333334,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.923125,
+      "macro_recall": 0.8416666666666668,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9539682539682539,
+      "macro_recall": 0.9355555555555555,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.92875,
+      "macro_recall": 0.8491666666666667,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|3.0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9587301587301587,
+      "macro_recall": 0.9422222222222221,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|same_day|1|1": {
+      "accuracy": 0.9,
+      "macro_recall": 0.90625,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|same_day|1|32": {
+      "accuracy": 0.875,
+      "macro_recall": 0.888888888888889,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|same_day|16|1": {
+      "accuracy": 0.9416666666666667,
+      "macro_recall": 0.84375,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|same_day|16|32": {
+      "accuracy": 0.96875,
+      "macro_recall": 0.9722222222222221,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|same_day|all|1": {
+      "accuracy": 0.9333333333333333,
+      "macro_recall": 0.8,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|same_day|all|32": {
+      "accuracy": 0.9895833333333334,
+      "macro_recall": 0.9907407407407408,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|same_day|1|1": {
+      "accuracy": 0.9833333333333332,
+      "macro_recall": 0.9875,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|same_day|1|32": {
+      "accuracy": 0.96875,
+      "macro_recall": 0.9722222222222221,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|same_day|16|1": {
+      "accuracy": 0.9916666666666668,
+      "macro_recall": 0.99375,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|same_day|16|32": {
+      "accuracy": 0.9791666666666666,
+      "macro_recall": 0.9814814814814815,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|other_day_any|1|1": {
+      "accuracy": 0.6666666666666666,
+      "macro_recall": 0.6127272727272728,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|other_day_any|1|32": {
+      "accuracy": 0.725,
+      "macro_recall": 0.5684149880505291,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|other_day_any|16|1": {
+      "accuracy": 0.7541666666666667,
+      "macro_recall": 0.6582575757575757,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|other_day_any|16|32": {
+      "accuracy": 0.8149999999999998,
+      "macro_recall": 0.8880206555138273,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|other_day_any|all|1": {
+      "accuracy": 0.7625,
+      "macro_recall": 0.6501515151515151,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles|other_day_any|all|32": {
+      "accuracy": 0.805,
+      "macro_recall": 0.6372759474223284,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|other_day_any|1|1": {
+      "accuracy": 0.9,
+      "macro_recall": 0.7333333333333334,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|other_day_any|1|32": {
+      "accuracy": 0.975,
+      "macro_recall": 0.7327586206896551,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|other_day_any|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|3.0|shape|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9949999999999999,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|same_day|1|1": {
+      "accuracy": 0.72,
+      "macro_recall": 0.7552777777777778,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|same_day|1|32": {
+      "accuracy": 0.6854700854700855,
+      "macro_recall": 0.7777307692307692,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|same_day|16|1": {
+      "accuracy": 0.704,
+      "macro_recall": 0.7705555555555554,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|same_day|16|32": {
+      "accuracy": 0.6615384615384616,
+      "macro_recall": 0.7818076923076923,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|same_day|all|1": {
+      "accuracy": 0.6493333333333333,
+      "macro_recall": 0.7127777777777778,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|same_day|all|32": {
+      "accuracy": 0.6119658119658119,
+      "macro_recall": 0.7347051282051282,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|same_day|1|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|same_day|1|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|same_day|16|1": {
+      "accuracy": 0.9986666666666666,
+      "macro_recall": 0.9983333333333334,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|same_day|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|same_day|all|32": {
+      "accuracy": 0.9982905982905983,
+      "macro_recall": 0.9960000000000001,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.5325,
+      "macro_recall": 0.5467626262626263,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.5404761904761906,
+      "macro_recall": 0.5935778679287808,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.545625,
+      "macro_recall": 0.5767828282828285,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.5269841269841271,
+      "macro_recall": 0.6685925174667569,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.505625,
+      "macro_recall": 0.538530303030303,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.47619047619047616,
+      "macro_recall": 0.6224746450304259,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.8712500000000001,
+      "macro_recall": 0.7541666666666667,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9380952380952381,
+      "macro_recall": 0.8355555555555556,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.899375,
+      "macro_recall": 0.8016666666666665,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9492063492063492,
+      "macro_recall": 0.9288888888888888,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.905,
+      "macro_recall": 0.8075000000000001,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|6.0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9547619047619047,
+      "macro_recall": 0.9344444444444443,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|same_day|1|1": {
+      "accuracy": 0.9,
+      "macro_recall": 0.90625,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|same_day|1|32": {
+      "accuracy": 0.875,
+      "macro_recall": 0.888888888888889,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|same_day|16|1": {
+      "accuracy": 0.9416666666666667,
+      "macro_recall": 0.84375,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|same_day|16|32": {
+      "accuracy": 0.96875,
+      "macro_recall": 0.9722222222222221,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|same_day|all|1": {
+      "accuracy": 0.9333333333333333,
+      "macro_recall": 0.8,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|same_day|all|32": {
+      "accuracy": 0.9895833333333334,
+      "macro_recall": 0.9907407407407408,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|same_day|1|1": {
+      "accuracy": 0.9833333333333332,
+      "macro_recall": 0.9875,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|same_day|1|32": {
+      "accuracy": 0.96875,
+      "macro_recall": 0.9722222222222221,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|same_day|16|1": {
+      "accuracy": 0.9916666666666668,
+      "macro_recall": 0.99375,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|same_day|16|32": {
+      "accuracy": 0.9791666666666666,
+      "macro_recall": 0.9814814814814815,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|other_day_any|1|1": {
+      "accuracy": 0.6666666666666666,
+      "macro_recall": 0.6127272727272728,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|other_day_any|1|32": {
+      "accuracy": 0.725,
+      "macro_recall": 0.5684149880505291,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|other_day_any|16|1": {
+      "accuracy": 0.7541666666666667,
+      "macro_recall": 0.6582575757575757,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|other_day_any|16|32": {
+      "accuracy": 0.8149999999999998,
+      "macro_recall": 0.8880206555138273,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|other_day_any|all|1": {
+      "accuracy": 0.7625,
+      "macro_recall": 0.6501515151515151,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles|other_day_any|all|32": {
+      "accuracy": 0.805,
+      "macro_recall": 0.6372759474223284,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|other_day_any|1|1": {
+      "accuracy": 0.9,
+      "macro_recall": 0.7333333333333334,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|other_day_any|1|32": {
+      "accuracy": 0.975,
+      "macro_recall": 0.7327586206896551,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|other_day_any|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|6.0|shape|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9949999999999999,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|same_day|1|1": {
+      "accuracy": 0.616,
+      "macro_recall": 0.6486111111111111,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|same_day|1|32": {
+      "accuracy": 0.6324786324786325,
+      "macro_recall": 0.7029615384615384,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|same_day|16|1": {
+      "accuracy": 0.5933333333333333,
+      "macro_recall": 0.6308333333333332,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|same_day|16|32": {
+      "accuracy": 0.5829059829059828,
+      "macro_recall": 0.6621923076923076,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|same_day|all|1": {
+      "accuracy": 0.5426666666666667,
+      "macro_recall": 0.5883333333333334,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|same_day|all|32": {
+      "accuracy": 0.535042735042735,
+      "macro_recall": 0.5842564102564103,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|same_day|1|1": {
+      "accuracy": 0.9933333333333334,
+      "macro_recall": 0.9941666666666666,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|same_day|1|32": {
+      "accuracy": 0.9914529914529915,
+      "macro_recall": 0.9889230769230769,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|same_day|16|1": {
+      "accuracy": 0.9813333333333333,
+      "macro_recall": 0.9800000000000001,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|same_day|16|32": {
+      "accuracy": 0.9760683760683762,
+      "macro_recall": 0.952923076923077,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|same_day|all|1": {
+      "accuracy": 0.9706666666666667,
+      "macro_recall": 0.9658333333333333,
+      "chance": 0.3277777777777778,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|same_day|all|32": {
+      "accuracy": 0.9623931623931623,
+      "macro_recall": 0.9179487179487179,
+      "chance": 0.3404558404558405,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|other_day_any|1|1": {
+      "accuracy": 0.38062500000000005,
+      "macro_recall": 0.4045353535353535,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|other_day_any|1|32": {
+      "accuracy": 0.3857142857142857,
+      "macro_recall": 0.471656524678837,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|other_day_any|16|1": {
+      "accuracy": 0.379375,
+      "macro_recall": 0.4147575757575758,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|other_day_any|16|32": {
+      "accuracy": 0.3595238095238095,
+      "macro_recall": 0.5158395312147848,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|other_day_any|all|1": {
+      "accuracy": 0.340625,
+      "macro_recall": 0.36743434343434345,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles|other_day_any|all|32": {
+      "accuracy": 0.32222222222222224,
+      "macro_recall": 0.4476526932612126,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|other_day_any|1|1": {
+      "accuracy": 0.86,
+      "macro_recall": 0.7383333333333334,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|other_day_any|1|32": {
+      "accuracy": 0.9341269841269841,
+      "macro_recall": 0.8294444444444444,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|other_day_any|16|1": {
+      "accuracy": 0.880625,
+      "macro_recall": 0.773611111111111,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|other_day_any|16|32": {
+      "accuracy": 0.9412698412698413,
+      "macro_recall": 0.9,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|other_day_any|all|1": {
+      "accuracy": 0.8768750000000001,
+      "macro_recall": 0.7661111111111112,
+      "chance": 0.16666666666666669,
+      "draws": 5
+    },
+    "1|session|12.0|level|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9404761904761905,
+      "macro_recall": 0.8772222222222222,
+      "chance": 0.16666666666666663,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|same_day|1|1": {
+      "accuracy": 0.9,
+      "macro_recall": 0.90625,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|same_day|1|32": {
+      "accuracy": 0.875,
+      "macro_recall": 0.888888888888889,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|same_day|16|1": {
+      "accuracy": 0.9416666666666667,
+      "macro_recall": 0.84375,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|same_day|16|32": {
+      "accuracy": 0.96875,
+      "macro_recall": 0.9722222222222221,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|same_day|all|1": {
+      "accuracy": 0.9333333333333333,
+      "macro_recall": 0.8,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|same_day|all|32": {
+      "accuracy": 0.9895833333333334,
+      "macro_recall": 0.9907407407407408,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|same_day|1|1": {
+      "accuracy": 0.9833333333333332,
+      "macro_recall": 0.9875,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|same_day|1|32": {
+      "accuracy": 0.96875,
+      "macro_recall": 0.9722222222222221,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|same_day|16|1": {
+      "accuracy": 0.9916666666666668,
+      "macro_recall": 0.99375,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|same_day|16|32": {
+      "accuracy": 0.9791666666666666,
+      "macro_recall": 0.9814814814814815,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|same_day|all|1": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.4305555555555555,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|same_day|all|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.43923611111111116,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|other_day_any|1|1": {
+      "accuracy": 0.6666666666666666,
+      "macro_recall": 0.6127272727272728,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|other_day_any|1|32": {
+      "accuracy": 0.725,
+      "macro_recall": 0.5684149880505291,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|other_day_any|16|1": {
+      "accuracy": 0.7541666666666667,
+      "macro_recall": 0.6582575757575757,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|other_day_any|16|32": {
+      "accuracy": 0.8149999999999998,
+      "macro_recall": 0.8880206555138273,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|other_day_any|all|1": {
+      "accuracy": 0.7625,
+      "macro_recall": 0.6501515151515151,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles|other_day_any|all|32": {
+      "accuracy": 0.805,
+      "macro_recall": 0.6372759474223284,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|other_day_any|1|1": {
+      "accuracy": 0.9,
+      "macro_recall": 0.7333333333333334,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|other_day_any|1|32": {
+      "accuracy": 0.975,
+      "macro_recall": 0.7327586206896551,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|other_day_any|16|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|other_day_any|16|32": {
+      "accuracy": 1.0,
+      "macro_recall": 1.0,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|other_day_any|all|1": {
+      "accuracy": 0.9166666666666666,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    },
+    "2|session|12.0|shape|angles+format|other_day_any|all|32": {
+      "accuracy": 0.9949999999999999,
+      "macro_recall": 0.75,
+      "chance": 0.25,
+      "draws": 5
+    }
+  }
+}

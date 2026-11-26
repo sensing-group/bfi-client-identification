@@ -1,0 +1,183 @@
+{
+ "dataset": "ntufi",
+ "seeds": 10,
+ "chance": 0.14285714285714285,
+ "cal_sizes": [
+  0,
+  1,
+  2,
+  3,
+  5,
+  7
+ ],
+ "supcon": true,
+ "supcon_epochs": 200,
+ "he_cal_per_class": null,
+ "session_prefix": "a",
+ "n_session_support": 140,
+ "n_session_queries": 280,
+ "runtime_s": 194.575599193573,
+ "peak_rss_mb": 861.1171875,
+ "aggregate": [
+  {
+   "dataset": "ntufi",
+   "n_cal": 0,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.8210653753026635,
+   "acc_sd": 0.05000714876252714,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 0,
+   "attacker": "nn1",
+   "K": "all_of_session_a",
+   "acc_mean": 0.8321428571428571,
+   "acc_sd": 1.1702778228589004e-16,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 1,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.7634382566585955,
+   "acc_sd": 0.07710300513507211,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 1,
+   "attacker": "nn1",
+   "K": "all_of_session_a",
+   "acc_mean": 0.8225,
+   "acc_sd": 0.019492570827377226,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 2,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.77046004842615,
+   "acc_sd": 0.05913148226775654,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 2,
+   "attacker": "nn1",
+   "K": "all_of_session_a",
+   "acc_mean": 0.8114285714285716,
+   "acc_sd": 0.03594370756305874,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 2,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.6883777239709443,
+   "acc_sd": 0.08192825899225582,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 3,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.7861985472154963,
+   "acc_sd": 0.07364605788396483,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 3,
+   "attacker": "nn1",
+   "K": "all_of_session_a",
+   "acc_mean": 0.8200000000000001,
+   "acc_sd": 0.0234012616672488,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 3,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.6891041162227604,
+   "acc_sd": 0.0806230360104352,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 5,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.7663438256658596,
+   "acc_sd": 0.06434839503487291,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 5,
+   "attacker": "nn1",
+   "K": "all_of_session_a",
+   "acc_mean": 0.8117857142857142,
+   "acc_sd": 0.017500404919189774,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 5,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.6714285714285714,
+   "acc_sd": 0.06398088415670412,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 7,
+   "attacker": "nn1",
+   "K": "1",
+   "acc_mean": 0.7523002421307506,
+   "acc_sd": 0.06926096405723778,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 7,
+   "attacker": "nn1",
+   "K": "all_of_session_a",
+   "acc_mean": 0.8178571428571428,
+   "acc_sd": 0.0,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  },
+  {
+   "dataset": "ntufi",
+   "n_cal": 7,
+   "attacker": "supcon",
+   "K": "1",
+   "acc_mean": 0.6564164648910411,
+   "acc_sd": 0.06313430026964655,
+   "chance": 0.14285714285714285,
+   "n_seeds": 10
+  }
+ ]
+}

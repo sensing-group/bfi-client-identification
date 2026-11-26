@@ -1,0 +1,50 @@
+% fig_condition_matched.tex -- condition-matched eavesdropper protocol.
+%
+% Adapted verbatim from slide 20 of the BFI WiMob talk
+% (papers/bfi-wimob-talk/deck.tex, "Condition-matched eavesdropper").
+% The encoder is trained on calibration windows from one recording
+% prefix; targets are evaluated on the same prefix (same-prefix) or on
+% the two unseen prefixes (cross-prefix).
+%
+% Required preamble (already in paper.tex):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta,positioning,calc}
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\sffamily\footnotesize,
+    room/.style={rectangle, rounded corners=1mm, draw=black!45,
+                 line width=0.5pt, minimum width=22mm, minimum height=11mm,
+                 fill=white, font=\sffamily\scriptsize, align=center},
+    cal/.style={room, fill=blue!10, draw=blue!55, line width=0.7pt},
+    tgt/.style={room, fill=orange!10, draw=orange!65},
+    arr/.style={-{Stealth[length=1.6mm, width=1.2mm]}, line width=0.45pt},
+]
+
+% Calibration condition (left, blue)
+\node[cal] (a) at (10, 5) {prefix \texttt{a}\\\tiny slow walk};
+\node[font=\sffamily\scriptsize, color=blue!60, align=center, anchor=south]
+    at (10, 12) {\textbf{calibration cohort}};
+\node[font=\sffamily\scriptsize\itshape, color=blue!75, anchor=north]
+    at (10, -2) {trains the encoder};
+
+% Encoder
+\node[rectangle, rounded corners=1mm, draw=orange!75, fill=orange!12,
+      minimum width=14mm, minimum height=9mm,
+      font=\sffamily\scriptsize\bfseries, align=center, line width=0.6pt]
+      (enc) at (45, 5) {encoder};
+\draw[arr, blue!70] (a.east) -- (enc.west);
+
+% Targets (right, orange)
+\node[tgt] (ta) at (80, 15) {target on \texttt{a}};
+\node[tgt] (tb) at (80,  5) {target on \texttt{b}};
+\node[tgt] (tc) at (80, -5) {target on \texttt{c}};
+\node[font=\sffamily\scriptsize, color=orange!75, align=center, anchor=south]
+    at (80, 22) {\textbf{held-out target}};
+
+% Connect encoder to targets
+\draw[arr] (enc.east) .. controls (62, 15) .. (ta.west);
+\draw[arr] (enc.east) -- (tb.west);
+\draw[arr] (enc.east) .. controls (62, -5) .. (tc.west);
+\node[font=\sffamily\tiny, anchor=west] at (53, 15.5) {same-prefix};
+\node[font=\sffamily\tiny, anchor=west] at (53, -2.5) {cross-prefix};
+\end{tikzpicture}

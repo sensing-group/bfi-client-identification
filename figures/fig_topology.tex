@@ -1,0 +1,138 @@
+% fig_topology.tex -- residential air-capture testbed layout (v6, 2026-05-22)
+%
+% Generated via /figure-generator with the iterative refinement workflow.
+%
+% Design constraints applied this pass:
+%   * Smaller canvas (drops from ~50x34 mm to ~38x22 mm).
+%   * Zero label collisions: all room and device labels live OUTSIDE
+%     the rooms with leader lines into the floor plan.
+%   * Furniture and activity oval remain (LeakyBeam idiom) but the
+%     decorative annotations that previously collided ("plaintext BFI"
+%     wavy arrow, "approx 11 m" distance tag, inline "client locations"
+%     text) are removed.
+%   * Dimensions stay in the room labels themselves (e.g. "Living room
+%     25 m x 25 m"), not on outside extension lines, to save vertical
+%     and horizontal space.
+%   * Palette matches the eval figures: attack-teal sniffer,
+%     defense-orange router, neutral grays for walls and furniture.
+%
+% Required preamble (already in paper.tex):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,
+%                    shapes.geometric,decorations.pathmorphing}
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\sffamily\footnotesize,
+    >={Stealth[length=1.5mm,width=1.1mm]},
+    every node/.style={font=\sffamily\footnotesize},
+]
+
+% Lock bounding box to 1:1 so the figure renders at the same width and
+% height as the two 1:1 photo panels it shares Figure 3 with.
+\useasboundingbox (-1, -10) rectangle (49, 23);
+
+% -- Palette -----------------------------------------------------------
+\definecolor{cWall}{HTML}{4A4A4A}
+\definecolor{cFurn}{HTML}{B8B8B8}
+\definecolor{cActivity}{HTML}{C7DBEA}
+\definecolor{cClient}{HTML}{D55E00}
+\definecolor{cSniffer}{HTML}{1B9E77}
+\definecolor{cRouter}{HTML}{D95F02}
+\definecolor{cLabel}{HTML}{2A2A2A}
+\definecolor{cLead}{HTML}{6A6A6A}
+
+% -- Floor plan (compact: ~38 mm wide x 22 mm tall) -------------------
+% Living  (0,0) - (20,20)    ~ 25 m x 25 m
+% Bedroom (20,7) - (33,20)   ~ 16 m x 16 m
+% Office  (21,0) - (28,7)    ~ 8 m x 8 m
+\draw[cWall, line width=0.6pt]
+    (0, 0) -- (0, 20)        % west wall
+    -- (33, 20)              % north wall (extends across bedroom)
+    -- (33, 7)               % east wall of bedroom
+    -- (28, 7)               % step in
+    -- (28, 0)               % east wall of office
+    -- (21, 0)               % south wall of office
+    -- (21, 7)               % west wall of office (interior)
+    -- (20, 7)               % step to living
+    -- (20, 0) -- cycle;     % south wall of living
+% Internal partitions
+\draw[cWall, line width=0.6pt] (20, 7) -- (20, 20);   % living | bedroom
+\draw[cWall, line width=0.6pt] (20, 7) -- (21, 7);    % small step
+\draw[cWall, line width=0.6pt] (21, 7) -- (28, 7);    % bedroom floor over office
+% Door gaps (white over the walls)
+\fill[white] (20, 13) rectangle (20.4, 15);   % living-bedroom door
+\fill[white] (24, 7) rectangle (25.5, 7.3);   % bedroom-office door
+
+% -- Furniture line art (very subtle) ---------------------------------
+% Living: sofa (north wall), TV bench (south wall), coffee table.
+\draw[cFurn, line width=0.3pt] (2.5, 17) rectangle (8, 18.5);   % sofa
+\draw[cFurn, line width=0.3pt] (3.5, 13) rectangle (7, 14.5);   % coffee table
+\draw[cFurn, line width=0.3pt] (10, 1.3) rectangle (18, 2.3);   % TV bench
+% Bedroom: bed.
+\draw[cFurn, line width=0.3pt] (21.5, 11) rectangle (28, 16);   % bed
+% Office: desk (south wall).
+\draw[cFurn, line width=0.3pt] (21.6, 0.8) rectangle (27.4, 2); % desk
+
+% -- Activity area (translucent blue oval, LeakyBeam idiom) -----------
+\fill[cActivity, opacity=0.55] (10, 9) ellipse [x radius=8, y radius=4.6];
+
+% -- WiFi clients: small filled squares, centred on the activity oval -
+\foreach \cx/\cy in {7/10.5, 10/10.5, 13/10.5,
+                     7/7.5,  10/7.5,  13/7.5}{
+    \fill[cClient!85] (\cx-0.45, \cy-0.45) rectangle (\cx+0.45, \cy+0.45);
+}
+
+% -- Router glyph (office, bottom centre) -----------------------------
+\coordinate (rtrPos) at (24.5, 3.6);
+\fill[cRouter!85] ($(rtrPos)+(-0.8,-0.55)$) rectangle ($(rtrPos)+(0.8,0.55)$);
+\fill[cRouter!85] ($(rtrPos)+(-0.15,0.55)$) rectangle ($(rtrPos)+(0.15,1.25)$);
+% Small WiFi waves
+\foreach \r/\op in {1.4/0.7, 2.0/0.5}{
+    \draw[cRouter!85, line width=0.35pt, opacity=\op]
+        ($(rtrPos)+(0,1.25)$) ++(150:\r mm) arc (150:30:\r mm);
+}
+
+% -- Sniffer glyph (bedroom, centre) ----------------------------------
+\coordinate (snifPos) at (26.5, 14);
+\fill[cSniffer!85] ($(snifPos)+(-0.8,-0.55)$) rectangle ($(snifPos)+(0.8,0.55)$);
+\fill[cSniffer!85] ($(snifPos)+(-0.55,0.55)$) rectangle ($(snifPos)+(-0.40,1.20)$);
+\fill[cSniffer!85] ($(snifPos)+( 0.40,0.55)$) rectangle ($(snifPos)+( 0.55,1.20)$);
+
+% -- Labels: room name OUTSIDE-above the wall, dimension INSIDE the room
+%    near the top so the two never stack vertically.  Office labels both
+%    go BELOW the room (the room is small; nothing inside has room).
+\node[font=\sffamily\bfseries\scriptsize, text=cLabel, anchor=south]
+    at (10, 20.6) {Living room};
+\node[font=\sffamily\scriptsize, text=cLabel!75]
+    at (10, 19) {25\,m\,$\times$\,25\,m};
+
+\node[font=\sffamily\bfseries\scriptsize, text=cLabel, anchor=south]
+    at (26.5, 20.6) {Bedroom};
+\node[font=\sffamily\scriptsize, text=cLabel!75]
+    at (26.5, 19) {16\,m\,$\times$\,16\,m};
+
+% Office: name + dimension on a single line below the south wall.
+\node[font=\sffamily\bfseries\scriptsize, text=cLabel, anchor=north,
+      align=center]
+    at (24.5, -0.6)
+    {Office\\[-1pt]\textmd{\textcolor{cLabel!75}{8\,m\,$\times$\,8\,m}}};
+
+% Device callouts: leader from outside-right margin to each glyph.
+\node[font=\sffamily\bfseries\scriptsize, text=cSniffer, anchor=west]
+    (snifLab) at (35.5, 14) {Sniffer};
+\draw[cSniffer, line width=0.4pt, ->]
+    (snifLab.west) -- ($(snifPos)+(0.8,0)$);
+
+\node[font=\sffamily\bfseries\scriptsize, text=cRouter, anchor=west]
+    (rtrLab) at (35.5, 4) {Router};
+\draw[cRouter, line width=0.4pt, ->]
+    (rtrLab.west) -- ($(rtrPos)+(0.8,0)$);
+
+% Client cluster label: centred under the cluster in the clear lower
+% half of the activity oval, with a white backing so no furniture
+% outline shows through the text.
+\node[font=\sffamily\scriptsize\itshape, text=cClient, anchor=north,
+      fill=white, inner sep=0.7pt]
+    at (10, 6.0) {WiFi clients};
+
+\end{tikzpicture}

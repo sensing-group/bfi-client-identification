@@ -1,0 +1,103 @@
+# MANIFEST of the data files and vendored code released with "Hide the Client, Keep the Beam: What It Takes to Protect WiFi Beamforming Feedback"
+# Generated 2026-10-25T00:07Z, updated 2026-10-25 (A: datasheet and labels; B: salted copies; C: vendored code) with: sha256sum <file>; stat -c %s <file>; updated 2026-10-28 (the 24 middle C5 files; both DATASHEET.md and load_dataset.py: final title, authors, CC BY 4.0, code link; decoder docstring); updated 2026-11-12 (A and B: the corrected release, see the section headers)
+# Columns: sha256  size_bytes  released_path
+#
+# A. 13-day Pi 5 + AX210 capture, corrected release: only the frames the six labelled household devices sent to the
+#    household access point (832,019 of the 832,827 frames heard); salted device IDs; RSSI exact in dBm, column rssi;
+#    the LG TV labelled "LG TV", mobility "stationary".
+#    Local source at build time: ~/bfi-archive/anon_v2/ (written by ~/bfi-archive/anonymise_v2.py from the raw archive)
+938314f48ff0ef48760ea2d98fee86975e7dc3b61fc5a75906c4f512fa4d7811      23441408  pi-capture/bfi_2026-05-08.sqlite
+7f2fc6bc92458d0f5583f36e2e62057dbf19bf1033e2184ab80f24f261d12d5d      48037888  pi-capture/bfi_2026-05-09.sqlite
+cda8b8b920ad6cb6457c7a063672e2e9824e07213943f9d09c988e2fe3ccb384      85327872  pi-capture/bfi_2026-05-10.sqlite
+167d47b8b2f22b66942a6a895e8623a3ad70e65ede1777d19122bce4b03bcbf3      73109504  pi-capture/bfi_2026-05-11.sqlite
+4b5cef2cb27e3ce376f63168312ba0079a29799dd487d351ce2f28de7f59b186         16384  pi-capture/bfi_2026-05-12.sqlite
+4b5cef2cb27e3ce376f63168312ba0079a29799dd487d351ce2f28de7f59b186         16384  pi-capture/bfi_2026-05-13.sqlite
+4400418d1670b4eaf52ae4e4fcf7a48f9620456a621ff858cc5fd6ba95a2ce2e      71942144  pi-capture/bfi_2026-05-14.sqlite
+5c674fc3ce42bfe2bad7550742eac1f9857d27a209a2920ac3c14f79b2cc04b6     313143296  pi-capture/bfi_2026-05-15.sqlite
+49f1aeded73acab8dc7fbc2d0bebd32e3d55203024f45614dca5f9ceedf6ad89     244838400  pi-capture/bfi_2026-05-16.sqlite
+97189b50d77815caac5313cb4347b0c3e40bd405a5d3fb9eb137d44586fb2cc1     240390144  pi-capture/bfi_2026-05-17.sqlite
+61d81e724d707205e7fbbbbd7d56f7bece955468353b9d91658d09a98f848f51     302125056  pi-capture/bfi_2026-05-18.sqlite
+6c059999a39d3b55eafcc98767fcbb106aa0b55a3168172b5834af667c9cbfb1     242331648  pi-capture/bfi_2026-05-19.sqlite
+10f837d41691b1d45e98963a3f806f416c0531928f0ca6af2b8bf3ebdcd20b14     122961920  pi-capture/bfi_2026-05-20.sqlite
+93c0d20420c66603b934c73704ee4447a2dae92949baef7b05b231a4c328c1b9          6970  pi-capture/DATASHEET.md
+d691baaba77376697ab3d03487ccfc39764d7e3fb0a33b4c257289cfb773527d           493  pi-capture/device_labels.csv
+d2df1b42f6da568ba44b09bcea319a7e576943e998250574a3b8194c0b148410          1988  pi-capture/load_dataset.py
+28605f40a285032821c62cb9d7b029f7df8696983abe84254b7290b03c7820a6          1789  pi-capture/SHA256SUMS
+#
+# B. ESP32-C5 mesh recording (2026-07-15..09-08, 26 files), corrected release: only receptions of frames that the labelled
+#    household devices or the boards themselves sent to the household access point (108,600,711 of the 115,265,058 receptions
+#    heard). JSON lines, one record per reception; src_mac, dst_mac and node_mac hold pseudonymized ids from the SAME salt as A;
+#    RSSI exact as before; action bodies capped at 512 bytes by the firmware.
+#    Local source at build time: ~/bfi-archive/anon_c5_v2/ (written by ~/bfi-archive/anonymise_c5_v2.py from
+#    ~/esp32-csi-tomography/csi_data/bfi_captures.jsonl, 2026-09-06..08, and
+#    every ~/esp32-csi-tomography/csi_data/rotated/bfi_captures.jsonl.<stamp>.gz, 2026-07-15..09-06)
+7dd90bb7aec6fb020d93f75a95778a8cd67d478823b2cd04d6fdf322d8cc1a07     706633489  esp32-c5/bfi_c5_2026-07.jsonl.gz
+7482e4c3374d82d90f382dabdbd68baf8624d31d9f19219e19e4aee0bb37f249     128493395  esp32-c5/bfi_c5_2026-09.jsonl.gz
+f8b22000a55b0430baf33ad0bb410226cfbfd0ccc2ed175da34faf6bf2b07263     855840839  esp32-c5/bfi_c5_20260730T081619Z.jsonl.gz
+8a72c8e007d009fea041383f0892fbb62683b796fe5baf892294987e56beac75     149129874  esp32-c5/bfi_c5_20260801T053002Z.jsonl.gz
+fe542f9992873e03184bb441d388cc08cf201b8e3d847a002b550e143b707fc0     143825759  esp32-c5/bfi_c5_20260802T053240Z.jsonl.gz
+285f696c0295d865e644ffc942f3b97459ca3776ea286e2f043d957a766afa8a     139228626  esp32-c5/bfi_c5_20260803T053239Z.jsonl.gz
+b2c90879e53b9b99fc2c85f1f21799c1599334ee4f6c3163cb7e7665e9892a6c     267931167  esp32-c5/bfi_c5_20260805T053021Z.jsonl.gz
+d20f6f00f2ec0ac0c20137108c82dbcf4855cbc024314c7062a1ff42117ff36a     160453387  esp32-c5/bfi_c5_20260806T053028Z.jsonl.gz
+1158e76319f43ba570793812011c062f37df9c3088fa1ae8dba127dfef2d8f18     185185467  esp32-c5/bfi_c5_20260808T053015Z.jsonl.gz
+bac8b219ec1055b4ee3df2ec836afaf8f3163ecb17b0ca7d4439af9c52b2a111     147762122  esp32-c5/bfi_c5_20260810T053030Z.jsonl.gz
+2911ef9e7b547afc25f06d7becdb8b0cfad076992723b55efa7e67aa70ed2da7     148861890  esp32-c5/bfi_c5_20260813T053019Z.jsonl.gz
+087a6c7c297cad4311d6095984fab1d87eef0efe9b1d555dce3f9d9a405c912f     140576748  esp32-c5/bfi_c5_20260816T053029Z.jsonl.gz
+754501d0e4df81a2f71b40376eed34387977c1a1b2b1fc763beaf8baf69ede8d     141858340  esp32-c5/bfi_c5_20260819T053056Z.jsonl.gz
+f68ae6ea2f15966b5772fc534b10ef48d0c1a622d5902955ba1a3b188f0ad601     127979068  esp32-c5/bfi_c5_20260821T053031Z.jsonl.gz
+e815db3448193a8bf39acab2516612cdd891810ccfa4e0ad67adf1bb7d5bc3d8     219922626  esp32-c5/bfi_c5_20260823T053122Z.jsonl.gz
+7f50f34718e2c0872f358045fdf994c8dfb6f42cf0a5f763eed69b332b956549     121243295  esp32-c5/bfi_c5_20260825T053042Z.jsonl.gz
+2e50daf370b11e375ca77ce7b1786509b6f06bafd803e33e85594f0db112d9ea     109645563  esp32-c5/bfi_c5_20260827T053038Z.jsonl.gz
+3bf486b98a27b8869900d10b26553c6f278e6d108e651b7089c8e70bf1129d2a      89021810  esp32-c5/bfi_c5_20260828T053021Z.jsonl.gz
+dd683b60f6416c4cb9d11fed255d30ae076f2713803161a3e23e9d201354be3a     191103432  esp32-c5/bfi_c5_20260828T210217Z.jsonl.gz
+44e6ba440e6a17146fdb4a6f3ecdbe19426013995337e74d471cb43d0769a65e     268055976  esp32-c5/bfi_c5_20260830T061540Z.jsonl.gz
+713b978e515a48098cbbc45c3983f0a4a78e7e1141422bd397bfdab2bb57322b     134742873  esp32-c5/bfi_c5_20260831T061528Z.jsonl.gz
+29b41eb579ed037dbc92c986d1d7f68963d201cc9cbb4ca775fe01a14e6659b2      93345507  esp32-c5/bfi_c5_20260901T061521Z.jsonl.gz
+cb2ecf984e48450acd5a7393c8f7c8643cbab9f2cd6f8fed352d441decb68ccc     175812229  esp32-c5/bfi_c5_20260903T061530Z.jsonl.gz
+31a6a4bd405e6c1a95292532b69f73d0ba8f9b8f8e96bf270740f981f9562b3c     136468047  esp32-c5/bfi_c5_20260904T061548Z.jsonl.gz
+948b32b3e85e8712cac551a5f23246d278f28e5636b695c0f2aedf7c0a56ce8f     121655700  esp32-c5/bfi_c5_20260905T061533Z.jsonl.gz
+44ff0b7ae8fd8c4c47c3876b68726253a062a7ccb14108de2331b6234b1c489e     122580649  esp32-c5/bfi_c5_20260906T061547Z.jsonl.gz
+80356c376c2a89f5e8339bbc54134d236f9acdadca8f9eecea8ad0d700642f4d          6401  esp32-c5/DATASHEET.md
+8756a5440660a0811d319529199ea5f327d482313f3da0c5d5ee7fd2568628ac          3363  esp32-c5/SHA256SUMS
+3943ade07e15128cd61698703cb57c0ecd061a8ae38237cd9aab5c92011a6a5c         46601  esp32-c5/export_stats.json
+#
+# C. Vendored code (paths relative to release/). Verbatim copies except: the two dataset loaders
+#    he_location.py and he_presence.py default to a repository-relative data path instead of the
+#    authors' home directory (the environment variables are unchanged), and zones_cache.json carries
+#    the salted board ids of release B in place of the board MACs. bfi/ and run_pi_one_shot.py from
+#    ~/bfi-privacy (MIT, LICENSE.bfi-privacy; commit 5678894); zones_cache.json from ~/esp32-csi-tomography
+#    scripts/watcher/ (commit b0dc7dc5, file last changed a928ea05); decoder/angle_decode.py from
+#    ~/esp32-csi-tomography/backend/src/core/bfi/ (commit 5709e87d).
+e6cbbdb964d6a5f19bd21be546982a4a901025d577cc3b3d66965e9b8cd93f80          1072  vendor/LICENSE.bfi-privacy
+00a598a4870474fa8fb43ecc95b8e1538450881fcfd78c0a40b73b6499f356f0          5209  vendor/bfi/README.md
+aaab55739f5555e5e76457c5d6b5330b7f903f64aa54322769b8705a94494e2a          1107  vendor/bfi/__init__.py
+1adfe350732efdbe4775a78303951ff546ea0358b60482922350db6fe90ce507          1023  vendor/bfi/datasets/__init__.py
+9233fab9c8d4612b1ef2bbaf6369d4ecc68b2754e1e2b1e2ec14b808aa205a50         13499  vendor/bfi/datasets/beamsense.py
+d7d2592832e5ecfced70aa6a82897b50b627cce58b7459979d52b12ec99900d4         16281  vendor/bfi/datasets/internal_csi.py
+e3e6c7799a6c9fe026fc595868486677a7f6f18da07d2609c79e6865a69fd4d8          8903  vendor/bfi/datasets/ke_bfi.py
+d5405d2c844f17117ff4cbd05b3a7c7ef0b04ec235a1f17a1c68d4a38ed0e8c7          9156  vendor/bfi/datasets/ntu_fi.py
+63c9ef0c2d4f34432668fcccd8b8aa7798df4f631db6f331eabd852992178464          7311  vendor/bfi/framework/README.md
+e885b0c0067e8e07cc4e11ab72478c0e33e966c89e6c03161aabbb7b5424adda          1643  vendor/bfi/framework/__init__.py
+04c489e3eeaf8f50e2735841735eb1e24461ced18e1472c57d082a4e3eb6f8ff         12729  vendor/bfi/framework/attacker.py
+4b13b70e75cd75c289469785e9317c18f8eed814fcd94dc9cf607c440c4e23b8          4317  vendor/bfi/framework/baselines.py
+25c526d00fb77f9f585a5f6ed7fa488dea3890fe79c97e3fe2a26df4e89a2eb0          4069  vendor/bfi/framework/cohort_split.py
+0518aa2dffa3a0e4affa59fa7d8199c8475efce477ac217310ab665db7ba06af           880  vendor/bfi/framework/datasets/__init__.py
+a0bb73e1504637e4f2432ec06f705f0f3cf223b782fca753d3c2ff4dbacab3a7          3249  vendor/bfi/framework/datasets/he_location.py
+377be42642d56ec6397714364d51f53c1936b5d1cc7dd39deb7f1a632a6e4dc6          4093  vendor/bfi/framework/datasets/he_presence.py
+7ed3c6979f87a44aacbc4c60b1c2047a92bb267ad3b6b447fe2e7fd2f773ea44          3799  vendor/bfi/framework/datasets/ntufi.py
+38d36ef264c191a806883337e3382c0e64f34a490367b5d601e63a5d96fdb48d          1522  vendor/bfi/framework/datasets/substrate.py
+f45bc528a13972475f93157dbe581b19f4458167c35c68cb526af58a65007069          3856  vendor/bfi/framework/defenses.py
+9afe5f44851f372cee32d60c24a0eb65a82b161f476ff7d56c1ace48578a4694          5294  vendor/bfi/framework/encoder.py
+1a04149d16dc395628afd953bdb1d9a70efc838524139042749bdc8527e08688          3507  vendor/bfi/framework/inference.py
+665d13d18f63e088efc32e0c9338e0cbf95949aa9a02b8ab8d0411fb25a4c406          6196  vendor/bfi/framework/losses.py
+5fd815da83efce86a122d38abbf6f8d61984affc07b699caca09862b60224b99          2783  vendor/bfi/framework/quantize.py
+dacc951b9a8d444c0bae4dd463da9e9c97aea598247d74ffe8768d33321649d6          9528  vendor/bfi/givens.py
+5c6fdbc7e0653ec4dffd543365665fafde3e7e7b5f0ee671a034c7cd79b65837          5312  vendor/bfi/manifold_dp.py
+7cff8a8fa138ad779b2e6f1c4546123dbea381cf4b24a8fdef6271c52f3368e8          8870  vendor/bfi/quantisation.py
+0346a196af0ef7e2c522fa5d5a43b6adbdf108557dd687af87a71b909d3d4ff0          3113  vendor/bfi/structural_defense.py
+b97d805f1c39493ca4044e6dfa388469ee14ab4d3afe6886e363b3452b8dc78b          7337  vendor/run_pi_one_shot.py
+2453bf04d557c8083d150a3cac868f095d9eac24e04e85622595279193b76b3b          2224  vendor/zones_cache.json
+607a7e493eb59241fa74a9bd99b3697013b710389f9284059dd778d24eb39739          9231  decoder/angle_decode.py
+#
+# The two 16384-byte files (2026-05-12, 2026-05-13) are empty SQLite databases with the bfi schema: capture downtime.
+# Verify after download: sha256sum -c <(awk '!/^#/ {print $1"  "$3}' MANIFEST.txt)

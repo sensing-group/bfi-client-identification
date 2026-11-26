@@ -1,0 +1,5540 @@
+{
+  "note": "r_eval.py standardises the window vectors with the mean and standard deviation of ALL windows of the six devices (r_eval.Table), query windows included, and its interval resamples device|query-session blocks. This script repeats r_eval's decisions, episode for episode, under three scalings",
+  "trials": 50,
+  "n_boot": 1000,
+  "boot_seed": 11,
+  "ci_level": 0.95,
+  "upper_level": 0.95,
+  "chance_margin": 0.01,
+  "scalings": [
+    "stored",
+    "enrolled",
+    "raw"
+  ],
+  "schemes": [
+    "block",
+    "day",
+    "device_day"
+  ],
+  "feature": "angles",
+  "T": 1,
+  "session_gap_s": 300.0,
+  "stored_values_asserted": true,
+  "defense_reference": "null_noise",
+  "results": {
+    "home": {
+      "other_day_any|K=1|stored": {
+        "accuracy": 0.82625,
+        "macro_recall": 0.7131060606060605,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.42,
+          "LGTV": 1.0,
+          "Laptop": 0.885,
+          "AppleTV-LR": 0.9236363636363636,
+          "SamsungTV": 0.06,
+          "AppleTV-BR": 0.99
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.009,
+            "accuracy": {
+              "lo": 0.7462464453707855,
+              "hi": 0.8992852926781217,
+              "ub95": 0.8909389305083355
+            },
+            "macro_recall": {
+              "lo": 0.6778377543135911,
+              "hi": 0.7496105901891087,
+              "ub95": 0.7428827856479997
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.121,
+            "accuracy": {
+              "lo": 0.7666585365853659,
+              "hi": 0.9091875,
+              "ub95": 0.8928138461538462
+            },
+            "macro_recall": {
+              "lo": 0.689564393939394,
+              "hi": 0.8315227272727271,
+              "ub95": 0.8233636363636364
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.8,
+              "hi": 0.853125,
+              "ub95": 0.85
+            },
+            "macro_recall": {
+              "lo": 0.680449494949495,
+              "hi": 0.7480580808080808,
+              "ub95": 0.743165404040404
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.7405794178136371,
+            0.8985746761467421
+          ]
+        }
+      },
+      "other_day_any|K=1|enrolled": {
+        "accuracy": 0.764375,
+        "macro_recall": 0.6925505050505051,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.52,
+          "LGTV": 1.0,
+          "Laptop": 0.725,
+          "AppleTV-LR": 0.7636363636363637,
+          "SamsungTV": 0.2,
+          "AppleTV-BR": 0.9466666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.003,
+            "accuracy": {
+              "lo": 0.6878891232647257,
+              "hi": 0.840656772703679,
+              "ub95": 0.8304723274050793
+            },
+            "macro_recall": {
+              "lo": 0.6532311669651935,
+              "hi": 0.7320518523695335,
+              "ub95": 0.7259024492805365
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.119,
+            "accuracy": {
+              "lo": 0.6903145161290323,
+              "hi": 0.8326833333333333,
+              "ub95": 0.8239059907834101
+            },
+            "macro_recall": {
+              "lo": 0.6428272727272727,
+              "hi": 0.7940189393939393,
+              "ub95": 0.777491341991342
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.70875,
+              "hi": 0.813140625,
+              "ub95": 0.8081562499999999
+            },
+            "macro_recall": {
+              "lo": 0.6523977272727273,
+              "hi": 0.7296527777777777,
+              "ub95": 0.7269444444444444
+            }
+          }
+        },
+        "ties": 0
+      },
+      "other_day_any|K=1|raw": {
+        "accuracy": 0.83,
+        "macro_recall": 0.7003787878787878,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.285,
+          "LGTV": 1.0,
+          "Laptop": 0.96,
+          "AppleTV-LR": 0.9672727272727273,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.99
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.007,
+            "accuracy": {
+              "lo": 0.7335484217232926,
+              "hi": 0.9174263967882235,
+              "ub95": 0.906699328906975
+            },
+            "macro_recall": {
+              "lo": 0.6655669824747728,
+              "hi": 0.7406786900161761,
+              "ub95": 0.7358617591212531
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.137,
+            "accuracy": {
+              "lo": 0.7510263157894738,
+              "hi": 0.923707264957265,
+              "ub95": 0.9118045977011493
+            },
+            "macro_recall": {
+              "lo": 0.6601479978354977,
+              "hi": 0.8755151515151516,
+              "ub95": 0.8537139826839827
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.80375,
+              "hi": 0.85625,
+              "ub95": 0.8525
+            },
+            "macro_recall": {
+              "lo": 0.6678762626262628,
+              "hi": 0.7343112373737374,
+              "ub95": 0.7298989898989898
+            }
+          }
+        },
+        "ties": 0
+      },
+      "other_day_any|K=16|stored": {
+        "accuracy": 0.873125,
+        "macro_recall": 0.7583838383838385,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.6,
+          "LGTV": 1.0,
+          "Laptop": 0.99,
+          "AppleTV-LR": 0.9636363636363636,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.9966666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.005,
+            "accuracy": {
+              "lo": 0.7994771587556713,
+              "hi": 0.936247726303599,
+              "ub95": 0.9269681776666455
+            },
+            "macro_recall": {
+              "lo": 0.7311508885944688,
+              "hi": 0.7819269250571134,
+              "ub95": 0.7784920027438824
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.129,
+            "accuracy": {
+              "lo": 0.8157894736842105,
+              "hi": 0.9441696428571429,
+              "ub95": 0.9327
+            },
+            "macro_recall": {
+              "lo": 0.7373705808080808,
+              "hi": 0.9072818181818183,
+              "ub95": 0.8990609090909091
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.854984375,
+              "hi": 0.89,
+              "ub95": 0.8875
+            },
+            "macro_recall": {
+              "lo": 0.7351508838383839,
+              "hi": 0.7796988636363636,
+              "ub95": 0.7761224747474749
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.7877080248367773,
+            0.9321055074799425
+          ]
+        }
+      },
+      "other_day_any|K=16|enrolled": {
+        "accuracy": 0.849375,
+        "macro_recall": 0.750580808080808,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.595,
+          "LGTV": 1.0,
+          "Laptop": 0.96,
+          "AppleTV-LR": 0.9018181818181819,
+          "SamsungTV": 0.06,
+          "AppleTV-BR": 0.9866666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.001,
+            "accuracy": {
+              "lo": 0.7782800112205757,
+              "hi": 0.9129559165987049,
+              "ub95": 0.9056184846173405
+            },
+            "macro_recall": {
+              "lo": 0.7259572953541896,
+              "hi": 0.7836353596561334,
+              "ub95": 0.7776537912767835
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.13,
+            "accuracy": {
+              "lo": 0.7847457983193278,
+              "hi": 0.9178907142857142,
+              "ub95": 0.907215
+            },
+            "macro_recall": {
+              "lo": 0.708542297979798,
+              "hi": 0.8975125541125542,
+              "ub95": 0.8880310606060604
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.818734375,
+              "hi": 0.876875,
+              "ub95": 0.87253125
+            },
+            "macro_recall": {
+              "lo": 0.7237941919191919,
+              "hi": 0.7735662878787879,
+              "ub95": 0.7704229797979797
+            }
+          }
+        },
+        "ties": 0
+      },
+      "other_day_any|K=16|raw": {
+        "accuracy": 0.8575,
+        "macro_recall": 0.7322474747474748,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.43,
+          "LGTV": 1.0,
+          "Laptop": 0.985,
+          "AppleTV-LR": 0.9818181818181818,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.9966666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.006,
+            "accuracy": {
+              "lo": 0.7628535108958838,
+              "hi": 0.9344714500845022,
+              "ub95": 0.9246187312330995
+            },
+            "macro_recall": {
+              "lo": 0.6957866002440094,
+              "hi": 0.7686874210241746,
+              "ub95": 0.7637316156814834
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.122,
+            "accuracy": {
+              "lo": 0.7805255376344087,
+              "hi": 0.9459329501915709,
+              "ub95": 0.9286095238095238
+            },
+            "macro_recall": {
+              "lo": 0.6959954545454546,
+              "hi": 0.9025727272727272,
+              "ub95": 0.8823060606060605
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.829375,
+              "hi": 0.881875,
+              "ub95": 0.87875
+            },
+            "macro_recall": {
+              "lo": 0.6956287878787879,
+              "hi": 0.7629558080808082,
+              "ub95": 0.7595202020202021
+            }
+          }
+        },
+        "ties": 0
+      },
+      "other_day_any|K=all|stored": {
+        "accuracy": 0.87875,
+        "macro_recall": 0.7595202020202021,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.585,
+          "LGTV": 1.0,
+          "Laptop": 0.99,
+          "AppleTV-LR": 0.9854545454545455,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.9966666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.004,
+            "accuracy": {
+              "lo": 0.8027287764577118,
+              "hi": 0.9383476857994589,
+              "ub95": 0.9317562710086075
+            },
+            "macro_recall": {
+              "lo": 0.7376539264641763,
+              "hi": 0.7776363106180179,
+              "ub95": 0.7755412642694912
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.125,
+            "accuracy": {
+              "lo": 0.8167678821879383,
+              "hi": 0.9504158620689656,
+              "ub95": 0.9406666666666667
+            },
+            "macro_recall": {
+              "lo": 0.7391910173160172,
+              "hi": 0.9110939393939395,
+              "ub95": 0.9039999999999999
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.86375,
+              "hi": 0.8925,
+              "ub95": 0.890625
+            },
+            "macro_recall": {
+              "lo": 0.7401761363636364,
+              "hi": 0.7779318181818182,
+              "ub95": 0.7747651515151515
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.796703056654999,
+            0.9406132217654654
+          ]
+        }
+      },
+      "other_day_any|K=all|enrolled": {
+        "accuracy": 0.84375,
+        "macro_recall": 0.734949494949495,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.525,
+          "LGTV": 1.0,
+          "Laptop": 0.955,
+          "AppleTV-LR": 0.9163636363636364,
+          "SamsungTV": 0.02,
+          "AppleTV-BR": 0.9933333333333333
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.001,
+            "accuracy": {
+              "lo": 0.7636651268256271,
+              "hi": 0.909699799588042,
+              "ub95": 0.9019309027107963
+            },
+            "macro_recall": {
+              "lo": 0.699141289491587,
+              "hi": 0.7700721533370617,
+              "ub95": 0.7657220702877212
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.114,
+            "accuracy": {
+              "lo": 0.7660568181818183,
+              "hi": 0.9222291666666668,
+              "ub95": 0.9110452586206896
+            },
+            "macro_recall": {
+              "lo": 0.6975909992784992,
+              "hi": 0.8940985606060606,
+              "ub95": 0.8791189393939393
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.811875,
+              "hi": 0.87375,
+              "ub95": 0.8700312499999999
+            },
+            "macro_recall": {
+              "lo": 0.7012373737373738,
+              "hi": 0.766441287878788,
+              "ub95": 0.7629810606060606
+            }
+          }
+        },
+        "ties": 0
+      },
+      "other_day_any|K=all|raw": {
+        "accuracy": 0.851875,
+        "macro_recall": 0.7337626262626263,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.47,
+          "LGTV": 1.0,
+          "Laptop": 0.985,
+          "AppleTV-LR": 0.9509090909090909,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.9966666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.004,
+            "accuracy": {
+              "lo": 0.7706339354267429,
+              "hi": 0.9212965781651613,
+              "ub95": 0.9130181961482434
+            },
+            "macro_recall": {
+              "lo": 0.6980696051705766,
+              "hi": 0.7659394576118209,
+              "ub95": 0.7612329342423605
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.103,
+            "accuracy": {
+              "lo": 0.7773333333333333,
+              "hi": 0.9340888888888889,
+              "ub95": 0.9212315151515151
+            },
+            "macro_recall": {
+              "lo": 0.695655303030303,
+              "hi": 0.8938666666666666,
+              "ub95": 0.8736636363636363
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.82125,
+              "hi": 0.87875,
+              "ub95": 0.875625
+            },
+            "macro_recall": {
+              "lo": 0.6981780303030304,
+              "hi": 0.7649015151515152,
+              "ub95": 0.7608270202020203
+            }
+          }
+        },
+        "ties": 0
+      },
+      "same_day|K=1|stored": {
+        "accuracy": 0.9666666666666667,
+        "macro_recall": 0.9325000000000001,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.78,
+          "LGTV": 1.0,
+          "Laptop": 0.95,
+          "AppleTV-LR": 1.0,
+          "SamsungTV": 0.88,
+          "AppleTV-BR": 0.985
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.195,
+            "accuracy": {
+              "lo": 0.9424968220338983,
+              "hi": 0.9859396976090014,
+              "ub95": 0.9834592680047226
+            },
+            "macro_recall": {
+              "lo": 0.9084611380148989,
+              "hi": 0.9720059943278065,
+              "ub95": 0.9678188216113599
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.766,
+            "accuracy": {
+              "lo": 0.9447058823529412,
+              "hi": 0.9914285714285714,
+              "ub95": 0.9885714285714285
+            },
+            "macro_recall": {
+              "lo": 0.91679,
+              "hi": 0.98625,
+              "ub95": 0.9840222222222221
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.9613333333333334,
+              "hi": 0.9706666666666667,
+              "ub95": 0.9706666666666667
+            },
+            "macro_recall": {
+              "lo": 0.9291666666666666,
+              "hi": 0.9358333333333334,
+              "ub95": 0.9358333333333334
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.9444264069264069,
+            0.9861818183567147
+          ]
+        }
+      },
+      "same_day|K=1|enrolled": {
+        "accuracy": 0.8853333333333333,
+        "macro_recall": 0.8883333333333333,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.74,
+          "LGTV": 1.0,
+          "Laptop": 0.96,
+          "AppleTV-LR": 0.9,
+          "SamsungTV": 0.9,
+          "AppleTV-BR": 0.83
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.161,
+            "accuracy": {
+              "lo": 0.8353615955852296,
+              "hi": 0.9332447774750227,
+              "ub95": 0.9280783890096593
+            },
+            "macro_recall": {
+              "lo": 0.8540100227271993,
+              "hi": 0.9334168005768045,
+              "ub95": 0.9239561948961765
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.776,
+            "accuracy": {
+              "lo": 0.803076923076923,
+              "hi": 0.9575,
+              "ub95": 0.9512589285714286
+            },
+            "macro_recall": {
+              "lo": 0.8281666666666667,
+              "hi": 0.96,
+              "ub95": 0.9375416666666666
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.8306333333333333,
+              "hi": 0.94,
+              "ub95": 0.9293333333333333
+            },
+            "macro_recall": {
+              "lo": 0.8566666666666668,
+              "hi": 0.9197222222222224,
+              "ub95": 0.9147222222222222
+            }
+          }
+        },
+        "ties": 0
+      },
+      "same_day|K=1|raw": {
+        "accuracy": 0.9893333333333333,
+        "macro_recall": 0.9758333333333332,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.86,
+          "LGTV": 1.0,
+          "Laptop": 1.0,
+          "AppleTV-LR": 1.0,
+          "SamsungTV": 1.0,
+          "AppleTV-BR": 0.995
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.154,
+            "accuracy": {
+              "lo": 0.9740017527359781,
+              "hi": 1.0,
+              "ub95": 0.9986614906443755
+            },
+            "macro_recall": {
+              "lo": 0.9578289558700006,
+              "hi": 1.0,
+              "ub95": 0.9990847722447017
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.779,
+            "accuracy": {
+              "lo": 0.9725,
+              "hi": 1.0,
+              "ub95": 1.0
+            },
+            "macro_recall": {
+              "lo": 0.9624999999999999,
+              "hi": 1.0,
+              "ub95": 1.0
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.9866666666666667,
+              "hi": 0.9906666666666667,
+              "ub95": 0.9906666666666667
+            },
+            "macro_recall": {
+              "lo": 0.9741666666666666,
+              "hi": 0.9766666666666666,
+              "ub95": 0.9766666666666666
+            }
+          }
+        },
+        "ties": 0
+      },
+      "same_day|K=16|stored": {
+        "accuracy": 0.984,
+        "macro_recall": 0.9625,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.86,
+          "LGTV": 1.0,
+          "Laptop": 1.0,
+          "AppleTV-LR": 1.0,
+          "SamsungTV": 0.92,
+          "AppleTV-BR": 0.995
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.197,
+            "accuracy": {
+              "lo": 0.961644954232975,
+              "hi": 0.9974457215836526,
+              "ub95": 0.9965823119384137
+            },
+            "macro_recall": {
+              "lo": 0.9196115732593896,
+              "hi": 0.9948177027866525,
+              "ub95": 0.9924416244625461
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.77,
+            "accuracy": {
+              "lo": 0.9693952205882352,
+              "hi": 0.9984615384615385,
+              "ub95": 0.9971428571428571
+            },
+            "macro_recall": {
+              "lo": 0.9543900000000001,
+              "hi": 0.99875,
+              "ub95": 0.998
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.9813333333333333,
+              "hi": 0.9853333333333333,
+              "ub95": 0.9853333333333333
+            },
+            "macro_recall": {
+              "lo": 0.9608333333333334,
+              "hi": 0.9633333333333334,
+              "ub95": 0.9633333333333334
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.961780151438288,
+            0.997070041105493
+          ]
+        }
+      },
+      "same_day|K=16|enrolled": {
+        "accuracy": 0.988,
+        "macro_recall": 0.9727777777777776,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.86,
+          "LGTV": 1.0,
+          "Laptop": 1.0,
+          "AppleTV-LR": 0.9966666666666667,
+          "SamsungTV": 0.98,
+          "AppleTV-BR": 1.0
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.177,
+            "accuracy": {
+              "lo": 0.9661966652858327,
+              "hi": 1.0,
+              "ub95": 1.0
+            },
+            "macro_recall": {
+              "lo": 0.9366616450256539,
+              "hi": 1.0,
+              "ub95": 1.0
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.772,
+            "accuracy": {
+              "lo": 0.96875,
+              "hi": 1.0,
+              "ub95": 1.0
+            },
+            "macro_recall": {
+              "lo": 0.9624999999999999,
+              "hi": 1.0,
+              "ub95": 1.0
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.9853333333333333,
+              "hi": 0.9893333333333333,
+              "ub95": 0.9893333333333333
+            },
+            "macro_recall": {
+              "lo": 0.9716666666666667,
+              "hi": 0.9733333333333333,
+              "ub95": 0.9733333333333333
+            }
+          }
+        },
+        "ties": 0
+      },
+      "same_day|K=16|raw": {
+        "accuracy": 0.992,
+        "macro_recall": 0.9825,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.9,
+          "LGTV": 1.0,
+          "Laptop": 1.0,
+          "AppleTV-LR": 1.0,
+          "SamsungTV": 1.0,
+          "AppleTV-BR": 0.995
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.187,
+            "accuracy": {
+              "lo": 0.9775550376703743,
+              "hi": 1.0,
+              "ub95": 1.0
+            },
+            "macro_recall": {
+              "lo": 0.9580428657805419,
+              "hi": 1.0,
+              "ub95": 1.0
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.722,
+            "accuracy": {
+              "lo": 0.98,
+              "hi": 1.0,
+              "ub95": 1.0
+            },
+            "macro_recall": {
+              "lo": 0.9724999999999999,
+              "hi": 1.0,
+              "ub95": 1.0
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.9893333333333333,
+              "hi": 0.9933333333333333,
+              "ub95": 0.9933333333333333
+            },
+            "macro_recall": {
+              "lo": 0.9808333333333334,
+              "hi": 0.9833333333333334,
+              "ub95": 0.9833333333333334
+            }
+          }
+        },
+        "ties": 0
+      },
+      "same_day|K=all|stored": {
+        "accuracy": 0.984,
+        "macro_recall": 0.9625,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.86,
+          "LGTV": 1.0,
+          "Laptop": 1.0,
+          "AppleTV-LR": 1.0,
+          "SamsungTV": 0.92,
+          "AppleTV-BR": 0.995
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.172,
+            "accuracy": {
+              "lo": 0.9627496279820797,
+              "hi": 0.997481187522773,
+              "ub95": 0.9965083763086506
+            },
+            "macro_recall": {
+              "lo": 0.920054047182826,
+              "hi": 0.9942561256750196,
+              "ub95": 0.9919622264616967
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.74,
+            "accuracy": {
+              "lo": 0.9694117647058823,
+              "hi": 0.9984615384615385,
+              "ub95": 0.9971428571428571
+            },
+            "macro_recall": {
+              "lo": 0.954,
+              "hi": 0.9988888888888888,
+              "ub95": 0.998
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.9813333333333333,
+              "hi": 0.9853333333333333,
+              "ub95": 0.9853333333333333
+            },
+            "macro_recall": {
+              "lo": 0.9608333333333334,
+              "hi": 0.9633333333333334,
+              "ub95": 0.9633333333333334
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.9609959486965117,
+            0.99724639058813
+          ]
+        }
+      },
+      "same_day|K=all|enrolled": {
+        "accuracy": 0.9653333333333334,
+        "macro_recall": 0.9175,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.84,
+          "LGTV": 1.0,
+          "Laptop": 0.99,
+          "AppleTV-LR": 1.0,
+          "SamsungTV": 0.68,
+          "AppleTV-BR": 0.995
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.176,
+            "accuracy": {
+              "lo": 0.9323268046281372,
+              "hi": 0.9853169957249038,
+              "ub95": 0.9834592876797271
+            },
+            "macro_recall": {
+              "lo": 0.8631613481841981,
+              "hi": 0.9564913629152034,
+              "ub95": 0.9524382284133373
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.753,
+            "accuracy": {
+              "lo": 0.93,
+              "hi": 0.9969230769230769,
+              "ub95": 0.9942857142857143
+            },
+            "macro_recall": {
+              "lo": 0.8997333333333334,
+              "hi": 0.99375,
+              "ub95": 0.9924999999999999
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.9626666666666667,
+              "hi": 0.968,
+              "ub95": 0.968
+            },
+            "macro_recall": {
+              "lo": 0.915,
+              "hi": 0.9199999999999999,
+              "ub95": 0.9199999999999999
+            }
+          }
+        },
+        "ties": 0
+      },
+      "same_day|K=all|raw": {
+        "accuracy": 0.9906666666666667,
+        "macro_recall": 0.9791666666666666,
+        "chance": 0.3277777777777778,
+        "macro_chance": 0.29745370370370366,
+        "n_decisions": 750,
+        "n_query_blocks": 63,
+        "n_days": 6,
+        "per_device_recall": {
+          "Vacuum": 0.88,
+          "LGTV": 1.0,
+          "Laptop": 1.0,
+          "AppleTV-LR": 1.0,
+          "SamsungTV": 1.0,
+          "AppleTV-BR": 0.995
+        },
+        "per_device_decisions": {
+          "Vacuum": 50,
+          "LGTV": 50,
+          "Laptop": 100,
+          "AppleTV-LR": 300,
+          "SamsungTV": 50,
+          "AppleTV-BR": 200
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 2,
+          "LGTV": 3,
+          "Laptop": 5,
+          "AppleTV-LR": 18,
+          "SamsungTV": 24,
+          "AppleTV-BR": 11
+        },
+        "per_device_days": {
+          "Vacuum": 1,
+          "LGTV": 1,
+          "Laptop": 2,
+          "AppleTV-LR": 6,
+          "SamsungTV": 1,
+          "AppleTV-BR": 4
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 63,
+            "draws_with_device_absent": 0.167,
+            "accuracy": {
+              "lo": 0.9731267980923326,
+              "hi": 1.0,
+              "ub95": 1.0
+            },
+            "macro_recall": {
+              "lo": 0.9499966307277629,
+              "hi": 1.0,
+              "ub95": 1.0
+            }
+          },
+          "day": {
+            "n_clusters": 6,
+            "draws_with_device_absent": 0.789,
+            "accuracy": {
+              "lo": 0.97625,
+              "hi": 1.0,
+              "ub95": 1.0
+            },
+            "macro_recall": {
+              "lo": 0.9683333333333333,
+              "hi": 1.0,
+              "ub95": 1.0
+            }
+          },
+          "device_day": {
+            "n_clusters": 15,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.988,
+              "hi": 0.992,
+              "ub95": 0.992
+            },
+            "macro_recall": {
+              "lo": 0.9775,
+              "hi": 0.98,
+              "ub95": 0.98
+            }
+          }
+        },
+        "ties": 0
+      }
+    },
+    "defense": {
+      "null_noise|angles|K=1|stored": {
+        "accuracy": 0.165625,
+        "macro_recall": 0.1725959595959596,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.09,
+          "LGTV": 0.148,
+          "Laptop": 0.2,
+          "AppleTV-LR": 0.1709090909090909,
+          "SamsungTV": 0.26,
+          "AppleTV-BR": 0.16666666666666666
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.009,
+            "accuracy": {
+              "lo": 0.1412316585678922,
+              "hi": 0.18923284735982424,
+              "ub95": 0.18598735871178088
+            },
+            "macro_recall": {
+              "lo": 0.14505813876676862,
+              "hi": 0.21851352447635078,
+              "ub95": 0.21194284574936212
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.105,
+            "accuracy": {
+              "lo": 0.14756587837837837,
+              "hi": 0.18788181818181818,
+              "ub95": 0.18358035714285714
+            },
+            "macro_recall": {
+              "lo": 0.1527035173160173,
+              "hi": 0.19856249999999995,
+              "ub95": 0.19399065656565656
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.14375,
+              "hi": 0.19,
+              "ub95": 0.18625
+            },
+            "macro_recall": {
+              "lo": 0.14002941919191922,
+              "hi": 0.20539292929292932,
+              "ub95": 0.20210656565656568
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.14337632079594828,
+            0.19050706093106576
+          ]
+        }
+      },
+      "null_noise|angles|K=1|enrolled": {
+        "accuracy": 0.160625,
+        "macro_recall": 0.17015656565656567,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.125,
+          "LGTV": 0.152,
+          "Laptop": 0.18,
+          "AppleTV-LR": 0.14727272727272728,
+          "SamsungTV": 0.24,
+          "AppleTV-BR": 0.17666666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.005,
+            "accuracy": {
+              "lo": 0.14454119092152648,
+              "hi": 0.17835383346661335,
+              "ub95": 0.17616037401488574
+            },
+            "macro_recall": {
+              "lo": 0.14578312931724433,
+              "hi": 0.21416325109848092,
+              "ub95": 0.2096069177040843
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.118,
+            "accuracy": {
+              "lo": 0.14065,
+              "hi": 0.17783832046332046,
+              "ub95": 0.1756294642857143
+            },
+            "macro_recall": {
+              "lo": 0.1383505772005772,
+              "hi": 0.20441691919191918,
+              "ub95": 0.20096702741702743
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.139375,
+              "hi": 0.18125,
+              "ub95": 0.178125
+            },
+            "macro_recall": {
+              "lo": 0.13490580808080807,
+              "hi": 0.2057558080808081,
+              "ub95": 0.2022742424242424
+            }
+          }
+        },
+        "ties": 0
+      },
+      "null_noise|angles|K=1|raw": {
+        "accuracy": 0.166875,
+        "macro_recall": 0.17426262626262626,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.09,
+          "LGTV": 0.148,
+          "Laptop": 0.21,
+          "AppleTV-LR": 0.1709090909090909,
+          "SamsungTV": 0.26,
+          "AppleTV-BR": 0.16666666666666666
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.009,
+            "accuracy": {
+              "lo": 0.14310816064560525,
+              "hi": 0.19190631109140138,
+              "ub95": 0.18775528481415266
+            },
+            "macro_recall": {
+              "lo": 0.14859490339704828,
+              "hi": 0.22195660956547952,
+              "ub95": 0.21659722741701534
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.106,
+            "accuracy": {
+              "lo": 0.1477768817204301,
+              "hi": 0.19000925925925927,
+              "ub95": 0.1856294642857143
+            },
+            "macro_recall": {
+              "lo": 0.15214545454545456,
+              "hi": 0.2012121212121212,
+              "ub95": 0.19782889610389615
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.141875,
+              "hi": 0.190015625,
+              "ub95": 0.186875
+            },
+            "macro_recall": {
+              "lo": 0.13994747474747476,
+              "hi": 0.20726590909090906,
+              "ub95": 0.2034808080808081
+            }
+          }
+        },
+        "ties": 0
+      },
+      "null_noise|angles|K=all|stored": {
+        "accuracy": 0.228125,
+        "macro_recall": 0.18525252525252525,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.18,
+          "LGTV": 0.16,
+          "Laptop": 0.1,
+          "AppleTV-LR": 0.2781818181818182,
+          "SamsungTV": 0.01,
+          "AppleTV-BR": 0.38333333333333336
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.006,
+            "accuracy": {
+              "lo": 0.19006136529742995,
+              "hi": 0.2670438563425318,
+              "ub95": 0.2609818249408373
+            },
+            "macro_recall": {
+              "lo": 0.15403352846295204,
+              "hi": 0.22093729953509725,
+              "ub95": 0.21394887105196056
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.104,
+            "accuracy": {
+              "lo": 0.1907265725288832,
+              "hi": 0.28697491638795986,
+              "ub95": 0.2733333333333333
+            },
+            "macro_recall": {
+              "lo": 0.1545343434343434,
+              "hi": 0.2591192640692641,
+              "ub95": 0.24114071969696962
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.2025,
+              "hi": 0.255,
+              "ub95": 0.25065624999999997
+            },
+            "macro_recall": {
+              "lo": 0.15519608585858585,
+              "hi": 0.21830896464646463,
+              "ub95": 0.21303005050505047
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.18926831696469268,
+            0.26271284215769947
+          ]
+        }
+      },
+      "null_noise|angles|K=all|enrolled": {
+        "accuracy": 0.230625,
+        "macro_recall": 0.1876111111111111,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.195,
+          "LGTV": 0.164,
+          "Laptop": 0.09,
+          "AppleTV-LR": 0.28,
+          "SamsungTV": 0.01,
+          "AppleTV-BR": 0.38666666666666666
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.004,
+            "accuracy": {
+              "lo": 0.19244967616396833,
+              "hi": 0.27027503112868967,
+              "ub95": 0.2626288927122305
+            },
+            "macro_recall": {
+              "lo": 0.1560272755330015,
+              "hi": 0.2210502500267951,
+              "ub95": 0.21428205633026878
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.116,
+            "accuracy": {
+              "lo": 0.19460700236034623,
+              "hi": 0.2855221674876847,
+              "ub95": 0.2768
+            },
+            "macro_recall": {
+              "lo": 0.16069318181818185,
+              "hi": 0.2525733766233766,
+              "ub95": 0.23884707792207785
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.20625,
+              "hi": 0.2575,
+              "ub95": 0.253125
+            },
+            "macro_recall": {
+              "lo": 0.15947550505050503,
+              "hi": 0.21914595959595956,
+              "ub95": 0.2143939393939394
+            }
+          }
+        },
+        "ties": 0
+      },
+      "null_noise|angles|K=all|raw": {
+        "accuracy": 0.228125,
+        "macro_recall": 0.1857828282828283,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.185,
+          "LGTV": 0.16,
+          "Laptop": 0.1,
+          "AppleTV-LR": 0.27636363636363637,
+          "SamsungTV": 0.01,
+          "AppleTV-BR": 0.38333333333333336
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.008,
+            "accuracy": {
+              "lo": 0.19155324947123506,
+              "hi": 0.2645601305012956,
+              "ub95": 0.2590416327159215
+            },
+            "macro_recall": {
+              "lo": 0.15423057888977293,
+              "hi": 0.22001551019001844,
+              "ub95": 0.21231122825186374
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.122,
+            "accuracy": {
+              "lo": 0.18924390243902442,
+              "hi": 0.28261166007905136,
+              "ub95": 0.27166954022988504
+            },
+            "macro_recall": {
+              "lo": 0.15353251262626263,
+              "hi": 0.2548928787878788,
+              "ub95": 0.24340333333333328
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.20375,
+              "hi": 0.254390625,
+              "ub95": 0.25
+            },
+            "macro_recall": {
+              "lo": 0.1571756313131313,
+              "hi": 0.21830252525252525,
+              "ub95": 0.21196565656565658
+            }
+          }
+        },
+        "ties": 0
+      },
+      "null_noise|invariant|K=1|stored": {
+        "accuracy": 0.17125,
+        "macro_recall": 0.17676767676767677,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.195,
+          "LGTV": 0.18,
+          "Laptop": 0.155,
+          "AppleTV-LR": 0.16727272727272727,
+          "SamsungTV": 0.21,
+          "AppleTV-BR": 0.15333333333333332
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.004,
+            "accuracy": {
+              "lo": 0.1534165636871923,
+              "hi": 0.18898325477035066,
+              "ub95": 0.1856429822366775
+            },
+            "macro_recall": {
+              "lo": 0.15270476357193052,
+              "hi": 0.1984926474691226,
+              "ub95": 0.1945411628359874
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.111,
+            "accuracy": {
+              "lo": 0.1567545045045045,
+              "hi": 0.18923076923076923,
+              "ub95": 0.186
+            },
+            "macro_recall": {
+              "lo": 0.16389988576238573,
+              "hi": 0.1870431277056277,
+              "ub95": 0.18528791486291485
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.157484375,
+              "hi": 0.186875,
+              "ub95": 0.184375
+            },
+            "macro_recall": {
+              "lo": 0.16275088383838382,
+              "hi": 0.19076161616161616,
+              "ub95": 0.18864848484848484
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.15294122755104464,
+            0.18866703400566695
+          ]
+        }
+      },
+      "null_noise|invariant|K=1|enrolled": {
+        "accuracy": 0.15875,
+        "macro_recall": 0.16334343434343435,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.18,
+          "LGTV": 0.164,
+          "Laptop": 0.16,
+          "AppleTV-LR": 0.15272727272727274,
+          "SamsungTV": 0.18,
+          "AppleTV-BR": 0.14333333333333334
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.008,
+            "accuracy": {
+              "lo": 0.14149639811709505,
+              "hi": 0.17731031043835943,
+              "ub95": 0.1730094585659191
+            },
+            "macro_recall": {
+              "lo": 0.13448725574869264,
+              "hi": 0.1818571264442209,
+              "ub95": 0.17948260281358905
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.117,
+            "accuracy": {
+              "lo": 0.14071031746031745,
+              "hi": 0.18214810924369745,
+              "ub95": 0.17801891891891888
+            },
+            "macro_recall": {
+              "lo": 0.14039065656565658,
+              "hi": 0.18988667929292927,
+              "ub95": 0.18633964646464646
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.140625,
+              "hi": 0.175625,
+              "ub95": 0.173125
+            },
+            "macro_recall": {
+              "lo": 0.1408674242424242,
+              "hi": 0.18504217171717172,
+              "ub95": 0.18267929292929294
+            }
+          }
+        },
+        "ties": 0
+      },
+      "null_noise|invariant|K=1|raw": {
+        "accuracy": 0.16875,
+        "macro_recall": 0.17405050505050504,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.185,
+          "LGTV": 0.184,
+          "Laptop": 0.145,
+          "AppleTV-LR": 0.16363636363636364,
+          "SamsungTV": 0.21,
+          "AppleTV-BR": 0.15666666666666668
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.004,
+            "accuracy": {
+              "lo": 0.15065376803047242,
+              "hi": 0.18568693264084563,
+              "ub95": 0.18283535614858304
+            },
+            "macro_recall": {
+              "lo": 0.14805994469123646,
+              "hi": 0.19586922045481703,
+              "ub95": 0.19203144438508854
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.124,
+            "accuracy": {
+              "lo": 0.15646907993966816,
+              "hi": 0.18357473544973546,
+              "ub95": 0.18083333333333335
+            },
+            "macro_recall": {
+              "lo": 0.16288034812409813,
+              "hi": 0.1831370791245791,
+              "ub95": 0.18145829725829726
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.153734375,
+              "hi": 0.184375,
+              "ub95": 0.181875
+            },
+            "macro_recall": {
+              "lo": 0.15864406565656564,
+              "hi": 0.18746477272727274,
+              "ub95": 0.1858901515151515
+            }
+          }
+        },
+        "ties": 0
+      },
+      "null_noise|invariant|K=all|stored": {
+        "accuracy": 0.209375,
+        "macro_recall": 0.17086363636363636,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.165,
+          "LGTV": 0.152,
+          "Laptop": 0.13,
+          "AppleTV-LR": 0.2581818181818182,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.32
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.007,
+            "accuracy": {
+              "lo": 0.1760092501050093,
+              "hi": 0.24103518369055094,
+              "ub95": 0.23707567769254656
+            },
+            "macro_recall": {
+              "lo": 0.13895129022287056,
+              "hi": 0.19982120315925317,
+              "ub95": 0.19454414218864077
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.116,
+            "accuracy": {
+              "lo": 0.18362878787878786,
+              "hi": 0.24500462962962963,
+              "ub95": 0.2377854406130268
+            },
+            "macro_recall": {
+              "lo": 0.13882456709956711,
+              "hi": 0.23041469696969696,
+              "ub95": 0.21457559884559882
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.181875,
+              "hi": 0.235625,
+              "ub95": 0.230625
+            },
+            "macro_recall": {
+              "lo": 0.14048585858585858,
+              "hi": 0.19912297979797983,
+              "ub95": 0.19485378787878785
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.17692178833625594,
+            0.24067981622143877
+          ]
+        }
+      },
+      "null_noise|invariant|K=all|enrolled": {
+        "accuracy": 0.215,
+        "macro_recall": 0.17599494949494945,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.175,
+          "LGTV": 0.164,
+          "Laptop": 0.13,
+          "AppleTV-LR": 0.2636363636363636,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.3233333333333333
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.008,
+            "accuracy": {
+              "lo": 0.18128143338912042,
+              "hi": 0.24729924227755617,
+              "ub95": 0.24165121862459915
+            },
+            "macro_recall": {
+              "lo": 0.1427982597363474,
+              "hi": 0.20686734724410558,
+              "ub95": 0.2011343180190329
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.126,
+            "accuracy": {
+              "lo": 0.18944089147286822,
+              "hi": 0.2511111111111111,
+              "ub95": 0.24609030100334447
+            },
+            "macro_recall": {
+              "lo": 0.14596709956709958,
+              "hi": 0.23795742424242425,
+              "ub95": 0.22773121212121214
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.18875,
+              "hi": 0.24375,
+              "ub95": 0.239375
+            },
+            "macro_recall": {
+              "lo": 0.14474646464646462,
+              "hi": 0.20716704545454548,
+              "ub95": 0.20349368686868688
+            }
+          }
+        },
+        "ties": 0
+      },
+      "null_noise|invariant|K=all|raw": {
+        "accuracy": 0.20875,
+        "macro_recall": 0.17003030303030306,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.165,
+          "LGTV": 0.152,
+          "Laptop": 0.125,
+          "AppleTV-LR": 0.2581818181818182,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.32
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.006,
+            "accuracy": {
+              "lo": 0.17449889857999482,
+              "hi": 0.23923399082807145,
+              "ub95": 0.23470327679778102
+            },
+            "macro_recall": {
+              "lo": 0.13741668564280513,
+              "hi": 0.19810701732842612,
+              "ub95": 0.19358526214443253
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.112,
+            "accuracy": {
+              "lo": 0.181875,
+              "hi": 0.24308620689655172,
+              "ub95": 0.23726819923371645
+            },
+            "macro_recall": {
+              "lo": 0.14013993506493508,
+              "hi": 0.22626,
+              "ub95": 0.2140312121212121
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.183125,
+              "hi": 0.235625,
+              "ub95": 0.231875
+            },
+            "macro_recall": {
+              "lo": 0.14124848484848487,
+              "hi": 0.20025593434343428,
+              "ub95": 0.19512449494949496
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|angles|K=1|stored": {
+        "accuracy": 0.175,
+        "macro_recall": 0.1788989898989899,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.165,
+          "LGTV": 0.164,
+          "Laptop": 0.165,
+          "AppleTV-LR": 0.17272727272727273,
+          "SamsungTV": 0.22,
+          "AppleTV-BR": 0.18666666666666668
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.009,
+            "accuracy": {
+              "lo": 0.15696935666386008,
+              "hi": 0.19533749157437952,
+              "ub95": 0.19182486228095105
+            },
+            "macro_recall": {
+              "lo": 0.1546141431854938,
+              "hi": 0.22032121958924722,
+              "ub95": 0.2160932242312187
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.023386511965192137,
+              "hi": 0.04680156356722229,
+              "ub95": 0.039284129582001934
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.038528071418143774,
+              "hi": 0.05235820699991724,
+              "ub95": 0.04340019668701167
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.106,
+            "accuracy": {
+              "lo": 0.1537875615763547,
+              "hi": 0.1955125,
+              "ub95": 0.19250657894736842
+            },
+            "macro_recall": {
+              "lo": 0.1403008658008658,
+              "hi": 0.21185818903318904,
+              "ub95": 0.20894448653198655
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.023454661558109827,
+              "hi": 0.040024999999999984,
+              "ub95": 0.03529411764705881
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.03653787878787878,
+              "hi": 0.044227480158730154,
+              "ub95": 0.03812727272727271
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.156875,
+              "hi": 0.19314062499999998,
+              "ub95": 0.19003124999999998
+            },
+            "macro_recall": {
+              "lo": 0.14753409090909092,
+              "hi": 0.20983358585858586,
+              "ub95": 0.20536616161616164
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.020015624999999978,
+              "hi": 0.03812499999999999,
+              "ub95": 0.033125000000000016
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.025585732323232305,
+              "hi": 0.03579633838383841,
+              "ub95": 0.03259116161616159
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 2.7755575615628914e-17,
+          "counts_equal": true,
+          "stored_ci": [
+            0.15685094230153648,
+            0.19498291628982012
+          ]
+        }
+      },
+      "rot_group_cb42_n234|angles|K=1|enrolled": {
+        "accuracy": 0.17625,
+        "macro_recall": 0.17572727272727273,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.185,
+          "LGTV": 0.188,
+          "Laptop": 0.165,
+          "AppleTV-LR": 0.17636363636363636,
+          "SamsungTV": 0.17,
+          "AppleTV-BR": 0.17
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.012,
+            "accuracy": {
+              "lo": 0.1556095557695895,
+              "hi": 0.19634881012865946,
+              "ub95": 0.19344415147693836
+            },
+            "macro_recall": {
+              "lo": 0.15243649050237823,
+              "hi": 0.20476593592070907,
+              "ub95": 0.20088054176739148
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.015984533146577756,
+              "hi": 0.04683769564309546,
+              "ub95": 0.04310100128697052
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.04708427033452128,
+              "hi": 0.04116245380900298,
+              "ub95": 0.03494269535476059
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.116,
+            "accuracy": {
+              "lo": 0.15466666666666667,
+              "hi": 0.2,
+              "ub95": 0.19667424242424242
+            },
+            "macro_recall": {
+              "lo": 0.14670762626262626,
+              "hi": 0.20875171356421354,
+              "ub95": 0.20397045454545457
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.009294312169312162,
+              "hi": 0.04000000000000001,
+              "ub95": 0.0364347290640394
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.025309722222222247,
+              "hi": 0.03332319023569022,
+              "ub95": 0.02928522727272729
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.158125,
+              "hi": 0.19625,
+              "ub95": 0.19375
+            },
+            "macro_recall": {
+              "lo": 0.15638383838383837,
+              "hi": 0.1958885101010101,
+              "ub95": 0.19333484848484847
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.015625,
+              "hi": 0.04749999999999999,
+              "ub95": 0.04249999999999998
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.036703282828282835,
+              "hi": 0.04473952020202021,
+              "ub95": 0.03931464646464644
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|angles|K=1|raw": {
+        "accuracy": 0.176875,
+        "macro_recall": 0.17425757575757575,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.19,
+          "LGTV": 0.176,
+          "Laptop": 0.125,
+          "AppleTV-LR": 0.17454545454545456,
+          "SamsungTV": 0.17,
+          "AppleTV-BR": 0.21
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.006,
+            "accuracy": {
+              "lo": 0.1542662268841026,
+              "hi": 0.19973238482651928,
+              "ub95": 0.19656170191599065
+            },
+            "macro_recall": {
+              "lo": 0.15212293591379175,
+              "hi": 0.20076816287775262,
+              "ub95": 0.19529917224494792
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.029904608037917887,
+              "hi": 0.045487032919315114,
+              "ub95": 0.04082727394887718
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.052857150808355034,
+              "hi": 0.03731153154170533,
+              "ub95": 0.030634621635645943
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.127,
+            "accuracy": {
+              "lo": 0.15713852813852813,
+              "hi": 0.19428794642857142,
+              "ub95": 0.19187648809523808
+            },
+            "macro_recall": {
+              "lo": 0.14687040404040402,
+              "hi": 0.1949652507215007,
+              "ub95": 0.19249137806637806
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.01999999999999999,
+              "hi": 0.03659008654602675,
+              "ub95": 0.033663109756097556
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.03473252164502162,
+              "hi": 0.032774071067821105,
+              "ub95": 0.028704040404040395
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.16,
+              "hi": 0.194375,
+              "ub95": 0.19125
+            },
+            "macro_recall": {
+              "lo": 0.15803724747474746,
+              "hi": 0.19154570707070706,
+              "ub95": 0.18841590909090913
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.022499999999999992,
+              "hi": 0.03999999999999998,
+              "ub95": 0.03437499999999999
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.03832563131313129,
+              "hi": 0.03908093434343434,
+              "ub95": 0.03310075757575755
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|angles|K=all|stored": {
+        "accuracy": 0.213125,
+        "macro_recall": 0.16781818181818178,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.06,
+          "LGTV": 0.156,
+          "Laptop": 0.15,
+          "AppleTV-LR": 0.27090909090909093,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.37
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.008,
+            "accuracy": {
+              "lo": 0.1732760566711098,
+              "hi": 0.25068010936431984,
+              "ub95": 0.2438254396857542
+            },
+            "macro_recall": {
+              "lo": 0.14845738820682883,
+              "hi": 0.1904505480364315,
+              "ub95": 0.18609013327375978
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.04619224964031246,
+              "hi": 0.01295209258261662,
+              "ub95": 0.00947441160900864
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.048861466478554536,
+              "hi": 0.014022466095465534,
+              "ub95": 0.009773933590514452
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.109,
+            "accuracy": {
+              "lo": 0.17998780487804877,
+              "hi": 0.2576944444444444,
+              "ub95": 0.2500185185185185
+            },
+            "macro_recall": {
+              "lo": 0.14377322330447334,
+              "hi": 0.21100753246753245,
+              "ub95": 0.20209999999999997
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.04924137931034481,
+              "hi": 0.013347222222222212,
+              "ub95": 0.010720238095238107
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.05202638888888885,
+              "hi": 0.00949383116883117,
+              "ub95": 0.00569873737373735
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.195625,
+              "hi": 0.231875,
+              "ub95": 0.229375
+            },
+            "macro_recall": {
+              "lo": 0.14923964646464646,
+              "hi": 0.18599558080808076,
+              "ub95": 0.18324292929292935
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.040624999999999994,
+              "hi": 0.008124999999999993,
+              "ub95": 0.0050000000000000044
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.04660391414141418,
+              "hi": 0.007325252525252534,
+              "ub95": 0.0037921717171717096
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 5.551115123125783e-17,
+          "counts_equal": true,
+          "stored_ci": [
+            0.17449750363860794,
+            0.24968659076619915
+          ]
+        }
+      },
+      "rot_group_cb42_n234|angles|K=all|enrolled": {
+        "accuracy": 0.21375,
+        "macro_recall": 0.16881818181818184,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.065,
+          "LGTV": 0.152,
+          "Laptop": 0.155,
+          "AppleTV-LR": 0.27090909090909093,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.37
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.006,
+            "accuracy": {
+              "lo": 0.17506867363305498,
+              "hi": 0.25224662989032504,
+              "ub95": 0.243489771604492
+            },
+            "macro_recall": {
+              "lo": 0.14692647464635616,
+              "hi": 0.1899505532267708,
+              "ub95": 0.18482305070233795
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.04994538612378063,
+              "hi": 0.014544007837040528,
+              "ub95": 0.010673071144680725
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.047965790626064264,
+              "hi": 0.016974822597000484,
+              "ub95": 0.012043366084989222
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.113,
+            "accuracy": {
+              "lo": 0.18315470494417863,
+              "hi": 0.2600192307692308,
+              "ub95": 0.2511111111111111
+            },
+            "macro_recall": {
+              "lo": 0.14575700757575757,
+              "hi": 0.21086522727272727,
+              "ub95": 0.20278147186147188
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.05600322580645163,
+              "hi": 0.015563218390804608,
+              "ub95": 0.012005263157894741
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.05376651515151511,
+              "hi": 0.011802272727272705,
+              "ub95": 0.0062289562289562245
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.193125,
+              "hi": 0.23375,
+              "ub95": 0.23
+            },
+            "macro_recall": {
+              "lo": 0.14805454545454547,
+              "hi": 0.1884931818181818,
+              "ub95": 0.18556767676767677
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.04314062499999998,
+              "hi": 0.009999999999999981,
+              "ub95": 0.0050000000000000044
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.04723030303030306,
+              "hi": 0.009520833333333317,
+              "ub95": 0.004693181818181816
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|angles|K=all|raw": {
+        "accuracy": 0.214375,
+        "macro_recall": 0.17073232323232324,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.105,
+          "LGTV": 0.16,
+          "Laptop": 0.14,
+          "AppleTV-LR": 0.2727272727272727,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.3466666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.01,
+            "accuracy": {
+              "lo": 0.17986989340615053,
+              "hi": 0.24957161687170473,
+              "ub95": 0.24297818439567365
+            },
+            "macro_recall": {
+              "lo": 0.1481644237409144,
+              "hi": 0.1932971853299945,
+              "ub95": 0.1909647375722582
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.04229480213992797,
+              "hi": 0.015438374611545336,
+              "ub95": 0.00943679375606652
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.04100758989108334,
+              "hi": 0.013580131497488292,
+              "ub95": 0.01041474961374334
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.11,
+            "accuracy": {
+              "lo": 0.18060479797979798,
+              "hi": 0.25555797101449274,
+              "ub95": 0.25
+            },
+            "macro_recall": {
+              "lo": 0.14528751803751802,
+              "hi": 0.22720727272727273,
+              "ub95": 0.21791689393939392
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.04134545454545456,
+              "hi": 0.013339999999999996,
+              "ub95": 0.00945222222222222
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.03650468614718617,
+              "hi": 0.011503535353535353,
+              "ub95": 0.0044896825396825045
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.19623437500000002,
+              "hi": 0.23375,
+              "ub95": 0.23
+            },
+            "macro_recall": {
+              "lo": 0.15176515151515152,
+              "hi": 0.1904056818181818,
+              "ub95": 0.1864739898989899
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.03624999999999998,
+              "hi": 0.007515624999999992,
+              "ub95": 0.004999999999999978
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.03896666666666664,
+              "hi": 0.008570202020202032,
+              "ub95": 0.005216666666666658
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|invariant|K=1|stored": {
+        "accuracy": 0.17875,
+        "macro_recall": 0.1725151515151515,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.12,
+          "LGTV": 0.216,
+          "Laptop": 0.17,
+          "AppleTV-LR": 0.1890909090909091,
+          "SamsungTV": 0.16,
+          "AppleTV-BR": 0.18
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.011,
+            "accuracy": {
+              "lo": 0.15930117407080144,
+              "hi": 0.2024409180019802,
+              "ub95": 0.1982762225230965
+            },
+            "macro_recall": {
+              "lo": 0.14947460370294874,
+              "hi": 0.19882668799763714,
+              "ub95": 0.1951130079726035
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.01915154298766106,
+              "hi": 0.03653827168467378,
+              "ub95": 0.03170063962887468
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.03131469083894845,
+              "hi": 0.0281397600239946,
+              "ub95": 0.022260888650718055
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.105,
+            "accuracy": {
+              "lo": 0.1599852941176471,
+              "hi": 0.19737706766917293,
+              "ub95": 0.1940027027027027
+            },
+            "macro_recall": {
+              "lo": 0.14860753367003368,
+              "hi": 0.19590113636363637,
+              "ub95": 0.19148483405483405
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.023336206896551734,
+              "hi": 0.035862068965517246,
+              "ub95": 0.030666666666666675
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.029115025252525253,
+              "hi": 0.022435227272727308,
+              "ub95": 0.01740173160173156
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.15875,
+              "hi": 0.19875,
+              "ub95": 0.19628125
+            },
+            "macro_recall": {
+              "lo": 0.1530391414141414,
+              "hi": 0.1935340909090909,
+              "ub95": 0.19079974747474746
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.016250000000000014,
+              "hi": 0.0325,
+              "ub95": 0.028749999999999998
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.025553787878787843,
+              "hi": 0.01824015151515155,
+              "ub95": 0.01378030303030303
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.15845118939919325,
+            0.20123207243377944
+          ]
+        }
+      },
+      "rot_group_cb42_n234|invariant|K=1|enrolled": {
+        "accuracy": 0.166875,
+        "macro_recall": 0.16581818181818184,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.155,
+          "LGTV": 0.144,
+          "Laptop": 0.175,
+          "AppleTV-LR": 0.1709090909090909,
+          "SamsungTV": 0.17,
+          "AppleTV-BR": 0.18
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.011,
+            "accuracy": {
+              "lo": 0.14901752190237796,
+              "hi": 0.18465878875311156,
+              "ub95": 0.18135068564396326
+            },
+            "macro_recall": {
+              "lo": 0.14043554431305094,
+              "hi": 0.18378290885162535,
+              "ub95": 0.18147562212827167
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.015162844383851405,
+              "hi": 0.033177163076107,
+              "ub95": 0.029638784695169784
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.027926439459293306,
+              "hi": 0.03420136700053057,
+              "ub95": 0.02953592657023403
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.098,
+            "accuracy": {
+              "lo": 0.15076666666666666,
+              "hi": 0.18250416666666666,
+              "ub95": 0.18
+            },
+            "macro_recall": {
+              "lo": 0.14681540404040405,
+              "hi": 0.18313531024531024,
+              "ub95": 0.1806797186147186
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.023574735449735453,
+              "hi": 0.03375347222222222,
+              "ub95": 0.02944444444444444
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.030859848484848445,
+              "hi": 0.03092370129870128,
+              "ub95": 0.02773116883116884
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.149375,
+              "hi": 0.1825,
+              "ub95": 0.18
+            },
+            "macro_recall": {
+              "lo": 0.14791338383838384,
+              "hi": 0.18309305555555555,
+              "ub95": 0.18030858585858586
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.013765624999999998,
+              "hi": 0.028749999999999998,
+              "ub95": 0.026249999999999996
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.01991351010101009,
+              "hi": 0.02517601010101007,
+              "ub95": 0.021397222222222234
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|invariant|K=1|raw": {
+        "accuracy": 0.18375,
+        "macro_recall": 0.177989898989899,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.15,
+          "LGTV": 0.224,
+          "Laptop": 0.17,
+          "AppleTV-LR": 0.18727272727272729,
+          "SamsungTV": 0.15,
+          "AppleTV-BR": 0.18666666666666668
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.005,
+            "accuracy": {
+              "lo": 0.16306206137179213,
+              "hi": 0.2064957108857968,
+              "ub95": 0.20223624112513003
+            },
+            "macro_recall": {
+              "lo": 0.15359490691404834,
+              "hi": 0.2077374174072496,
+              "ub95": 0.2027983141364531
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.012054422272656871,
+              "hi": 0.043264956743287265,
+              "ub95": 0.03883677755120675
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.026136921687544484,
+              "hi": 0.03828199945712472,
+              "ub95": 0.033800308165916206
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.118,
+            "accuracy": {
+              "lo": 0.16083101851851853,
+              "hi": 0.2054108952702703,
+              "ub95": 0.2016770833333333
+            },
+            "macro_recall": {
+              "lo": 0.1484475378787879,
+              "hi": 0.20656893939393942,
+              "ub95": 0.20209204545454543
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.018588624338624325,
+              "hi": 0.04364890282131661,
+              "ub95": 0.04000000000000001
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.028838546176046156,
+              "hi": 0.037300925925925925,
+              "ub95": 0.032098905723905696
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.163125,
+              "hi": 0.20376562499999998,
+              "ub95": 0.20125
+            },
+            "macro_recall": {
+              "lo": 0.15501515151515152,
+              "hi": 0.2010537878787879,
+              "ub95": 0.19713282828282827
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.006890625000000004,
+              "hi": 0.03999999999999998,
+              "ub95": 0.036250000000000004
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.01689595959595958,
+              "hi": 0.027870454545454577,
+              "ub95": 0.0238217171717172
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|invariant|K=all|stored": {
+        "accuracy": 0.189375,
+        "macro_recall": 0.1501111111111111,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.07,
+          "LGTV": 0.144,
+          "Laptop": 0.13,
+          "AppleTV-LR": 0.24,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.31666666666666665
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.009,
+            "accuracy": {
+              "lo": 0.1580042246909717,
+              "hi": 0.2184830607661405,
+              "ub95": 0.21332565326538472
+            },
+            "macro_recall": {
+              "lo": 0.13196917116178705,
+              "hi": 0.16476539825405692,
+              "ub95": 0.16275238176029053
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.04813641099287891,
+              "hi": 0.004588801564321443,
+              "ub95": 0.0013806337149929668
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.051050822788105334,
+              "hi": 0.00932950277814904,
+              "ub95": 0.005051387482277702
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.121,
+            "accuracy": {
+              "lo": 0.16129032258064516,
+              "hi": 0.22,
+              "ub95": 0.21408465608465607
+            },
+            "macro_recall": {
+              "lo": 0.130502886002886,
+              "hi": 0.1851923484848485,
+              "ub95": 0.17618713924963925
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.05535624999999999,
+              "hi": 0.004002941176470589,
+              "ub95": 0.0005891265597148135
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.06829675324675323,
+              "hi": 0.004959532828282805,
+              "ub95": 0.00260479797979799
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.170625,
+              "hi": 0.206875,
+              "ub95": 0.204375
+            },
+            "macro_recall": {
+              "lo": 0.1328938131313131,
+              "hi": 0.1674837121212121,
+              "ub95": 0.16504368686868684
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.048125,
+              "hi": 0.005624999999999991,
+              "ub95": 0.0018750000000000155
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.05320555555555551,
+              "hi": 0.007111489898989876,
+              "ub95": 0.0032641414141414485
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.15882144024997275,
+            0.22156654818325436
+          ]
+        }
+      },
+      "rot_group_cb42_n234|invariant|K=all|enrolled": {
+        "accuracy": 0.189375,
+        "macro_recall": 0.1505909090909091,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.06,
+          "LGTV": 0.164,
+          "Laptop": 0.125,
+          "AppleTV-LR": 0.23454545454545456,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.32
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.01,
+            "accuracy": {
+              "lo": 0.15659664126135314,
+              "hi": 0.22011583961067538,
+              "ub95": 0.21585462640340689
+            },
+            "macro_recall": {
+              "lo": 0.13307090208024452,
+              "hi": 0.16767848564340937,
+              "ub95": 0.16482038713232064
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.05612407851370389,
+              "hi": -0.0011429026675407702,
+              "ub95": -0.0038911034735329797
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.05827840104931833,
+              "hi": 0.005226215338511996,
+              "ub95": 0.001741922146962316
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.129,
+            "accuracy": {
+              "lo": 0.1605874183006536,
+              "hi": 0.2280142857142857,
+              "ub95": 0.22
+            },
+            "macro_recall": {
+              "lo": 0.13080555555555556,
+              "hi": 0.19365636363636363,
+              "ub95": 0.18591060606060605
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.06,
+              "hi": -0.0010156250000000215,
+              "ub95": -0.003519607843137274
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.07485606060606063,
+              "hi": 0.0009943181818181778,
+              "ub95": -0.00110088383838384
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.16875,
+              "hi": 0.206890625,
+              "ub95": 0.205
+            },
+            "macro_recall": {
+              "lo": 0.1323181818181818,
+              "hi": 0.16607803030303028,
+              "ub95": 0.16491641414141414
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.05437500000000001,
+              "hi": 0.0,
+              "ub95": -0.004375000000000016
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.0575244949494949,
+              "hi": 0.0029121212121211723,
+              "ub95": -0.0005186868686868531
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group_cb42_n234|invariant|K=all|raw": {
+        "accuracy": 0.200625,
+        "macro_recall": 0.15961111111111112,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.07,
+          "LGTV": 0.156,
+          "Laptop": 0.125,
+          "AppleTV-LR": 0.26,
+          "SamsungTV": 0.02,
+          "AppleTV-BR": 0.32666666666666666
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.004,
+            "accuracy": {
+              "lo": 0.16977327477456047,
+              "hi": 0.23173679939519626,
+              "ub95": 0.2275407432470535
+            },
+            "macro_recall": {
+              "lo": 0.13899283726691655,
+              "hi": 0.17770582989910363,
+              "ub95": 0.17380719010856885
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.036261173093234136,
+              "hi": 0.016126253976021535,
+              "ub95": 0.012815949721053937
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.037300255925326556,
+              "hi": 0.015844119614984668,
+              "ub95": 0.012773543100576702
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.122,
+            "accuracy": {
+              "lo": 0.17063704630788484,
+              "hi": 0.24077083333333332,
+              "ub95": 0.2335825123152709
+            },
+            "macro_recall": {
+              "lo": 0.1364784090909091,
+              "hi": 0.19634104978354983,
+              "ub95": 0.1899087121212121
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.0412246753246753,
+              "hi": 0.019286330049261093,
+              "ub95": 0.015762800417972844
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.04501651515151515,
+              "hi": 0.0164770202020202,
+              "ub95": 0.012936183261183261
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.1825,
+              "hi": 0.22,
+              "ub95": 0.2175
+            },
+            "macro_recall": {
+              "lo": 0.14147777777777779,
+              "hi": 0.17761338383838385,
+              "ub95": 0.17446085858585858
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.03501562499999999,
+              "hi": 0.017515625,
+              "ub95": 0.013749999999999984
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.0388722222222222,
+              "hi": 0.014438762626262626,
+              "ub95": 0.011461363636363624
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|angles|K=1|stored": {
+        "accuracy": 0.21375,
+        "macro_recall": 0.20936363636363634,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.19,
+          "LGTV": 0.328,
+          "Laptop": 0.14,
+          "AppleTV-LR": 0.21818181818181817,
+          "SamsungTV": 0.2,
+          "AppleTV-BR": 0.18
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.006,
+            "accuracy": {
+              "lo": 0.18979789441689907,
+              "hi": 0.23973556419250103,
+              "ub95": 0.2361509543513571
+            },
+            "macro_recall": {
+              "lo": 0.1816009777002294,
+              "hi": 0.2363565824834845,
+              "ub95": 0.23099281717932102
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.010399263747327947,
+              "hi": 0.08649628949289671,
+              "ub95": 0.0800080160320641
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.021336404674128624,
+              "hi": 0.07678107150422202,
+              "ub95": 0.0696793531480713
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.134,
+            "accuracy": {
+              "lo": 0.1910344827586207,
+              "hi": 0.2326681818181818,
+              "ub95": 0.2293623670212766
+            },
+            "macro_recall": {
+              "lo": 0.18818090909090912,
+              "hi": 0.2311386303511303,
+              "ub95": 0.22781203703703704
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.010714285714285732,
+              "hi": 0.07826268115942028,
+              "ub95": 0.07317886178861789
+            },
+            "macro_recall_minus_reference": {
+              "lo": 0.0027976190476190887,
+              "hi": 0.0732414231601732,
+              "ub95": 0.06751774891774891
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.19625,
+              "hi": 0.234375,
+              "ub95": 0.230625
+            },
+            "macro_recall": {
+              "lo": 0.19448762626262628,
+              "hi": 0.22599747474747472,
+              "ub95": 0.22346363636363636
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.016875,
+              "hi": 0.081890625,
+              "ub95": 0.075625
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.0028828282828283164,
+              "hi": 0.07975618686868688,
+              "ub95": 0.07144595959595956
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 5.551115123125783e-17,
+          "counts_equal": true,
+          "stored_ci": [
+            0.1896586997299693,
+            0.24010241835213908
+          ]
+        }
+      },
+      "rot_group|angles|K=1|enrolled": {
+        "accuracy": 0.19375,
+        "macro_recall": 0.18559090909090906,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.155,
+          "LGTV": 0.244,
+          "Laptop": 0.14,
+          "AppleTV-LR": 0.21454545454545454,
+          "SamsungTV": 0.18,
+          "AppleTV-BR": 0.18
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.004,
+            "accuracy": {
+              "lo": 0.17273322674679623,
+              "hi": 0.21337270265208455,
+              "ub95": 0.21086843061683316
+            },
+            "macro_recall": {
+              "lo": 0.16565417274294106,
+              "hi": 0.20830321334583732,
+              "ub95": 0.20440076328666684
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.0018258525035547528,
+              "hi": 0.06092903828197946,
+              "ub95": 0.05609120607849477
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.037421494331805145,
+              "hi": 0.04910485269774969,
+              "ub95": 0.044135196687070305
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.129,
+            "accuracy": {
+              "lo": 0.1758263888888889,
+              "hi": 0.2082786429365962,
+              "ub95": 0.20540540540540542
+            },
+            "macro_recall": {
+              "lo": 0.15984015151515152,
+              "hi": 0.20438970959595956,
+              "ub95": 0.20232819865319865
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.00785036945812807,
+              "hi": 0.054815412186379926,
+              "ub95": 0.05217632850241544
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.019778409090909117,
+              "hi": 0.04530982142857144,
+              "ub95": 0.04167195767195766
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.175,
+              "hi": 0.2125,
+              "ub95": 0.209375
+            },
+            "macro_recall": {
+              "lo": 0.16771123737373736,
+              "hi": 0.20270239898989897,
+              "ub95": 0.19996439393939394
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.0012343750000000156,
+              "hi": 0.063140625,
+              "ub95": 0.058750000000000024
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.027139141414141414,
+              "hi": 0.056519823232323206,
+              "ub95": 0.05099065656565658
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|angles|K=1|raw": {
+        "accuracy": 0.184375,
+        "macro_recall": 0.17707575757575755,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.15,
+          "LGTV": 0.252,
+          "Laptop": 0.115,
+          "AppleTV-LR": 0.20545454545454545,
+          "SamsungTV": 0.18,
+          "AppleTV-BR": 0.16
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.008,
+            "accuracy": {
+              "lo": 0.1605964899332248,
+              "hi": 0.2074454711772914,
+              "ub95": 0.20466361051045984
+            },
+            "macro_recall": {
+              "lo": 0.15758671533702004,
+              "hi": 0.20368483603382162,
+              "ub95": 0.19884031007325964
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.023044634714763396,
+              "hi": 0.05326195838829295,
+              "ub95": 0.04652100702619355
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.05076854754752918,
+              "hi": 0.040116594766099745,
+              "ub95": 0.035150836574219475
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.127,
+            "accuracy": {
+              "lo": 0.16193397177419355,
+              "hi": 0.20606060606060606,
+              "ub95": 0.20316129032258062
+            },
+            "macro_recall": {
+              "lo": 0.146812012987013,
+              "hi": 0.2031825036075036,
+              "ub95": 0.1987806818181818
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.017151785714285717,
+              "hi": 0.05059379968203498,
+              "ub95": 0.044836206896551725
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.037173629148629136,
+              "hi": 0.040940404040404034,
+              "ub95": 0.03552026815776811
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.16373437500000002,
+              "hi": 0.205625,
+              "ub95": 0.2025
+            },
+            "macro_recall": {
+              "lo": 0.15826212121212122,
+              "hi": 0.19557954545454545,
+              "ub95": 0.19269671717171719
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.016906249999999973,
+              "hi": 0.05249999999999999,
+              "ub95": 0.046249999999999986
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.040761489898989894,
+              "hi": 0.043214646464646476,
+              "ub95": 0.037912626262626224
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|angles|K=all|stored": {
+        "accuracy": 0.29,
+        "macro_recall": 0.2284848484848485,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.095,
+          "LGTV": 0.4,
+          "Laptop": 0.155,
+          "AppleTV-LR": 0.39090909090909093,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.33
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.005,
+            "accuracy": {
+              "lo": 0.24513401156785788,
+              "hi": 0.3320478698236051,
+              "ub95": 0.3252457666043316
+            },
+            "macro_recall": {
+              "lo": 0.2068365873783625,
+              "hi": 0.2465085868328098,
+              "ub95": 0.2435800777629605
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.01895859077956168,
+              "hi": 0.10364430383362852,
+              "ub95": 0.09664061224073162
+            },
+            "macro_recall_minus_reference": {
+              "lo": 0.015624287454504938,
+              "hi": 0.07056431121427517,
+              "ub95": 0.06717492198828313
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.108,
+            "accuracy": {
+              "lo": 0.24817464114832535,
+              "hi": 0.34215450310559004,
+              "ub95": 0.3365641379310345
+            },
+            "macro_recall": {
+              "lo": 0.20734834054834056,
+              "hi": 0.290877288961039,
+              "ub95": 0.27935030303030306
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.014192876344085992,
+              "hi": 0.10621839080459772,
+              "ub95": 0.09926504629629627
+            },
+            "macro_recall_minus_reference": {
+              "lo": 0.01750698051948049,
+              "hi": 0.06778571428571427,
+              "ub95": 0.06295912698412698
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.269375,
+              "hi": 0.310625,
+              "ub95": 0.306875
+            },
+            "macro_recall": {
+              "lo": 0.2096659090909091,
+              "hi": 0.24745025252525252,
+              "ub95": 0.24472323232323231
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.03812500000000002,
+              "hi": 0.08374999999999999,
+              "ub95": 0.079375
+            },
+            "macro_recall_minus_reference": {
+              "lo": 0.017380303030303055,
+              "hi": 0.06388358585858583,
+              "ub95": 0.061321969696969694
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.24613929705022825,
+            0.3319403482915099
+          ]
+        }
+      },
+      "rot_group|angles|K=all|enrolled": {
+        "accuracy": 0.284375,
+        "macro_recall": 0.22252020202020203,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.08,
+          "LGTV": 0.408,
+          "Laptop": 0.135,
+          "AppleTV-LR": 0.38545454545454544,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.32666666666666666
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.01,
+            "accuracy": {
+              "lo": 0.23905489302666721,
+              "hi": 0.3281800432788346,
+              "ub95": 0.32257938414730103
+            },
+            "macro_recall": {
+              "lo": 0.19863644799399718,
+              "hi": 0.241955390852306,
+              "ub95": 0.23937665799213229
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.009293405168105787,
+              "hi": 0.10068090386960354,
+              "ub95": 0.09221500721500724
+            },
+            "macro_recall_minus_reference": {
+              "lo": 0.0041292771164067295,
+              "hi": 0.06675051288479945,
+              "ub95": 0.06214464587267948
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.13,
+            "accuracy": {
+              "lo": 0.24294117647058824,
+              "hi": 0.34138830584707647,
+              "ub95": 0.3296724137931034
+            },
+            "macro_recall": {
+              "lo": 0.1992400432900433,
+              "hi": 0.28790199134199135,
+              "ub95": 0.27840454545454546
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.004236363636363641,
+              "hi": 0.1024025,
+              "ub95": 0.09407407407407409
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.002677398989899007,
+              "hi": 0.06155801767676765,
+              "ub95": 0.05803629148629146
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.26310937500000003,
+              "hi": 0.304375,
+              "ub95": 0.30125
+            },
+            "macro_recall": {
+              "lo": 0.2016026515151515,
+              "hi": 0.24204065656565657,
+              "ub95": 0.23873787878787878
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.02498437500000001,
+              "hi": 0.07939062499999996,
+              "ub95": 0.07624999999999998
+            },
+            "macro_recall_minus_reference": {
+              "lo": 0.002181313131313131,
+              "hi": 0.06280883838383833,
+              "ub95": 0.05904570707070704
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|angles|K=all|raw": {
+        "accuracy": 0.259375,
+        "macro_recall": 0.19398484848484845,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.09,
+          "LGTV": 0.288,
+          "Laptop": 0.135,
+          "AppleTV-LR": 0.4109090909090909,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.24
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.007,
+            "accuracy": {
+              "lo": 0.21370112571523345,
+              "hi": 0.3063386369392009,
+              "ub95": 0.2977354884731989
+            },
+            "macro_recall": {
+              "lo": 0.16893668120276958,
+              "hi": 0.21982531296859387,
+              "ub95": 0.21505147965318014
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.011158204310868246,
+              "hi": 0.07297613639516463,
+              "ub95": 0.06719821556583115
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.018856776670867423,
+              "hi": 0.03909950524551593,
+              "ub95": 0.03368724646822485
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.112,
+            "accuracy": {
+              "lo": 0.218,
+              "hi": 0.30642857142857144,
+              "ub95": 0.30003571428571424
+            },
+            "macro_recall": {
+              "lo": 0.16846601731601735,
+              "hi": 0.24822796536796535,
+              "ub95": 0.24131287878787877
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.011530844155844133,
+              "hi": 0.07371758241758238,
+              "ub95": 0.06650591216216213
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.022676893939393938,
+              "hi": 0.033662752525252526,
+              "ub95": 0.02932211399711395
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.23375,
+              "hi": 0.28689062499999995,
+              "ub95": 0.28065625
+            },
+            "macro_recall": {
+              "lo": 0.1696502525252525,
+              "hi": 0.21867184343434343,
+              "ub95": 0.21427550505050505
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.006250000000000005,
+              "hi": 0.05689062499999999,
+              "ub95": 0.05437499999999998
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.01659482323232324,
+              "hi": 0.03378093434343433,
+              "ub95": 0.0294537878787879
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|invariant|K=1|stored": {
+        "accuracy": 0.193125,
+        "macro_recall": 0.1907777777777778,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.14,
+          "LGTV": 0.268,
+          "Laptop": 0.17,
+          "AppleTV-LR": 0.2,
+          "SamsungTV": 0.2,
+          "AppleTV-BR": 0.16666666666666666
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.005,
+            "accuracy": {
+              "lo": 0.17356387688141242,
+              "hi": 0.2139535649218427,
+              "ub95": 0.2113565098967078
+            },
+            "macro_recall": {
+              "lo": 0.1683519728464472,
+              "hi": 0.2238748919436481,
+              "ub95": 0.21775783495994006
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.003695741195741189,
+              "hi": 0.05092708150872891,
+              "ub95": 0.04591631212472148
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.012723556598963473,
+              "hi": 0.04841601593151056,
+              "ub95": 0.0434583382867082
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.1,
+            "accuracy": {
+              "lo": 0.16342456896551727,
+              "hi": 0.21771737451737452,
+              "ub95": 0.21412971342383105
+            },
+            "macro_recall": {
+              "lo": 0.16326737012987014,
+              "hi": 0.21571256313131312,
+              "ub95": 0.2123902777777778
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.011254464285714291,
+              "hi": 0.051337878787878766,
+              "ub95": 0.04703051438535311
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.015127380952380916,
+              "hi": 0.04270890151515148,
+              "ub95": 0.039411544011544015
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.176859375,
+              "hi": 0.21,
+              "ub95": 0.2075
+            },
+            "macro_recall": {
+              "lo": 0.17180441919191922,
+              "hi": 0.2095775252525253,
+              "ub95": 0.20723939393939395
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.0025000000000000022,
+              "hi": 0.046875,
+              "ub95": 0.04249999999999998
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.00933295454545451,
+              "hi": 0.04037196969696971,
+              "ub95": 0.035538131313131306
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 2.7755575615628914e-17,
+          "counts_equal": true,
+          "stored_ci": [
+            0.17188454477117698,
+            0.21218832420369244
+          ]
+        }
+      },
+      "rot_group|invariant|K=1|enrolled": {
+        "accuracy": 0.191875,
+        "macro_recall": 0.18765151515151515,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.14,
+          "LGTV": 0.24,
+          "Laptop": 0.155,
+          "AppleTV-LR": 0.2109090909090909,
+          "SamsungTV": 0.21,
+          "AppleTV-BR": 0.17
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.005,
+            "accuracy": {
+              "lo": 0.1730637321200361,
+              "hi": 0.21546115705855215,
+              "ub95": 0.21021190372676857
+            },
+            "macro_recall": {
+              "lo": 0.16645288593319352,
+              "hi": 0.21895501400943448,
+              "ub95": 0.21509092450564407
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.008844829762324436,
+              "hi": 0.062124623340979374,
+              "ub95": 0.057402580401931115
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.002922884049725426,
+              "hi": 0.07202851127435889,
+              "ub95": 0.06729570626244051
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.115,
+            "accuracy": {
+              "lo": 0.1682716682199441,
+              "hi": 0.21785714285714286,
+              "ub95": 0.21317886178861786
+            },
+            "macro_recall": {
+              "lo": 0.15860579004329006,
+              "hi": 0.21305699855699856,
+              "ub95": 0.20940797258297264
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.0032344470046082948,
+              "hi": 0.06758772819472615,
+              "ub95": 0.06322667829119442
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.02079396645021646,
+              "hi": 0.06831035353535353,
+              "ub95": 0.06469826839826845
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.173109375,
+              "hi": 0.21125,
+              "ub95": 0.208125
+            },
+            "macro_recall": {
+              "lo": 0.16493371212121213,
+              "hi": 0.21090946969696972,
+              "ub95": 0.20675378787878793
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.009359375000000036,
+              "hi": 0.058750000000000024,
+              "ub95": 0.05562500000000001
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.010576515151515132,
+              "hi": 0.06115303030303031,
+              "ub95": 0.05764090909090911
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|invariant|K=1|raw": {
+        "accuracy": 0.17625,
+        "macro_recall": 0.16703535353535356,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.1,
+          "LGTV": 0.256,
+          "Laptop": 0.145,
+          "AppleTV-LR": 0.19454545454545455,
+          "SamsungTV": 0.15,
+          "AppleTV-BR": 0.15666666666666668
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.005,
+            "accuracy": {
+              "lo": 0.1563298517457829,
+              "hi": 0.19708913050701832,
+              "ub95": 0.1939338499251267
+            },
+            "macro_recall": {
+              "lo": 0.14987575463948608,
+              "hi": 0.1880893840673168,
+              "ub95": 0.1848074773581547
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.01759935855172373,
+              "hi": 0.034100904196074255,
+              "ub95": 0.030818210527578157
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.03544068724739157,
+              "hi": 0.026447200649343184,
+              "ub95": 0.019983770197441273
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.15,
+            "accuracy": {
+              "lo": 0.15499166666666667,
+              "hi": 0.2,
+              "ub95": 0.1944893899204244
+            },
+            "macro_recall": {
+              "lo": 0.14919141414141415,
+              "hi": 0.18210045093795094,
+              "ub95": 0.18016338383838384
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.014487356321839073,
+              "hi": 0.02788181818181819,
+              "ub95": 0.02514497354497356
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.0245945165945166,
+              "hi": 0.01205652958152956,
+              "ub95": 0.009525000000000044
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.160625,
+              "hi": 0.19125,
+              "ub95": 0.18815624999999997
+            },
+            "macro_recall": {
+              "lo": 0.15411502525252527,
+              "hi": 0.17995593434343432,
+              "ub95": 0.17788510101010102
+            },
+            "accuracy_minus_reference": {
+              "lo": -0.01125000000000001,
+              "hi": 0.02687500000000001,
+              "ub95": 0.02437499999999998
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.023293434343434304,
+              "hi": 0.010900883838383845,
+              "ub95": 0.007819444444444454
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|invariant|K=all|stored": {
+        "accuracy": 0.261875,
+        "macro_recall": 0.19408585858585858,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.085,
+          "LGTV": 0.248,
+          "Laptop": 0.09,
+          "AppleTV-LR": 0.3981818181818182,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.3433333333333333
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.002,
+            "accuracy": {
+              "lo": 0.21656998953057358,
+              "hi": 0.3070259921868064,
+              "ub95": 0.2998627997653027
+            },
+            "macro_recall": {
+              "lo": 0.175622496827048,
+              "hi": 0.2104557677679723,
+              "ub95": 0.20726686947163778
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.011590972029908622,
+              "hi": 0.08865200283003319,
+              "ub95": 0.08441877376062051
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.007927722669348276,
+              "hi": 0.05251208291492777,
+              "ub95": 0.04836964791495187
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.103,
+            "accuracy": {
+              "lo": 0.22716250000000002,
+              "hi": 0.31310416666666663,
+              "ub95": 0.3028624338624339
+            },
+            "macro_recall": {
+              "lo": 0.1765650883838384,
+              "hi": 0.23778833333333332,
+              "ub95": 0.23080848484848482
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.028960891505466775,
+              "hi": 0.08666666666666664,
+              "ub95": 0.08003225806451611
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.0036395202020201947,
+              "hi": 0.0525798106060606,
+              "ub95": 0.04591522366522364
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.24,
+              "hi": 0.281875,
+              "ub95": 0.27878125
+            },
+            "macro_recall": {
+              "lo": 0.17762424242424246,
+              "hi": 0.21004911616161617,
+              "ub95": 0.20741515151515152
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.024375000000000008,
+              "hi": 0.07999999999999999,
+              "ub95": 0.076875
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.003682070707070713,
+              "hi": 0.049872601010101034,
+              "ub95": 0.04643661616161613
+            }
+          }
+        },
+        "ties": 0,
+        "reproduces_r_rotation_main": {
+          "max_abs_diff": 0.0,
+          "counts_equal": true,
+          "stored_ci": [
+            0.21741734493107834,
+            0.3077147401908802
+          ]
+        }
+      },
+      "rot_group|invariant|K=all|enrolled": {
+        "accuracy": 0.263125,
+        "macro_recall": 0.1954747474747475,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.08,
+          "LGTV": 0.248,
+          "Laptop": 0.1,
+          "AppleTV-LR": 0.3981818181818182,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.3466666666666667
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.009,
+            "accuracy": {
+              "lo": 0.21676857186393453,
+              "hi": 0.3045627401919642,
+              "ub95": 0.3008572826789865
+            },
+            "macro_recall": {
+              "lo": 0.17811702343396613,
+              "hi": 0.21190597121564544,
+              "ub95": 0.20909636540878918
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.010919910453216379,
+              "hi": 0.08558091818414974,
+              "ub95": 0.08068112934525348
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.008789142107475275,
+              "hi": 0.052187346459409804,
+              "ub95": 0.04727094428145769
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.14,
+            "accuracy": {
+              "lo": 0.22913223443223443,
+              "hi": 0.3123125,
+              "ub95": 0.3037108262108262
+            },
+            "macro_recall": {
+              "lo": 0.17936569264069266,
+              "hi": 0.23980831168831168,
+              "ub95": 0.23466848484848485
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.024109300476947537,
+              "hi": 0.07999999999999999,
+              "ub95": 0.07335897435897434
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.009948863636363608,
+              "hi": 0.044365367965367976,
+              "ub95": 0.04019718614718615
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.2425,
+              "hi": 0.283140625,
+              "ub95": 0.28
+            },
+            "macro_recall": {
+              "lo": 0.17824949494949496,
+              "hi": 0.21176262626262624,
+              "ub95": 0.20926540404040403
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.021234375000000007,
+              "hi": 0.074375,
+              "ub95": 0.07003125
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.009202020202020197,
+              "hi": 0.04651502525252524,
+              "ub95": 0.04281666666666667
+            }
+          }
+        },
+        "ties": 0
+      },
+      "rot_group|invariant|K=all|raw": {
+        "accuracy": 0.250625,
+        "macro_recall": 0.1896919191919192,
+        "chance": 0.16666666666666663,
+        "macro_chance": 0.16666666666666666,
+        "n_decisions": 1600,
+        "n_query_blocks": 83,
+        "n_days": 11,
+        "per_device_recall": {
+          "Vacuum": 0.115,
+          "LGTV": 0.228,
+          "Laptop": 0.08,
+          "AppleTV-LR": 0.3618181818181818,
+          "SamsungTV": 0.0,
+          "AppleTV-BR": 0.35333333333333333
+        },
+        "per_device_decisions": {
+          "Vacuum": 200,
+          "LGTV": 250,
+          "Laptop": 200,
+          "AppleTV-LR": 550,
+          "SamsungTV": 100,
+          "AppleTV-BR": 300
+        },
+        "per_device_query_blocks": {
+          "Vacuum": 5,
+          "LGTV": 7,
+          "Laptop": 7,
+          "AppleTV-LR": 23,
+          "SamsungTV": 28,
+          "AppleTV-BR": 13
+        },
+        "per_device_days": {
+          "Vacuum": 4,
+          "LGTV": 5,
+          "Laptop": 4,
+          "AppleTV-LR": 11,
+          "SamsungTV": 2,
+          "AppleTV-BR": 6
+        },
+        "intervals": {
+          "block": {
+            "n_clusters": 83,
+            "draws_with_device_absent": 0.011,
+            "accuracy": {
+              "lo": 0.20845658250947346,
+              "hi": 0.2972230893634994,
+              "ub95": 0.28732006015759604
+            },
+            "macro_recall": {
+              "lo": 0.16901505183273915,
+              "hi": 0.21002877664827074,
+              "ub95": 0.207160226467641
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.01063121616517688,
+              "hi": 0.07249907295819043,
+              "ub95": 0.06832547317768739
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.0028151820233145984,
+              "hi": 0.04780543586562644,
+              "ub95": 0.0432571552886671
+            }
+          },
+          "day": {
+            "n_clusters": 11,
+            "draws_with_device_absent": 0.118,
+            "accuracy": {
+              "lo": 0.20749854651162788,
+              "hi": 0.30880222222222226,
+              "ub95": 0.3
+            },
+            "macro_recall": {
+              "lo": 0.16451052489177492,
+              "hi": 0.24734287878787875,
+              "ub95": 0.23461333333333334
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.01901219512195122,
+              "hi": 0.0725023148148148,
+              "ub95": 0.06689787798408489
+            },
+            "macro_recall_minus_reference": {
+              "lo": 0.0037594696969697377,
+              "hi": 0.042990606060606076,
+              "ub95": 0.03801349206349202
+            }
+          },
+          "device_day": {
+            "n_clusters": 32,
+            "draws_with_device_absent": 0.0,
+            "accuracy": {
+              "lo": 0.228125,
+              "hi": 0.271875,
+              "ub95": 0.26940624999999996
+            },
+            "macro_recall": {
+              "lo": 0.1690681818181818,
+              "hi": 0.21071780303030302,
+              "ub95": 0.20712878787878788
+            },
+            "accuracy_minus_reference": {
+              "lo": 0.017500000000000016,
+              "hi": 0.067515625,
+              "ub95": 0.06375
+            },
+            "macro_recall_minus_reference": {
+              "lo": -0.0034794191919191773,
+              "hi": 0.044398484848484854,
+              "ub95": 0.0395310606060606
+            }
+          }
+        },
+        "ties": 0
+      }
+    }
+  },
+  "runtime_s": 1996.86137509346,
+  "peak_rss_mb": 1228.43359375
+}

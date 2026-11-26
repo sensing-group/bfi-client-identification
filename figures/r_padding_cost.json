@@ -1,0 +1,82 @@
+{
+  "days_with_data": 11,
+  "active_minutes": 11224,
+  "longest_body_len": 1533,
+  "shortest_body_len": 572,
+  "reports": 832019,
+  "body_mb": 620.743129,
+  "padded_mb": 1275.485127,
+  "factor": 2.054771236944292,
+  "factor_min": 1.0146910535052203,
+  "factor_max": 2.68006993006993,
+  "extra_mb_per_day": 59.52199981818182,
+  "rates_mbps": [
+    6,
+    24
+  ],
+  "airtime": {
+    "6": {
+      "captured_s": 875.3599280000001,
+      "padded_s": 1748.3492586666669,
+      "captured_share": 0.0012998335827987648,
+      "padded_share": 0.0025961470341332067
+    },
+    "24": {
+      "captured_s": 231.320267,
+      "padded_s": 449.56759966666675,
+      "captured_share": 0.0003434905366476598,
+      "padded_share": 0.0006675688994812704
+    }
+  },
+  "per_device": {
+    "Vacuum": {
+      "reports": 24028,
+      "body_bytes": 24086488,
+      "padded_bytes": 36834924,
+      "factor": 1.5292774936719709,
+      "mean_body_len": 1002.4341601464957
+    },
+    "AppleTV-LR": {
+      "reports": 415518,
+      "body_bytes": 237676296,
+      "padded_bytes": 636989094,
+      "factor": 2.68006993006993,
+      "mean_body_len": 572.0
+    },
+    "LGTV": {
+      "reports": 53352,
+      "body_bytes": 50519634,
+      "padded_bytes": 81788616,
+      "factor": 1.6189471206382848,
+      "mean_body_len": 946.9117183985605
+    },
+    "Laptop": {
+      "reports": 55926,
+      "body_bytes": 55430046,
+      "padded_bytes": 85734558,
+      "factor": 1.5467163422523589,
+      "mean_body_len": 991.131960090119
+    },
+    "SamsungTV": {
+      "reports": 3840,
+      "body_bytes": 5801490,
+      "padded_bytes": 5886720,
+      "factor": 1.0146910535052203,
+      "mean_body_len": 1510.8046875
+    },
+    "AppleTV-BR": {
+      "reports": 279355,
+      "body_bytes": 247229175,
+      "padded_bytes": 428251215,
+      "factor": 1.7322033898305085,
+      "mean_body_len": 885.0
+    }
+  },
+  "assumptions": {
+    "preamble_s": 2e-05,
+    "mac_overhead_bytes": 28,
+    "note": "no transmit rate is captured; the lowest rate bounds the share from above"
+  },
+  "runtime_s": 1.2125935554504395,
+  "peak_rss_mb": 36.796875
+}

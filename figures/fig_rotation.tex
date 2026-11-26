@@ -1,0 +1,94 @@
+% fig_rotation.tex -- the proposed protection: a fresh rotation per subcarrier group
+% at the access point, drawn as a two-lifeline sequence diagram.
+%
+% Single-column figure (\columnwidth = 241.15pt = 84.75mm wide, <= 1.6in tall).
+% Requires in the document preamble:
+%     \usepackage{tikz}
+%     \usetikzlibrary{arrows.meta,positioning,calc}
+%
+% Palette: Okabe-Ito (access point blue, client green, feedback frame orange,
+% outsider vermilion), as in fig_sounding.tex and the rest of the paper.
+%
+% Layout (time runs downward):
+%   1. sounding, each subcarrier group k rotated by a fresh unitary Q_k   AP -> client
+%      note at the AP: Q_k kept at the AP
+%   2. feedback Q_k^H V_k, plaintext as today                       client -> AP
+%      with a branch from its midpoint to the outsider's mast at the far right
+%   3. the AP undoes the rotation (self-loop on the AP lifeline) and steers
+%   bottom line: client unchanged, frame unchanged, no key leaves the AP
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\footnotesize,
+    >={Stealth[length=1.4mm,width=1.1mm]},
+    inner sep=0pt, outer sep=0pt,
+]
+
+% ===== Colour palette (Okabe-Ito) =====
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cGreen}{HTML}{009E73}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cRed}{HTML}{D55E00}
+\definecolor{cGray}{HTML}{555555}
+\definecolor{fillGw}{HTML}{DCEEF7}
+\definecolor{fillCl}{HTML}{D9F0E8}
+
+% Lifeline abscissae; labels between the lifelines are centred on \xm.
+\def\xg{9}
+\def\xc{54}
+\def\xm{31.5}
+\def\xo{77}
+\def\xr{84.5}
+
+% ----- Header boxes (lifeline tops) -----
+\node[draw=cBlue, fill=fillGw, line width=0.4pt, rounded corners=0.7mm,
+      inner sep=0.7mm, minimum width=12mm, minimum height=4mm, anchor=south]
+      (gw) at (\xg,34.3) {access point};
+\node[draw=cGreen, fill=fillCl, line width=0.4pt, rounded corners=0.7mm,
+      inner sep=0.7mm, minimum width=12mm, minimum height=4mm, anchor=south]
+      (cl) at (\xc,34.3) {client};
+
+% ----- Lifelines -----
+\draw[cGray, line width=0.3pt, dash pattern=on 0.8mm off 0.5mm] (gw.south) -- (\xg,4);
+\draw[cGray, line width=0.3pt, dash pattern=on 0.8mm off 0.5mm] (cl.south) -- (\xc,4);
+
+% ----- Time arrow on far left -----
+\draw[->, cGray, line width=0.3pt] (1.5,31.5) -- (1.5,6);
+\node[cGray, rotate=90, font=\footnotesize] at (3.1,18.5) {time};
+
+% ===== 1. Sounding with a fresh rotation per subcarrier group: AP -> client =====
+\draw[->, cBlue, line width=0.5pt] (\xg+0.6,26.5) -- (\xc-0.6,26.5);
+\node[anchor=south, align=center, fill=white, inner sep=0.3mm] at (\xm,27.1)
+     {sounding, each subcarrier group $k$\\rotated by a fresh random unitary $\mathbf{Q}_k$};
+\node[anchor=north west, cGray, font=\footnotesize\itshape] at (\xg+1.8,25.7)
+     {$\mathbf{Q}_k$ kept at the AP};
+
+% ===== 2. Feedback of the rotated subspace: client -> AP =====
+\draw[->, cOrange, line width=1.0pt] (\xc-0.6,18) -- (\xg+0.6,18);
+\node[anchor=south, align=center, fill=white, inner sep=0.3mm] at (\xm,18.6)
+     {feedback $\mathbf{Q}_k^{\!H}\mathbf{V}_k$, plaintext as today};
+
+% ----- Branch from the midpoint of the feedback frame to the outsider -----
+\draw[->, cRed, line width=0.5pt, dash pattern=on 1mm off 0.6mm, rounded corners=1.5mm]
+    (\xm,18) |- (\xo-2.2,11.5);
+
+% ----- Outsider mast (far right) -----
+\draw[cRed, line width=0.6pt] (\xo-1.5,11.5) -- (\xo+1.5,11.5);    % footing
+\draw[cRed, line width=0.6pt] (\xo,11.5) -- (\xo,17);               % mast
+\fill[cRed] (\xo,17) circle (0.5);                                 % tip
+\draw[cRed, line width=0.4pt] (\xo-1.6,18.2) arc (120:60:3.2);     % wave 1
+\draw[cRed, line width=0.4pt] (\xo-2.6,19.4) arc (120:60:5.2);     % wave 2
+\node[cRed, anchor=south east, align=right] at (\xr,22.4)
+     {outsider: angles of\\$\mathbf{Q}_k^{\!H}\mathbf{V}_k$ random;\\format, SNR stay};
+
+% ===== 3. The AP undoes the rotation: self-loop on the AP lifeline =====
+\draw[->, cBlue, line width=0.5pt, rounded corners=0.6mm]
+    (\xg,9.5) -- (\xg+3,9.5) -- (\xg+3,6) -- (\xg+0.6,6);
+\node[anchor=west, align=left] at (\xg+4,7.75)
+     {AP recovers $\mathbf{V}_k = \mathbf{Q}_k\,(\mathbf{Q}_k^{\!H}\mathbf{V}_k)$\\and steers as before};
+
+% ----- Bottom line -----
+\node[cGray, font=\footnotesize\itshape, anchor=south] at (43,0)
+     {client as today unless it smooths across groups; no key leaves the AP};
+
+\end{tikzpicture}

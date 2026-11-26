@@ -1,0 +1,172 @@
+% fig_joint_vs_coord.tex -- identity is a joint pattern across angles, so
+% per-coordinate noise on individual angles cannot break it.
+%
+% Slide-width figure (~120mm wide x ~58mm tall).
+% Requires in the document preamble:
+%     \usepackage{tikz}
+%     \usetikzlibrary{arrows.meta,positioning,calc}
+%
+% Layout (stacked panels):
+%   Top    panel: clean scatter of two subjects (blue, orange) in (phi, psi).
+%                 The two clouds are anti-correlated (blue along y=+x,
+%                 orange along y=-x), so projecting onto phi alone or psi
+%                 alone gives heavy overlap, but the joint clouds separate.
+%   Bottom panel: same scatter with i.i.d. per-coordinate Gaussian noise.
+%                 Clouds blur but joint regions remain separable.
+%   Right column (between panels): annotation describing the take-away.
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\sffamily\footnotesize,
+    >={Stealth[length=1.4mm,width=1.1mm]},
+]
+
+% ===== Wong colorblind-safe palette =====
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cGreen}{HTML}{009E73}
+\definecolor{cRed}{HTML}{D55E00}
+\definecolor{cGrey}{HTML}{666666}
+\definecolor{fillTop}{HTML}{F8F8F8}
+\definecolor{fillBot}{HTML}{F0F0F0}
+
+% Canvas: 120mm x 58mm.
+
+% =====================================================================
+% TOP PANEL: clean scatter, x in [22..82], y in [32..52]
+% =====================================================================
+% panel background
+\fill[fillTop, rounded corners=0.5mm] (22,32) rectangle (82,52);
+\draw[cGrey, line width=0.3pt, rounded corners=0.5mm]
+      (22,32) rectangle (82,52);
+
+% axis labels
+\node[font=\sffamily\scriptsize\color{cGrey}, anchor=east] at (21,42) {$\psi$};
+\node[font=\sffamily\scriptsize\color{cGrey}, anchor=west] at (82.5,32) {$\varphi$};
+
+% panel header
+\node[font=\sffamily\scriptsize\bfseries\color{black}, anchor=south west]
+      at (22,52.5) {clean angles};
+
+% legend dots (along the top of the panel, right side)
+\fill[cBlue, opacity=0.85] (60,53.5) circle (0.5mm);
+\node[font=\sffamily\tiny\color{cBlue}, anchor=west] at (61,53.5) {subject A};
+\fill[cOrange, opacity=0.85] (72,53.5) circle (0.5mm);
+\node[font=\sffamily\tiny\color{cOrange}, anchor=west] at (73,53.5) {subject B};
+
+% =====================================================================
+% BOTTOM PANEL: noisy scatter, x in [22..82], y in [6..26]
+% =====================================================================
+\fill[fillBot, rounded corners=0.5mm] (22,6) rectangle (82,26);
+\draw[cGrey, line width=0.3pt, rounded corners=0.5mm]
+      (22,6) rectangle (82,26);
+
+\node[font=\sffamily\scriptsize\color{cGrey}, anchor=east] at (21,16) {$\psi$};
+\node[font=\sffamily\scriptsize\color{cGrey}, anchor=west] at (82.5,6) {$\varphi$};
+
+\node[font=\sffamily\scriptsize\bfseries\color{black}, anchor=south west]
+      at (22,26.5) {with per-coordinate noise};
+
+% =====================================================================
+% Scatter points (auto-generated; centers around (52, 42) top, (52,16) bottom)
+% =====================================================================
+% TOP CLEAN -- subject A (blue)
+\foreach \p in {%
+  (56.49,42.05),(45.98,38.71),(59.29,43.39),(58.34,44.68),(36.86,37.11),%
+  (40.88,39.08),(53.70,42.08),(49.32,41.28),(50.81,42.31),(46.01,39.65),%
+  (57.94,44.50),(59.06,43.61),(53.12,41.96),(61.26,44.65),(57.60,42.51),%
+  (44.61,40.09),(55.61,42.67),(44.66,39.57),(57.89,44.51),(50.86,42.13),%
+  (49.46,41.91),(46.97,40.21),(62.05,44.87),(50.96,41.56),(51.59,39.96),%
+  (51.77,40.29),(58.31,42.61),(56.48,42.37),(54.47,43.28),(56.83,42.58),%
+  (69.00,47.24),(46.69,41.70),(48.69,40.49),(44.53,40.35),(58.29,43.04),%
+  (60.97,44.76),(52.74,41.17),(46.16,39.67),(44.28,40.38),(59.90,42.68),%
+  (56.94,44.14),(55.74,43.52),(47.93,39.97),(56.23,41.77),(52.77,42.34),%
+  (54.57,42.26),(58.26,44.35),(53.67,42.58),(54.47,44.63),(52.92,42.04),%
+  (55.94,42.16),(56.52,43.71),(40.50,38.42),(47.25,41.96),(46.99,41.28),%
+  (46.52,40.58),(47.42,42.13),(65.43,45.13),(46.47,39.43),(60.97,43.94),%
+  (39.81,37.50),(51.78,40.37),(52.17,42.77),(56.85,43.37),(59.93,42.98),%
+  (59.78,43.45),(48.80,41.29),(47.05,41.30),(55.16,45.31),(45.59,43.16)%
+}{ \fill[cBlue, opacity=0.75] \p circle (0.42mm); }
+% TOP CLEAN -- subject B (orange)
+\foreach \p in {%
+  (56.72,41.46),(42.19,43.77),(35.77,47.44),(53.22,41.04),(45.24,43.88),%
+  (50.53,43.62),(48.24,43.86),(53.19,43.11),(59.88,39.20),(52.02,41.21),%
+  (50.41,42.28),(44.50,44.77),(39.51,46.36),(46.45,42.62),(51.74,42.19),%
+  (65.89,37.63),(57.27,43.09),(62.69,40.56),(46.74,42.79),(42.46,44.85),%
+  (42.15,43.63),(45.46,43.51),(68.79,36.76),(47.77,44.77),(57.17,39.45),%
+  (43.99,43.93),(55.47,38.41),(54.66,40.93),(49.00,41.80),(50.79,41.80),%
+  (45.51,43.17),(55.25,40.81),(45.54,42.16),(40.15,44.29),(45.85,46.46),%
+  (51.13,40.83),(62.20,37.36),(56.34,42.63),(56.02,43.95),(52.19,40.61),%
+  (61.35,38.47),(54.26,41.63),(51.80,44.02),(58.77,38.63),(54.86,40.77),%
+  (65.05,38.53),(54.14,41.78),(42.01,44.90),(41.32,45.41),(62.27,37.02),%
+  (64.76,37.48),(50.18,42.31),(49.47,43.11),(62.22,37.97),(44.35,45.08),%
+  (46.89,44.85),(57.18,40.45),(49.58,43.20),(52.05,42.04),(50.75,42.42),%
+  (53.35,40.73),(63.29,38.60),(52.53,41.71),(60.47,41.54),(39.01,48.11),%
+  (52.28,42.34),(44.27,43.71),(40.80,44.47),(47.32,44.91),(49.89,43.00)%
+}{ \fill[cOrange, opacity=0.75] \p circle (0.42mm); }
+% BOTTOM NOISY -- subject A (blue)
+\foreach \p in {%
+  (57.50,14.83),(47.93,13.03),(56.96,17.06),(58.89,18.71),(36.25,11.04),%
+  (40.35,13.18),(56.79,14.29),(48.82,15.41),(51.43,16.05),(42.32,13.88),%
+  (61.57,17.42),(60.88,17.38),(52.99,15.23),(60.55,19.56),(58.82,17.73),%
+  (47.08,14.40),(59.27,16.98),(46.39,13.36),(58.03,18.02),(52.94,15.30),%
+  (51.10,15.77),(49.43,14.74),(65.88,19.38),(47.65,15.51),(49.13,13.59),%
+  (54.94,14.73),(56.84,15.90),(56.55,15.51),(53.06,17.50),(59.25,17.01),%
+  (64.19,21.45),(46.84,15.99),(52.09,13.05),(43.29,14.76),(54.97,18.07),%
+  (61.74,19.35),(51.54,15.74),(48.40,13.83),(44.77,14.57),(58.09,16.58),%
+  (56.62,18.41),(57.84,16.78),(47.66,15.01),(54.67,15.20),(53.19,16.93),%
+  (54.59,17.19),(60.06,18.94),(54.83,18.21),(54.04,17.23),(56.29,15.72),%
+  (56.17,17.07),(53.15,16.83),(37.14,11.86),(48.18,16.32),(47.57,14.29),%
+  (41.66,14.61),(46.42,16.45),(66.91,19.23),(48.07,13.59),(62.08,17.45),%
+  (39.43,11.63),(53.50,14.09),(53.26,16.59),(56.61,17.95),(55.74,16.07),%
+  (56.67,15.81),(47.38,15.81),(46.45,15.44),(57.45,20.24),(45.45,18.11)%
+}{ \fill[cBlue, opacity=0.75] \p circle (0.42mm); }
+% BOTTOM NOISY -- subject B (orange)
+\foreach \p in {%
+  (56.91,14.88),(40.94,16.73),(33.90,21.19),(54.91,16.25),(42.33,18.16),%
+  (48.34,17.96),(47.96,16.58),(55.14,16.69),(58.76,12.45),(50.64,15.51),%
+  (50.01,16.51),(45.26,19.70),(38.79,19.33),(48.69,16.39),(54.08,16.46),%
+  (65.61,11.87),(61.36,18.55),(62.84,14.67),(49.00,16.20),(43.16,18.84),%
+  (42.81,17.05),(42.12,16.06),(66.44,10.44),(47.16,20.13),(59.49,12.78),%
+  (44.72,17.64),(54.87,12.54),(55.96,14.69),(51.23,15.00),(50.80,17.62),%
+  (45.98,18.17),(55.44,15.22),(45.42,16.04),(38.51,18.59),(44.07,20.92),%
+  (53.41,15.09),(61.60,11.68),(55.69,17.29),(52.18,17.71),(48.01,13.56),%
+  (64.21,13.09),(52.74,14.58),(45.57,17.64),(63.86,12.93),(53.68,15.10),%
+  (61.77,12.32),(54.35,15.72),(43.67,19.15),(42.73,18.93),(64.16,12.16),%
+  (62.72,10.86),(52.98,16.17),(52.42,16.80),(65.27,12.06),(44.89,20.18),%
+  (46.13,18.19),(56.23,14.77),(46.30,17.65),(50.92,16.85),(45.72,15.87),%
+  (49.81,14.15),(63.81,12.47),(51.99,15.60),(60.90,14.84),(40.50,22.57),%
+  (53.09,16.73),(44.89,19.14),(40.62,18.26),(45.73,18.19),(47.28,16.38)%
+}{ \fill[cOrange, opacity=0.75] \p circle (0.42mm); }
+
+% =====================================================================
+% Right-side annotations (between and beside the two panels)
+% =====================================================================
+% Top take-away
+\node[font=\sffamily\scriptsize\bfseries\color{cBlue},
+      anchor=west, align=left]
+      at (87,46) {joint pattern};
+\node[font=\sffamily\tiny\color{black},
+      anchor=west, align=left, text width=29mm]
+      at (87,40) {%
+the two clouds split
+along orthogonal diagonals};
+\node[font=\sffamily\tiny\itshape\color{cGrey},
+      anchor=west, align=left, text width=29mm]
+      at (87,35) {%
+projecting onto $\varphi$ alone
+or $\psi$ alone overlaps};
+
+% Bottom take-away
+\node[font=\sffamily\scriptsize\bfseries\color{cRed},
+      anchor=west, align=left]
+      at (87,21) {joint survives};
+\node[font=\sffamily\tiny\color{black},
+      anchor=west, align=left, text width=29mm]
+      at (87,15) {%
+per-coordinate noise blurs each
+axis, but the joint regions
+remain separable};
+% (Conclusion "per-coordinate defenses cannot work" carried by the slide bullets.)
+
+\end{tikzpicture}

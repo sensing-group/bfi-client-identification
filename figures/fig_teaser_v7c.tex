@@ -1,0 +1,150 @@
+% Figure 1 (v7c): v7a with consistent framing. Panels (1) scene and (3) observer
+% share one frame style, title position and height; the observers legend is a framed strip
+% under both. Smallest text 7.5 pt.
+% Based on v7a: floor-plan scene (left, ~60%) and observer panel (right, ~40%).
+% Built on the threat-model drawing of the FuSo talk (slide 14): a flat with a
+% living room, a bedroom and a kitchen, the router in the middle, clients that
+% answer its sounding, the household's own mesh nodes, and an outsider beyond
+% the outer wall. Width \textwidth (17.78 cm); height 4.5 cm.
+% Colour roles as in the paper: provider blue, household green, outsider vermilion.
+% Text 8 pt (\footnotesize); room names 7 pt. Step titles (1) and (3) are bold 8 pt. Pictograms drawn as TikZ pics with
+% one stroke (0.6 pt). No caption here: the caption lives in paper.tex.
+\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize]
+\definecolor{oiBlue}{HTML}{0072B2}\definecolor{oiVerm}{HTML}{D55E00}\definecolor{oiGreen}{HTML}{009E73}
+\tikzset{
+  st/.style={line width=0.6pt, line join=round, line cap=round},
+  wall/.style={draw=black!65, line width=1.1pt, line cap=butt},
+  iwall/.style={draw=black!45, line width=0.8pt, line cap=butt},
+  room/.style={inner sep=0pt, font=\fontsize{7.5}{9}\selectfont, text=black!72},
+  panel/.style={draw=black!40, line width=0.5pt, rounded corners=3pt},
+  ptitle/.style={anchor=west, inner sep=0pt, font=\footnotesize\bfseries, text=black!85},
+  stepno/.style={circle, draw=black!75, fill=white, line width=0.5pt, minimum size=0.36cm,
+                 inner sep=0pt, font=\fontsize{7.5}{9}\selectfont, text=black},
+  fb/.style={-{Stealth[length=1.5mm, width=1.2mm]}, draw=black!70, line width=0.6pt},
+  eav/.style={draw=oiVerm, line width=0.6pt, dash pattern=on 2pt off 1.5pt},
+  mesh/.style={draw=oiGreen!55, line width=0.45pt},
+  lab/.style={inner sep=1pt, align=center, text=black!85},
+  tag/.style={draw=black!60, fill=black!8, line width=0.5pt, rounded corners=1.5pt, inner xsep=2pt, inner ysep=1pt, text=black!85},
+  % ---------------------------------------------------------------- pictograms
+  pics/tv/.style={code={
+    \draw[st, draw=black!75, fill=black!12] (-0.33,-0.06) rectangle (0.33,0.34);
+    \draw[st, draw=black!75] (0,-0.06) -- (0,-0.17) (-0.14,-0.17) -- (0.14,-0.17);}},
+  pics/laptop/.style={code={
+    \draw[st, draw=black!75, fill=black!12] (-0.21,0) rectangle (0.21,0.28);
+    \draw[st, draw=black!75, fill=white] (-0.21,0) -- (0.21,0) -- (0.28,-0.07) -- (-0.28,-0.07) -- cycle;}},
+  pics/phone/.style={code={
+    \draw[st, draw=black!75, fill=black!12, rounded corners=1.2pt] (-0.1,-0.17) rectangle (0.1,0.17);
+    \draw[st, draw=black!75] (-0.03,-0.12) -- (0.03,-0.12);}},
+  pics/vacuum/.style={code={
+    \draw[st, draw=black!75, fill=black!12] (0,0) circle (0.19);
+    \draw[st, draw=black!75, fill=white] (0,0) circle (0.07);
+    \draw[st, draw=black!75] (-0.13,0.13) arc (135:45:0.19);}},
+  pics/router/.style={code={
+    \draw[st, draw=oiBlue] (-0.17,0.08) -- (-0.24,0.38) (0.17,0.08) -- (0.24,0.38);
+    \draw[st, draw=oiBlue, fill=oiBlue!18, rounded corners=1pt] (-0.32,-0.12) rectangle (0.32,0.08);
+    \foreach \x in {-0.18,-0.08,0.02} \fill[oiBlue] (\x,-0.02) circle (0.025);}},
+  pics/c5/.style={code={
+    \draw[st, draw=oiGreen, fill=oiGreen!22] (-0.15,-0.1) rectangle (0.15,0.1);
+    \fill[oiGreen] (-0.07,-0.04) rectangle (0.03,0.05);
+    \draw[st, draw=oiGreen, line width=0.5pt] (0.08,0.06) -- (0.08,-0.06);}},
+  pics/pi/.style={code={% Raspberry Pi board with the AX210's two antennas
+    \draw[st, draw=oiVerm] (-0.22,0.27) -- (-0.22,0.6) (0.02,0.27) -- (0.02,0.6);
+    \fill[oiVerm] (-0.22,0.6) circle (0.04) (0.02,0.6) circle (0.04);
+    \draw[st, draw=oiVerm, fill=oiVerm!12, rounded corners=1.5pt] (-0.42,-0.27) rectangle (0.42,0.27);
+    \foreach \x in {-0.33,0.33} \foreach \y in {-0.18,0.18} \draw[draw=oiVerm, line width=0.4pt] (\x,\y) circle (0.035);
+    \foreach \x in {-0.2,-0.12,...,0.21} \fill[oiVerm] (\x-0.025,0.15) rectangle (\x+0.025,0.2);
+    \fill[oiVerm] (-0.14,-0.14) rectangle (0.06,0.06);
+    \draw[st, draw=oiVerm, line width=0.5pt, fill=white] (0.14,-0.16) rectangle (0.42,0.02);}},
+  pics/seated/.style={code={% person on a sofa, facing left
+    \draw[st, draw=black!45, fill=black!8] (-0.16,-0.26) rectangle (0.44,-0.06);
+    \draw[st, draw=black!45, fill=black!8] (0.32,-0.06) rectangle (0.44,0.26);
+    \draw[st, draw=black!45, fill=black!8] (-0.16,-0.06) rectangle (-0.06,0.06);
+    \fill[black!60] (0.14,0.37) circle (0.085);
+    \draw[draw=black!60, line width=2.4pt, line cap=round] (0.17,0.24) -- (0.19,-0.01) -- (-0.03,-0.01) -- (-0.05,-0.2);}},
+}
+\ifdefined\teasernobbox\else\useasboundingbox (0,0) rectangle (17.78,4.5);\fi
+% ================================================================ frames
+\draw[panel] (0,0) rectangle (17.78,0.52);
+\begin{scope}[yshift=-0.1cm]
+\draw[panel] (0,0.75) rectangle (10.79,4.6);
+\draw[panel] (10.94,0.75) rectangle (17.78,4.6);
+\node[stepno] at (0.3,4.33) {1};
+\node[ptitle] at (0.53,4.33) {Clients answer each sounding, in plaintext};
+\node[stepno] at (11.24,4.33) {2};
+\node[ptitle] at (11.47,4.33) {Passive observer, never trained on the client};
+% ================================================================ floor plan
+% the household's mesh: corner nodes joined along the room's edges
+\coordinate (n1) at (0.5,1.22); \coordinate (n2) at (4.7,1.22);
+\coordinate (n3) at (0.5,3.68); \coordinate (n4) at (4.7,3.68);
+\draw[mesh] (n1) -- (n2) -- (n4) -- (n3) -- cycle;
+% walls (doors are gaps)
+\draw[wall] (0.15,0.9) rectangle (9.0,3.97);
+\draw[iwall] (5.15,0.9) -- (5.15,1.75) (5.15,3.15) -- (5.15,3.97);
+\draw[iwall] (5.8,2.63) -- (9.0,2.63);
+\node[room, anchor=south] at (2.6,0.93) {living room};
+\node[room, anchor=north west] at (5.3,3.9) {bedroom};
+\node[room, anchor=south west] at (5.3,0.95) {office};
+% clients and the occupant
+\pic[scale=1.25] at (1.3,2.95) {tv};
+\pic[scale=1.3] at (2.1,1.75) {seated};
+\pic[scale=1.25] at (3.55,1.62) {vacuum};
+\pic[scale=1.45] at (7.55,3.3) {laptop};
+\pic[scale=1.25] at (7.55,1.72) {tv};
+% household nodes
+\foreach \n in {n1,n2,n3,n4} \pic at (\n) {c5};
+% router at the centre, on the wall junction
+\pic[scale=1.5] at (5.15,2.63) {router};
+\node[lab, anchor=north west, text=oiBlue, fill=white] at (4.8,2.38) {provider's\\gateway};
+% feedback arrows: clients -> router
+\draw[fb] (1.78,2.91) -- (4.6,2.65);
+\draw[fb] (3.77,1.8) -- (4.62,2.49);
+\draw[fb] (7.1,3.29) -- (5.68,2.75);
+\draw[fb] (7.3,1.8) -- (5.68,2.55);
+\node[lab, anchor=south, fill=white] at (3.3,2.93) {feedback frame,\\plaintext};
+% outsider beyond the wall
+\pic at (9.85,2.5) {pi};
+\draw[eav] (9.4,2.65) -- (8.05,3.3);
+\draw[eav] (9.4,2.35) -- (7.8,1.63);
+\node[lab, anchor=north, text=oiVerm] at (9.85,2.15) {outsider\\listens only};
+\end{scope}
+% ================================================================ observers strip
+\node[ptitle] at (0.18,0.26) {Observers};
+\fill[oiBlue] (2.62,0.15) rectangle (2.84,0.37);
+\node[lab, anchor=west] at (2.9,0.26) {provider's gateway};
+\fill[oiGreen] (7.86,0.26) circle (0.11);
+\node[lab, anchor=west] at (8.03,0.26) {household nodes (ESP32-C5)};
+\fill[oiVerm] (13.1,0.26) circle (0.11);
+\node[lab, anchor=west] at (13.27,0.26) {outsider (Pi 5 + AX210, behind a wall)};
+% ================================================================ observer panel
+\begin{scope}[yshift=-0.1cm]
+\draw[fb, draw=oiVerm] (10.33,2.5) -- (11.1,2.5);
+% one labeled session
+\begin{scope}[shift={(12.14,2.65)}]
+  \draw[st, draw=black!60, fill=white] (-1.0,-1.05) rectangle (1.0,1.15);
+  \draw[st, draw=black!60, fill=black!12] (-1.0,0.8) rectangle (1.0,1.15);
+  \draw[st, draw=black!60] (-0.84,1.0) -- (-0.84,1.27) (0.84,1.0) -- (0.84,1.27);
+  \node[lab] at (0,0.975) {enrolled};
+  \pic at (-0.62,0.35) {tv};
+  \pic at (-0.62,-0.5) {laptop};
+  \node[tag, anchor=west] at (-0.17,0.42) {TV};
+  \node[tag, anchor=west] at (-0.24,-0.45) {laptop};
+\end{scope}
+\node[lab, anchor=north] at (12.14,1.52) {one labeled session};
+\draw[fb] (13.29,2.65) -- (15.3,2.65);
+\node[lab, anchor=south] at (14.295,2.72) {each window to\\its nearest\\enrolled window};
+% other days: identified
+\begin{scope}[shift={(16.45,2.65)}]
+  \foreach \d in {0.16,0.08} \draw[st, draw=black!40, fill=white] (-1.0+\d,-1.05+\d) rectangle (1.0+\d,1.15+\d);
+  \draw[st, draw=black!60, fill=white] (-1.0,-1.05) rectangle (1.0,1.15);
+  \draw[st, draw=black!60, fill=black!12] (-1.0,0.8) rectangle (1.0,1.15);
+  \draw[st, draw=black!60] (-0.84,1.0) -- (-0.84,1.27) (0.84,1.0) -- (0.84,1.27);
+  \node[lab] at (0,0.975) {other days};
+  \pic at (-0.62,0.35) {tv};
+  \pic at (-0.62,-0.5) {laptop};
+  \node[tag, anchor=west] (i1) at (-0.17,0.42) {TV}; \node[lab, right=0pt of i1] {\checkmark};
+  \node[tag, anchor=west] (i2) at (-0.24,-0.45) {laptop}; \node[lab, right=0pt of i2] {\checkmark};
+\end{scope}
+\node[lab, anchor=north] at (16.45,1.52) {identified};
+\node[lab, anchor=west] at (11.1,0.98) {Whole session: 98--100\% (three TVs, laptop); chance 17\%};
+\end{scope}
+\end{tikzpicture}%

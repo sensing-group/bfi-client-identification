@@ -1,0 +1,100 @@
+% fig_methodology.tex -- single-row overview of the one-shot attack.
+%
+% High-level pipeline (a)-(b)-(c)-(d): Train (offline) -> Enroll
+% (per target, one labelled window) -> Listen (T passive windows) ->
+% Decide (cosine to support). Forward references to Figure 3
+% (multi-query consensus, the detail of the Listen+Decide stage)
+% and Figure 4 (condition-matched calibration, the detail of the
+% Train stage) are noted under the corresponding boxes.
+%
+% This is the OVERVIEW figure for Section 4. The two detail figures
+% expand specific stages.
+%
+% Required preamble (already in paper.tex):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta,positioning,calc}
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\sffamily\footnotesize,
+    >={Stealth[length=1.8mm,width=1.4mm]},
+]
+
+% Bounding box: 140 x 36 mm (~3.9:1, wide horizontal banner).
+\useasboundingbox (-6, -10) rectangle (134, 26);
+
+% ===== Palette ======================================================
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cGreen}{HTML}{009E73}
+\definecolor{cGrey}{HTML}{666666}
+\definecolor{cRedBorder}{HTML}{B5651D}
+
+% ===== Phase tags above the pipeline ================================
+\node[font=\sffamily\scriptsize\itshape, color=cBlue, anchor=south west]
+    at (-4, 22) {\textbf{Offline}};
+\node[font=\sffamily\scriptsize\itshape, color=cOrange, anchor=south west]
+    at (38, 22) {\textbf{In the field} (per target, passive)};
+
+% Soft vertical separator between offline and in-field
+\draw[gray!45, dashed, line width=0.4pt] (33, -2) -- (33, 22);
+
+% ===== Four pipeline boxes, evenly spaced ===========================
+% Train (offline, blue)
+\draw[fill=blue!8, draw=cBlue, line width=0.7pt, rounded corners=1.6mm]
+      (-3, 6) rectangle (29, 20);
+\node[font=\sffamily\bfseries\small, color=cBlue, anchor=center]
+    at (13, 16) {Train};
+\node[font=\sffamily\scriptsize, anchor=center, align=center]
+    at (13, 10) {encoder on a\\disjoint cohort};
+
+% Enroll (in-field, orange)
+\draw[fill=orange!10, draw=cOrange, line width=0.7pt, rounded corners=1.6mm]
+      (37, 6) rectangle (69, 20);
+\node[font=\sffamily\bfseries\small, color=cOrange, anchor=center]
+    at (53, 16) {Enroll};
+\node[font=\sffamily\scriptsize, anchor=center, align=center]
+    at (53, 10) {one labelled\\window per target};
+
+% Listen (in-field, orange)
+\draw[fill=orange!10, draw=cOrange, line width=0.7pt, rounded corners=1.6mm]
+      (77, 6) rectangle (109, 20);
+\node[font=\sffamily\bfseries\small, color=cOrange, anchor=center]
+    at (93, 16) {Listen};
+\node[font=\sffamily\scriptsize, anchor=center, align=center]
+    at (93, 10) {$T$ unlabelled\\windows from the air};
+
+% Decide (output, green badge)
+\draw[fill=green!10, draw=cGreen, line width=0.7pt, rounded corners=1.6mm]
+      (117, 6) rectangle (133, 20);
+\node[font=\sffamily\bfseries\small, color=cGreen, anchor=center]
+    at (125, 16) {Decide};
+\node[font=\sffamily\scriptsize, anchor=center, align=center]
+    at (125, 10) {subject ID};
+
+% Soft vertical separator between offline and in-field
+\draw[gray!45, dashed, line width=0.4pt] (114, -2) -- (114, 22);
+
+% ===== Arrows between boxes =========================================
+\draw[->, line width=0.6pt] (29.5, 13) -- (36.5, 13);
+\draw[->, line width=0.6pt] (69.5, 13) -- (76.5, 13);
+\draw[->, line width=0.6pt] (109.5, 13) -- (116.5, 13);
+
+% ===== Forward references to the detail figures =====================
+% Train -> Figure 4 (condition-matched calibration)
+\node[font=\sffamily\tiny\itshape, color=cGrey, anchor=north,
+      align=center]
+    at (13, 4) {\textbf{detail:}\\Fig.~\ref{fig:condition_matched}};
+
+% Listen/Decide -> Figure 3 (multi-query consensus)
+\node[font=\sffamily\tiny\itshape, color=cGrey, anchor=north,
+      align=center]
+    at (109, 4) {\textbf{detail:}\\Fig.~\ref{fig:multi_query}};
+
+% ===== Footer caption =============================================
+\node[font=\sffamily\scriptsize\itshape, color=cGrey, anchor=center,
+      align=center]
+    at (65, 1)
+    {one labelled clip per target, then everything else is passive};
+
+\end{tikzpicture}

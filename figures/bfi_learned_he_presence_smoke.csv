@@ -1,0 +1,10 @@
+bandwidth,defense,attacker,b,eps,seed,accuracy
+20M,deterministic,1nn,4,,-1,1.0
+20M,deterministic,lr,4,,-1,1.0
+20M,deterministic,mlp,4,,-1,1.0
+20M,dp_sq,1nn,4,0.5,0,1.0
+20M,dp_sq,lr,4,0.5,0,1.0
+20M,dp_sq,mlp,4,0.5,0,1.0
+20M,dp_sq,1nn,4,0.5,1,1.0
+20M,dp_sq,lr,4,0.5,1,1.0
+20M,dp_sq,mlp,4,0.5,1,1.0

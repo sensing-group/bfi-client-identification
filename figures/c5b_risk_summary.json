@@ -1,0 +1,588 @@
+{
+  "trials": 50,
+  "k_grid": [
+    "1",
+    "16",
+    "all"
+  ],
+  "t_grid": [
+    1,
+    4,
+    16,
+    32
+  ],
+  "time_k_grid": [
+    "1",
+    "16",
+    "all"
+  ],
+  "time_t_grid": [
+    1,
+    2,
+    4,
+    8,
+    16,
+    32
+  ],
+  "devices": [
+    "LGTV",
+    "AppleTV-LR",
+    "SamsungTV"
+  ],
+  "windows_per_device": {
+    "LGTV": 3860,
+    "AppleTV-LR": 9941,
+    "SamsungTV": 4161
+  },
+  "days": [
+    "2026-07-15",
+    "2026-07-16",
+    "2026-07-17",
+    "2026-07-18",
+    "2026-07-19",
+    "2026-07-20",
+    "2026-07-21",
+    "2026-07-22",
+    "2026-07-23",
+    "2026-07-24",
+    "2026-09-06",
+    "2026-09-07",
+    "2026-09-08"
+  ],
+  "bins_kept": 17,
+  "bins_kept_idx": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ],
+  "format_by_device_month": {
+    "LGTV": {
+      "2026-09": {
+        "[\"HE\", 2, 3, 6, 4, 80, 4, \"SU\", 1]": 172
+      },
+      "2026-07": {
+        "[\"HE\", 2, 3, 6, 4, 80, 4, \"SU\", 1]": 3688
+      }
+    },
+    "AppleTV-LR": {
+      "2026-09": {
+        "[\"HE\", 2, 3, 4, 2, 80, 4, \"SU\", 0]": 3698
+      },
+      "2026-07": {
+        "[\"HE\", 2, 3, 4, 2, 80, 4, \"SU\", 0]": 6243
+      }
+    },
+    "SamsungTV": {
+      "2026-09": {
+        "[\"VHT\", 2, 3, 6, 4, 80, 1, \"SU\", 1]": 342
+      },
+      "2026-07": {
+        "[\"VHT\", 2, 3, 6, 4, 80, 1, \"SU\", 1]": 3819
+      }
+    }
+  },
+  "blocks": {
+    "LGTV": [
+      {
+        "session": 9,
+        "day": "2026-07-15",
+        "windows": 63
+      },
+      {
+        "session": 16,
+        "day": "2026-07-16",
+        "windows": 180
+      },
+      {
+        "session": 19,
+        "day": "2026-07-16",
+        "windows": 316
+      },
+      {
+        "session": 25,
+        "day": "2026-07-17",
+        "windows": 5
+      },
+      {
+        "session": 27,
+        "day": "2026-07-17",
+        "windows": 1
+      },
+      {
+        "session": 34,
+        "day": "2026-07-17",
+        "windows": 285
+      },
+      {
+        "session": 44,
+        "day": "2026-07-18",
+        "windows": 53
+      },
+      {
+        "session": 47,
+        "day": "2026-07-18",
+        "windows": 218
+      },
+      {
+        "session": 57,
+        "day": "2026-07-19",
+        "windows": 44
+      },
+      {
+        "session": 58,
+        "day": "2026-07-19",
+        "windows": 256
+      },
+      {
+        "session": 61,
+        "day": "2026-07-19",
+        "windows": 290
+      },
+      {
+        "session": 67,
+        "day": "2026-07-20",
+        "windows": 260
+      },
+      {
+        "session": 70,
+        "day": "2026-07-20",
+        "windows": 34
+      },
+      {
+        "session": 72,
+        "day": "2026-07-20",
+        "windows": 178
+      },
+      {
+        "session": 79,
+        "day": "2026-07-21",
+        "windows": 1
+      },
+      {
+        "session": 81,
+        "day": "2026-07-21",
+        "windows": 359
+      },
+      {
+        "session": 83,
+        "day": "2026-07-21",
+        "windows": 72
+      },
+      {
+        "session": 86,
+        "day": "2026-07-21",
+        "windows": 75
+      },
+      {
+        "session": 94,
+        "day": "2026-07-22",
+        "windows": 170
+      },
+      {
+        "session": 96,
+        "day": "2026-07-22",
+        "windows": 309
+      },
+      {
+        "session": 97,
+        "day": "2026-07-22",
+        "windows": 1
+      },
+      {
+        "session": 109,
+        "day": "2026-07-23",
+        "windows": 444
+      },
+      {
+        "session": 118,
+        "day": "2026-07-24",
+        "windows": 74
+      },
+      {
+        "session": 1,
+        "day": "2026-09-06",
+        "windows": 107
+      },
+      {
+        "session": 3,
+        "day": "2026-09-06",
+        "windows": 35
+      },
+      {
+        "session": 7,
+        "day": "2026-09-07",
+        "windows": 13
+      },
+      {
+        "session": 8,
+        "day": "2026-09-07",
+        "windows": 17
+      }
+    ],
+    "SamsungTV": [
+      {
+        "session": 9,
+        "day": "2026-07-15",
+        "windows": 45
+      },
+      {
+        "session": 12,
+        "day": "2026-07-15",
+        "windows": 2
+      },
+      {
+        "session": 13,
+        "day": "2026-07-15",
+        "windows": 62
+      },
+      {
+        "session": 13,
+        "day": "2026-07-16",
+        "windows": 374
+      },
+      {
+        "session": 14,
+        "day": "2026-07-16",
+        "windows": 29
+      },
+      {
+        "session": 15,
+        "day": "2026-07-16",
+        "windows": 54
+      },
+      {
+        "session": 16,
+        "day": "2026-07-16",
+        "windows": 61
+      },
+      {
+        "session": 17,
+        "day": "2026-07-16",
+        "windows": 399
+      },
+      {
+        "session": 17,
+        "day": "2026-07-17",
+        "windows": 289
+      },
+      {
+        "session": 18,
+        "day": "2026-07-17",
+        "windows": 44
+      },
+      {
+        "session": 19,
+        "day": "2026-07-17",
+        "windows": 453
+      },
+      {
+        "session": 20,
+        "day": "2026-07-17",
+        "windows": 120
+      },
+      {
+        "session": 22,
+        "day": "2026-07-17",
+        "windows": 113
+      },
+      {
+        "session": 22,
+        "day": "2026-07-18",
+        "windows": 649
+      },
+      {
+        "session": 23,
+        "day": "2026-07-22",
+        "windows": 71
+      },
+      {
+        "session": 24,
+        "day": "2026-07-23",
+        "windows": 36
+      },
+      {
+        "session": 26,
+        "day": "2026-07-23",
+        "windows": 1
+      },
+      {
+        "session": 27,
+        "day": "2026-07-23",
+        "windows": 66
+      },
+      {
+        "session": 28,
+        "day": "2026-07-23",
+        "windows": 168
+      },
+      {
+        "session": 29,
+        "day": "2026-07-23",
+        "windows": 20
+      },
+      {
+        "session": 30,
+        "day": "2026-07-23",
+        "windows": 35
+      },
+      {
+        "session": 31,
+        "day": "2026-07-23",
+        "windows": 10
+      },
+      {
+        "session": 32,
+        "day": "2026-07-23",
+        "windows": 463
+      },
+      {
+        "session": 33,
+        "day": "2026-07-23",
+        "windows": 16
+      },
+      {
+        "session": 34,
+        "day": "2026-07-23",
+        "windows": 11
+      },
+      {
+        "session": 34,
+        "day": "2026-07-24",
+        "windows": 9
+      },
+      {
+        "session": 36,
+        "day": "2026-07-24",
+        "windows": 7
+      },
+      {
+        "session": 37,
+        "day": "2026-07-24",
+        "windows": 23
+      },
+      {
+        "session": 38,
+        "day": "2026-07-24",
+        "windows": 1
+      },
+      {
+        "session": 39,
+        "day": "2026-07-24",
+        "windows": 80
+      },
+      {
+        "session": 40,
+        "day": "2026-07-24",
+        "windows": 104
+      },
+      {
+        "session": 41,
+        "day": "2026-07-24",
+        "windows": 4
+      },
+      {
+        "session": 0,
+        "day": "2026-09-07",
+        "windows": 126
+      },
+      {
+        "session": 0,
+        "day": "2026-09-08",
+        "windows": 216
+      }
+    ],
+    "AppleTV-LR": [
+      {
+        "session": 10,
+        "day": "2026-07-15",
+        "windows": 5
+      },
+      {
+        "session": 19,
+        "day": "2026-07-16",
+        "windows": 2
+      },
+      {
+        "session": 21,
+        "day": "2026-07-16",
+        "windows": 1
+      },
+      {
+        "session": 26,
+        "day": "2026-07-20",
+        "windows": 127
+      },
+      {
+        "session": 27,
+        "day": "2026-07-20",
+        "windows": 426
+      },
+      {
+        "session": 28,
+        "day": "2026-07-20",
+        "windows": 368
+      },
+      {
+        "session": 29,
+        "day": "2026-07-20",
+        "windows": 6
+      },
+      {
+        "session": 30,
+        "day": "2026-07-21",
+        "windows": 47
+      },
+      {
+        "session": 31,
+        "day": "2026-07-21",
+        "windows": 665
+      },
+      {
+        "session": 32,
+        "day": "2026-07-21",
+        "windows": 131
+      },
+      {
+        "session": 33,
+        "day": "2026-07-21",
+        "windows": 51
+      },
+      {
+        "session": 34,
+        "day": "2026-07-21",
+        "windows": 302
+      },
+      {
+        "session": 35,
+        "day": "2026-07-21",
+        "windows": 192
+      },
+      {
+        "session": 36,
+        "day": "2026-07-22",
+        "windows": 116
+      },
+      {
+        "session": 37,
+        "day": "2026-07-22",
+        "windows": 23
+      },
+      {
+        "session": 38,
+        "day": "2026-07-22",
+        "windows": 277
+      },
+      {
+        "session": 39,
+        "day": "2026-07-22",
+        "windows": 162
+      },
+      {
+        "session": 41,
+        "day": "2026-07-22",
+        "windows": 60
+      },
+      {
+        "session": 42,
+        "day": "2026-07-22",
+        "windows": 494
+      },
+      {
+        "session": 43,
+        "day": "2026-07-22",
+        "windows": 47
+      },
+      {
+        "session": 44,
+        "day": "2026-07-22",
+        "windows": 5
+      },
+      {
+        "session": 46,
+        "day": "2026-07-22",
+        "windows": 78
+      },
+      {
+        "session": 47,
+        "day": "2026-07-22",
+        "windows": 81
+      },
+      {
+        "session": 48,
+        "day": "2026-07-22",
+        "windows": 169
+      },
+      {
+        "session": 49,
+        "day": "2026-07-23",
+        "windows": 317
+      },
+      {
+        "session": 50,
+        "day": "2026-07-23",
+        "windows": 262
+      },
+      {
+        "session": 51,
+        "day": "2026-07-23",
+        "windows": 177
+      },
+      {
+        "session": 52,
+        "day": "2026-07-23",
+        "windows": 424
+      },
+      {
+        "session": 53,
+        "day": "2026-07-23",
+        "windows": 434
+      },
+      {
+        "session": 53,
+        "day": "2026-07-24",
+        "windows": 446
+      },
+      {
+        "session": 54,
+        "day": "2026-07-24",
+        "windows": 348
+      },
+      {
+        "session": 0,
+        "day": "2026-09-06",
+        "windows": 1447
+      },
+      {
+        "session": 0,
+        "day": "2026-09-07",
+        "windows": 1951
+      },
+      {
+        "session": 0,
+        "day": "2026-09-08",
+        "windows": 300
+      }
+    ]
+  },
+  "window_seconds_median": {
+    "LGTV": 45.520697832107544,
+    "AppleTV-LR": 43.67195248603821,
+    "SamsungTV": 45.05079507827759
+  },
+  "runtime_s": 85.91266465187073,
+  "peak_rss_mb": 341.2265625
+}

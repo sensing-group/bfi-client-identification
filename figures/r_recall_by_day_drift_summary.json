@@ -1,0 +1,738 @@
+{
+  "protocol": "as r_recall_by_day.csv (one fixed enrolled block per device, all-six gallery) under each (feature, K, T, rule) variant; T=16 queries are non-overlapping runs of 16 consecutive windows within a block; ties share the hit",
+  "published_strip": {
+    "feature": "angles",
+    "K": 16,
+    "T": 1,
+    "rule": "nn"
+  },
+  "variants": [
+    {
+      "feature": "angles",
+      "K": 16,
+      "T": 1,
+      "rule": "nn"
+    },
+    {
+      "feature": "angles",
+      "K": 0,
+      "T": 1,
+      "rule": "nn"
+    },
+    {
+      "feature": "angles",
+      "K": 16,
+      "T": 16,
+      "rule": "nn"
+    },
+    {
+      "feature": "angles",
+      "K": 0,
+      "T": 16,
+      "rule": "nn"
+    },
+    {
+      "feature": "angles",
+      "K": 0,
+      "T": 1,
+      "rule": "centroid"
+    },
+    {
+      "feature": "angles",
+      "K": 0,
+      "T": 16,
+      "rule": "centroid"
+    },
+    {
+      "feature": "format",
+      "K": 0,
+      "T": 1,
+      "rule": "nn"
+    }
+  ],
+  "trials": 50,
+  "seed": 0,
+  "chance": 0.16666666666666666,
+  "enrolled": {
+    "Vacuum": {
+      "session": 1,
+      "day": "2026-05-11",
+      "windows": 72
+    },
+    "LGTV": {
+      "session": 3,
+      "day": "2026-05-09",
+      "windows": 484
+    },
+    "Laptop": {
+      "session": 1,
+      "day": "2026-05-11",
+      "windows": 227
+    },
+    "AppleTV-LR": {
+      "session": 0,
+      "day": "2026-05-08",
+      "windows": 520
+    },
+    "SamsungTV": {
+      "session": 0,
+      "day": "2026-05-15",
+      "windows": 47
+    },
+    "AppleTV-BR": {
+      "session": 0,
+      "day": "2026-05-15",
+      "windows": 326
+    }
+  },
+  "focus_device": "AppleTV-LR",
+  "per_day": {
+    "angles K=16 T=1 nn": {
+      "2026-05-09": {
+        "recall": 1.0,
+        "n_queries": 234,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-10": {
+        "recall": 0.9403,
+        "n_queries": 1388,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.057
+      },
+      "2026-05-11": {
+        "recall": 0.8041,
+        "n_queries": 869,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.196
+      },
+      "2026-05-14": {
+        "recall": 0.4391,
+        "n_queries": 519,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.548
+      },
+      "2026-05-15": {
+        "recall": 0.5151,
+        "n_queries": 1522,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.485
+      },
+      "2026-05-16": {
+        "recall": 0.5792,
+        "n_queries": 1734,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.316
+      },
+      "2026-05-17": {
+        "recall": 0.602,
+        "n_queries": 1748,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.251
+      },
+      "2026-05-18": {
+        "recall": 0.4911,
+        "n_queries": 1786,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.5
+      },
+      "2026-05-19": {
+        "recall": 0.3858,
+        "n_queries": 1753,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.554
+      },
+      "2026-05-20": {
+        "recall": 0.18,
+        "n_queries": 901,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.82
+      }
+    },
+    "angles K=all T=1 nn": {
+      "2026-05-09": {
+        "recall": 1.0,
+        "n_queries": 234,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-10": {
+        "recall": 0.9971,
+        "n_queries": 1388,
+        "top_wrong": "Laptop",
+        "top_wrong_share": 0.002
+      },
+      "2026-05-11": {
+        "recall": 1.0,
+        "n_queries": 869,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-14": {
+        "recall": 1.0,
+        "n_queries": 519,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-15": {
+        "recall": 1.0,
+        "n_queries": 1522,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-16": {
+        "recall": 0.9469,
+        "n_queries": 1734,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.053
+      },
+      "2026-05-17": {
+        "recall": 0.9989,
+        "n_queries": 1748,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.001
+      },
+      "2026-05-18": {
+        "recall": 1.0,
+        "n_queries": 1786,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-19": {
+        "recall": 0.9989,
+        "n_queries": 1753,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.001
+      },
+      "2026-05-20": {
+        "recall": 1.0,
+        "n_queries": 901,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      }
+    },
+    "angles K=16 T=16 nn": {
+      "2026-05-09": {
+        "recall": 1.0,
+        "n_queries": 14,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-10": {
+        "recall": 0.9456,
+        "n_queries": 86,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.054
+      },
+      "2026-05-11": {
+        "recall": 0.7033,
+        "n_queries": 54,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.297
+      },
+      "2026-05-14": {
+        "recall": 0.3774,
+        "n_queries": 31,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.612
+      },
+      "2026-05-15": {
+        "recall": 0.4404,
+        "n_queries": 94,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.56
+      },
+      "2026-05-16": {
+        "recall": 0.5172,
+        "n_queries": 107,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.362
+      },
+      "2026-05-17": {
+        "recall": 0.5477,
+        "n_queries": 107,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.267
+      },
+      "2026-05-18": {
+        "recall": 0.4329,
+        "n_queries": 110,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.564
+      },
+      "2026-05-19": {
+        "recall": 0.3089,
+        "n_queries": 108,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.649
+      },
+      "2026-05-20": {
+        "recall": 0.0836,
+        "n_queries": 56,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.916
+      }
+    },
+    "angles K=all T=16 nn": {
+      "2026-05-09": {
+        "recall": 1.0,
+        "n_queries": 14,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-10": {
+        "recall": 1.0,
+        "n_queries": 86,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-11": {
+        "recall": 1.0,
+        "n_queries": 54,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-14": {
+        "recall": 1.0,
+        "n_queries": 31,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-15": {
+        "recall": 1.0,
+        "n_queries": 94,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-16": {
+        "recall": 0.9439,
+        "n_queries": 107,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.047
+      },
+      "2026-05-17": {
+        "recall": 1.0,
+        "n_queries": 107,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-18": {
+        "recall": 1.0,
+        "n_queries": 110,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-19": {
+        "recall": 1.0,
+        "n_queries": 108,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-20": {
+        "recall": 1.0,
+        "n_queries": 56,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      }
+    },
+    "angles K=all T=1 centroid": {
+      "2026-05-09": {
+        "recall": 1.0,
+        "n_queries": 234,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-10": {
+        "recall": 0.6282,
+        "n_queries": 1388,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.369
+      },
+      "2026-05-11": {
+        "recall": 0.0,
+        "n_queries": 869,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 1.0
+      },
+      "2026-05-14": {
+        "recall": 0.0096,
+        "n_queries": 519,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.969
+      },
+      "2026-05-15": {
+        "recall": 0.0039,
+        "n_queries": 1522,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.995
+      },
+      "2026-05-16": {
+        "recall": 0.0058,
+        "n_queries": 1734,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.589
+      },
+      "2026-05-17": {
+        "recall": 0.0023,
+        "n_queries": 1748,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.664
+      },
+      "2026-05-18": {
+        "recall": 0.0,
+        "n_queries": 1786,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 1.0
+      },
+      "2026-05-19": {
+        "recall": 0.0006,
+        "n_queries": 1753,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.999
+      },
+      "2026-05-20": {
+        "recall": 0.0,
+        "n_queries": 901,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 1.0
+      }
+    },
+    "angles K=all T=16 centroid": {
+      "2026-05-09": {
+        "recall": 1.0,
+        "n_queries": 14,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-10": {
+        "recall": 0.6395,
+        "n_queries": 86,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.36
+      },
+      "2026-05-11": {
+        "recall": 0.0,
+        "n_queries": 54,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 1.0
+      },
+      "2026-05-14": {
+        "recall": 0.0,
+        "n_queries": 31,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.968
+      },
+      "2026-05-15": {
+        "recall": 0.0,
+        "n_queries": 94,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 1.0
+      },
+      "2026-05-16": {
+        "recall": 0.0093,
+        "n_queries": 107,
+        "top_wrong": "LGTV",
+        "top_wrong_share": 0.533
+      },
+      "2026-05-17": {
+        "recall": 0.0,
+        "n_queries": 107,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 0.645
+      },
+      "2026-05-18": {
+        "recall": 0.0,
+        "n_queries": 110,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 1.0
+      },
+      "2026-05-19": {
+        "recall": 0.0,
+        "n_queries": 108,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 1.0
+      },
+      "2026-05-20": {
+        "recall": 0.0,
+        "n_queries": 56,
+        "top_wrong": "AppleTV-BR",
+        "top_wrong_share": 1.0
+      }
+    },
+    "format K=all T=1 nn": {
+      "2026-05-09": {
+        "recall": 1.0,
+        "n_queries": 234,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-10": {
+        "recall": 1.0,
+        "n_queries": 1388,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-11": {
+        "recall": 1.0,
+        "n_queries": 869,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-14": {
+        "recall": 1.0,
+        "n_queries": 519,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-15": {
+        "recall": 1.0,
+        "n_queries": 1522,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-16": {
+        "recall": 1.0,
+        "n_queries": 1734,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-17": {
+        "recall": 1.0,
+        "n_queries": 1748,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-18": {
+        "recall": 1.0,
+        "n_queries": 1786,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-19": {
+        "recall": 1.0,
+        "n_queries": 1753,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      },
+      "2026-05-20": {
+        "recall": 1.0,
+        "n_queries": 901,
+        "top_wrong": "Vacuum",
+        "top_wrong_share": 0.0
+      }
+    }
+  },
+  "per_device_minimum": {
+    "angles K=16 T=1 nn": {
+      "Vacuum": {
+        "recall": 0.4564,
+        "day": "2026-05-18",
+        "n_queries": 555
+      },
+      "LGTV": {
+        "recall": 1.0,
+        "day": "2026-05-10",
+        "n_queries": 273
+      },
+      "Laptop": {
+        "recall": 0.9885,
+        "day": "2026-05-15",
+        "n_queries": 1433
+      },
+      "AppleTV-LR": {
+        "recall": 0.18,
+        "day": "2026-05-20",
+        "n_queries": 901
+      },
+      "SamsungTV": {
+        "recall": 0.0,
+        "day": "2026-05-16",
+        "n_queries": 2
+      },
+      "AppleTV-BR": {
+        "recall": 0.9472,
+        "day": "2026-05-16",
+        "n_queries": 1744
+      }
+    },
+    "angles K=all T=1 nn": {
+      "Vacuum": {
+        "recall": 0.1315,
+        "day": "2026-05-18",
+        "n_queries": 555
+      },
+      "LGTV": {
+        "recall": 1.0,
+        "day": "2026-05-10",
+        "n_queries": 273
+      },
+      "Laptop": {
+        "recall": 0.9916,
+        "day": "2026-05-15",
+        "n_queries": 1433
+      },
+      "AppleTV-LR": {
+        "recall": 0.9469,
+        "day": "2026-05-16",
+        "n_queries": 1734
+      },
+      "SamsungTV": {
+        "recall": 0.0,
+        "day": "2026-05-16",
+        "n_queries": 2
+      },
+      "AppleTV-BR": {
+        "recall": 0.9472,
+        "day": "2026-05-16",
+        "n_queries": 1744
+      }
+    },
+    "angles K=16 T=16 nn": {
+      "Vacuum": {
+        "recall": 0.4053,
+        "day": "2026-05-18",
+        "n_queries": 34
+      },
+      "LGTV": {
+        "recall": 1.0,
+        "day": "2026-05-10",
+        "n_queries": 17
+      },
+      "Laptop": {
+        "recall": 1.0,
+        "day": "2026-05-14",
+        "n_queries": 1
+      },
+      "AppleTV-LR": {
+        "recall": 0.0836,
+        "day": "2026-05-20",
+        "n_queries": 56
+      },
+      "AppleTV-BR": {
+        "recall": 0.9439,
+        "day": "2026-05-16",
+        "n_queries": 107
+      }
+    },
+    "angles K=all T=16 nn": {
+      "Vacuum": {
+        "recall": 0.1176,
+        "day": "2026-05-18",
+        "n_queries": 34
+      },
+      "LGTV": {
+        "recall": 1.0,
+        "day": "2026-05-10",
+        "n_queries": 17
+      },
+      "Laptop": {
+        "recall": 1.0,
+        "day": "2026-05-14",
+        "n_queries": 1
+      },
+      "AppleTV-LR": {
+        "recall": 0.9439,
+        "day": "2026-05-16",
+        "n_queries": 107
+      },
+      "AppleTV-BR": {
+        "recall": 0.9439,
+        "day": "2026-05-16",
+        "n_queries": 107
+      }
+    },
+    "angles K=all T=1 centroid": {
+      "Vacuum": {
+        "recall": 0.0,
+        "day": "2026-05-08",
+        "n_queries": 1
+      },
+      "LGTV": {
+        "recall": 1.0,
+        "day": "2026-05-10",
+        "n_queries": 273
+      },
+      "Laptop": {
+        "recall": 0.9874,
+        "day": "2026-05-15",
+        "n_queries": 1433
+      },
+      "AppleTV-LR": {
+        "recall": 0.0,
+        "day": "2026-05-11",
+        "n_queries": 869
+      },
+      "SamsungTV": {
+        "recall": 0.0,
+        "day": "2026-05-16",
+        "n_queries": 2
+      },
+      "AppleTV-BR": {
+        "recall": 0.9472,
+        "day": "2026-05-16",
+        "n_queries": 1744
+      }
+    },
+    "angles K=all T=16 centroid": {
+      "Vacuum": {
+        "recall": 0.0,
+        "day": "2026-05-15",
+        "n_queries": 7
+      },
+      "LGTV": {
+        "recall": 1.0,
+        "day": "2026-05-10",
+        "n_queries": 17
+      },
+      "Laptop": {
+        "recall": 1.0,
+        "day": "2026-05-14",
+        "n_queries": 1
+      },
+      "AppleTV-LR": {
+        "recall": 0.0,
+        "day": "2026-05-11",
+        "n_queries": 54
+      },
+      "AppleTV-BR": {
+        "recall": 0.9439,
+        "day": "2026-05-16",
+        "n_queries": 107
+      }
+    },
+    "format K=all T=1 nn": {
+      "Vacuum": {
+        "recall": 0.0,
+        "day": "2026-05-08",
+        "n_queries": 1
+      },
+      "LGTV": {
+        "recall": 1.0,
+        "day": "2026-05-10",
+        "n_queries": 273
+      },
+      "Laptop": {
+        "recall": 0.3333,
+        "day": "2026-05-14",
+        "n_queries": 24
+      },
+      "AppleTV-LR": {
+        "recall": 1.0,
+        "day": "2026-05-09",
+        "n_queries": 234
+      },
+      "SamsungTV": {
+        "recall": 0.0,
+        "day": "2026-05-16",
+        "n_queries": 2
+      },
+      "AppleTV-BR": {
+        "recall": 1.0,
+        "day": "2026-05-16",
+        "n_queries": 1744
+      }
+    }
+  },
+  "runtime_s": 21.144001483917236,
+  "peak_rss_mb": 343.2734375
+}

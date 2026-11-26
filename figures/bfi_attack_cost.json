@@ -1,0 +1,80 @@
+{
+ "ntufi_csv_mean_only": {
+  "D": 87,
+  "nn1": {
+   "params": 0,
+   "macs_per_query": 609,
+   "us_per_query": 0.34145969548262656,
+   "supports": 7
+  },
+  "supcon_mlp": {
+   "params": 55424,
+   "macs_per_query": 55936,
+   "us_per_query": 1.3530894997529685
+  },
+  "supcon_mlpv2": {
+   "params": 122240,
+   "us_per_query": 3.5223329963628203
+  },
+  "bfid_head": {
+   "params": 13070,
+   "classes": 14,
+   "macs_per_query": 12928,
+   "us_per_query": 0.3986914991401136,
+   "note": "closed-set softmax head; needs labelled training data of every target"
+  },
+  "multi_query_note": "T-window consensus costs T encoder passes + one cosine against n_sup supports"
+ },
+ "ntufi_paper_mean_std": {
+  "D": 174,
+  "nn1": {
+   "params": 0,
+   "macs_per_query": 1218,
+   "us_per_query": 0.6954234035219997,
+   "supports": 7
+  },
+  "supcon_mlp": {
+   "params": 77696,
+   "macs_per_query": 78208,
+   "us_per_query": 1.732738601276651
+  },
+  "supcon_mlpv2": {
+   "params": 144512,
+   "us_per_query": 4.307485098252073
+  },
+  "bfid_head": {
+   "params": 24206,
+   "classes": 14,
+   "macs_per_query": 24064,
+   "us_per_query": 0.7116339984349906,
+   "note": "closed-set softmax head; needs labelled training data of every target"
+  },
+  "multi_query_note": "T-window consensus costs T encoder passes + one cosine against n_sup supports"
+ },
+ "he_pair0": {
+  "D": 118,
+  "nn1": {
+   "params": 0,
+   "macs_per_query": 2242,
+   "us_per_query": 0.6304166046902537,
+   "supports": 19
+  },
+  "supcon_mlp": {
+   "params": 63360,
+   "macs_per_query": 65408,
+   "us_per_query": 1.9029208982829005
+  },
+  "supcon_mlpv2": {
+   "params": 130176,
+   "us_per_query": 3.9136546023655683
+  },
+  "bfid_head": {
+   "params": 20263,
+   "classes": 39,
+   "macs_per_query": 20096,
+   "us_per_query": 0.6628177012316883,
+   "note": "closed-set softmax head; needs labelled training data of every target"
+  },
+  "multi_query_note": "T-window consensus costs T encoder passes + one cosine against n_sup supports"
+ }
+}

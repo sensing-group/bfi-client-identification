@@ -1,0 +1,556 @@
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "enrol": "rot20260724",
+  "july_last_window": 1784890376.0238833,
+  "k_grid": [
+    "1",
+    "16",
+    "all"
+  ],
+  "t_grid": [
+    1,
+    16
+  ],
+  "n_trials": 20,
+  "sources": {
+    "rot20260730T0816": {
+      "source": "rot20260730T0816",
+      "first_day": "2026-07-24",
+      "last_day": "2026-07-30",
+      "days_after_enrol_min": 0.006936520282868986,
+      "days_after_enrol_max": 5.8905281957404485,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 16051,
+      "query_blocks_per_device": {
+        "LGTV": 13,
+        "AppleTV-LR": 19,
+        "SamsungTV": 42
+      },
+      "seconds": 121.72113132476807
+    },
+    "rot20260801T0530": {
+      "source": "rot20260801T0530",
+      "first_day": "2026-07-30",
+      "last_day": "2026-07-31",
+      "days_after_enrol_min": 5.895642542574141,
+      "days_after_enrol_max": 7.023288345049929,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR"
+      ],
+      "bins_kept": 17,
+      "query_windows": 2646,
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 2
+      },
+      "seconds": 29.437939167022705
+    },
+    "rot20260802T0532": {
+      "source": "rot20260802T0532",
+      "first_day": "2026-08-01",
+      "last_day": "2026-08-02",
+      "days_after_enrol_min": 7.776541063164672,
+      "days_after_enrol_max": 8.776661986302999,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR"
+      ],
+      "bins_kept": 17,
+      "query_windows": 2475,
+      "query_blocks_per_device": {
+        "LGTV": 2,
+        "AppleTV-LR": 2
+      },
+      "seconds": 28.99394917488098
+    },
+    "rot20260803T0532": {
+      "source": "rot20260803T0532",
+      "first_day": "2026-08-02",
+      "last_day": "2026-08-03",
+      "days_after_enrol_min": 8.780454212849339,
+      "days_after_enrol_max": 9.77633640738825,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 2415,
+      "query_blocks_per_device": {
+        "LGTV": 2,
+        "AppleTV-LR": 2,
+        "SamsungTV": 5
+      },
+      "seconds": 31.262522220611572
+    },
+    "rot20260805T0530": {
+      "source": "rot20260805T0530",
+      "first_day": "2026-08-03",
+      "last_day": "2026-08-05",
+      "days_after_enrol_min": 9.783325838937804,
+      "days_after_enrol_max": 11.77512228395376,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 5181,
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 13,
+        "SamsungTV": 28
+      },
+      "seconds": 55.533257484436035
+    },
+    "rot20260806T0530": {
+      "source": "rot20260806T0530",
+      "first_day": "2026-08-05",
+      "last_day": "2026-08-06",
+      "days_after_enrol_min": 11.777387656293534,
+      "days_after_enrol_max": 12.774920556114779,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 3014,
+      "query_blocks_per_device": {
+        "LGTV": 3,
+        "AppleTV-LR": 2,
+        "SamsungTV": 5
+      },
+      "seconds": 40.28651452064514
+    },
+    "rot20260808T0530": {
+      "source": "rot20260808T0530",
+      "first_day": "2026-08-06",
+      "last_day": "2026-08-08",
+      "days_after_enrol_min": 12.776891077516808,
+      "days_after_enrol_max": 14.774806577033466,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 5878,
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 16
+      },
+      "seconds": 57.85025763511658
+    },
+    "rot20260810T0530": {
+      "source": "rot20260810T0530",
+      "first_day": "2026-08-08",
+      "last_day": "2026-08-10",
+      "days_after_enrol_min": 14.776893112725682,
+      "days_after_enrol_max": 16.775012214881954,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 6005,
+      "query_blocks_per_device": {
+        "LGTV": 5,
+        "AppleTV-LR": 3,
+        "SamsungTV": 7
+      },
+      "seconds": 60.22511601448059
+    },
+    "rot20260813T0530": {
+      "source": "rot20260813T0530",
+      "first_day": "2026-08-10",
+      "last_day": "2026-08-13",
+      "days_after_enrol_min": 16.77678833918439,
+      "days_after_enrol_max": 19.774939338299962,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 6164,
+      "query_blocks_per_device": {
+        "LGTV": 5,
+        "AppleTV-LR": 4,
+        "SamsungTV": 2
+      },
+      "seconds": 49.44399333000183
+    },
+    "rot20260816T0530": {
+      "source": "rot20260816T0530",
+      "first_day": "2026-08-13",
+      "last_day": "2026-08-16",
+      "days_after_enrol_min": 19.7768480834834,
+      "days_after_enrol_max": 22.774389522693774,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR"
+      ],
+      "bins_kept": 17,
+      "query_windows": 5599,
+      "query_blocks_per_device": {
+        "LGTV": 6,
+        "AppleTV-LR": 4
+      },
+      "seconds": 41.6376633644104
+    },
+    "rot20260819T0530": {
+      "source": "rot20260819T0530",
+      "first_day": "2026-08-16",
+      "last_day": "2026-08-19",
+      "days_after_enrol_min": 22.77894686979828,
+      "days_after_enrol_max": 25.77531815515072,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR"
+      ],
+      "bins_kept": 17,
+      "query_windows": 6269,
+      "query_blocks_per_device": {
+        "LGTV": 9,
+        "AppleTV-LR": 6
+      },
+      "seconds": 50.42682909965515
+    },
+    "rot20260821T0530": {
+      "source": "rot20260821T0530",
+      "first_day": "2026-08-19",
+      "last_day": "2026-08-21",
+      "days_after_enrol_min": 25.777482630668416,
+      "days_after_enrol_max": 27.77509219663011,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 5826,
+      "query_blocks_per_device": {
+        "LGTV": 6,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "seconds": 59.24380803108215
+    },
+    "rot20260823T0531": {
+      "source": "rot20260823T0531",
+      "first_day": "2026-08-21",
+      "last_day": "2026-08-23",
+      "days_after_enrol_min": 27.795458338288245,
+      "days_after_enrol_max": 29.775914548503028,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 8261,
+      "query_blocks_per_device": {
+        "LGTV": 3,
+        "AppleTV-LR": 3,
+        "SamsungTV": 5
+      },
+      "seconds": 77.63150143623352
+    },
+    "rot20260825T0530": {
+      "source": "rot20260825T0530",
+      "first_day": "2026-08-23",
+      "last_day": "2026-08-25",
+      "days_after_enrol_min": 29.778530133416254,
+      "days_after_enrol_max": 31.775148018355722,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 4836,
+      "query_blocks_per_device": {
+        "LGTV": 2,
+        "AppleTV-LR": 3,
+        "SamsungTV": 1
+      },
+      "seconds": 47.95345377922058
+    },
+    "rot20260827T0530": {
+      "source": "rot20260827T0530",
+      "first_day": "2026-08-25",
+      "last_day": "2026-08-27",
+      "days_after_enrol_min": 31.77723604734297,
+      "days_after_enrol_max": 33.77535115412264,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 1642,
+      "query_blocks_per_device": {
+        "LGTV": 5,
+        "AppleTV-LR": 4,
+        "SamsungTV": 3
+      },
+      "seconds": 22.57668709754944
+    },
+    "rot20260828T0530": {
+      "source": "rot20260828T0530",
+      "first_day": "2026-08-27",
+      "last_day": "2026-08-28",
+      "days_after_enrol_min": 33.779213184739156,
+      "days_after_enrol_max": 34.7752215739312,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 2255,
+      "query_blocks_per_device": {
+        "LGTV": 2,
+        "AppleTV-LR": 1,
+        "SamsungTV": 3
+      },
+      "seconds": 29.614969730377197
+    },
+    "rot20260828T2102": {
+      "source": "rot20260828T2102",
+      "first_day": "2026-08-28",
+      "last_day": "2026-08-28",
+      "days_after_enrol_min": 34.77671500237176,
+      "days_after_enrol_max": 35.422518933393334,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 2919,
+      "query_blocks_per_device": {
+        "LGTV": 3,
+        "AppleTV-LR": 1,
+        "SamsungTV": 1
+      },
+      "seconds": 45.134565591812134
+    },
+    "rot20260830T0615": {
+      "source": "rot20260830T0615",
+      "first_day": "2026-08-28",
+      "last_day": "2026-08-30",
+      "days_after_enrol_min": 35.42452800129299,
+      "days_after_enrol_max": 36.806397090678416,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 5764,
+      "query_blocks_per_device": {
+        "LGTV": 7,
+        "AppleTV-LR": 3,
+        "SamsungTV": 5
+      },
+      "seconds": 66.2651698589325
+    },
+    "rot20260831T0615": {
+      "source": "rot20260831T0615",
+      "first_day": "2026-08-30",
+      "last_day": "2026-08-31",
+      "days_after_enrol_min": 36.81062517772394,
+      "days_after_enrol_max": 37.80657163103974,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 2646,
+      "query_blocks_per_device": {
+        "LGTV": 1,
+        "AppleTV-LR": 2,
+        "SamsungTV": 1
+      },
+      "seconds": 34.49310851097107
+    },
+    "rot20260901T0615": {
+      "source": "rot20260901T0615",
+      "first_day": "2026-08-31",
+      "last_day": "2026-09-01",
+      "days_after_enrol_min": 37.80854118849116,
+      "days_after_enrol_max": 38.806460406402195,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR"
+      ],
+      "bins_kept": 17,
+      "query_windows": 2116,
+      "query_blocks_per_device": {
+        "LGTV": 2,
+        "AppleTV-LR": 2
+      },
+      "seconds": 23.612207651138306
+    },
+    "rot20260903T0615": {
+      "source": "rot20260903T0615",
+      "first_day": "2026-09-01",
+      "last_day": "2026-09-03",
+      "days_after_enrol_min": 38.80855553662887,
+      "days_after_enrol_max": 40.80647567832084,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 4991,
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "seconds": 51.25922107696533
+    },
+    "rot20260904T0615": {
+      "source": "rot20260904T0615",
+      "first_day": "2026-09-03",
+      "last_day": "2026-09-04",
+      "days_after_enrol_min": 40.80893806685452,
+      "days_after_enrol_max": 41.80678838942338,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 3586,
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 2,
+        "SamsungTV": 2
+      },
+      "seconds": 44.32219409942627
+    },
+    "rot20260905T0615": {
+      "source": "rot20260905T0615",
+      "first_day": "2026-09-04",
+      "last_day": "2026-09-05",
+      "days_after_enrol_min": 41.8091460588602,
+      "days_after_enrol_max": 42.80629112972429,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 3370,
+      "query_blocks_per_device": {
+        "LGTV": 2,
+        "AppleTV-LR": 2,
+        "SamsungTV": 2
+      },
+      "seconds": 41.5241596698761
+    },
+    "rot20260906T0615": {
+      "source": "rot20260906T0615",
+      "first_day": "2026-09-05",
+      "last_day": "2026-09-06",
+      "days_after_enrol_min": 42.808930514294794,
+      "days_after_enrol_max": 43.80668952612965,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 3351,
+      "query_blocks_per_device": {
+        "LGTV": 3,
+        "AppleTV-LR": 2,
+        "SamsungTV": 2
+      },
+      "seconds": 42.494842767715454
+    },
+    "live": {
+      "source": "live",
+      "first_day": "2026-09-06",
+      "last_day": "2026-09-08",
+      "days_after_enrol_min": 43.81042563680973,
+      "days_after_enrol_max": 45.69886985005604,
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "bins_kept": 17,
+      "query_windows": 4212,
+      "query_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "seconds": 39.718101024627686
+    }
+  },
+  "recording": {
+    "first": "2026-07-15T20:16:13Z",
+    "last": "2026-09-08T03:40:24Z",
+    "n_files": 26,
+    "unique_reports": 11019290,
+    "source_addresses": 24,
+    "boards_per_file": {
+      "rot20260724": 10,
+      "rot20260730T0816": 10,
+      "rot20260801T0530": 10,
+      "rot20260802T0532": 10,
+      "rot20260803T0532": 10,
+      "rot20260805T0530": 10,
+      "rot20260806T0530": 10,
+      "rot20260808T0530": 10,
+      "rot20260810T0530": 9,
+      "rot20260813T0530": 9,
+      "rot20260816T0530": 10,
+      "rot20260819T0530": 10,
+      "rot20260821T0530": 10,
+      "rot20260823T0531": 10,
+      "rot20260825T0530": 10,
+      "rot20260827T0530": 20,
+      "rot20260828T0530": 17,
+      "rot20260828T2102": 20,
+      "rot20260830T0615": 20,
+      "rot20260831T0615": 20,
+      "rot20260901T0615": 20,
+      "rot20260903T0615": 20,
+      "rot20260904T0615": 20,
+      "rot20260905T0615": 19,
+      "rot20260906T0615": 19,
+      "live": 19
+    },
+    "boards_min": 9,
+    "boards_max": 20
+  },
+  "peak_rss_mb": 1127.3984375
+}

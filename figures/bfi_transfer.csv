@@ -1,0 +1,7 @@
+source_substrate,target_substrate,defense,b,eps,seed,accuracy_transfer,accuracy_native
+ntu_fi_humanid,he_cr1_location,none,-1,nan,0,0.922667,0.990667
+ntu_fi_humanid,he_cr1_location,dp_sq,4,0.5,0,0.691333,0.822667
+ntu_fi_humanid,he_cr1_location,none,-1,nan,1,0.917333,0.982
+ntu_fi_humanid,he_cr1_location,dp_sq,4,0.5,1,0.700667,0.82
+ntu_fi_humanid,he_cr1_location,none,-1,nan,2,0.920667,0.990667
+ntu_fi_humanid,he_cr1_location,dp_sq,4,0.5,2,0.733333,0.844667

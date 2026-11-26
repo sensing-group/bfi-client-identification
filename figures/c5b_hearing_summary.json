@@ -1,0 +1,96 @@
+{
+  "sources": {
+    "live": {
+      "lines": 3226983,
+      "labelled_receptions": 2359996,
+      "n_boards": 19,
+      "seconds": 30.51770520210266,
+      "peak_rss_mb": 32.953125
+    },
+    "rot20260724": {
+      "lines": 14823639,
+      "labelled_receptions": 4010175,
+      "n_boards": 10,
+      "seconds": 109.96872687339783,
+      "peak_rss_mb": 33.328125
+    }
+  },
+  "devices": {
+    "AppleTV-LR": {
+      "live": {
+        "unique_reports": 118365,
+        "boards_per_report_mean": 17.619862290373,
+        "boards_per_report_median": 19.0,
+        "heard_by_one_board_only": 0.030735436995733535,
+        "boards_for_50pct": 1,
+        "boards_for_90pct": 1,
+        "boards_for_95pct": 2,
+        "boards_for_99pct": 5
+      },
+      "rot20260724": {
+        "unique_reports": 200413,
+        "boards_per_report_mean": 9.04023691077924,
+        "boards_per_report_median": 10.0,
+        "heard_by_one_board_only": 0.008707020003692376,
+        "boards_for_50pct": 1,
+        "boards_for_90pct": 1,
+        "boards_for_95pct": 2,
+        "boards_for_99pct": 4
+      }
+    },
+    "LGTV": {
+      "live": {
+        "unique_reports": 5566,
+        "boards_per_report_mean": 16.443226733740566,
+        "boards_per_report_median": 19.0,
+        "heard_by_one_board_only": 0.08731584620912684,
+        "boards_for_50pct": 1,
+        "boards_for_90pct": 1,
+        "boards_for_95pct": 3,
+        "boards_for_99pct": 9
+      },
+      "rot20260724": {
+        "unique_reports": 118601,
+        "boards_per_report_mean": 9.120167620846367,
+        "boards_per_report_median": 10.0,
+        "heard_by_one_board_only": 0.008128093355030733,
+        "boards_for_50pct": 1,
+        "boards_for_90pct": 1,
+        "boards_for_95pct": 2,
+        "boards_for_99pct": 4
+      }
+    },
+    "SamsungTV": {
+      "live": {
+        "unique_reports": 10961,
+        "boards_per_report_mean": 16.686251254447587,
+        "boards_per_report_median": 18.0,
+        "heard_by_one_board_only": 0.022899370495392757,
+        "boards_for_50pct": 1,
+        "boards_for_90pct": 1,
+        "boards_for_95pct": 1,
+        "boards_for_99pct": 3
+      },
+      "rot20260724": {
+        "unique_reports": 122695,
+        "boards_per_report_mean": 9.101699335751253,
+        "boards_per_report_median": 10.0,
+        "heard_by_one_board_only": 0.004596764334324952,
+        "boards_for_50pct": 1,
+        "boards_for_90pct": 1,
+        "boards_for_95pct": 1,
+        "boards_for_99pct": 3
+      }
+    }
+  },
+  "layout_source": "/repo/release/vendor/zones_cache.json",
+  "layout_generated_at": "2026-08-26T22:22:32Z",
+  "layout_note": "Relative MDS positions (metres, arbitrary origin and rotation) and k-means zone ids from the tomography repo; NO room labels exist for the boards. All boards are deployed in the living room (PI ground-truth scope rule); three boards carry a PI placement note.",
+  "pi_placements": {
+    "dev_5e5d39": "entrance shelf (PI label, 2026-07-24)",
+    "dev_1dc8f3": "right of the TV, near the entrance (PI label)",
+    "dev_c27892": "kitchen back, near the fridge (PI label)"
+  },
+  "runtime_s": 140.52503371238708,
+  "peak_rss_mb": 34.328125
+}

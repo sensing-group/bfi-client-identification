@@ -1,0 +1,62 @@
+% Figure 1 (v6): a conventional systems-paper overview, one connected flow from
+% left to right. Text width (17.78 cm) by 3.9 cm. Line art only: rectangles
+% with 0.5 pt gray!50 borders and gray!5 fills, 0.5 pt arrows with Stealth
+% heads, circled step numbers (7 pt) on the arrows, a dot at the branch
+% junction. Labels are \footnotesize
+% (8 pt) in the document font; the two group titles are 9 pt. Two accent
+% colours: Okabe-Ito blue for the provider, vermilion for the outsider.
+%   Home network (dashed group): Client -> (1) Gateway, "beamforming feedback,
+%     plaintext"; under the gateway, in blue, "provider reads it"; a thin wall
+%     at the group's right edge.
+%   Beyond the wall: the passive receiver (vermilion border); (2) a branch of
+%     the client's feedback reaches it, "same frame, over the air".
+%   Observer (dashed group, never trained on the target): Enroll -> (3) Match
+%     -> (4) Identity on later days; one grey line under it on prior attacks.
+% The bounding box is fixed unless the preview defines \teasernobbox.
+\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize]
+\definecolor{oiBlue}{HTML}{0072B2}\definecolor{oiVerm}{HTML}{D55E00}
+\tikzset{
+  box/.style={draw=gray!50, fill=gray!5, line width=0.5pt, align=center,
+              minimum height=1.1cm, inner xsep=3pt, inner ysep=2pt},
+  group/.style={draw=gray!60, line width=0.5pt, dash pattern=on 2pt off 1.5pt,
+                rounded corners=3pt},
+  flow/.style={-{Stealth[length=1.6mm, width=1.2mm]}, draw=black!70, line width=0.5pt},
+  line/.style={draw=black!70, line width=0.5pt},
+  stepno/.style={circle, draw=black!70, fill=white, line width=0.5pt,
+               minimum size=0.3cm, inner sep=0pt, font=\fontsize{7}{7}\selectfont, text=black!80},
+  gtitle/.style={anchor=north west, inner sep=0pt, font=\fontsize{9}{10.5}\selectfont, text=black!85},
+  lab/.style={inner sep=1pt, align=center, text=black!75},
+  grey/.style={inner sep=1pt, text=black!55},
+}
+\ifdefined\teasernobbox\else\useasboundingbox (0,0.1) rectangle (17.78,4.0);\fi
+% ---------------------------------------------------------------- home network
+\draw[group] (0.05,0.6) rectangle (5.55,3.9);
+\node[gtitle] at (0.2,3.85) {Home network};
+\node[box, minimum width=2.5cm] (client) at (1.45,2.1) {Client\\(TV, laptop, phone)};
+\node[box, minimum width=1.85cm] (gw) at (4.45,2.1) {Gateway\\(access point)};
+\draw[flow] (client.east) -- (gw.west);
+\node[stepno] at (3.3,2.1) {1};
+\node[lab, anchor=south] at (3.1,2.75) {beamforming feedback,\\plaintext};
+\node[lab, anchor=north, text=oiBlue] at (gw.south) [yshift=-2pt] {provider reads it};
+% wall at the group's right edge
+\draw[line] (5.75,0.35) -- (5.75,3.7);
+\node[grey, rotate=90, anchor=south, font=\fontsize{7}{7}\selectfont] at (5.8,3.25) {wall};
+% ---------------------------------------------------------------- outsider's receiver
+\node[box, draw=oiVerm, minimum width=2.3cm] (rx) at (7.2,2.1) {Receiver in range\\(Pi 5 or ESP32-C5)\\passive};
+\fill[black!70] (2.9,2.1) circle (0.8pt);
+\draw[flow] (2.9,2.1) -- (2.9,0.9) -- (7.2,0.9) -- (rx.south);
+\node[stepno] at (6.05,0.9) {2};
+\node[lab, anchor=north] at (7.35,0.78) {same frame, over the air};
+% ---------------------------------------------------------------- observer
+\draw[group] (8.85,0.6) rectangle (17.75,3.9);
+\node[gtitle] at (9.0,3.85) {Observer, never trained on the target};
+\node[box, minimum width=2.45cm] (enroll) at (10.225,2.1) {Enroll:\\one labeled session};
+\node[box, minimum width=3.1cm] (match) at (13.6,2.1) {Match:\\nearest enrolled window};
+\node[box, minimum width=1.85cm] (ident) at (16.675,2.1) {Identity\\on later days};
+\draw[flow] (rx.east) -- (enroll.west);
+\draw[flow] (enroll.east) -- (match.west);
+\node[stepno] at (11.75,2.1) {3};
+\draw[flow] (match.east) -- (ident.west);
+\node[stepno] at (15.45,2.1) {4};
+\node[grey, anchor=north west] at (9.0,0.45) {Prior attacks: target in the training set};
+\end{tikzpicture}%

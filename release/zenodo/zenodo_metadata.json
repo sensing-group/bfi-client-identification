@@ -1,0 +1,63 @@
+{
+  "_comment": "Metadata of Zenodo deposit 10.5281/zenodo.23650178 (draft on the authors' account; it supersedes the restricted, anonymous record 10.5281/zenodo.20545948 of the double-blind submission). Zenodo deposit metadata schema (legacy REST API). Files: see FILES.txt.",
+  "metadata": {
+    "upload_type": "dataset",
+    "title": "Plaintext WiFi Beamforming Feedback (BFI) of one home: 13 days on a Raspberry Pi 5 + Intel AX210, and 54 days on ESP32-C5 boards (2026)",
+    "version": "3.0",
+    "publication_date": "2026-11-12",
+    "creators": [
+      {
+        "name": "Khamaisi, Karim",
+        "affiliation": "University of St. Gallen"
+      },
+      {
+        "name": "Rodrigues, Bruno",
+        "affiliation": "University of St. Gallen"
+      }
+    ],
+    "description": "<p>Companion data for <em>Hide the Client, Keep the Beam: What It Takes to Protect WiFi Beamforming Feedback</em>. The paper shows that an observer who hears one labeled session of a device's plaintext 802.11 compressed beamforming feedback (BFI) recognises that device on other days from the Givens angles of its reports alone, and defines a privacy test that no tested defense passes: an access-point-side rotation fresh per subcarrier group, first proposed by LeakyBeam, hides the angles but leaves the report's SNR field and format.</p><p><strong>What the record holds.</strong> Only frames that the six labeled devices of the authors' household, and in part B also the receiving boards themselves, sent to the household's own access point. The receivers have no access-point filter and heard more: frames of neighbouring networks, of one unlabeled device on the household's network and of direct links. The owners of those devices did not consent to a release and the paper does not study them, so these frames are withheld and their ids appear in no file. The counts heard and released are given per part.</p><p><strong>A. pi-capture/</strong> (pi-capture.tar.gz, 0.39 GB; unpacked 13 SQLite files, 1.77 GB, plus DATASHEET.md, device_labels.csv, load_dataset.py, SHA256SUMS). A Raspberry Pi 5 with an Intel AX210 card in monitor mode on 5 GHz channel 40 (80 MHz), 11 m from the household's ISP-issued gateway, logged every VHT and HE Compressed Beamforming frame it heard on the channel from 8 to 20 May 2026: 832,827 frames from 49 source addresses. Released are the 832,019 frames of the six labeled devices (two Apple TVs, an LG TV, a Samsung TV, a laptop, a robot vacuum) to the gateway: 6 source ids, 1 access-point id. Withheld are 808 frames: 807 from 42 addresses to 20 neighbouring access points, and 1 from an unlabeled address to the gateway. One file per day, table <code>bfi</code> with columns ts, src_id, ap_id, category (21 VHT, 30 HE), subtype, mimo_ctrl, body_hex (the Action body, verbatim), body_len, rssi (received signal strength in dBm, exact as captured). 12 and 13 May are present as empty files (capture downtime). device_labels.csv has one row per device with its name and mobility group.</p><p><strong>B. esp32-c5/</strong> (esp32-c5.tar, 5.2 GB, holding 26 gzip JSON-lines files plus DATASHEET.md, export_stats.json, SHA256SUMS). Reports overheard by ESP32-C5 boards of a sensing mesh in the same home, recorded from 15 July to 8 September 2026 (54.3 days, one 18-hour gap on 31 July; 10 boards, up to 20 from 25 August): 115,265,058 receptions from 291 source addresses heard. Released are 108,600,711 receptions from 24 source ids, all addressed to the gateway: 47,697,150 of the four labeled devices present (three televisions and the laptop) and 60,903,561 of the 20 boards' own feedback frames (the boards are stations of the same network). Withheld are 6,664,347 receptions: 113,689 of frames addressed to anything other than the gateway, and 6,550,658 of frames that unlabeled addresses sent to the gateway, 6,518,183 of them from one device the household did not label. The backend rotated its log every one to three days; each rotated file keeps its rotation time in its name, and bfi_c5_2026-07.jsonl.gz and bfi_c5_2026-09.jsonl.gz are the first and the last part. One JSON object per reception (recv_ts, node_mac, node_ip, src_mac, dst_mac, node_ts_us, rssi, channel, bb_format, subtype, category, action, body_len, length_ok, body_hex); rssi is in dBm as the board reported it; the firmware keeps the first 512 bytes of each Action body. export_stats.json gives the released receptions per id and file and the withheld receptions per file by reason, as counts.</p><p><strong>Pseudonymization.</strong> Device, access-point and board addresses are replaced by stable opaque ids <code>dev_XXXXXX</code> (the first three bytes of SHA-256(salt || MAC) with a 16-byte salt held by the authors and not released), the same salt in both parts, so a device carries the same id in A and B. RSSI is exact in both parts. The BFI bodies are released verbatim because they are the object of study. The captures come from the authors' own household with the occupants' informed consent; only beamforming feedback frames with their headers were stored.</p><p><strong>Reproduction.</strong> The code repository (related identifier) reproduces every number and figure of the paper from these files: <code>release/README.md</code> documents the schema, the scripts and the environment variables, <code>release/reproduce.sh</code> runs them, <code>release/MANIFEST.txt</code> carries the sha256 of every file here.</p><p><strong>This record</strong> replaces 10.5281/zenodo.20545948, the restricted and anonymous Pi capture of an earlier double-blind submission: it adds the authors' names, the label and mobility columns of device_labels.csv, the revised datasheets and the whole ESP32-C5 recording.</p>",
+    "access_right": "open",
+    "license": "cc-by-4.0",
+    "keywords": [
+      "WiFi sensing",
+      "beamforming feedback",
+      "BFI",
+      "802.11",
+      "802.11ac",
+      "802.11ax",
+      "privacy",
+      "device identification",
+      "MAC randomization",
+      "ESP32-C5",
+      "Raspberry Pi"
+    ],
+    "related_identifiers": [
+      {
+        "identifier": "https://github.com/sensing-group/bfi-client-identification",
+        "relation": "isSupplementTo",
+        "resource_type": "software",
+        "scheme": "url"
+      },
+      {
+        "identifier": "https://doi.org/10.21227/47h2-3p42",
+        "relation": "references",
+        "resource_type": "dataset",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "https://doi.org/10.1016/j.patter.2023.100703",
+        "relation": "references",
+        "resource_type": "publication-article",
+        "scheme": "doi"
+      },
+      {
+        "identifier": "10.5281/zenodo.20545948",
+        "relation": "isNewVersionOf",
+        "resource_type": "dataset",
+        "scheme": "doi"
+      }
+    ],
+    "notes": "The record holds only frames of the six labeled household devices (and, on the ESP32-C5 boards, the boards' own feedback) sent to the household's access point; frames of neighbours' devices, of unlabeled devices and to other destinations that the receivers heard are withheld (808 of 832,827 frames on the Pi, 6,664,347 of 115,265,058 receptions on the boards). The paper's capture-level totals count everything heard. The two 16,384-byte files bfi_2026-05-12.sqlite and bfi_2026-05-13.sqlite are empty databases with the bfi schema (capture downtime); they are kept so that the 13-column day index of the paper's figures matches the archive. Verify after download: unpack the two archives and compare with the SHA256SUMS file in each folder (columns sha256, size in bytes, path), with FILES.txt or with release/MANIFEST.txt of the code repository.",
+    "language": "eng"
+  }
+}

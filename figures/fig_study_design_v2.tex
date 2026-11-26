@@ -1,0 +1,134 @@
+% Study design, v2 (figure*): four stages, pictograms first, about 60 words.
+% (a) capture  (b) frame to feature  (c) the observer  (d) what is measured, with
+% the section of each result in grey. Pictograms and colour roles as in Fig. 1.
+% Width \textwidth (17.78 cm); height 5.0 cm. Titles bold 8.5 pt, labels 8 pt,
+% nothing under 7.5 pt.
+\begin{tikzpicture}[x=1cm, y=1cm, font=\footnotesize]
+\definecolor{oiBlue}{HTML}{0072B2}\definecolor{oiVerm}{HTML}{D55E00}\definecolor{oiGreen}{HTML}{009E73}
+\tikzset{
+  st/.style={line width=0.6pt, line join=round, line cap=round},
+  panel/.style={draw=black!35, line width=0.5pt, rounded corners=3pt},
+  ptitle/.style={anchor=west, inner sep=0pt, font=\fontsize{8.5}{10}\selectfont\bfseries, text=black!85},
+  stepno/.style={circle, draw=black!75, fill=white, line width=0.5pt, minimum size=0.36cm,
+                 inner sep=0pt, font=\fontsize{7.5}{9}\selectfont, text=black},
+  fb/.style={-{Stealth[length=1.5mm, width=1.2mm]}, draw=black!70, line width=0.6pt},
+  down/.style={-{Stealth[length=1.2mm, width=1mm]}, draw=black!60, line width=0.5pt},
+  lab/.style={inner sep=1pt, align=left, text=black!85},
+  t/.style={anchor=west, inner sep=1pt, align=left, text=black!85},
+  cl/.style={inner sep=1pt, align=center, text=black!85},
+  sec/.style={inner sep=0pt, text=black!62},
+  small/.style={inner sep=1pt, align=center, font=\fontsize{7.5}{9}\selectfont, text=black!70},
+  tag/.style={draw=black!60, fill=black!8, line width=0.5pt, rounded corners=1.5pt, inner xsep=2pt, inner ysep=1pt, text=black!85},
+  % ---------------------------------------------------------------- pictograms
+  pics/tv/.style={code={
+    \draw[st, draw=black!75, fill=black!12] (-0.33,-0.06) rectangle (0.33,0.34);
+    \draw[st, draw=black!75] (0,-0.06) -- (0,-0.17) (-0.14,-0.17) -- (0.14,-0.17);}},
+  pics/laptop/.style={code={
+    \draw[st, draw=black!75, fill=black!12] (-0.21,0) rectangle (0.21,0.28);
+    \draw[st, draw=black!75, fill=white] (-0.21,0) -- (0.21,0) -- (0.28,-0.07) -- (-0.28,-0.07) -- cycle;}},
+  pics/phone/.style={code={
+    \draw[st, draw=black!75, fill=black!12, rounded corners=1.2pt] (-0.1,-0.17) rectangle (0.1,0.17);
+    \draw[st, draw=black!75] (-0.03,-0.12) -- (0.03,-0.12);}},
+  pics/vacuum/.style={code={
+    \draw[st, draw=black!75, fill=black!12] (0,0) circle (0.19);
+    \draw[st, draw=black!75, fill=white] (0,0) circle (0.07);
+    \draw[st, draw=black!75] (-0.13,0.13) arc (135:45:0.19);}},
+  pics/router/.style={code={
+    \draw[st, draw=oiBlue] (-0.17,0.08) -- (-0.24,0.38) (0.17,0.08) -- (0.24,0.38);
+    \draw[st, draw=oiBlue, fill=oiBlue!18, rounded corners=1pt] (-0.32,-0.12) rectangle (0.32,0.08);
+    \foreach \x in {-0.18,-0.08,0.02} \fill[oiBlue] (\x,-0.02) circle (0.025);}},
+  pics/c5/.style={code={
+    \draw[st, draw=oiGreen, fill=oiGreen!22] (-0.15,-0.1) rectangle (0.15,0.1);
+    \fill[oiGreen] (-0.07,-0.04) rectangle (0.03,0.05);
+    \draw[st, draw=oiGreen, line width=0.5pt] (0.08,0.06) -- (0.08,-0.06);}},
+  pics/pi/.style={code={% Raspberry Pi board with the AX210's two antennas
+    \draw[st, draw=oiVerm] (-0.22,0.27) -- (-0.22,0.6) (0.02,0.27) -- (0.02,0.6);
+    \fill[oiVerm] (-0.22,0.6) circle (0.04) (0.02,0.6) circle (0.04);
+    \draw[st, draw=oiVerm, fill=oiVerm!12, rounded corners=1.5pt] (-0.42,-0.27) rectangle (0.42,0.27);
+    \foreach \x in {-0.33,0.33} \foreach \y in {-0.18,0.18} \draw[draw=oiVerm, line width=0.4pt] (\x,\y) circle (0.035);
+    \foreach \x in {-0.2,-0.12,...,0.21} \fill[oiVerm] (\x-0.025,0.15) rectangle (\x+0.025,0.2);
+    \fill[oiVerm] (-0.14,-0.14) rectangle (0.06,0.06);
+    \draw[st, draw=oiVerm, line width=0.5pt, fill=white] (0.14,-0.16) rectangle (0.42,0.02);}},
+  pics/db/.style={code={% a dataset
+    \draw[st, draw=black!65, fill=black!10] (-0.22,-0.2) -- (-0.22,0.16) arc (180:360:0.22 and 0.07) -- (0.22,-0.2) arc (360:180:0.22 and 0.07);
+    \draw[st, draw=black!65, fill=black!4] (0,0.16) ellipse (0.22 and 0.07);
+    \draw[st, draw=black!65] (-0.22,-0.02) arc (180:360:0.22 and 0.07);}},
+  pics/win/.style={code={% a 32-frame window: a short stack of frames
+    \foreach \d in {0.1,0.05,0} \draw[st, draw=black!60, line width=0.5pt, fill=white] (-0.3+\d,-0.14+\d) rectangle (0.3+\d,0.14+\d);}},
+  pics/frame/.style={code={% one feedback frame: control field and body
+    \draw[st, draw=black!65, fill=black!20] (-0.4,-0.13) rectangle (-0.15,0.13);
+    \draw[st, draw=black!65, fill=white] (-0.15,-0.13) rectangle (0.4,0.13);
+    \foreach \x in {-0.05,0.05,...,0.35} \draw[draw=black!55, line width=0.5pt] (\x,-0.08) -- (\x,0.08);}},
+  pics/angles/.style={code={% decoded angles across subcarriers
+    \draw[st, draw=black!65, fill=white] (-0.4,-0.25) rectangle (0.4,0.25);
+    \draw[draw=oiBlue!80!black, line width=0.6pt] plot[smooth] coordinates {(-0.35,0.08) (-0.2,0.17) (-0.05,0.04) (0.1,0.12) (0.22,-0.02) (0.35,0.08)};
+    \draw[draw=black!55, line width=0.6pt] plot[smooth] coordinates {(-0.35,-0.15) (-0.2,-0.08) (-0.05,-0.18) (0.1,-0.1) (0.22,-0.16) (0.35,-0.05)};}},
+  pics/vec/.style={code={% the 320-value vector
+    \foreach \c [count=\i from 0] in {35,15,42,25,10,30,20,45} \fill[black!\c] (-0.4+0.1*\i,-0.12) rectangle ++(0.1,0.24);
+    \draw[st, draw=black!65] (-0.4,-0.12) rectangle (0.4,0.12);}},
+  pics/calendar/.style={code={
+    \draw[st, draw=black!65, fill=white] (-0.25,-0.22) rectangle (0.25,0.18);
+    \draw[st, draw=black!65, fill=black!15] (-0.25,0.08) rectangle (0.25,0.18);
+    \draw[st, draw=black!65] (-0.13,0.14) -- (-0.13,0.25) (0.13,0.14) -- (0.13,0.25);
+    \foreach \x in {-0.15,0,0.15} \foreach \y in {-0.02,-0.13} \fill[black!45] (\x,\y) circle (0.025);}},
+  pics/room/.style={code={% a room with positions
+    \draw[st, draw=black!65, line width=0.8pt] (-0.27,-0.22) rectangle (0.27,0.22);
+    \foreach \p in {(-0.15,0.1),(0.0,-0.08),(0.14,0.08),(-0.12,-0.12),(0.15,-0.12)} \fill[black!55] \p circle (0.03);
+    \fill[oiVerm] (0.0,-0.08) circle (0.045);}},
+  pics/person/.style={code={
+    \fill[black!60] (0,0.12) circle (0.085);
+    \fill[black!60] (-0.18,-0.24) -- (-0.18,-0.12) arc (180:0:0.18) -- (0.18,-0.24) -- cycle;}},
+  pics/clock/.style={code={
+    \draw[st, draw=black!65, fill=white] (0,0) circle (0.22);
+    \draw[st, draw=black!65] (0,0) -- (0,0.15) (0,0) -- (0.11,-0.05);}},
+  pics/shield/.style={code={
+    \draw[st, draw=black!65, fill=black!8] (0,0.24) -- (0.2,0.17) -- (0.2,0.0) .. controls (0.2,-0.12) and (0.1,-0.2) .. (0,-0.25) .. controls (-0.1,-0.2) and (-0.2,-0.12) .. (-0.2,0.0) -- (-0.2,0.17) -- cycle;
+    \draw[draw=black!70, line width=0.8pt] (-0.08,0.0) -- (-0.02,-0.07) -- (0.09,0.08);}},
+}
+\ifdefined\studynobbox\else\useasboundingbox (0,0) rectangle (17.78,5.0);\fi
+\draw[panel] (0,0) rectangle (4.3,5.0);
+\draw[panel] (4.66,0) rectangle (8.4,5.0);
+\draw[panel] (8.76,0) rectangle (13.26,5.0);
+\draw[panel] (13.62,0) rectangle (17.78,5.0);
+\foreach \x in {4.32,8.42,13.28} \draw[fb] (\x,2.5) -- (\x+0.32,2.5);
+\foreach \x/\l/\t in {0/a/Capture,4.66/b/Frame to feature,8.76/c/Observer,13.62/d/What is measured} {
+  \node[stepno] at (\x+0.3,4.7) {\l};
+  \node[ptitle] at (\x+0.53,4.7) {\t}; }
+% ================================================================ (a) capture
+\pic at (0.55,3.75) {router};
+\draw[draw=oiVerm, line width=0.5pt, dash pattern=on 1.5pt off 1pt, -{Stealth[length=1.2mm, width=1mm]}] (0.92,3.75) -- (1.17,3.75);
+\pic at (1.62,3.67) {pi};
+\node[t] at (2.15,3.75) {home, 13 days,\\[-1pt]832{,}827 frames};
+\pic[scale=1.3] at (0.75,2.4) {c5}; \pic[scale=1.3] at (1.45,2.4) {c5};
+\node[t] at (2.15,2.4) {ESP32-C5,\\[-1pt]54 days};
+\pic at (0.75,1.05) {db}; \pic at (1.45,1.05) {db};
+\node[t] at (2.15,1.05) {public: He \etal,\\[-1pt]NTU-Fi};
+% ================================================================ (b) frame to feature
+\foreach \y/\p/\l in {3.85/frame/frame, 2.85/angles/Givens angles, 1.8/win/32-frame window, 0.85/vec/320-d vector} {
+  \pic at (5.4,\y) {\p};
+  \node[t] at (6.05,\y) {\l}; }
+\foreach \y in {3.65,2.53,1.55} \draw[down] (5.4,\y) -- (5.4,\y-0.25);
+% ================================================================ (c) observer
+\pic at (9.45,3.7) {win};
+\node[tag, anchor=north] at (9.5,3.35) {TV};
+\draw[fb] (9.95,3.7) -- (10.55,3.7);
+\pic at (11.0,3.7) {win};
+\node[font=\footnotesize, text=black!70] at (11.05,3.75) {?};
+\draw[fb] (11.45,3.7) -- (11.9,3.7);
+\begin{scope}[shift={(12.55,3.7)}]
+  \draw[st, draw=black!35, fill=black!3] (-0.55,-0.42) rectangle (0.55,0.42);
+  \foreach \p in {(-0.38,0.22),(-0.22,0.3),(-0.3,0.08),(-0.12,0.16)} \fill[black!65] \p circle (0.045);
+  \foreach \p in {(0.2,-0.2),(0.36,-0.08),(0.28,-0.3),(0.42,-0.24)} \draw[draw=black!65, line width=0.5pt] \p ++(-0.045,-0.045) rectangle ++(0.09,0.09);
+  \draw[draw=black!70, line width=0.5pt, dash pattern=on 1.5pt off 1pt] (0.06,0.1) -- (-0.12,0.16);
+  \node[star, star points=5, star point ratio=2.2, fill=oiVerm, inner sep=0pt, minimum size=0.18cm] at (0.06,0.1) {};
+\end{scope}
+\node[cl] at (11.01,2.25) {$\hat{d}(q)=\arg\min_{d}\,\min_{e}\,\lVert\mathbf{z}(q)-\mathbf{z}(e)\rVert$};
+\node[cl] at (11.01,1.25) {gallery = eligible devices\\[1pt]chance = 1/gallery};
+% ================================================================ (d) what is measured
+\foreach \c/\r/\p/\l/\s in {0/0/calendar/{same vs.\\ other days}/{\S6.1}, 1/0/room/positions/{\S6.2},
+                            0/1/person/people/{\S6.3}, 1/1/c5/{boards,\\ 7 weeks}/{App.\,C}} {
+  \pic[scale=1.15] at (14.6+1.95*\c,4.05-1.45*\r) {\p};
+  \node[cl, anchor=north] at (14.6+1.95*\c,3.72-1.45*\r) {\l\ \textcolor{black!62}{\s}}; }
+\pic[scale=1.15] at (15.575,1.15) {shield};
+\node[cl, anchor=north] at (15.575,0.82) {privacy \textcolor{black!62}{\S7}\\[-1pt]{\fontsize{7.5}{9}\selectfont\color{black!70}chance, gain${}\geq{}$95\%}};
+\end{tikzpicture}%

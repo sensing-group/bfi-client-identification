@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+.DS_Store
+*.swp
+*~
+release/logs/
+figures/*.png.cache
+# public datasets and captures are downloaded, not committed
+data
+data/

@@ -1,0 +1,76 @@
+% fig_threat_model.tex -- v8 horizontal BFI lifecycle (2026-05-21).
+%
+% Redesign rationale:
+%   v7 was a vertical 4-stage pipeline forced into a wrapfigure at
+%   0.40\columnwidth, which crushed the annotation text to unreadable
+%   size. v8 is a horizontal 4-stage pipeline rendered at \columnwidth
+%   inside a regular figure[t] float; each stage carries a short label
+%   underneath rather than a verbose annotation box on the side. Stage 3
+%   is highlighted because that is where the leak the paper attacks is.
+%
+% Required preamble (already in paper.tex):
+%   \usepackage{tikz}
+%   \usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,
+%                    shapes.geometric,decorations.pathmorphing}
+
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\sffamily\footnotesize,
+    >={Stealth[length=2.4mm,width=1.8mm]},
+    every node/.style={font=\sffamily\footnotesize},
+]
+
+% Palette ------------------------------------------------------------------
+\definecolor{s1Fill}{HTML}{E0EAF5}\definecolor{s1Edge}{HTML}{1F4E8C}
+\definecolor{s2Fill}{HTML}{DDEEEA}\definecolor{s2Edge}{HTML}{009E73}
+\definecolor{s3Fill}{HTML}{FAF0D0}\definecolor{s3Edge}{HTML}{E69F00}
+\definecolor{s3Text}{HTML}{8A5A00}
+\definecolor{s4Fill}{HTML}{F8E2E2}\definecolor{s4Edge}{HTML}{C53E3E}
+\definecolor{cGray}{HTML}{555555}
+\definecolor{cSubText}{HTML}{555555}
+\definecolor{cLeakTag}{HTML}{B23A3A}
+
+\tikzset{
+  stagebox/.style={
+    rectangle, rounded corners=1.6mm, line width=0.8pt,
+    minimum width=27mm, minimum height=9mm,
+    font=\sffamily\bfseries\footnotesize, align=center, inner sep=2pt
+  },
+  subtxt/.style={
+    text=cSubText, font=\sffamily\scriptsize, align=center,
+    text width=27mm, inner sep=0pt
+  },
+  flowarrow/.style={->, draw=cGray, line width=0.8pt},
+  arrowlabel/.style={font=\sffamily\scriptsize\itshape, text=cGray,
+                     fill=white, inner sep=1.2pt},
+  leakflag/.style={text=cLeakTag, font=\sffamily\bfseries\scriptsize,
+                   align=center},
+}
+
+% Canvas: 4 stages along x, centred vertically at y=12 ---------------------
+% Box centres at x = 15, 53, 91, 129. Inter-box gap = 38 mm, box width 27 mm
+% so arrow segment between boxes is ~11 mm. Total width = 144 mm.
+
+\node[stagebox, draw=s1Edge, fill=s1Fill, text=s1Edge] (s1) at (15, 16) {Channel\\acquisition};
+\node[subtxt, below=1.6mm of s1.south] {AP sends NDP;\\STA estimates $\mathbf{H}_k$};
+
+\node[stagebox, draw=s2Edge, fill=s2Fill, text=s2Edge] (s2) at (53, 16) {Givens\\compression};
+\node[subtxt, below=1.6mm of s2.south] {Plane-rotation angles\\$\phi\!\in\!\{5,7,9\}$, $\psi\!\in\!\{4,6\}$ bits};
+
+\node[stagebox, draw=s3Edge, fill=s3Fill, text=s3Text, line width=1.2pt]
+     (s3) at (91, 16) {BFI Action\\frame};
+\node[subtxt, below=1.6mm of s3.south] {STA $\to$ AP\\\textbf{\color{cLeakTag}plaintext}};
+\node[leakflag, above=1.4mm of s3.north] {leak point};
+
+\node[stagebox, draw=s4Edge, fill=s4Fill, text=s4Edge] (s4) at (129, 16) {Eavesdropper\\observes};
+\node[subtxt, below=1.6mm of s4.south] {Any device in range;\\no patch, no association};
+
+% Flow arrows with italic mid-arrow labels ---------------------------------
+\draw[flowarrow] (s1.east) -- (s2.west)
+    node[arrowlabel, midway, above=0.4mm] {sounding};
+\draw[flowarrow] (s2.east) -- (s3.west)
+    node[arrowlabel, midway, above=0.4mm] {quantization};
+\draw[flowarrow] (s3.east) -- (s4.west)
+    node[arrowlabel, midway, above=0.4mm] {transmission};
+
+\end{tikzpicture}

@@ -1,0 +1,119 @@
+% Figure 1 (v5): the four steps of v4, each inside its own panel, full text
+% width (7.0 in) by at most 1.75 in. Panels are rounded rectangles (gray!6 fill,
+% gray!40 border) of equal height side by side, joined by short thick grey
+% arrows in the gaps. Each panel carries its circled number and title on the
+% first line and the drawing below:
+%   1 the TV (client, green) sends its channel report in plaintext (orange frame);
+%   2 the frame fans out to three readers: gateway (provider, blue), house
+%     (household, green), mast beyond a thin wall (outsider, vermilion), which
+%     only listens and is the reader the next two steps follow;
+%   3 the outsider keeps one labeled session, "TV, day 1"; the panel's last
+%     line is the grey contrast with prior attacks (frame stack, drawn cross);
+%   4 and identifies the TV on days 2 to 13 (drawn check mark).
+% Labels are 9 pt in the document font; colours are Okabe-Ito. The bounding
+% box is fixed at 17.78 cm x 4.42 cm unless the preview defines \teasernobbox.
+\begin{tikzpicture}[x=1cm, y=1cm, font=\fontsize{9}{10.5}\selectfont]
+\definecolor{oiOrange}{HTML}{E69F00}\definecolor{oiGreen}{HTML}{009E73}
+\definecolor{oiBlue}{HTML}{0072B2}\definecolor{oiVerm}{HTML}{D55E00}
+\definecolor{oiGrey}{HTML}{8C8C8C}
+\tikzset{
+  panel/.style={draw=gray!40, fill=gray!6, line width=0.6pt, rounded corners=4pt},
+  hop/.style={-{Stealth[length=2mm, width=2.4mm]}, draw=black!30, line width=1.6pt},
+  tv/.style={draw=oiGreen!60, fill=oiGreen!10, line width=0.7pt, rounded corners=2.5pt,
+             minimum width=1.3cm, minimum height=0.8cm, inner sep=1pt},
+  gw/.style={draw=oiBlue!60, fill=oiBlue!10, line width=0.7pt, rounded corners=2.5pt,
+             minimum width=1.2cm, minimum height=0.48cm, inner sep=1pt},
+  tag/.style={draw=oiGreen!60, fill=oiGreen!10, line width=0.6pt, rounded corners=2pt,
+              minimum height=0.46cm, inner sep=2.5pt, text=oiGreen!70!black},
+  rtag/.style={draw=oiVerm!70, fill=oiVerm!8, line width=0.6pt, rounded corners=2pt,
+               minimum height=0.42cm, inner sep=2.5pt, text=oiVerm!90!black},
+  stepno/.style={circle, draw=black!65, line width=0.6pt, fill=white, minimum size=0.42cm,
+               inner sep=0pt, text=black!80},
+  stitle/.style={anchor=north west, inner sep=0pt, align=left, text=black!85,
+            execute at begin node={\hyphenpenalty=10000\relax}},
+  wall/.style={draw=oiGrey, fill=black!12, line width=0.5pt},
+  house/.style={draw=oiGreen!70, fill=oiGreen!10, line width=0.7pt, line join=round},
+  mast/.style={draw=oiVerm, line width=0.8pt, line cap=round},
+  report/.style={-{Stealth[length=1.8mm, width=1.4mm]}, draw=oiOrange!90!black, line width=0.8pt},
+  frame/.style={draw=oiOrange!90!black, fill=oiOrange!15, line width=0.55pt},
+  frameline/.style={draw=oiOrange!90!black, line width=0.45pt},
+  gframe/.style={draw=oiGrey, fill=black!6, line width=0.5pt},
+  gframeline/.style={draw=oiGrey, line width=0.4pt},
+  lab/.style={inner sep=1pt},
+  grey/.style={inner sep=1pt, text=black!55},
+}
+% frame glyph centred at (#1,#2) with scale #3: a document with a folded corner and three lines
+\newcommand{\reportframe}[3]{%
+  \begin{scope}[shift={(#1,#2)}, scale=#3]
+    \draw[frame] (-0.27,-0.33) -- (0.13,-0.33) -- (0.27,-0.19) -- (0.27,0.33) -- (-0.27,0.33) -- cycle;
+    \draw[frameline] (0.13,-0.33) -- (0.13,-0.19) -- (0.27,-0.19);
+    \draw[frameline] (-0.17,-0.1) -- (0.17,-0.1) (-0.17,0.03) -- (0.17,0.03) (-0.17,0.16) -- (0.05,0.16);
+  \end{scope}}
+\newcommand{\greyframe}[3]{%
+  \begin{scope}[shift={(#1,#2)}, scale=#3]
+    \draw[gframe] (-0.27,-0.33) -- (0.13,-0.33) -- (0.27,-0.19) -- (0.27,0.33) -- (-0.27,0.33) -- cycle;
+    \draw[gframeline] (0.13,-0.33) -- (0.13,-0.19) -- (0.27,-0.19);
+    \draw[gframeline] (-0.17,-0.1) -- (0.17,-0.1) (-0.17,0.03) -- (0.17,0.03);
+  \end{scope}}
+% a strip of five small frames, the first centred at (#1,#2)
+\newcommand{\framestrip}[2]{%
+  \foreach \i in {0,...,4} {\reportframe{#1+0.34*\i}{#2}{0.55}}}
+% panel #1 .. #2 in x, with number #3 at its top left
+\newcommand{\panel}[3]{%
+  \draw[panel] (#1,0.03) rectangle (#2,4.39);
+  \node[stepno] at (#1+0.36,4.02) {#3};}
+\ifdefined\teasernobbox\else\useasboundingbox (0,0) rectangle (17.78,4.42);\fi
+% panel edges: P1 0.02-3.22, P2 3.62-8.72, P3 9.12-13.72, P4 14.12-17.76 (gaps 0.40)
+\panel{0.02}{3.22}{1}\panel{3.62}{8.72}{2}\panel{9.12}{13.72}{3}\panel{14.12}{17.76}{4}
+\foreach \a/\b in {3.27/3.57, 8.77/9.07, 13.77/14.07} {\draw[hop] (\a,2.3) -- (\b,2.3);}
+% ---------------------------------------------------------------- step 1
+\node[stitle, text width=2.45cm] at (0.67,4.24) {A client sends its channel report, in plaintext};
+\node[tv] (tv) at (0.95,2.3) {TV};
+\node[grey, anchor=north] at (tv.south) [yshift=-1pt] {client};
+\reportframe{2.6}{2.3}{1}
+\draw[report] (tv.east) -- (2.32,2.3);
+% ---------------------------------------------------------------- step 2
+\node[stitle, text width=4.3cm] at (4.27,4.24) {Three readers receive it};
+\reportframe{4.12}{2.3}{1}
+\node[gw] (gw) at (5.57,3.2) {gateway};
+\node[lab, text=oiBlue, anchor=north] at ([yshift=-1pt]gw.south) {provider};
+% house outline: base and roof
+\draw[house] (5.22,1.05) -- (5.22,1.4) -- (5.57,1.65) -- (5.92,1.4) -- (5.92,1.05) -- cycle;
+\node[lab, text=oiGreen!85!black, anchor=north] at (5.57,1.02) {household};
+% fan-out to the three readers
+\draw[report] (4.4,2.42) -- (gw.west);
+\draw[report] (4.4,2.3) -- (7.72,2.3);
+\draw[report] (4.4,2.18) -- (5.3,1.57);
+\draw[wall] (6.62,0.55) rectangle (6.76,3.5);
+% mast beyond the wall; the middle arrow ends on its pole
+\draw[mast] (7.82,2.05) -- (7.82,2.8);
+\draw[mast] (7.64,2.05) -- (8.0,2.05);
+\draw[mast] (7.82,2.83) +(-0.15,0) arc (180:0:0.15);
+\draw[mast] (7.82,2.83) +(-0.28,0) arc (180:0:0.28);
+\node[rtag] (reader) at (7.82,1.7) {the reader};
+\node[lab, text=oiVerm] at (7.82,1.23) {outsider};
+\node[grey, text width=1.3cm, align=center] at (7.82,0.7) {passive listening};
+% ---------------------------------------------------------------- step 3
+\node[stitle, text width=4.0cm] at (9.77,4.24) {The outsider keeps one labeled session};
+\framestrip{9.6}{2.55}
+\draw[draw=oiGrey!60, line width=0.4pt] (11.12,2.55) -- (11.35,2.55);
+\node[tag, anchor=west] (sess) at (11.35,2.55) {TV, day 1};
+\node[grey, anchor=north] at (11.1,2.2) {never saw this TV before};
+% last line: what prior attacks need
+\node[grey, anchor=north west, text width=2.9cm, align=left] (pa) at (9.32,1.45)
+  {prior attacks: train on many recordings of the target};
+\begin{scope}[shift={(12.55,0.9)}]
+  \greyframe{0.12}{-0.10}{0.5}\greyframe{0.0}{0.0}{0.5}\greyframe{-0.12}{0.10}{0.5}
+\end{scope}
+\draw[draw=oiVerm!90!black, line width=1pt, line cap=round]
+  (13.0,0.76) -- (13.28,1.04) (13.0,1.04) -- (13.28,0.76);
+% ---------------------------------------------------------------- step 4
+\node[stitle, text width=2.9cm] at (14.77,4.24) {Identifies the client on every later day};
+\framestrip{14.6}{2.3}
+\node[lab, anchor=north] at (15.28,1.95) {days 2 to 13};
+\draw[-{Stealth[length=1.6mm, width=1.2mm]}, draw=black!55, line width=0.6pt] (16.2,2.3) -- (16.5,2.3);
+\node[tag, anchor=west, text width=0.85cm, align=left] (tvlab) at (16.55,2.3) {TV};
+\draw[draw=oiGreen!80!black, line width=1pt, line cap=round, line join=round]
+  ([xshift=-0.42cm,yshift=-0.01cm]tvlab.east) -- ([xshift=-0.30cm,yshift=-0.13cm]tvlab.east)
+  -- ([xshift=-0.10cm,yshift=0.13cm]tvlab.east);
+\end{tikzpicture}%

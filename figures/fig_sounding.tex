@@ -1,0 +1,85 @@
+% fig_sounding.tex -- one 802.11 sounding as a two-lifeline sequence diagram.
+%
+% Single-column figure (\columnwidth = 241.15pt = 84.75mm wide, <= 1.5in tall).
+% Requires in the document preamble:
+%     \usepackage{tikz}
+%     \usetikzlibrary{arrows.meta,positioning,calc}
+%
+% Palette: Okabe-Ito (access point blue, client green, feedback frame orange,
+% outsider vermilion), as in the rest of the paper.
+%
+% Layout (time runs downward):
+%   1. NDP announcement             access point -> client
+%   2. NDP (known training symbols) access point -> client, note at the client
+%   3. Compressed Beamforming Action frame, client -> access point, thick orange,
+%      with a branch from its midpoint to an outsider's mast at the far right.
+%
+\begin{tikzpicture}[
+    x=1mm, y=1mm,
+    font=\footnotesize,
+    >={Stealth[length=1.4mm,width=1.1mm]},
+    inner sep=0pt, outer sep=0pt,
+]
+
+% ===== Colour palette (Okabe-Ito) =====
+\definecolor{cBlue}{HTML}{0072B2}
+\definecolor{cGreen}{HTML}{009E73}
+\definecolor{cOrange}{HTML}{E69F00}
+\definecolor{cRed}{HTML}{D55E00}
+\definecolor{cGray}{HTML}{555555}
+\definecolor{fillGw}{HTML}{DCEEF7}
+\definecolor{fillCl}{HTML}{D9F0E8}
+
+% Lifeline abscissae; labels between the lifelines are centred on \xm.
+\def\xg{9}
+\def\xc{50}
+\def\xm{29.5}
+\def\xo{77}
+\def\xr{84.5}
+
+% ----- Header boxes (lifeline tops) -----
+\node[draw=cBlue, fill=fillGw, line width=0.4pt, rounded corners=0.7mm,
+      inner sep=0.7mm, minimum width=12mm, minimum height=4mm, anchor=south]
+      (gw) at (\xg,31) {access point};
+\node[draw=cGreen, fill=fillCl, line width=0.4pt, rounded corners=0.7mm,
+      inner sep=0.7mm, minimum width=12mm, minimum height=4mm, anchor=south]
+      (cl) at (\xc,31) {client};
+
+% ----- Lifelines -----
+\draw[cGray, line width=0.3pt, dash pattern=on 0.8mm off 0.5mm] (gw.south) -- (\xg,4);
+\draw[cGray, line width=0.3pt, dash pattern=on 0.8mm off 0.5mm] (cl.south) -- (\xc,4);
+
+% ----- Time arrow on far left -----
+\draw[->, cGray, line width=0.3pt] (1.5,29) -- (1.5,6);
+\node[cGray, rotate=90, font=\scriptsize] at (3.1,17.5) {time};
+
+% ===== 1. NDP announcement: access point -> client =====
+\draw[->, cBlue, line width=0.5pt] (\xg+0.6,27.5) -- (\xc-0.6,27.5);
+\node[anchor=south] at (\xm,27.9) {NDP announcement};
+
+% ===== 2. NDP with known training symbols: access point -> client =====
+\draw[->, cBlue, line width=0.5pt] (\xg+0.6,21.5) -- (\xc-0.6,21.5);
+\node[anchor=south] at (\xm,21.9) {NDP (known training symbols)};
+\node[anchor=west, cGray, font=\scriptsize\itshape, align=left] at (\xc+1.8,21.5)
+     {client estimates\\the channel};
+
+% ===== 3. Compressed Beamforming Action frame: client -> access point =====
+\draw[->, cOrange, line width=1.0pt] (\xc-0.6,8.5) -- (\xg+0.6,8.5);
+\node[anchor=south, align=center, fill=white, inner sep=0.3mm] at (\xm,9.1)
+     {Compressed Beamforming Report:\\SNR per stream, Givens angles\\per group, 2 to 9 bits, plaintext};
+
+% ----- Branch from the midpoint of the feedback frame to the outsider -----
+\draw[->, cRed, line width=0.5pt, dash pattern=on 1mm off 0.6mm, rounded corners=1.5mm]
+    (\xm,8.5) |- (\xo-2.2,5.5);
+
+% ----- Outsider mast (far right) -----
+\draw[cRed, line width=0.6pt] (\xo-1.5,5.5) -- (\xo+1.5,5.5);    % footing
+\draw[cRed, line width=0.6pt] (\xo,5.5) -- (\xo,11);               % mast
+\fill[cRed] (\xo,11) circle (0.5);                                 % tip
+\draw[cRed, line width=0.4pt] (\xo-1.6,12.2) arc (120:60:3.2);     % wave 1
+\draw[cRed, line width=0.4pt] (\xo-2.6,13.4) arc (120:60:5.2);     % wave 2
+\node[cRed, anchor=south east] at (\xr,14.2) {outsider in range};
+\node[cGray, font=\scriptsize\itshape, anchor=north east, align=right] at (\xr,4.7)
+     {not covered by\\Management Frame Protection};
+
+\end{tikzpicture}

@@ -1,0 +1,91 @@
+{
+  "query": {
+    "device": "AppleTV-LR",
+    "mac": "dev_a674c6",
+    "window": 292,
+    "day": "2026-05-08",
+    "session": 0,
+    "ts0": 1778214151.7209523,
+    "ts1": 1778214198.16601,
+    "utc0": "2026-05-08 04:22:31",
+    "utc1": "2026-05-08 04:23:18",
+    "frames": 32
+  },
+  "enrolled": {
+    "Vacuum": {
+      "window": 2936,
+      "day": "2026-05-11",
+      "session": 1,
+      "utc0": "2026-05-11 08:28:14"
+    },
+    "LGTV": {
+      "window": 814,
+      "day": "2026-05-09",
+      "session": 3,
+      "utc0": "2026-05-09 15:49:56"
+    },
+    "Laptop": {
+      "window": 4687,
+      "day": "2026-05-14",
+      "session": 2,
+      "utc0": "2026-05-14 17:06:12"
+    },
+    "AppleTV-LR": {
+      "window": 17918,
+      "day": "2026-05-18",
+      "session": 15,
+      "utc0": "2026-05-18 13:04:04"
+    },
+    "SamsungTV": {
+      "window": 8672,
+      "day": "2026-05-15",
+      "session": 19,
+      "utc0": "2026-05-15 16:24:10"
+    },
+    "AppleTV-BR": {
+      "window": 25519,
+      "day": "2026-05-20",
+      "session": 7,
+      "utc0": "2026-05-20 04:25:46"
+    }
+  },
+  "frame": {
+    "category": 30,
+    "action": 0,
+    "nc": 2,
+    "nr": 3,
+    "bw_mhz": 80,
+    "ng": 4,
+    "codebook": 0,
+    "feedback_type": "SU",
+    "remaining_segments": 0,
+    "first_segment": 1,
+    "ru_start": 0,
+    "ru_end": 36,
+    "dialog_token": 63,
+    "bphi": 4,
+    "bpsi": 2,
+    "body_bytes": 572,
+    "n_sub": 250,
+    "bits_per_tone": 18,
+    "hex_head": "1e 00 91 80 00 d2 0f"
+  },
+  "distance": {
+    "Vacuum": 134.11895063834763,
+    "LGTV": 26.6058727040761,
+    "Laptop": 29.099266515409273,
+    "AppleTV-LR": 19.594507856287894,
+    "SamsungTV": 39.619813608499015,
+    "AppleTV-BR": 25.467228545712835
+  },
+  "nearest": "AppleTV-LR",
+  "chance": 0.16666666666666666,
+  "protocol": {
+    "condition": "other_day_any",
+    "K": 1,
+    "T": 1,
+    "accuracy_all_devices": 0.82625,
+    "n_decisions": 1600
+  },
+  "seed": 0
+}

@@ -1,0 +1,206 @@
+{
+  "runtime_s": 165.43287777900696,
+  "peak_rss_mb": 434.50390625,
+  "trials": 50,
+  "k_grid": [
+    1,
+    16
+  ],
+  "T": 1,
+  "rate_definition": "mean |frame-to-frame change| of phi11, phi21 (circular), psi21, psi31 over 32 subcarrier bins, rad/frame; split at the device median",
+  "local_tz": "Europe/Vienna",
+  "thresholds": {
+    "Vacuum": {
+      "median_rate_rad_per_frame": 0.03030091244727373,
+      "n_windows": 748,
+      "n_active": 374,
+      "rate_p10": 0.02499895989894867,
+      "rate_p90": 0.35198831558227556,
+      "spearman_rate_vs_spread": 0.9339045278161833
+    },
+    "LGTV": {
+      "median_rate_rad_per_frame": 0.0310335885733366,
+      "n_windows": 1659,
+      "n_active": 830,
+      "rate_p10": 0.01918337233364582,
+      "rate_p90": 0.045305272191762926,
+      "spearman_rate_vs_spread": 0.7262948008964246
+    },
+    "Laptop": {
+      "median_rate_rad_per_frame": 0.06703095138072968,
+      "n_windows": 1743,
+      "n_active": 872,
+      "rate_p10": 0.028705542162060737,
+      "rate_p90": 0.13353731036186217,
+      "spearman_rate_vs_spread": 0.9572421345863189
+    },
+    "AppleTV-LR": {
+      "median_rate_rad_per_frame": 0.01792735792696476,
+      "n_windows": 12974,
+      "n_active": 6487,
+      "rate_p10": 0.012139884009957313,
+      "rate_p90": 0.06343823447823525,
+      "spearman_rate_vs_spread": 0.8758503169776375
+    },
+    "SamsungTV": {
+      "median_rate_rad_per_frame": 0.05046119913458824,
+      "n_windows": 100,
+      "n_active": 50,
+      "rate_p10": 0.036202051863074305,
+      "rate_p90": 0.09800671935081484,
+      "spearman_rate_vs_spread": 0.8595499549954995
+    },
+    "AppleTV-BR": {
+      "median_rate_rad_per_frame": 0.04601445980370045,
+      "n_windows": 8724,
+      "n_active": 4362,
+      "rate_p10": 0.03355521708726883,
+      "rate_p90": 0.0848499022424221,
+      "spearman_rate_vs_spread": 0.9520008646528797
+    }
+  },
+  "episodes_skipped": {
+    "other_day_pair|quiet|quiet": {
+      "query_block_no_query_class": 602,
+      "query_device_no_enrol_class": 653,
+      "gallery_below_two": 415,
+      "n_episodes_used": 7456
+    },
+    "other_day_pair|quiet|active": {
+      "query_block_no_query_class": 186,
+      "query_device_no_enrol_class": 649,
+      "gallery_below_two": 415,
+      "n_episodes_used": 7889
+    },
+    "other_day_pair|active|quiet": {
+      "gallery_below_two": 500,
+      "query_device_no_enrol_class": 183,
+      "query_block_no_query_class": 671,
+      "n_episodes_used": 7782
+    },
+    "other_day_pair|active|active": {
+      "gallery_below_two": 500,
+      "query_device_no_enrol_class": 187,
+      "query_block_no_query_class": 185,
+      "n_episodes_used": 8266
+    },
+    "other_day_any|quiet|quiet": {
+      "query_block_no_query_class": 87,
+      "query_device_no_enrol_class": 147,
+      "n_episodes_used": 1366
+    },
+    "other_day_any|quiet|active": {
+      "query_block_no_query_class": 92,
+      "query_device_no_enrol_class": 142,
+      "n_episodes_used": 1366
+    },
+    "other_day_any|active|quiet": {
+      "query_device_no_enrol_class": 77,
+      "query_block_no_query_class": 101,
+      "n_episodes_used": 1422
+    },
+    "other_day_any|active|active": {
+      "query_block_no_query_class": 84,
+      "query_device_no_enrol_class": 79,
+      "n_episodes_used": 1437
+    }
+  },
+  "activity_by_time_of_day": {
+    "Vacuum": {
+      "night_00_06": {
+        "n_windows": 0,
+        "n_active": 0,
+        "frac_active": null,
+        "share_of_device_active": 0.0,
+        "share_of_device_windows": 0.0
+      },
+      "evening_18_23": {
+        "n_windows": 210,
+        "n_active": 134,
+        "frac_active": 0.638095238095238,
+        "share_of_device_active": 0.3582887700534759,
+        "share_of_device_windows": 0.2807486631016043
+      }
+    },
+    "LGTV": {
+      "night_00_06": {
+        "n_windows": 3,
+        "n_active": 2,
+        "frac_active": 0.6666666666666666,
+        "share_of_device_active": 0.0024096385542168677,
+        "share_of_device_windows": 0.0018083182640144665
+      },
+      "evening_18_23": {
+        "n_windows": 992,
+        "n_active": 600,
+        "frac_active": 0.6048387096774194,
+        "share_of_device_active": 0.7228915662650602,
+        "share_of_device_windows": 0.5979505726341169
+      }
+    },
+    "Laptop": {
+      "night_00_06": {
+        "n_windows": 82,
+        "n_active": 42,
+        "frac_active": 0.5121951219512195,
+        "share_of_device_active": 0.0481651376146789,
+        "share_of_device_windows": 0.04704532415375789
+      },
+      "evening_18_23": {
+        "n_windows": 1016,
+        "n_active": 612,
+        "frac_active": 0.6023622047244095,
+        "share_of_device_active": 0.7018348623853211,
+        "share_of_device_windows": 0.582903040734366
+      }
+    },
+    "AppleTV-LR": {
+      "night_00_06": {
+        "n_windows": 3422,
+        "n_active": 1631,
+        "frac_active": 0.4766218585622443,
+        "share_of_device_active": 0.2514259287806382,
+        "share_of_device_windows": 0.263758285802374
+      },
+      "evening_18_23": {
+        "n_windows": 2770,
+        "n_active": 1584,
+        "frac_active": 0.5718411552346571,
+        "share_of_device_active": 0.24418066903036842,
+        "share_of_device_windows": 0.21350393093880068
+      }
+    },
+    "SamsungTV": {
+      "night_00_06": {
+        "n_windows": 2,
+        "n_active": 1,
+        "frac_active": 0.5,
+        "share_of_device_active": 0.02,
+        "share_of_device_windows": 0.02
+      },
+      "evening_18_23": {
+        "n_windows": 16,
+        "n_active": 3,
+        "frac_active": 0.1875,
+        "share_of_device_active": 0.06,
+        "share_of_device_windows": 0.16
+      }
+    },
+    "AppleTV-BR": {
+      "night_00_06": {
+        "n_windows": 2358,
+        "n_active": 2126,
+        "frac_active": 0.9016115351993215,
+        "share_of_device_active": 0.4873911049977075,
+        "share_of_device_windows": 0.2702888583218707
+      },
+      "evening_18_23": {
+        "n_windows": 2181,
+        "n_active": 561,
+        "frac_active": 0.25722145804676755,
+        "share_of_device_active": 0.12861072902338377,
+        "share_of_device_windows": 0.25
+      }
+    }
+  }
+}

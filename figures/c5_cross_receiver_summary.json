@@ -1,0 +1,359 @@
+{
+  "k_grid": [
+    "1",
+    "16",
+    "all"
+  ],
+  "t_grid": [
+    1,
+    16
+  ],
+  "n_trials": 20,
+  "max_queries_per_device": 1000,
+  "format_vocab": {
+    "0": [
+      "VHT",
+      1,
+      3,
+      6,
+      4,
+      80,
+      1,
+      "SU",
+      1
+    ],
+    "1": [
+      "HE",
+      2,
+      3,
+      4,
+      2,
+      80,
+      4,
+      "SU",
+      0
+    ],
+    "2": [
+      "HE",
+      2,
+      3,
+      6,
+      4,
+      80,
+      4,
+      "SU",
+      1
+    ],
+    "3": [
+      "VHT",
+      1,
+      3,
+      9,
+      7,
+      80,
+      1,
+      "MU",
+      1
+    ],
+    "4": [
+      "VHT",
+      2,
+      3,
+      9,
+      7,
+      80,
+      1,
+      "MU",
+      1
+    ],
+    "5": [
+      "VHT",
+      2,
+      3,
+      6,
+      4,
+      80,
+      1,
+      "SU",
+      1
+    ],
+    "6": [
+      "HE",
+      1,
+      3,
+      6,
+      4,
+      20,
+      4,
+      "SU",
+      1
+    ],
+    "7": [
+      "HE",
+      1,
+      3,
+      6,
+      4,
+      80,
+      4,
+      "SU",
+      1
+    ]
+  },
+  "a_windows": 25948,
+  "months": {
+    "2026-07": {
+      "b_windows": 13750,
+      "b_days": [
+        "2026-07-15",
+        "2026-07-16",
+        "2026-07-17",
+        "2026-07-18",
+        "2026-07-19",
+        "2026-07-20",
+        "2026-07-21",
+        "2026-07-22",
+        "2026-07-23",
+        "2026-07-24"
+      ],
+      "devices_in_B": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "chance": 0.3333333333333333,
+      "bins_kept": 17,
+      "bins_kept_idx": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "b_windows_per_device": {
+        "LGTV": 3688,
+        "AppleTV-LR": 6243,
+        "SamsungTV": 3819
+      },
+      "b_blocks_per_device": {
+        "LGTV": 23,
+        "AppleTV-LR": 31,
+        "SamsungTV": 32
+      },
+      "a_windows_per_device": {
+        "LGTV": 1659,
+        "AppleTV-LR": 12974,
+        "SamsungTV": 100
+      },
+      "a_blocks_per_device": {
+        "LGTV": 7,
+        "AppleTV-LR": 23,
+        "SamsungTV": 29
+      }
+    },
+    "2026-09": {
+      "b_windows": 4212,
+      "b_days": [
+        "2026-09-06",
+        "2026-09-07",
+        "2026-09-08"
+      ],
+      "devices_in_B": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "gallery": [
+        "LGTV",
+        "AppleTV-LR",
+        "SamsungTV"
+      ],
+      "chance": 0.3333333333333333,
+      "bins_kept": 17,
+      "bins_kept_idx": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "b_windows_per_device": {
+        "LGTV": 172,
+        "AppleTV-LR": 3698,
+        "SamsungTV": 342
+      },
+      "b_blocks_per_device": {
+        "LGTV": 4,
+        "AppleTV-LR": 3,
+        "SamsungTV": 2
+      },
+      "a_windows_per_device": {
+        "LGTV": 1659,
+        "AppleTV-LR": 12974,
+        "SamsungTV": 100
+      },
+      "a_blocks_per_device": {
+        "LGTV": 7,
+        "AppleTV-LR": 23,
+        "SamsungTV": 29
+      }
+    }
+  },
+  "per_device": {
+    "LGTV": {
+      "format_A": [
+        "HE",
+        2,
+        3,
+        6,
+        4,
+        80,
+        4,
+        "SU",
+        1
+      ],
+      "format_B_2026-07": [
+        "HE",
+        2,
+        3,
+        6,
+        4,
+        80,
+        4,
+        "SU",
+        1
+      ],
+      "tones_present_B_2026-07": 134,
+      "format_differs_2026-07": false,
+      "format_B_2026-09": [
+        "HE",
+        2,
+        3,
+        6,
+        4,
+        80,
+        4,
+        "SU",
+        1
+      ],
+      "tones_present_B_2026-09": 134,
+      "format_differs_2026-09": false
+    },
+    "AppleTV-LR": {
+      "format_A": [
+        "HE",
+        2,
+        3,
+        4,
+        2,
+        80,
+        4,
+        "SU",
+        0
+      ],
+      "format_B_2026-07": [
+        "HE",
+        2,
+        3,
+        4,
+        2,
+        80,
+        4,
+        "SU",
+        0
+      ],
+      "tones_present_B_2026-07": 223,
+      "format_differs_2026-07": false,
+      "format_B_2026-09": [
+        "HE",
+        2,
+        3,
+        4,
+        2,
+        80,
+        4,
+        "SU",
+        0
+      ],
+      "tones_present_B_2026-09": 223,
+      "format_differs_2026-09": false
+    },
+    "SamsungTV": {
+      "format_A": [
+        "VHT",
+        2,
+        3,
+        9,
+        7,
+        80,
+        1,
+        "MU",
+        1
+      ],
+      "format_B_2026-07": [
+        "VHT",
+        2,
+        3,
+        6,
+        4,
+        80,
+        1,
+        "SU",
+        1
+      ],
+      "tones_present_B_2026-07": 134,
+      "format_differs_2026-07": true,
+      "format_B_2026-09": [
+        "VHT",
+        2,
+        3,
+        6,
+        4,
+        80,
+        1,
+        "SU",
+        1
+      ],
+      "tones_present_B_2026-09": 134,
+      "format_differs_2026-09": true
+    }
+  },
+  "zscore": "fitted label-free on the pooled windows of the two sets being compared (enrolment set + query set)",
+  "notes": [
+    "A beamforming report is a digital payload: every receiver that decodes the frame obtains the same angle bits. The receiver changes only WHICH reports are heard and how much of each body is kept (512-byte firmware cap in B). Receiver and months therefore change together, but the angle content can only differ by time, not by receiver.",
+    "Bins kept = bins fully covered in every B window of the gallery (AND over devices); the same mask is applied to A, including in the A_within_A reference.",
+    "Devices absent from B (AppleTV-BR, Vacuum; Laptop has 114 Nr=4 reports in July only, first column undecodable at Nr=4) cannot be queried; chance is 1/|gallery| of devices present in both sets.",
+    "A device whose majority format differs between A and B (per_device.format_differs_*) can never be matched by the format one-hot across sets; its angle features are compared in radians (angles) and after re-quantisation to 4/2 bits (angles_rq)."
+  ],
+  "runtime_s": 76.00784420967102,
+  "peak_rss_mb": 670.6875
+}
